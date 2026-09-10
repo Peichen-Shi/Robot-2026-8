@@ -1,0 +1,113 @@
+{
+  "tag": "front_en",
+  "results": [
+    {
+      "slot": 1,
+      "grid": "Grid1",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.567,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -1.05,
+        0.13
+      ],
+      "actual": [
+        0.3804,
+        -1.0476,
+        0.1322
+      ],
+      "error": [
+        0.0004,
+        0.0024,
+        0.0022
+      ],
+      "success": true,
+      "t_wall": 26.98
+    },
+    {
+      "slot": 2,
+      "grid": "Grid2",
+      "cls": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.566,
+      "bin": "RightBin",
+      "target": [
+        0.38,
+        0.75,
+        0.13
+      ],
+      "actual": [
+        0.3802,
+        0.7539,
+        0.1323
+      ],
+      "error": [
+        0.0002,
+        0.0039,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 47.73
+    },
+    {
+      "slot": 3,
+      "grid": "Grid3",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.567,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -0.9,
+        0.13
+      ],
+      "actual": [
+        0.3801,
+        -0.8947,
+        0.1323
+      ],
+      "error": [
+        0.0001,
+        0.0053,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 67.4
+    },
+    {
+      "slot": 5,
+      "grid": "Grid5",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.598,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -0.75,
+        0.13
+      ],
+      "actual": [
+        0.3801,
+        -0.7427,
+        0.1323
+      ],
+      "error": [
+        0.0001,
+        0.0073,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 97.47
+    }
+  ],
+  "errors": [
+    {
+      "time": "2026-09-10 17:56:52",
+      "phase": "grasp",
+      "message": "target at slot 6 is unreachable: gripper never touched an object after 2 attempts - task aborted"
+    }
+  ],
+  "violations": []
+}

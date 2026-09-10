@@ -1,0 +1,132 @@
+{
+  "tag": "front_en",
+  "results": [
+    {
+      "slot": 1,
+      "grid": "Grid1",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.567,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -1.05,
+        0.13
+      ],
+      "actual": [
+        0.3812,
+        -1.048,
+        0.1322
+      ],
+      "error": [
+        0.0012,
+        0.002,
+        0.0022
+      ],
+      "success": true,
+      "t_wall": 26.04
+    },
+    {
+      "slot": 2,
+      "grid": "Grid2",
+      "cls": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.566,
+      "bin": "RightBin",
+      "target": [
+        0.38,
+        0.75,
+        0.13
+      ],
+      "actual": [
+        0.3811,
+        0.7535,
+        0.1322
+      ],
+      "error": [
+        0.0011,
+        0.0035,
+        0.0022
+      ],
+      "success": true,
+      "t_wall": 46.52
+    },
+    {
+      "slot": 3,
+      "grid": "Grid3",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.565,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -0.9,
+        0.13
+      ],
+      "actual": [
+        0.3811,
+        -0.8952,
+        0.1322
+      ],
+      "error": [
+        0.0011,
+        0.0048,
+        0.0022
+      ],
+      "success": true,
+      "t_wall": 63.85
+    },
+    {
+      "slot": 5,
+      "grid": "Grid5",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.593,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -0.75,
+        0.13
+      ],
+      "actual": [
+        0.381,
+        -0.7434,
+        0.1323
+      ],
+      "error": [
+        0.001,
+        0.0066,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 90.25
+    },
+    {
+      "slot": 6,
+      "grid": "Grid6",
+      "cls": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.568,
+      "bin": "RightBin",
+      "target": [
+        0.38,
+        0.9,
+        0.13
+      ],
+      "actual": [
+        0.381,
+        0.9075,
+        0.1323
+      ],
+      "error": [
+        0.001,
+        0.0075,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 107.33
+    }
+  ],
+  "errors": [],
+  "violations": []
+}

@@ -1,0 +1,19 @@
+{
+  "tag": "top_en",
+  "finished_at": "2026-09-10 17:52:51",
+  "duration_s": 118.0,
+  "grasp_attempts": 5,
+  "grasp_success": 5,
+  "success_rate": 1.0,
+  "errors": 0,
+  "violations": 0,
+  "files": {
+    "trajectory": "trajectory_top_en_20260910_175053.csv",
+    "results": "results_top_en_20260910_175053.json",
+    "errors": "errors_top_en_20260910_175053.log",
+    "summary": "summary_top_en_20260910_175053.json"
+  },
+  "view": "top",
+  "lang": "en",
+  "video": "实验三_视觉分类演示_俯视_最终版_EN.mp4"
+}

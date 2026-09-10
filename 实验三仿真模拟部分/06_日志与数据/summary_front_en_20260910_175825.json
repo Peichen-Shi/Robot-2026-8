@@ -1,0 +1,19 @@
+{
+  "tag": "front_en",
+  "finished_at": "2026-09-10 18:00:20",
+  "duration_s": 114.4,
+  "grasp_attempts": 5,
+  "grasp_success": 5,
+  "success_rate": 1.0,
+  "errors": 0,
+  "violations": 0,
+  "files": {
+    "trajectory": "trajectory_front_en_20260910_175825.csv",
+    "results": "results_front_en_20260910_175825.json",
+    "errors": "errors_front_en_20260910_175825.log",
+    "summary": "summary_front_en_20260910_175825.json"
+  },
+  "view": "front",
+  "lang": "en",
+  "video": "_no_record.mp4"
+}

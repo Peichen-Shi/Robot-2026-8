@@ -1,0 +1,19 @@
+{
+  "tag": "front_en",
+  "finished_at": "2026-09-10 17:57:04",
+  "duration_s": 121.2,
+  "grasp_attempts": 4,
+  "grasp_success": 4,
+  "success_rate": 1.0,
+  "errors": 1,
+  "violations": 0,
+  "files": {
+    "trajectory": "trajectory_front_en_20260910_175502.csv",
+    "results": "results_front_en_20260910_175502.json",
+    "errors": "errors_front_en_20260910_175502.log",
+    "summary": "summary_front_en_20260910_175502.json"
+  },
+  "view": "front",
+  "lang": "en",
+  "video": "实验三_验收演示_不可达目标中止_EN.mp4"
+}

@@ -1,0 +1,132 @@
+{
+  "tag": "front_en",
+  "results": [
+    {
+      "slot": 1,
+      "grid": "Grid1",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.567,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -1.05,
+        0.13
+      ],
+      "actual": [
+        0.3803,
+        -1.0473,
+        0.1322
+      ],
+      "error": [
+        0.0003,
+        0.0027,
+        0.0022
+      ],
+      "success": true,
+      "t_wall": 26.2
+    },
+    {
+      "slot": 2,
+      "grid": "Grid2",
+      "cls": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.567,
+      "bin": "RightBin",
+      "target": [
+        0.38,
+        0.75,
+        0.13
+      ],
+      "actual": [
+        0.3802,
+        0.7542,
+        0.1323
+      ],
+      "error": [
+        0.0002,
+        0.0042,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 47.6
+    },
+    {
+      "slot": 3,
+      "grid": "Grid3",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.565,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -0.9,
+        0.13
+      ],
+      "actual": [
+        0.3803,
+        -0.8951,
+        0.1323
+      ],
+      "error": [
+        0.0003,
+        0.0049,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 67.19
+    },
+    {
+      "slot": 5,
+      "grid": "Grid5",
+      "cls": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.599,
+      "bin": "LeftBin",
+      "target": [
+        0.38,
+        -0.75,
+        0.13
+      ],
+      "actual": [
+        0.3801,
+        -0.7433,
+        0.1323
+      ],
+      "error": [
+        0.0001,
+        0.0067,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 95.61
+    },
+    {
+      "slot": 6,
+      "grid": "Grid6",
+      "cls": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.567,
+      "bin": "RightBin",
+      "target": [
+        0.38,
+        0.9,
+        0.13
+      ],
+      "actual": [
+        0.3801,
+        0.9078,
+        0.1323
+      ],
+      "error": [
+        0.0001,
+        0.0078,
+        0.0023
+      ],
+      "success": true,
+      "t_wall": 115.28
+    }
+  ],
+  "errors": [],
+  "violations": []
+}

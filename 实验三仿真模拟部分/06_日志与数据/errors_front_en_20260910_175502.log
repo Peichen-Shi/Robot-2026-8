@@ -1,0 +1,3 @@
+# 错误日志  tag=front_en  开始时间=2026-09-10 17:55:02
+[2026-09-10 17:56:52] (grasp) target at slot 6 is unreachable: gripper never touched an object after 2 attempts - task aborted
+# 结束：抓取 4 次，成功 4 次，错误 1 条，安全违规 0 条

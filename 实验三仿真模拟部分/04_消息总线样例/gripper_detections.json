@@ -1,0 +1,31 @@
+{
+  "stamp": 1789034402.7803829,
+  "source": "gripper_cam",
+  "count": 1,
+  "detections": [
+    {
+      "class": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.568,
+      "color": "红",
+      "shape": "棱柱(方)(近距提示)",
+      "top_width_m": 46183.1292,
+      "circularity": 0.715,
+      "consistent": false,
+      "bbox": [
+        119,
+        0,
+        180,
+        180
+      ],
+      "bbox_center_px": [
+        209.0,
+        90.0
+      ],
+      "world_xy": null,
+      "grid_index": null,
+      "bin": null,
+      "note": "近距视角：形状不作判据，类别由颜色决定"
+    }
+  ]
+}

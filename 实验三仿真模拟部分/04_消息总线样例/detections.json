@@ -1,0 +1,166 @@
+{
+  "stamp": 1789029684.0840085,
+  "count": 6,
+  "class_counts": {
+    "A": 3,
+    "B": 3
+  },
+  "detections": [
+    {
+      "class": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.648,
+      "color": "蓝",
+      "shape": "棱柱(方)",
+      "top_width_m": 4105.167,
+      "circularity": 0.782,
+      "consistent": true,
+      "bbox": [
+        312,
+        299,
+        16,
+        18
+      ],
+      "bbox_center_px": [
+        320.0,
+        308.0
+      ],
+      "world_xy": [
+        0.38,
+        -0.4989
+      ],
+      "grid_index": 1,
+      "bin": "LeftBin"
+    },
+    {
+      "class": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.648,
+      "color": "红",
+      "shape": "圆柱(圆)",
+      "top_width_m": 3592.0212,
+      "circularity": 0.917,
+      "consistent": true,
+      "bbox": [
+        313,
+        249,
+        14,
+        16
+      ],
+      "bbox_center_px": [
+        320.0,
+        257.0
+      ],
+      "world_xy": [
+        0.38,
+        -0.3001
+      ],
+      "grid_index": 2,
+      "bin": "RightBin"
+    },
+    {
+      "class": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.646,
+      "color": "蓝",
+      "shape": "棱柱(方)",
+      "top_width_m": 4105.167,
+      "circularity": 0.785,
+      "consistent": true,
+      "bbox": [
+        312,
+        198,
+        16,
+        16
+      ],
+      "bbox_center_px": [
+        320.0,
+        206.0
+      ],
+      "world_xy": [
+        0.38,
+        -0.1013
+      ],
+      "grid_index": 3,
+      "bin": "LeftBin"
+    },
+    {
+      "class": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.648,
+      "color": "红",
+      "shape": "圆柱(圆)",
+      "top_width_m": 3592.0212,
+      "circularity": 0.923,
+      "consistent": true,
+      "bbox": [
+        313,
+        147,
+        14,
+        15
+      ],
+      "bbox_center_px": [
+        320.0,
+        154.5
+      ],
+      "world_xy": [
+        0.38,
+        0.0994
+      ],
+      "grid_index": 4,
+      "bin": "RightBin"
+    },
+    {
+      "class": "A",
+      "class_name": "A类・蓝色棱柱",
+      "confidence": 0.646,
+      "color": "蓝",
+      "shape": "棱柱(方)",
+      "top_width_m": 4105.167,
+      "circularity": 0.785,
+      "consistent": true,
+      "bbox": [
+        312,
+        95,
+        16,
+        16
+      ],
+      "bbox_center_px": [
+        320.0,
+        103.0
+      ],
+      "world_xy": [
+        0.38,
+        0.3001
+      ],
+      "grid_index": 5,
+      "bin": "LeftBin"
+    },
+    {
+      "class": "B",
+      "class_name": "B类・红色圆柱",
+      "confidence": 0.624,
+      "color": "红",
+      "shape": "圆柱(圆)",
+      "top_width_m": 4105.167,
+      "circularity": 0.889,
+      "consistent": true,
+      "bbox": [
+        312,
+        43,
+        16,
+        17
+      ],
+      "bbox_center_px": [
+        320.0,
+        51.5
+      ],
+      "world_xy": [
+        0.38,
+        0.5008
+      ],
+      "grid_index": 6,
+      "bin": "RightBin"
+    }
+  ]
+}

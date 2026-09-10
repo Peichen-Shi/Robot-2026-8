@@ -1,0 +1,19 @@
+{
+  "tag": "front_en",
+  "finished_at": "2026-09-10 17:50:50",
+  "duration_s": 123.2,
+  "grasp_attempts": 5,
+  "grasp_success": 5,
+  "success_rate": 1.0,
+  "errors": 0,
+  "violations": 0,
+  "files": {
+    "trajectory": "trajectory_front_en_20260910_174847.csv",
+    "results": "results_front_en_20260910_174847.json",
+    "errors": "errors_front_en_20260910_174847.log",
+    "summary": "summary_front_en_20260910_174847.json"
+  },
+  "view": "front",
+  "lang": "en",
+  "video": "实验三_视觉分类演示_正面_最终版_EN.mp4"
+}
