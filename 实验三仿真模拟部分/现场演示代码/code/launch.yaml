@@ -1,0 +1,78 @@
+# ============================================================
+# launch.yaml —— 实验三 完整仿真系统 启动描述（声明式）
+# 说明：实际启动请运行  launch_sim.py（或双击 start_sim.bat）
+#       本文件用于说明各节点/参数/数据流，便于老师或评委核对系统构成。
+# ============================================================
+system:
+  name: "实验三 · 桌面物体自动分类整理（RoboMaster EP × CoppeliaSim）"
+  scene: "second_imitation.ttt"
+  simulator: "CoppeliaSim Edu 4.10"
+  interface: "ZMQ Remote API"
+  rpc_port: 23000
+  python: ">=3.10（依赖：coppeliasim_zmqremoteapi_client, numpy, opencv-python, Pillow, matplotlib）"
+
+nodes:
+  - name: camera_node            # 俯视识别相机（仅用于一次性类别识别，可选）
+    type: publisher
+    topic: "vision_bus/latest.jpg, vision_bus/camera_meta.json"
+    params: {resolution: [640, 360], fov_deg: 12.0, height_m: 12.0}
+
+  - name: vision_calibrate       # 相机标定（像素↔世界 线性映射）
+    type: calibration
+    output: "vision_bus/calibration.json"
+    params: {targets: "6 个已知网格位置", method: "最小二乘线性拟合"}
+
+  - name: detector_node          # 识别节点：类别 / 检测框 / 置信度
+    type: detector
+    subscribed: "vision_bus/latest.jpg"
+    topic: "vision_bus/detections.json"
+    params: {color: "HSV 蓝/红分割", shape: "轮廓圆度 (棱柱≈0.78 / 圆柱≈0.92)"}
+
+  - name: gripper_camera         # 夹爪摄像头（装在夹爪上，朝前看）
+    type: publisher
+    topic: "vision_bus/gripper_latest.jpg, vision_bus/gripper_detections.json"
+    params: {resolution: [320, 180], fov_deg: 75.0,
+             mount: "手指带中点后方 0.075m、上方 0.085m（视锥内不含机械臂）"}
+
+  - name: controller             # 主控：只用夹爪相机判断 + 直角走位抓取放置
+    type: controller
+    script: "vision_pipeline_recorded.py"
+    subscribed: "vision_bus/gripper_detections.json"
+    params:
+      decision: "只看夹爪相机；检测框中心须接近画面中央才算“当前位置有物体”"
+      motion: "直角走位（只走轴向直线，不斜穿）"
+      grasp: "夹爪闭合到手指刚接触物体即停（checkCollision）"
+      place: "机械臂前伸送料，落点 x=0.380 水平线"
+      class_rule: "A类=蓝色棱柱→左料盒；B类=红色圆柱→右料盒"
+    outputs: "logs/trajectory_*.csv, logs/results_*.json, logs/errors_*.log, logs/summary_*.json"
+
+  - name: safety_monitor         # 安全监控（验收：无碰撞 / 不超关节限位）
+    type: monitor
+    script: "safety_monitor.py"
+    checks: ["关节限位", "与桌面/地面碰撞", "与非目标物碰撞", "自碰撞"]
+
+  - name: sim_logger             # 数据记录（轨迹 / 结果 / 错误）
+    type: logger
+    script: "sim_logger.py"
+
+launch:
+  entry: "launch_sim.py"          # python launch_sim.py <front|top|side> <输出mp4|none> <zh|en>
+  one_click: "start_sim.bat"      # Windows 双击启动
+  steps:
+    - "启动 CoppeliaSim 并载入场景"
+    - "等待 ZMQ 端口 23000 就绪"
+    - "缺少标定时自动运行 vision_calibrate.py"
+    - "运行 vision_pipeline_recorded.py（视觉分类抓取 + 录制）"
+    - "写入 logs/launch_*.log 与轨迹/结果/错误日志"
+
+acceptance:                       # 仿真验收标准对照
+  - item: "一个 Launch 文件启动完整仿真系统"
+    evidence: "launch_sim.py / start_sim.bat / launch.yaml"
+  - item: "连续抓取 5 次，至少成功 4 次"
+    evidence: "logs/summary_*.json（grasp_attempts / grasp_success / success_rate）"
+  - item: "无明显碰撞、不超关节限位"
+    evidence: "safety_monitor.py + logs/results_*.json 中 violations"
+  - item: "不可达目标时停止并输出明确错误"
+    evidence: "主控中的不可达/夹取失败判定 + logs/errors_*.log"
+  - item: "保存轨迹、执行结果与错误日志"
+    evidence: "logs/trajectory_*.csv, logs/results_*.json, logs/errors_*.log"
