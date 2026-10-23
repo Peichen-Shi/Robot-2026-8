@@ -1,0 +1,11 @@
+<launch>
+  <arg name="simulator_data_directory" default="$(env HOME)/vnav-builds/lab4/lab4_Data"/>
+  <arg name="gates_output_csv" default="$(env HOME)/lab4_results/gates.csv"/>
+  <node name="traj_vertices_publisher" pkg="planner_pkg"
+        type="traj_vertices_publisher" output="screen">
+    <param name="simulator_data_directory" value="$(arg simulator_data_directory)"/>
+    <param name="gates_output_csv" value="$(arg gates_output_csv)"/>
+    <param name="frame_id" value="world"/>
+    <param name="publish_frequency" value="5.0"/>
+  </node>
+</launch>

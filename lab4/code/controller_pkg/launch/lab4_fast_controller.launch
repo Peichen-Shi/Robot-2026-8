@@ -1,0 +1,8 @@
+<launch>
+  <!-- Start one persistent controller for the prepared-start trial runner.
+       The runner owns reference publication and records the entire mission. -->
+  <node name="controller_node" pkg="controller_pkg" type="controller_node"
+        clear_params="true" output="screen">
+    <rosparam command="load" file="$(find controller_pkg)/config/lab4_balanced.yaml"/>
+  </node>
+</launch>

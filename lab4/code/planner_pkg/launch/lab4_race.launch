@@ -1,0 +1,57 @@
+<launch>
+  <arg name="start_controller" default="true"/>
+  <arg name="simulator_data_directory" default="$(env HOME)/vnav-builds/lab4/lab4_Data"/>
+  <arg name="gates_output_csv" default="$(env HOME)/lab4_results/gates.csv"/>
+  <arg name="controller_config" default="$(find controller_pkg)/config/lab4_controller.yaml"/>
+  <arg name="publish_frequency" default="50.0"/>
+  <arg name="v_max" default="8.0"/>
+  <arg name="a_max" default="4.0"/>
+  <arg name="time_scale" default="3.0"/>
+  <arg name="target_duration" default="0.0"/>
+  <arg name="terminal_segment_time" default="0.0"/>
+  <arg name="exit_distance" default="1.0"/>
+  <arg name="kx" default="4.0"/>
+  <arg name="kv" default="5.0"/>
+  <arg name="kr" default="4.0"/>
+  <arg name="komega" default="1.5"/>
+  <arg name="ready_hold_duration" default="5.0"/>
+  <arg name="post_hold_duration" default="75.0"/>
+  <arg name="run_id" default="lab4-unset"/>
+  <arg name="visualization" default="true"/>
+  <arg name="rviz" default="true"/>
+  <arg name="rviz_config" default="$(find controller_pkg)/rviz/lab4.rviz"/>
+
+  <node name="traj_vertices_publisher" pkg="planner_pkg"
+        type="traj_vertices_publisher" output="screen">
+    <param name="simulator_data_directory" value="$(arg simulator_data_directory)"/>
+    <param name="gates_output_csv" value="$(arg gates_output_csv)"/>
+    <param name="frame_id" value="world"/>
+    <param name="publish_frequency" value="5.0"/>
+  </node>
+
+  <include file="$(find trajectory_generation)/launch/traj_following.launch">
+    <arg name="start_controller" value="$(arg start_controller)"/>
+    <arg name="controller_config" value="$(arg controller_config)"/>
+    <arg name="publish_frequency" value="$(arg publish_frequency)"/>
+    <arg name="v_max" value="$(arg v_max)"/>
+    <arg name="a_max" value="$(arg a_max)"/>
+    <arg name="time_scale" value="$(arg time_scale)"/>
+    <arg name="target_duration" value="$(arg target_duration)"/>
+    <arg name="terminal_segment_time" value="$(arg terminal_segment_time)"/>
+    <arg name="exit_distance" value="$(arg exit_distance)"/>
+    <arg name="kx" value="$(arg kx)"/>
+    <arg name="kv" value="$(arg kv)"/>
+    <arg name="kr" value="$(arg kr)"/>
+    <arg name="komega" value="$(arg komega)"/>
+    <arg name="ready_hold_duration" value="$(arg ready_hold_duration)"/>
+    <arg name="post_hold_duration" value="$(arg post_hold_duration)"/>
+    <arg name="run_id" value="$(arg run_id)"/>
+  </include>
+
+  <include if="$(arg visualization)"
+           file="$(find controller_pkg)/launch/lab4_visualization.launch">
+    <arg name="rviz" value="$(arg rviz)"/>
+    <arg name="rviz_config" value="$(arg rviz_config)"/>
+    <arg name="source_label" value="Live TESSE LAB4 race"/>
+  </include>
+</launch>

@@ -1,0 +1,61 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+Preferences:
+  PromptSaveOnExit: false
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Grid
+      Name: Ground Grid
+      Enabled: true
+      Alpha: 0.20
+      Cell Size: 1
+      Plane Cell Count: 60
+      Color: 135; 142; 150
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/MarkerArray
+      Name: LAB4 Visualization
+      Enabled: true
+      Marker Topic: /lab4_visualization/markers
+      Queue Size: 20
+      Namespaces:
+        legend: false
+        quadrotor: true
+        body_axes: true
+        actual_path: true
+        desired_path: true
+        race_gates: true
+        gate_numbers: false
+        desired_setpoint: false
+      Value: true
+  Global Options:
+    Fixed Frame: world
+    Background Color: 27; 31; 36
+    Frame Rate: 30
+  Tools:
+    - Class: rviz/Interact
+    - Class: rviz/MoveCamera
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Name: Endpoint Model Close-up
+      Distance: 5.0
+      Focal Point:
+        X: -38.6352
+        Y: 14.7964
+        Z: 2.5103
+      Pitch: 0.65
+      Yaw: 0.78
+      Target Frame: world
+      Near Clip Distance: 0.01
+    Saved: ~
+Window Geometry:
+  Width: 1368
+  Height: 836
+  X: 72
+  Y: 27
+  Hide Left Dock: true
+  Hide Right Dock: true

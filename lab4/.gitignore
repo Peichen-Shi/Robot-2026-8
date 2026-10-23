@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+ros_ws/
+new_runs/
+offline_reanalysis/
+*.bag
+*.bag.active
+*.mp4
+*.log

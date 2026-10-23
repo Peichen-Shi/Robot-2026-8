@@ -1,0 +1,26 @@
+<launch>
+  <arg name="simulator_data_directory" default="$(env HOME)/vnav-builds/lab4/lab4_Data"/>
+  <arg name="gates_output_csv" default="$(env HOME)/lab4_results/gates.csv"/>
+  <arg name="controller_config" default="$(find controller_pkg)/config/lab4_controller.yaml"/>
+  <arg name="kx" default="4.0"/>
+  <arg name="kv" default="5.0"/>
+  <arg name="kr" default="4.0"/>
+  <arg name="komega" default="1.5"/>
+
+  <node name="controller_node" pkg="controller_pkg" type="controller_node" output="screen">
+    <rosparam command="load" file="$(arg controller_config)"/>
+    <param name="kx" value="$(arg kx)"/>
+    <param name="kv" value="$(arg kv)"/>
+    <param name="kr" value="$(arg kr)"/>
+    <param name="komega" value="$(arg komega)"/>
+  </node>
+  <node name="traj_vertices_publisher" pkg="planner_pkg"
+        type="traj_vertices_publisher" output="screen">
+    <param name="simulator_data_directory" value="$(arg simulator_data_directory)"/>
+    <param name="gates_output_csv" value="$(arg gates_output_csv)"/>
+    <param name="frame_id" value="world"/>
+    <param name="publish_frequency" value="5.0"/>
+  </node>
+  <node name="simple_traj_planner" pkg="planner_pkg"
+        type="simple_traj_planner" output="screen"/>
+</launch>

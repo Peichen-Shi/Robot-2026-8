@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find controller_pkg)/launch/visualization.launch">
+    <arg name="rviz_config"
+         value="$(find controller_pkg)/rviz/lab3_topdown.rviz"/>
+    <arg name="source_label" value="Live TESSE messages"/>
+  </include>
+</launch>

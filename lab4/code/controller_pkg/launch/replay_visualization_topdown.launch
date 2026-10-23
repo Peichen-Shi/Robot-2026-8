@@ -1,0 +1,13 @@
+<launch>
+  <arg name="bag"/>
+  <arg name="rate" default="1.0"/>
+  <arg name="start_paused" default="false"/>
+
+  <include file="$(find controller_pkg)/launch/replay_visualization.launch">
+    <arg name="bag" value="$(arg bag)"/>
+    <arg name="rate" value="$(arg rate)"/>
+    <arg name="start_paused" value="$(arg start_paused)"/>
+    <arg name="rviz_config"
+         value="$(find controller_pkg)/rviz/lab3_topdown.rviz"/>
+  </include>
+</launch>

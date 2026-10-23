@@ -1,0 +1,13 @@
+<launch>
+  <arg name="bag"/>
+  <arg name="rate" default="1.0"/>
+  <arg name="rviz_config" default="$(find controller_pkg)/rviz/lab4.rviz"/>
+  <param name="/use_sim_time" value="true"/>
+  <include file="$(find controller_pkg)/launch/lab4_visualization.launch">
+    <arg name="rviz_config" value="$(arg rviz_config)"/>
+    <arg name="source_label" value="NEW CLOSED-LOOP DATA REPLAY"/>
+  </include>
+  <!-- The bag contains /clock: do not enable an additional playback clock. -->
+  <node name="lab4_bag_replay" pkg="rosbag" type="play"
+        args="--delay=3.0 -r $(arg rate) $(arg bag)" output="screen"/>
+</launch>

@@ -1,0 +1,14 @@
+std_msgs/Header header
+uint32 trajectory_id
+string run_id
+string phase
+float64 planned_duration_s
+float64 mission_elapsed_s
+float64 trajectory_elapsed_s
+float64 sample_tau_s
+float64 ready_hold_required_s
+float64 post_hold_required_s
+bool trajectory_valid
+bool reference_complete
+bool fault
+string reason

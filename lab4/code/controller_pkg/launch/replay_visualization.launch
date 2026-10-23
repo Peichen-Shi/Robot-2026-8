@@ -1,0 +1,22 @@
+<launch>
+  <arg name="bag"/>
+  <arg name="rate" default="1.0"/>
+  <arg name="start_paused" default="false"/>
+  <arg name="rviz_config" default="$(find controller_pkg)/rviz/lab3.rviz"/>
+
+  <param name="/use_sim_time" value="true"/>
+
+  <!-- No trajectory publisher or controller is started during replay. -->
+  <include file="$(find controller_pkg)/launch/visualization.launch">
+    <arg name="rviz" value="true"/>
+    <arg name="rviz_config" value="$(arg rviz_config)"/>
+    <arg name="source_label" value="Source: original rosbag replay"/>
+  </include>
+
+  <node unless="$(arg start_paused)" name="lab3_bag_replay" pkg="rosbag"
+        type="play" args="--clock --rate $(arg rate) $(arg bag)"
+        output="screen"/>
+  <node if="$(arg start_paused)" name="lab3_bag_replay" pkg="rosbag"
+        type="play" args="--clock --pause --rate $(arg rate) $(arg bag)"
+        output="screen"/>
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+  <!-- The balanced13 snapshot, not the historical aggressive 14 s profile. -->
+  <node name="controller_node" pkg="controller_pkg" type="controller_node"
+        clear_params="true" output="screen">
+    <rosparam command="load" file="$(find controller_pkg)/config/lab4_balanced.yaml"/>
+  </node>
+</launch>

@@ -1,0 +1,19 @@
+<launch>
+  <arg name="rviz" default="true"/>
+  <arg name="source_label" default="Live TESSE LAB4 messages"/>
+  <arg name="rviz_config" default="$(find controller_pkg)/rviz/lab4.rviz"/>
+  <node name="lab4_visualization" pkg="controller_pkg"
+        type="lab4_visualization_node" output="screen">
+    <param name="fixed_frame" value="world"/>
+    <param name="source_label" value="$(arg source_label)"/>
+    <param name="max_points" value="4000"/>
+    <param name="sample_period" value="0.05"/>
+    <param name="minimum_point_distance" value="0.02"/>
+    <param name="publish_rate" value="20.0"/>
+    <param name="gate_width" value="2.4"/>
+    <param name="gate_height" value="2.4"/>
+    <param name="gate_beam_thickness" value="0.14"/>
+  </node>
+  <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz"
+        args="-d $(arg rviz_config)" output="screen"/>
+</launch>

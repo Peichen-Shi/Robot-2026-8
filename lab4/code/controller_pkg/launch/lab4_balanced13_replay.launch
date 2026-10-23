@@ -1,0 +1,13 @@
+<launch>
+  <arg name="bag"/>
+  <arg name="rate" default="1.0"/>
+  <arg name="rviz_config" default="$(find controller_pkg)/rviz/lab4.rviz"/>
+  <param name="/use_sim_time" value="true"/>
+  <include file="$(find controller_pkg)/launch/lab4_visualization.launch">
+    <arg name="rviz_config" value="$(arg rviz_config)"/>
+    <arg name="source_label" value="balanced13_01 - RECORDED DATA REPLAY"/>
+  </include>
+  <!-- The recorded /clock is the only clock source. Actuator commands are not replayed. -->
+  <node name="balanced13_bag_replay" pkg="rosbag" type="play" output="screen"
+    args="--delay=3.0 -r $(arg rate) $(arg bag) --topics /clock /current_state /desired_state /desired_state_stamped /desired_traj_vertices /trajectory_status /controller_diagnostics"/>
+</launch>

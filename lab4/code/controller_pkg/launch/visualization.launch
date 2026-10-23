@@ -1,0 +1,26 @@
+<launch>
+  <arg name="rviz" default="true"/>
+  <arg name="rviz_config"
+       default="$(find controller_pkg)/rviz/lab3.rviz"/>
+  <arg name="source_label" default="Live TESSE messages"/>
+  <arg name="max_points" default="2500"/>
+  <arg name="sample_period" default="0.05"/>
+
+  <!-- This node is display-only and never publishes actuator commands. -->
+  <node name="lab3_visualization" pkg="controller_pkg"
+        type="lab3_visualization_node" output="screen">
+    <remap from="current_state" to="/current_state"/>
+    <remap from="desired_state" to="/desired_state"/>
+    <param name="fixed_frame" value="world"/>
+    <param name="source_label" value="$(arg source_label)"/>
+    <param name="max_points" value="$(arg max_points)"/>
+    <param name="sample_period" value="$(arg sample_period)"/>
+    <param name="minimum_point_distance" value="0.01"/>
+    <param name="publish_rate" value="20.0"/>
+  </node>
+
+  <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz"
+        args="-d $(arg rviz_config) --fullscreen" output="screen">
+    <env name="DISABLE_ROS1_EOL_WARNINGS" value="1"/>
+  </node>
+</launch>

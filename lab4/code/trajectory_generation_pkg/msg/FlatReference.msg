@@ -1,0 +1,4 @@
+std_msgs/Header header
+trajectory_msgs/MultiDOFJointTrajectoryPoint state
+geometry_msgs/Vector3 jerk
+geometry_msgs/Vector3 snap

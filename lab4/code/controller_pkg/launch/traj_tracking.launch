@@ -1,0 +1,36 @@
+<launch>
+  <arg name="static_pose" default="false"/>
+  <arg name="radius" default="5.0"/>
+  <arg name="time_scale" default="2.0"/>
+  <arg name="height" default="2.0"/>
+
+  <!-- Final gains selected from the recorded tuning trials in lab3/results. -->
+  <arg name="kx" default="6.0"/>
+  <arg name="kv" default="4.5"/>
+  <arg name="kr" default="6.0"/>
+  <arg name="komega" default="1.2"/>
+
+  <node name="traj_publisher" pkg="controller_pkg" type="traj_publisher"
+        output="screen">
+    <param name="static_pose" value="$(arg static_pose)"/>
+    <param name="radius" value="$(arg radius)"/>
+    <param name="time_scale" value="$(arg time_scale)"/>
+    <param name="height" value="$(arg height)"/>
+    <param name="publish_frequency" value="500.0"/>
+  </node>
+
+  <node name="controller_node" pkg="controller_pkg" type="controller_node"
+        output="screen">
+    <param name="kx" value="$(arg kx)"/>
+    <param name="kv" value="$(arg kv)"/>
+    <param name="kr" value="$(arg kr)"/>
+    <param name="komega" value="$(arg komega)"/>
+    <param name="control_frequency" value="1000.0"/>
+    <param name="state_timeout" value="0.5"/>
+    <!-- Publish a zero command at 20 Hz while state data are missing/stale. -->
+    <param name="zero_command_period" value="0.05"/>
+    <!-- Runtime finite-difference tests on this binary identify both as world. -->
+    <param name="twist_linear_in_body" value="false"/>
+    <param name="twist_angular_in_body" value="false"/>
+  </node>
+</launch>

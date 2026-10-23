@@ -1,0 +1,40 @@
+<launch>
+  <arg name="start_controller" default="true"/>
+  <arg name="controller_config" default="$(find controller_pkg)/config/lab4_controller.yaml"/>
+  <arg name="publish_frequency" default="50.0"/>
+  <arg name="v_max" default="8.0"/>
+  <arg name="a_max" default="4.0"/>
+  <arg name="time_scale" default="1.0"/>
+  <arg name="target_duration" default="0.0"/>
+  <arg name="terminal_segment_time" default="0.0"/>
+  <arg name="exit_distance" default="1.0"/>
+  <arg name="kx" default="4.0"/>
+  <arg name="kv" default="5.0"/>
+  <arg name="kr" default="4.0"/>
+  <arg name="komega" default="1.5"/>
+  <arg name="ready_hold_duration" default="5.0"/>
+  <arg name="post_hold_duration" default="60.0"/>
+  <arg name="run_id" default="lab4-unset"/>
+
+  <node name="trajectory_generation_node" pkg="trajectory_generation"
+        type="trajectory_generation_node" output="screen">
+    <param name="publish_frequency" value="$(arg publish_frequency)"/>
+    <param name="v_max" value="$(arg v_max)"/>
+    <param name="a_max" value="$(arg a_max)"/>
+    <param name="time_scale" value="$(arg time_scale)"/>
+    <param name="target_duration" value="$(arg target_duration)"/>
+    <param name="terminal_segment_time" value="$(arg terminal_segment_time)"/>
+    <param name="minimum_segment_time" value="0.10"/>
+    <param name="exit_distance" value="$(arg exit_distance)"/>
+    <param name="ready_hold_duration" value="$(arg ready_hold_duration)"/>
+    <param name="post_hold_duration" value="$(arg post_hold_duration)"/>
+    <param name="run_id" value="$(arg run_id)"/>
+  </node>
+  <node if="$(arg start_controller)" name="controller_node" pkg="controller_pkg" type="controller_node" output="screen" clear_params="true">
+    <rosparam command="load" file="$(arg controller_config)"/>
+    <param name="kx" value="$(arg kx)"/>
+    <param name="kv" value="$(arg kv)"/>
+    <param name="kr" value="$(arg kr)"/>
+    <param name="komega" value="$(arg komega)"/>
+  </node>
+</launch>
