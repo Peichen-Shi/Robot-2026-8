@@ -2,6 +2,8 @@
   "goal_first_gate_to_last_gate_ms": 5000,
   "gate_order_and_geometry_changed": false,
   "clock_scaling": false,
+  "required_observed_successes": 4,
+  "qualification_attempts": 5,
   "default": "balanced_baseline.yaml, target 13 s, start height 0.7 m",
   "baseline_recheck_ms": 10219.952565474956,
   "candidates": [
@@ -21,6 +23,15 @@
       "one_complete_run_ms": 9255.504910312993,
       "minimum_remaining_clearance_m": 0.013505120181124042,
       "repeat_status": "not yet qualified; narrow-clearance candidate",
+      "promoted_to_default": false
+    },
+    {
+      "profile": "balanced_tilt72.yaml",
+      "target_duration_s": 12.0,
+      "start_height_m": 2.67,
+      "one_complete_run_ms": 8999.752174032665,
+      "minimum_remaining_clearance_m": 0.4069175790810553,
+      "qualification_state": "candidate; independent repeat series in progress",
       "promoted_to_default": false
     }
   ],
