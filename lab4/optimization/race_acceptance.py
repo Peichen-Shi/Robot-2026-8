@@ -19,18 +19,24 @@ def evaluate_run(directory):
         'no independently verified reference completion',
         'less than 60 seconds continuous terminal hold after settling',
         'whole-run position limits exceeded')]
-    statuses=[]
+    statuses=[];terminal=[]
     with rosbag.Bag(str(directory/(meta['run_id']+'.bag'))) as bag:
-        for _,s,t in bag.read_messages(topics=['/trajectory_status']):
-            if s.trajectory_id>0:statuses.append(s)
-    finished=any(s.phase=='FINISHED' and s.reference_complete and s.sample_tau_s>=s.planned_duration_s-1e-6 for s in statuses)
+        for topic,s,t in bag.read_messages(topics=['/trajectory_status','/controller_diagnostics']):
+            if topic=='/trajectory_status' and s.trajectory_id>0:statuses.append(s)
+            elif topic=='/controller_diagnostics' and s.task_phase_name in ('POST_RACE_HOLD','FINISHED'):
+                norm=lambda v:math.sqrt(v.x*v.x+v.y*v.y+v.z*v.z)
+                terminal.append((s.header.stamp.to_sec(),norm(s.position_error),norm(s.velocity),norm(s.body_angular_velocity)))
+    finished=any(s.phase in ('POST_RACE_HOLD','FINISHED') and s.reference_complete and s.sample_tau_s>=s.planned_duration_s-1e-6 for s in statuses)
+    tail=[r for r in terminal if r[0]>=terminal[-1][0]-1] if terminal else []
+    terminal_ok=len(tail)>=20 and all(r[1]<=.3 and r[2]<=.2 and r[3]<=.5 for r in tail)
     ids={(s.run_id,s.trajectory_id) for s in statuses}
     crossings=list(csv.DictReader((directory/'analysis/gate_crossings.csv').open()))
     all_crossed=len(crossings)==12 and all(r['passed']=='True' for r in crossings)
     finite=[m.get('first_gate_to_last_gate_s'),m.get('actual_speed_peak_mps')]
     checks=dict(original_twelve_gates_unchanged=same_gates,all_ordered_forward_gates=all_crossed,
         positive_finite_actual_time=all(v is not None and math.isfinite(v) and v>0 for v in finite),
-        complete_reference_and_finished=finished,single_trial=len(ids)==1,
+        complete_published_reference=finished,single_trial=len(ids)==1,
+        stable_exit_last_second=terminal_ok,
         no_fault_clock_reset_or_long_gap=not forbidden,
         collision_telemetry_enabled=meta.get('collision_telemetry_enabled') is True,
         no_reported_mission_collision=not m.get('collision_events_during_mission'))

@@ -154,6 +154,8 @@ class Trials:
                     time_scale=self.options.time_scale if self.options else 3., exit_distance_m=1.,
                     post_hold_s=self.options.post_hold, preflight='separate from mission; never reposition during bag')
         meta['collision_telemetry_enabled']=rospy.get_param('/tesse/tesse_ros_bridge/publish_collisions',False)
+        meta['race_exit_observation_s']=self.options.exit_observation
+        meta['long_hold_completed']=self.options.exit_observation<=0
         initial = self.state.pose.pose.position
         meta['actual_initial_position_m'] = [initial.x, initial.y, initial.z]
         meta['target_duration_s']=self.options.target_duration if self.options else 0.
@@ -225,6 +227,13 @@ class Trials:
                         raise RuntimeError('simulator collision: '+self.last_collision)
                     if self.status.fault:
                         raise RuntimeError('planner fault: '+self.status.reason)
+                    # Racing qualification does not claim a 60-second hover.
+                    # Keep the original 75 s generator setting, but end this
+                    # recording after reference end + a declared exit window.
+                    if (self.options.exit_observation>0 and self.status.reference_complete and
+                        self.status.phase in ('POST_RACE_HOLD','FINISHED') and
+                        self.status.trajectory_elapsed_s >= self.status.planned_duration_s+self.options.exit_observation):
+                        break
                     if self.status.phase == 'FINISHED':
                         finished_at = finished_at or rospy.get_time()
                         if rospy.get_time()-finished_at >= 5.:
@@ -236,7 +245,7 @@ class Trials:
                 time.sleep(.05)
             else:
                 raise RuntimeError('trial timed out or interrupted')
-            meta['recording_outcome'] = 'reference finished; physical acceptance requires analyzer'
+            meta['recording_outcome'] = 'reference endpoint observed; physical racing acceptance requires analyzer'
         except Exception as error:
             meta['recording_outcome'] = 'failed: '+str(error)
         finally:
@@ -289,6 +298,7 @@ if __name__ == '__main__':
     p.add_argument('--output-root', required=True)
     p.add_argument('--post-hold',type=float,default=75.)
     p.add_argument('--race-scoring',action='store_true',help='First-to-last gate task; keep old strict checker output separately')
+    p.add_argument('--exit-observation',type=float,default=5.,help='Recorded seconds after reference end; 0 retains original long-hold workflow')
     p.add_argument('--count', type=int, default=3)
     p.add_argument('--first-index',type=int,default=1)
     p.add_argument('--subset-csv')

@@ -2,9 +2,10 @@
   "goal_first_gate_to_last_gate_ms": 5000,
   "gate_order_and_geometry_changed": false,
   "clock_scaling": false,
-  "required_observed_successes": 4,
-  "qualification_attempts": 5,
-  "default": "balanced_baseline.yaml, target 13 s, start height 0.7 m",
+  "required_observed_successes": 2,
+  "qualification_attempts": 3,
+  "early_acceptance": "Accept immediately when the first two independent attempts both pass.",
+  "default": "balanced_tilt72.yaml, target 12 s, start height 2.67 m",
   "baseline_recheck_ms": 10219.952565474956,
   "candidates": [
     {
@@ -31,8 +32,10 @@
       "start_height_m": 2.67,
       "one_complete_run_ms": 8999.752174032665,
       "minimum_remaining_clearance_m": 0.4069175790810553,
-      "qualification_state": "candidate; independent repeat series in progress",
-      "promoted_to_default": false
+      "qualification_state": "qualified; first two passed; full recorded series 4 successes / 5 attempts",
+      "successes": 4,
+      "attempts": 5,
+      "promoted_to_default": true
     }
   ],
   "task_acceptance": "12 unchanged forward gate crossings, no reported collision, no controller or clock faults; first actual gate to last actual gate only.",

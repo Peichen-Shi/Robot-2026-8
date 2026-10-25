@@ -1,0 +1,53 @@
+{
+  "passed": false,
+  "checks": {
+    "original_twelve_gates_unchanged": true,
+    "all_ordered_forward_gates": false,
+    "positive_finite_actual_time": true,
+    "complete_published_reference": false,
+    "single_trial": true,
+    "stable_exit_last_second": false,
+    "no_fault_clock_reset_or_long_gap": false,
+    "collision_telemetry_enabled": true,
+    "no_reported_mission_collision": false
+  },
+  "run_id": "airborne_T12_q_01_01",
+  "first_gate_to_last_gate_ms": 2335.0656559528034,
+  "passed_gates": 4,
+  "gate_width_m": 2.4,
+  "gate_height_m": 2.4,
+  "body_margin_m": 0.18,
+  "ignored_legacy_criteria": [
+    "whole-record position aggregate",
+    "60-second terminal observation"
+  ],
+  "legacy_stability_result": {
+    "actual_stable_full_route": false,
+    "failure_reasons": [
+      "incomplete sequential gate crossings",
+      "less than 60 seconds continuous terminal hold after settling",
+      "missing independent terminal phase start",
+      "no independently verified reference completion",
+      "simulator reported collision during mission",
+      "whole-run position limits exceeded"
+    ],
+    "reference_full_route": false,
+    "terminal_hold_duration_s": 0.0
+  },
+  "failure_reasons": [
+    "incomplete sequential gate crossings",
+    "missing independent terminal phase start",
+    "simulator reported collision during mission"
+  ],
+  "minimum_clearance_m": null,
+  "racing_metrics": {
+    "angular_speed_max_rad_s": 5.799815240797711,
+    "duration_s": 4.0,
+    "position_max_m": 3.504102468888988,
+    "position_p95_m": 3.3196497918263947,
+    "position_rmse_m": 1.8478387774546923,
+    "speed_max_mps": 16.247972784095744,
+    "yaw_error_max_deg": 57.83328197262549
+  },
+  "actual_speed_peak_mps": 16.247972784095744
+}

@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": {
+    "original_twelve_gates_unchanged": true,
+    "all_ordered_forward_gates": true,
+    "positive_finite_actual_time": true,
+    "complete_reference_and_finished": true,
+    "single_trial": true,
+    "no_fault_clock_reset_or_long_gap": true,
+    "collision_telemetry_enabled": true,
+    "no_reported_mission_collision": true
+  },
+  "run_id": "airborne_T12_confirm01_01",
+  "first_gate_to_last_gate_ms": 9046.688585771562,
+  "passed_gates": 12,
+  "gate_width_m": 2.4,
+  "gate_height_m": 2.4,
+  "body_margin_m": 0.18,
+  "ignored_legacy_criteria": [
+    "whole-record position aggregate",
+    "60-second terminal observation"
+  ],
+  "legacy_stability_result": {
+    "actual_stable_full_route": true,
+    "failure_reasons": [],
+    "reference_full_route": true,
+    "terminal_hold_duration_s": 70.06000000000017
+  },
+  "failure_reasons": [],
+  "minimum_clearance_m": 0.42570403311706917,
+  "racing_metrics": {
+    "angular_speed_max_rad_s": 6.567662939670826,
+    "duration_s": 10.720000000000027,
+    "position_max_m": 3.830015889637034,
+    "position_p95_m": 3.4644518734481555,
+    "position_rmse_m": 1.449721999077852,
+    "speed_max_mps": 15.68737962942081,
+    "yaw_error_max_deg": 54.77385454295534
+  },
+  "actual_speed_peak_mps": 15.68737962942081
+}
