@@ -1,0 +1,29 @@
+{
+  "goal_first_gate_to_last_gate_ms": 5000,
+  "gate_order_and_geometry_changed": false,
+  "clock_scaling": false,
+  "default": "balanced_baseline.yaml, target 13 s, start height 0.7 m",
+  "baseline_recheck_ms": 10219.952565474956,
+  "candidates": [
+    {
+      "profile": "balanced_tau01.yaml",
+      "target_duration_s": 12.5,
+      "start_height_m": 0.7,
+      "one_complete_run_ms": 9732.063293214309,
+      "repeat_passed": false,
+      "repeat_failure": "Gate 4 crossing exceeded the unchanged effective aperture by 0.0442 m.",
+      "promoted_to_default": false
+    },
+    {
+      "profile": "balanced_tilt72.yaml",
+      "target_duration_s": 12.0,
+      "start_height_m": 0.7,
+      "one_complete_run_ms": 9255.504910312993,
+      "minimum_remaining_clearance_m": 0.013505120181124042,
+      "repeat_status": "not yet qualified; narrow-clearance candidate",
+      "promoted_to_default": false
+    }
+  ],
+  "task_acceptance": "12 unchanged forward gate crossings, no reported collision, no controller or clock faults; first actual gate to last actual gate only.",
+  "legacy_criteria": "Original metrics, P95 and extended-stability results are retained separately, not overwritten by race acceptance."
+}
