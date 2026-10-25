@@ -1,0 +1,31 @@
+{
+  "run_id": "qualify61_3_01",
+  "source": "new real TESSE closed-loop experiment",
+  "gains": [
+    16.0,
+    8.0,
+    24.0,
+    4.0
+  ],
+  "time_scale": 1.0,
+  "exit_distance_m": 1.0,
+  "post_hold_s": 75.0,
+  "preflight": "separate from mission; never reposition during bag",
+  "collision_telemetry_enabled": true,
+  "simulator_headless": false,
+  "clock_rate_modified": false,
+  "race_exit_observation_s": 8.0,
+  "long_hold_completed": false,
+  "actual_initial_position_m": [
+    0.4,
+    8.0,
+    2.645079
+  ],
+  "target_duration_s": 8.850000000000001,
+  "terminal_segment_s": 1.8,
+  "start_mode": "prepared airborne start",
+  "timing": "report TRACKING-to-last-gate and mission-to-last-gate separately; preflight not included",
+  "gate_handoff": "planner isolated on nonlatched /active_race_gates; original official gate topic unmodified; bag open verified before planning",
+  "recording_open_confirmed_before_mission": true,
+  "recording_outcome": "reference endpoint observed; physical racing acceptance requires analyzer"
+}

@@ -25,7 +25,7 @@ catkin init
 catkin config --extend "${LAB4_UNDERLAY:-/opt/ros/noetic}" --cmake-args -DCMAKE_BUILD_TYPE=Release
 if [[ -n "${LAB4_UNDERLAY:-}" ]]; then
   # An existing Noetic underlay must already provide the vendored dependencies.
-  catkin build --no-status -j2 -p1 --no-deps trajectory_generation controller_pkg planner_pkg tesse_ros_bridge
+  catkin build --no-status -j2 -p1 --no-deps mav_planning_msgs mav_visualization trajectory_generation controller_pkg planner_pkg tesse_ros_bridge
 else
   # The upstream glog/NLopt wrappers download their original source archives.
   catkin build --no-status -j2 -p1

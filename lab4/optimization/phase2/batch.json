@@ -1,0 +1,38 @@
+[
+  {
+    "prefix": "phase2_protect3_6.4_stock",
+    "schedule": "protect3_6.4",
+    "profile": "stock",
+    "total": 9.15
+  },
+  {
+    "prefix": "phase2_uniform_6.4_response32",
+    "schedule": "uniform_6.4",
+    "profile": "response32",
+    "total": 9.150000000000002
+  },
+  {
+    "prefix": "phase2_protect3_6.4_response32",
+    "schedule": "protect3_6.4",
+    "profile": "response32",
+    "total": 9.15
+  },
+  {
+    "prefix": "phase2_uniform_6.4_response40",
+    "schedule": "uniform_6.4",
+    "profile": "response40",
+    "total": 9.150000000000002
+  },
+  {
+    "prefix": "phase2_uniform_6.1_response32",
+    "schedule": "uniform_6.1",
+    "profile": "response32",
+    "total": 8.850000000000001
+  },
+  {
+    "prefix": "phase2_protect3_6.1_response40",
+    "schedule": "protect3_6.1",
+    "profile": "response40",
+    "total": 8.850000000000001
+  }
+]

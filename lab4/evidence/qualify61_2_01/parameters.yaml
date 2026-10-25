@@ -1,0 +1,682 @@
+controller_node:
+  arm_length: 0.3
+  attitude_feedforward: true
+  drag_coefficient: 1.0e-05
+  feedforward_clip_rate: true
+  feedforward_filter_tau: 0.02
+  feedforward_tracking_only: true
+  gravity: 9.81
+  inertia_x: 0.18
+  inertia_y: 0.26
+  inertia_z: 0.16
+  komega: 4.0
+  kr: 24.0
+  kv: 8.0
+  kx: 16.0
+  lift_coefficient: 0.001
+  mass: 1.0
+  maximum_moment_x: 12.0
+  maximum_moment_y: 12.0
+  maximum_moment_z: 7.0
+  maximum_reference_prediction: 0.04
+  maximum_thrust: 75.0
+  maximum_tilt_deg: 78.0
+  minimum_thrust: 0.0
+  minimum_vertical_force: 1.0
+  reference_prediction: true
+  reference_timeout: 0.5
+  state_timeout: 0.5
+  twist_angular_in_body: false
+  twist_linear_in_body: false
+  use_stamped_reference: true
+  zero_command_period: 0.05
+lab4_visualization:
+  fixed_frame: world
+  gate_beam_thickness: 0.14
+  gate_height: 2.4
+  gate_width: 2.4
+  max_points: 4000
+  minimum_point_distance: 0.02
+  publish_rate: 20.0
+  sample_period: 0.05
+  source_label: Live TESSE LAB4 messages
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_127_0_0_1__33053: http://127.0.0.1:33053/
+    host_127_0_0_1__33723: http://127.0.0.1:33723/
+    host_127_0_0_1__33747: http://127.0.0.1:33747/
+    host_127_0_0_1__33857: http://127.0.0.1:33857/
+    host_127_0_0_1__33919: http://127.0.0.1:33919/
+    host_127_0_0_1__33931: http://127.0.0.1:33931/
+    host_127_0_0_1__34027: http://127.0.0.1:34027/
+    host_127_0_0_1__34041: http://127.0.0.1:34041/
+    host_127_0_0_1__34181: http://127.0.0.1:34181/
+    host_127_0_0_1__34233: http://127.0.0.1:34233/
+    host_127_0_0_1__34429: http://127.0.0.1:34429/
+    host_127_0_0_1__34507: http://127.0.0.1:34507/
+    host_127_0_0_1__34585: http://127.0.0.1:34585/
+    host_127_0_0_1__35101: http://127.0.0.1:35101/
+    host_127_0_0_1__35405: http://127.0.0.1:35405/
+    host_127_0_0_1__35501: http://127.0.0.1:35501/
+    host_127_0_0_1__35741: http://127.0.0.1:35741/
+    host_127_0_0_1__35875: http://127.0.0.1:35875/
+    host_127_0_0_1__36239: http://127.0.0.1:36239/
+    host_127_0_0_1__36301: http://127.0.0.1:36301/
+    host_127_0_0_1__36487: http://127.0.0.1:36487/
+    host_127_0_0_1__36811: http://127.0.0.1:36811/
+    host_127_0_0_1__36833: http://127.0.0.1:36833/
+    host_127_0_0_1__37169: http://127.0.0.1:37169/
+    host_127_0_0_1__37243: http://127.0.0.1:37243/
+    host_127_0_0_1__37519: http://127.0.0.1:37519/
+    host_127_0_0_1__37601: http://127.0.0.1:37601/
+    host_127_0_0_1__38305: http://127.0.0.1:38305/
+    host_127_0_0_1__38881: http://127.0.0.1:38881/
+    host_127_0_0_1__38963: http://127.0.0.1:38963/
+    host_127_0_0_1__39139: http://127.0.0.1:39139/
+    host_127_0_0_1__39975: http://127.0.0.1:39975/
+    host_127_0_0_1__40173: http://127.0.0.1:40173/
+    host_127_0_0_1__40329: http://127.0.0.1:40329/
+    host_127_0_0_1__40563: http://127.0.0.1:40563/
+    host_127_0_0_1__41327: http://127.0.0.1:41327/
+    host_127_0_0_1__41419: http://127.0.0.1:41419/
+    host_127_0_0_1__41767: http://127.0.0.1:41767/
+    host_127_0_0_1__42141: http://127.0.0.1:42141/
+    host_127_0_0_1__42207: http://127.0.0.1:42207/
+    host_127_0_0_1__42363: http://127.0.0.1:42363/
+    host_127_0_0_1__42597: http://127.0.0.1:42597/
+    host_127_0_0_1__42737: http://127.0.0.1:42737/
+    host_127_0_0_1__42761: http://127.0.0.1:42761/
+    host_127_0_0_1__42779: http://127.0.0.1:42779/
+    host_127_0_0_1__42981: http://127.0.0.1:42981/
+    host_127_0_0_1__43007: http://127.0.0.1:43007/
+    host_127_0_0_1__43009: http://127.0.0.1:43009/
+    host_127_0_0_1__43057: http://127.0.0.1:43057/
+    host_127_0_0_1__43103: http://127.0.0.1:43103/
+    host_127_0_0_1__43107: http://127.0.0.1:43107/
+    host_127_0_0_1__43123: http://127.0.0.1:43123/
+    host_127_0_0_1__43335: http://127.0.0.1:43335/
+    host_127_0_0_1__43365: http://127.0.0.1:43365/
+    host_127_0_0_1__43543: http://127.0.0.1:43543/
+    host_127_0_0_1__43929: http://127.0.0.1:43929/
+    host_127_0_0_1__44143: http://127.0.0.1:44143/
+    host_127_0_0_1__44161: http://127.0.0.1:44161/
+    host_127_0_0_1__44249: http://127.0.0.1:44249/
+    host_127_0_0_1__44505: http://127.0.0.1:44505/
+    host_127_0_0_1__44881: http://127.0.0.1:44881/
+    host_127_0_0_1__45165: http://127.0.0.1:45165/
+    host_127_0_0_1__45353: http://127.0.0.1:45353/
+    host_127_0_0_1__45495: http://127.0.0.1:45495/
+    host_127_0_0_1__45569: http://127.0.0.1:45569/
+    host_127_0_0_1__45925: http://127.0.0.1:45925/
+    host_127_0_0_1__45931: http://127.0.0.1:45931/
+    host_127_0_0_1__45965: http://127.0.0.1:45965/
+    host_127_0_0_1__46149: http://127.0.0.1:46149/
+    host_127_0_0_1__46751: http://127.0.0.1:46751/
+rosversion: '1.17.4
+
+  '
+run_id: b8a8e608-d050-11f1-9139-39765ac9d0f5
+tesse:
+  quadrotor_control_interface:
+    command_timeout: 0.35
+    watchdog_rate: 20.0
+  tesse_ros_bridge:
+    accelerometer_bias_correlation_time: 500
+    accelerometer_bias_random_walk: 0.003
+    accelerometer_bias_random_walk_mu: 0.0
+    accelerometer_noise_density: 0.002
+    accelerometer_noise_density_mu: 0.0
+    body_frame_id: base_link
+    body_frame_id_gt: base_link_gt
+    camera_params:
+      DEPTH:
+        camera_id: depth_cam
+        compression: false
+        far_draw_dist: 200
+        frame_id: left_cam
+        height: 480
+        near_draw_dist: -0.05
+        num_channels: 1
+        pos_x: -0.05
+        pos_y: 0.0
+        pos_z: 0.0
+        quat_w: 1.0
+        quat_x: 0.0
+        quat_y: 0.0
+        quat_z: 0.0
+        vertical_fov: 60
+        width: 720
+      GRY_LEFT:
+        camera_id: left_cam
+        compression: false
+        frame_id: left_cam
+        num_channels: 1
+      GRY_RIGHT:
+        camera_id: right_cam
+        compression: false
+        frame_id: right_cam
+        num_channels: 1
+      RGB_LEFT:
+        camera_id: left_cam
+        compression: false
+        far_draw_dist: 50
+        frame_id: left_cam
+        height: 480
+        near_draw_dist: -0.05
+        num_channels: 3
+        pos_x: -0.05
+        pos_y: 0.0
+        pos_z: 0.0
+        quat_w: 1.0
+        quat_x: 0.0
+        quat_y: 0.0
+        quat_z: 0.0
+        vertical_fov: 60
+        width: 720
+      RGB_RIGHT:
+        camera_id: right_cam
+        compression: false
+        far_draw_dist: 50
+        frame_id: right_cam
+        height: 480
+        near_draw_dist: -0.05
+        num_channels: 3
+        pos_x: 0.05
+        pos_y: 0.0
+        pos_z: 0.0
+        quat_w: 1.0
+        quat_x: 0.0
+        quat_y: 0.0
+        quat_z: 0.0
+        vertical_fov: 60
+        width: 720
+      SEGMENTATION:
+        camera_id: seg_cam
+        compression: false
+        far_draw_dist: 50
+        frame_id: left_cam
+        height: 480
+        near_draw_dist: -0.05
+        num_channels: 3
+        pos_x: -0.05
+        pos_y: 0.0
+        pos_z: 0.0
+        quat_w: 1.0
+        quat_x: 0.0
+        quat_y: 0.0
+        quat_z: 0.0
+        vertical_fov: 60
+        width: 720
+      THIRD_PERSON:
+        camera_id: third_person
+        compression: false
+        far_draw_dist: 159
+        frame_id: third_person
+        height: 768
+        near_draw_dist: 0.3
+        num_channels: 3
+        pos_x: 0.0
+        pos_y: 0.7
+        pos_z: -1.2
+        quat_w: 0.9942158
+        quat_x: 0.1074007
+        quat_y: 0.0
+        quat_z: 0.0
+        vertical_fov: 90
+        width: 1024
+    clock_from_metadata_udp: true
+    drive_with_ackermann: false
+    enable_collision: true
+    enable_step_mode: false
+    frame_rate: 20.0
+    gyroscope_bias_correlation_time: 500
+    gyroscope_bias_random_walk: 1.9393e-05
+    gyroscope_bias_random_walk_mu: 0.0
+    gyroscope_noise_density: 0.00016968
+    gyroscope_noise_density_mu: 0.0
+    image_port: 9002
+    imu_rate: 200
+    initial_pose:
+      enabled: false
+    initial_scene: 1
+    lidar_params:
+      FRONT:
+        frame_id: front_lidar
+        lidar_id: front_lidar
+        pos_x: default
+        pos_y: default
+        pos_z: default
+        quat_w: default
+        quat_x: default
+        quat_y: default
+        quat_z: default
+        scan_beams: 1080
+        scan_max_angle: 3.92699
+        scan_max_range: 200
+        scan_min_angle: -0.785398
+      REAR:
+        frame_id: rear_lidar
+        lidar_id: rear_lidar
+        pos_x: default
+        pos_y: default
+        pos_z: default
+        quat_w: default
+        quat_x: default
+        quat_y: default
+        quat_z: default
+        scan_beams: 1080
+        scan_max_angle: 0.785398
+        scan_max_range: 200
+        scan_min_angle: -3.92699
+    lidar_port: 9006
+    lidar_udp_port: 9007
+    linear_velocity_noise_mu: 0.0
+    linear_velocity_noise_sigma: 0.1
+    map_frame_id: map
+    metadata_port: 9001
+    num_objects: 0
+    object_0:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_1:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_10:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_11:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_12:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_13:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_14:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_15:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_16:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_17:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_18:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_19:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_2:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_20:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_21:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_22:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_23:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_24:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_25:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_26:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_27:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_28:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_29:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_3:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_30:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_31:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_32:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_33:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_34:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_35:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_36:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_37:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_38:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_39:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_4:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_40:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_41:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_42:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_43:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_44:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_45:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_46:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_47:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_48:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_49:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_5:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_50:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_51:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_52:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_53:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_54:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_55:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_56:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_57:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_58:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_59:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_6:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_60:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_61:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_62:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_63:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_64:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_65:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_66:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_67:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_68:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_69:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_7:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_70:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_71:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_72:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_73:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_74:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_75:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_76:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_77:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_78:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_79:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    object_8:
+      id: 0
+      send_params: true
+      use_custom_pose: false
+    object_9:
+      id: 1
+      send_params: true
+      use_custom_pose: false
+    persistent_metadata_listener: true
+    position_noise_mu: 0.0
+    position_noise_sigma: 0.5
+    position_port: 9000
+    publish_clock: true
+    publish_collisions: true
+    publish_depth: false
+    publish_front_lidar: false
+    publish_imu: true
+    publish_imu_noise_biases: false
+    publish_metadata: true
+    publish_noisy_imu: false
+    publish_noisy_odom: false
+    publish_odom: true
+    publish_rear_lidar: false
+    publish_segmentation: false
+    publish_stereo_gry: false
+    publish_stereo_rgb: false
+    publish_third_pov: false
+    rotation_noise_mu: 0.0
+    rotation_noise_sigma: 0.05
+    scan_rate: 40.0
+    self_ip: 127.0.0.1
+    sim_ip: 127.0.0.1
+    step_port: 9005
+    teleop: false
+    udp_port: 9004
+    use_broadcast: true
+    use_gt_frames: true
+    world_frame_id: world
+traj_vertices_publisher:
+  gates_output_csv: /home/wanghanzhi/lab4_sub7_20261025/results/qualify61_2_01/gates.csv
+  simulator_data_directory: /home/wanghanzhi/vnav-builds/lab4/lab4_Data
+trajectory_generation_node:
+  gate_lateral_offsets:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  gate_vertical_offsets:
+  - 0.1299999999999999
+  - 0.55
+  - -0.08000000000000007
+  - -0.040000000000000036
+  - 0.1299999999999999
+  - 0.1299999999999999
+  - 0.1299999999999999
+  - -0.55
+  - 0.55
+  - 0.2897129999999999
+  - 0.2897129999999999
+  - 0.2897129999999999
+  post_hold_duration: 75.0
+  publish_frequency: 100.0
+  ready_hold_duration: 0.5
+  run_id: qualify61_2_01
+  segment_durations:
+  - 0.95
+  - 0.6386917399004864
+  - 0.633843274177405
+  - 0.6028919331880286
+  - 0.5131119791735608
+  - 0.5490989197583889
+  - 0.5266399333830678
+  - 0.5474751096431243
+  - 0.535116138265003
+  - 0.5273861542387783
+  - 0.5106746104447301
+  - 0.515070207827427
+  - 1.8
+  target_duration: 8.850000000000001
+  terminal_segment_time: 1.8
+  time_scale: 1.0
+use_sim_time: true

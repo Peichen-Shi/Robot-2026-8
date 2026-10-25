@@ -1,6 +1,7 @@
 #include <controller_pkg/ControllerDiagnostics.h>
 #include <controller_pkg/controller_math.h>
 #include <controller_pkg/attitude_feedforward.h>
+#include <controller_pkg/reference_prediction.h>
 #include <trajectory_generation/TrajectoryStatus.h>
 
 #include <geometry_msgs/Quaternion.h>
@@ -95,6 +96,11 @@ class ControllerNode {
     private_nh_.param("maximum_moment_y", maximum_moment_y_, 1.0);
     private_nh_.param("maximum_moment_z", maximum_moment_z_, 0.5);
     private_nh_.param("attitude_feedforward", attitude_feedforward_, false);
+    // During stationary holds, avoid differentiating feedback corrections.
+    private_nh_.param("feedforward_tracking_only", feedforward_tracking_only_, false);
+    private_nh_.param("feedforward_clip_rate", feedforward_clip_rate_, false);
+    private_nh_.param("reference_prediction", reference_prediction_, false);
+    private_nh_.param("maximum_reference_prediction", maximum_reference_prediction_, 0.04);
     private_nh_.param("feedforward_filter_tau", feedforward_filter_tau_, 0.03);
     private_nh_.param("use_stamped_reference", use_stamped_reference_, false);
 
@@ -105,7 +111,9 @@ class ControllerNode {
         inertia_z_ <= 0.0 || maximum_tilt_deg_ <= 0.0 ||
         maximum_tilt_deg_ >= 80.0 || minimum_vertical_force_ <= 0.0 ||
         maximum_thrust_ <= minimum_thrust_ || maximum_moment_x_ <= 0.0 ||
-        maximum_moment_y_ <= 0.0 || maximum_moment_z_ <= 0.0) {
+        maximum_moment_y_ <= 0.0 || maximum_moment_z_ <= 0.0 ||
+        !std::isfinite(maximum_reference_prediction_) ||
+        maximum_reference_prediction_ < 0.0 || maximum_reference_prediction_ > 0.10) {
       throw std::invalid_argument("invalid controller or safety-envelope parameter");
     }
 
@@ -201,6 +209,11 @@ class ControllerNode {
     tf2::Quaternion desired_quaternion;
     tf2::fromMsg(transform.rotation, desired_quaternion);
     desired_quaternion.normalize();
+    // Use causal jerk differences and the published analytic yaw acceleration
+    // for a short prediction to the current measurement's timestamp.
+    reference_jerk_.update(message.time_from_start.toSec(),desired_acceleration);
+    desired_yaw_acceleration_=std::isfinite(message.accelerations.front().angular.z)
+        ? message.accelerations.front().angular.z : 0.;
     desired_position_ = desired_position;
     desired_velocity_ = desired_velocity;
     desired_acceleration_ = desired_acceleration;
@@ -307,17 +320,23 @@ class ControllerNode {
     }
 
     try {
+      const double source_lag=reference_prediction_ && !reference_source_ros_time_.isZero()
+          ? (source_stamp-reference_source_ros_time_).toSec() : 0.;
+      const auto reference=controller_pkg::predictReference(
+          desired_position_,desired_velocity_,desired_acceleration_,reference_jerk_.jerk(),
+          desired_yaw_,desired_yaw_rate_,desired_yaw_acceleration_,
+          source_lag,maximum_reference_prediction_);
       const Eigen::Vector3d position_error =
-          current_position_ - desired_position_;
+          current_position_ - reference.position;
       const Eigen::Vector3d velocity_error =
-          current_velocity_world_ - desired_velocity_;
+          current_velocity_world_ - reference.velocity;
       const Eigen::Vector3d desired_force_unconstrained =
           -kx_ * position_error - kv_ * velocity_error +
-          mass_ * gravity_ * e3_ + mass_ * desired_acceleration_;
+          mass_ * gravity_ * e3_ + mass_ * reference.acceleration;
       const Eigen::Vector3d desired_force =
           limitDesiredForce(desired_force_unconstrained);
       const Eigen::Matrix3d desired_rotation =
-          controller_pkg::desiredRotation(desired_force, desired_yaw_);
+          controller_pkg::desiredRotation(desired_force, reference.yaw);
       const Eigen::Vector3d rotation_error = 0.5 * controller_pkg::vee(
           desired_rotation.transpose() * current_rotation_ -
           current_rotation_.transpose() * desired_rotation);
@@ -326,14 +345,17 @@ class ControllerNode {
       // not a yaw-only subtraction without the matching inertial terms.
       Eigen::Vector3d angular_rate_error = current_omega_body_;
       Eigen::Vector3d angular_feedforward = Eigen::Vector3d::Zero();
-      if (attitude_feedforward_) {
-        attitude_derivatives_.update(desired_rotation,source_stamp.toSec(),feedforward_filter_tau_);
+      if (attitude_feedforward_ &&
+          (!feedforward_tracking_only_ || task_phase_name_ == "TRACKING")) {
+        attitude_derivatives_.update(desired_rotation,source_stamp.toSec(),feedforward_filter_tau_,feedforward_clip_rate_);
         const Eigen::Vector3d omega=attitude_derivatives_.omega(),alpha=attitude_derivatives_.alpha();
         const Eigen::Matrix3d transport=current_rotation_.transpose()*desired_rotation;
         const Eigen::Vector3d desired_omega=transport*omega;
         angular_rate_error -= desired_omega;
         angular_feedforward=-inertia_*(controller_pkg::hat(current_omega_body_)*desired_omega-
             transport*alpha);
+      } else {
+        attitude_derivatives_.reset();
       }
 
       const double thrust_unconstrained =
@@ -364,7 +386,10 @@ class ControllerNode {
       }
       rotor_speed_publisher_.publish(command);
       fault_active_ = false;
-      publishDiagnostics(source_stamp, position_error, velocity_error,
+      // Keep diagnostic errors against the unmodified published reference.
+      // Prediction must not make the recorded tracking metrics look better.
+      publishDiagnostics(source_stamp, current_position_-desired_position_,
+                         current_velocity_world_-desired_velocity_,
                          rotation_error, angular_rate_error,
                          desired_force_unconstrained, desired_force,
                          thrust_unconstrained, thrust, moment_unconstrained,
@@ -481,6 +506,10 @@ class ControllerNode {
   double minimum_thrust_, maximum_thrust_;
   double maximum_moment_x_, maximum_moment_y_, maximum_moment_z_;
   bool attitude_feedforward_, use_stamped_reference_;
+  bool feedforward_tracking_only_;
+  bool feedforward_clip_rate_;
+  bool reference_prediction_;
+  double maximum_reference_prediction_;
   uint64_t reference_sequence_=0;
   double feedforward_filter_tau_;
   controller_pkg::AttitudeFeedforward attitude_derivatives_;
@@ -492,6 +521,8 @@ class ControllerNode {
   Eigen::Vector3d current_omega_body_;
   geometry_msgs::Quaternion current_message_orientation_;
   Eigen::Vector3d desired_position_, desired_velocity_, desired_acceleration_;
+  controller_pkg::ReferenceJerk reference_jerk_;
+  double desired_yaw_acceleration_=0.;
   double desired_yaw_, desired_yaw_rate_, desired_time_from_start_;
   bool have_current_state_, have_desired_state_, fault_active_;
   bool force_limited_, moment_limited_;

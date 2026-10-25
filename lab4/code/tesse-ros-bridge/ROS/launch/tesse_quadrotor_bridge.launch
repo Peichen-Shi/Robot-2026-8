@@ -20,6 +20,8 @@
   <!-- `publish_stereo_gry` toggles between publishing as mono8 (true) or rgb8 (false) \
         for both left/right stereo cameras -->
   <arg name="publish_clock"             default="true"/>
+  <arg name="clock_from_metadata_udp"   default="false"/>
+  <arg name="persistent_metadata_listener" default="false"/>
   <arg name="publish_metadata"          default="false"/>
   <arg name="publish_collisions"        default="false"/>
 
@@ -106,6 +108,8 @@
 
     <!-- Data to publish -->
     <param name="publish_clock"            value="$(arg publish_clock)"/>
+    <param name="clock_from_metadata_udp"  value="$(arg clock_from_metadata_udp)"/>
+    <param name="persistent_metadata_listener" value="$(arg persistent_metadata_listener)"/>
     <param name="publish_metadata"         value="$(arg publish_metadata)"/>
     <param name="publish_collisions"       value="$(arg publish_collisions)"/>
     <param name="publish_imu"              value="$(arg publish_imu)"/>

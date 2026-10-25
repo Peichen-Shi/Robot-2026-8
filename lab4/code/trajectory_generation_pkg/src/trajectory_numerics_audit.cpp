@@ -29,9 +29,9 @@ void printArray(const std::array<double,5>& values) {
 }
 
 int main(int argc, char** argv) {
-  if (argc < 2 || argc > 4) return 2;
+  if (argc < 2 || (argc > 4 && argc != 6)) return 2;
   const bool fast_allocation=argc>=3 && std::string(argv[2])=="--fast-allocation";
-  const double terminal_time=argc==4?std::stod(argv[3]):0.;
+  const double terminal_time=argc>=4?std::stod(argv[3]):0.;
   std::ifstream input(argv[1]);
   int count, sample_count;
   Eigen::Vector3d initial;
@@ -74,6 +74,19 @@ int main(int argc, char** argv) {
       for(size_t i=0;i<n;++i)times[i]=.1+(planned-terminal_time-.1*n)*times[i]/sum;
       times.back()=terminal_time;
     }
+  }
+  // Independently reconstruct a configured segment schedule from the recording.
+  if (argc == 6) {
+    if (std::string(argv[4]) != "--segment-times") return 2;
+    std::ifstream schedule(argv[5]);
+    std::vector<double> configured;
+    double value;
+    while (schedule >> value) {
+      if (!std::isfinite(value) || value < 0.1) return 3;
+      configured.push_back(value);
+    }
+    if (configured.size() != times.size()) return 3;
+    times = configured;
   }
   double total=0., maximum_condition=0., maximum_normalized_condition=0.;
   for (double& duration:times) {

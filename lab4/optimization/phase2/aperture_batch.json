@@ -1,0 +1,38 @@
+[
+  {
+    "prefix": "aperture_ap_T6.4_z0.55_y0.0_ap_stock",
+    "schedule": "ap_T6.4_z0.55_y0.0",
+    "profile": "ap_stock",
+    "total": 9.150000000000002
+  },
+  {
+    "prefix": "aperture_ap_T6.1_z0.55_y0.0_ap_torque",
+    "schedule": "ap_T6.1_z0.55_y0.0",
+    "profile": "ap_torque",
+    "total": 8.850000000000001
+  },
+  {
+    "prefix": "aperture_ap_T6.1_z0.55_y0.35_ap_torque",
+    "schedule": "ap_T6.1_z0.55_y0.35",
+    "profile": "ap_torque",
+    "total": 8.850000000000001
+  },
+  {
+    "prefix": "aperture_ap_T5.95_z0.55_y0.35_ap_balanced",
+    "schedule": "ap_T5.95_z0.55_y0.35",
+    "profile": "ap_balanced",
+    "total": 8.700000000000001
+  },
+  {
+    "prefix": "aperture_ap_T6.1_z0.55_y0.35_ap_no_prediction",
+    "schedule": "ap_T6.1_z0.55_y0.35",
+    "profile": "ap_no_prediction",
+    "total": 8.850000000000001
+  },
+  {
+    "prefix": "aperture_ap_T6.1_z0.65_y0.35_ap_stock",
+    "schedule": "ap_T6.1_z0.65_y0.35",
+    "profile": "ap_stock",
+    "total": 8.850000000000001
+  }
+]

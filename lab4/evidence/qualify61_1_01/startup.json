@@ -1,0 +1,22 @@
+{
+  "attempt": 1,
+  "simulator_pid": 525228,
+  "bridge_pid": 525266,
+  "headless": false,
+  "simulator_command": [
+    "/home/wanghanzhi/vnav-builds/lab4/lab4.x86_64",
+    "-screen-fullscreen",
+    "0",
+    "-screen-width",
+    "640",
+    "-screen-height",
+    "448",
+    "-screen-quality",
+    "Fastest",
+    "-job-worker-count",
+    "1",
+    "-logFile",
+    "/home/wanghanzhi/lab4_sub7_20261025/results/qualify61_1_startup/unity.log"
+  ],
+  "live_state_and_clock": true
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "prefix": "phase2b_uniform_6.4_response32_prediction",
+    "schedule": "uniform_6.4",
+    "profile": "response32_prediction",
+    "total": 9.150000000000002
+  },
+  {
+    "prefix": "phase2b_protect3_6.4_response32_prediction",
+    "schedule": "protect3_6.4",
+    "profile": "response32_prediction",
+    "total": 9.15
+  },
+  {
+    "prefix": "phase2b_uniform_6.4_stock_prediction",
+    "schedule": "uniform_6.4",
+    "profile": "stock_prediction",
+    "total": 9.150000000000002
+  },
+  {
+    "prefix": "phase2b_uniform_6.1_response32_prediction",
+    "schedule": "uniform_6.1",
+    "profile": "response32_prediction",
+    "total": 8.850000000000001
+  },
+  {
+    "prefix": "phase2b_protect3_6.1_response32_prediction",
+    "schedule": "protect3_6.1",
+    "profile": "response32_prediction",
+    "total": 8.850000000000001
+  },
+  {
+    "prefix": "phase2b_uniform_6.1_response40_prediction",
+    "schedule": "uniform_6.1",
+    "profile": "response40_prediction",
+    "total": 8.850000000000001
+  }
+]

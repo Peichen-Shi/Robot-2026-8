@@ -16,14 +16,22 @@ inline Eigen::Matrix3d hat(const Eigen::Vector3d& v) {
 class AttitudeFeedforward {
  public:
   void reset() { ready_=false; omega_.setZero(); alpha_.setZero(); }
-  void update(const Eigen::Matrix3d& rotation,double stamp,double tau) {
+  void update(const Eigen::Matrix3d& rotation,double stamp,double tau,
+              bool clip_excess_rate=false) {
     const double dt=stamp-last_stamp_;
     if (!ready_ || !std::isfinite(dt) || dt<0.005 || dt>0.10) {
       reset(); ready_=true; previous_=rotation; last_stamp_=stamp; return;
     }
     const Eigen::AngleAxisd delta(previous_.transpose()*rotation);
     Eigen::Vector3d measured=delta.axis()*delta.angle()/dt;
-    if (!measured.allFinite() || measured.norm()>8.) { reset(); return; }
+    if (!measured.allFinite()) { reset(); return; }
+    if (measured.norm()>8.) {
+      if (!clip_excess_rate) { reset(); return; }
+      // Preserve the rotation history through a fast corner. Resetting here
+      // repeatedly switches the entire feedforward off and on. This limits
+      // only the reference derivative; simulator and motor limits stay intact.
+      measured *= 8./measured.norm();
+    }
     const double gain=dt/(std::max(0.,tau)+dt);
     const Eigen::Vector3d next=omega_+gain*(measured-omega_);
     alpha_ += gain*((next-omega_)/dt-alpha_);

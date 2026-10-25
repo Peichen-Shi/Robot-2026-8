@@ -1,0 +1,13 @@
+Test project /home/wanghanzhi/lab4_sub7_20261025/ros_ws/build/controller_pkg
+    Start 1: allocation_math
+1/4 Test #1: allocation_math ..................   Passed    0.03 sec
+    Start 2: quaternion_conversions
+2/4 Test #2: quaternion_conversions ...........   Passed    0.02 sec
+    Start 3: so3_feedforward
+3/4 Test #3: so3_feedforward ..................   Passed    0.02 sec
+    Start 4: reference_prediction
+4/4 Test #4: reference_prediction .............   Passed    0.03 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.10 sec

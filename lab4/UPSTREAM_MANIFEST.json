@@ -1,0 +1,2821 @@
+{
+  "commit": "8f8f7af6668fbb2b51136e9c6570a54eb09300c7",
+  "entries": [
+    {
+      "path": "lab4/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "915cc70ba39a616f8d03eb3ed6af899f13381733",
+      "size": 92,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/915cc70ba39a616f8d03eb3ed6af899f13381733"
+    },
+    {
+      "path": "lab4/code/controller_pkg/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de878445f7bd9f4cb217e01437fb268c5e496632",
+      "size": 3172,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/de878445f7bd9f4cb217e01437fb268c5e496632"
+    },
+    {
+      "path": "lab4/code/controller_pkg/config/lab4_aggressive.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff85b078e3dbb2adff05b11ecd16af31f80fa6e",
+      "size": 648,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/5ff85b078e3dbb2adff05b11ecd16af31f80fa6e"
+    },
+    {
+      "path": "lab4/code/controller_pkg/config/lab4_analytic.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d6009de71f49ada1be50126a2e5216b59aa670f",
+      "size": 647,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3d6009de71f49ada1be50126a2e5216b59aa670f"
+    },
+    {
+      "path": "lab4/code/controller_pkg/config/lab4_balanced.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e4993b629db2b1dd9d7b00f51d98205a857eb4a",
+      "size": 647,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8e4993b629db2b1dd9d7b00f51d98205a857eb4a"
+    },
+    {
+      "path": "lab4/code/controller_pkg/config/lab4_controller.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f36f7907991be65974581f526c0df6562c4e337a",
+      "size": 739,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f36f7907991be65974581f526c0df6562c4e337a"
+    },
+    {
+      "path": "lab4/code/controller_pkg/config/lab4_fast.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49f7b2accf6603bea1ae2707407c72ea77fc9f97",
+      "size": 650,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/49f7b2accf6603bea1ae2707407c72ea77fc9f97"
+    },
+    {
+      "path": "lab4/code/controller_pkg/include/controller_pkg/attitude_feedforward.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b84d16a3c2b950c438c73dda2562fddd1d7d69d",
+      "size": 1524,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3b84d16a3c2b950c438c73dda2562fddd1d7d69d"
+    },
+    {
+      "path": "lab4/code/controller_pkg/include/controller_pkg/controller_math.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a37b6b22774b57acad5719442d946483ae91c1ad",
+      "size": 3274,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/a37b6b22774b57acad5719442d946483ae91c1ad"
+    },
+    {
+      "path": "lab4/code/controller_pkg/include/controller_pkg/flatness_feedforward.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a0b07e3ee4d7fec31dc60747fc5eb4e0195026e",
+      "size": 1926,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4a0b07e3ee4d7fec31dc60747fc5eb4e0195026e"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/lab4_balanced13_controller.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef14770a09fd623a9d025edb11ecbfcc0e0cdc15",
+      "size": 316,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ef14770a09fd623a9d025edb11ecbfcc0e0cdc15"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/lab4_balanced13_replay.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58632f073d8bbd6689041b281127e477adbc956f",
+      "size": 773,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/58632f073d8bbd6689041b281127e477adbc956f"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/lab4_fast_controller.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2aa527aa30976e7a7137cab5598d668a3d86c3",
+      "size": 393,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6a2aa527aa30976e7a7137cab5598d668a3d86c3"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/lab4_replay.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9974d8e7f6d5ba27142e6639a681477bb486c0fc",
+      "size": 614,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9974d8e7f6d5ba27142e6639a681477bb486c0fc"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/lab4_visualization.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aafde62c74ddce68b9ca6319754d55b7133f16a",
+      "size": 871,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1aafde62c74ddce68b9ca6319754d55b7133f16a"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/replay_visualization.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c63b79548c74725d82072ec9565be8c1fed8797",
+      "size": 896,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7c63b79548c74725d82072ec9565be8c1fed8797"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/replay_visualization_topdown.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e260c76ec4a376ab66fc50382b48bd5dcc061264",
+      "size": 446,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e260c76ec4a376ab66fc50382b48bd5dcc061264"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/traj_tracking.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32e0e0b5d1db1e8ff5ead5b117b3471760f48308",
+      "size": 1482,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/32e0e0b5d1db1e8ff5ead5b117b3471760f48308"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/visualization.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3be792c7de899dcb39f555040e775dfcca70971",
+      "size": 1111,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c3be792c7de899dcb39f555040e775dfcca70971"
+    },
+    {
+      "path": "lab4/code/controller_pkg/launch/visualization_topdown.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78b4a44035531fb62105b3261b1a6cac13c047ac",
+      "size": 254,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/78b4a44035531fb62105b3261b1a6cac13c047ac"
+    },
+    {
+      "path": "lab4/code/controller_pkg/msg/ControllerDiagnostics.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92782aa659198eea03bf2f559e52df4a266400bf",
+      "size": 1082,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/92782aa659198eea03bf2f559e52df4a266400bf"
+    },
+    {
+      "path": "lab4/code/controller_pkg/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ddc60494471ce90f63571bc1ac717309d829ef2",
+      "size": 1481,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4ddc60494471ce90f63571bc1ac717309d829ef2"
+    },
+    {
+      "path": "lab4/code/controller_pkg/rviz/lab3.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aa0e0c9c48d6528014d6be9b6412bac4ddb5f25",
+      "size": 2493,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/0aa0e0c9c48d6528014d6be9b6412bac4ddb5f25"
+    },
+    {
+      "path": "lab4/code/controller_pkg/rviz/lab3_topdown.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f63fe6064f22ceb9c5dcdc90563c2df806795db8",
+      "size": 2366,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f63fe6064f22ceb9c5dcdc90563c2df806795db8"
+    },
+    {
+      "path": "lab4/code/controller_pkg/rviz/lab4.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f094cdc9da1f9bf8752e9475f50c779d582da060",
+      "size": 2547,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f094cdc9da1f9bf8752e9475f50c779d582da060"
+    },
+    {
+      "path": "lab4/code/controller_pkg/rviz/lab4_closeup.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae2f419817a8b804d25fe52175884d1587105f58",
+      "size": 1307,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ae2f419817a8b804d25fe52175884d1587105f58"
+    },
+    {
+      "path": "lab4/code/controller_pkg/rviz/lab4_topdown.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7591c7206acd848c60a8d13db39846fc47aa5402",
+      "size": 2422,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7591c7206acd848c60a8d13db39846fc47aa5402"
+    },
+    {
+      "path": "lab4/code/controller_pkg/scripts/lab4_diagnostic_reference.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1f51bd2575208bba9eda46d2627f16b80bfc2b57",
+      "size": 3214,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1f51bd2575208bba9eda46d2627f16b80bfc2b57"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/controller_math_test.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db5dfcb8667a61b217e717611eff8532c4fb3a20",
+      "size": 2967,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/db5dfcb8667a61b217e717611eff8532c4fb3a20"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/controller_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "624838bf554d7de19bd25b992b0fe79075e52458",
+      "size": 23655,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/624838bf554d7de19bd25b992b0fe79075e52458"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/deliverable_1_api_test.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "780e3e56c9279bdcd75d88e05a206f7870c48beb",
+      "size": 1805,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/780e3e56c9279bdcd75d88e05a206f7870c48beb"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/feedforward_test.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727265714db894e97543c8f1206c169fb5243c39",
+      "size": 688,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/727265714db894e97543c8f1206c169fb5243c39"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/flatness_test.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e58c69f19114e8ed06f1120336a007354765c35",
+      "size": 997,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8e58c69f19114e8ed06f1120336a007354765c35"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/lab3_visualization_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26431e706a08ff1b346974b36ab63cc298dcbe44",
+      "size": 15572,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/26431e706a08ff1b346974b36ab63cc298dcbe44"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/lab4_visualization_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf39d102788fe38c10926d01a2577498149caec5",
+      "size": 22110,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/bf39d102788fe38c10926d01a2577498149caec5"
+    },
+    {
+      "path": "lab4/code/controller_pkg/src/traj_publisher.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d71791acec36000735ae0b3bb6856d6716f9f511",
+      "size": 4056,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d71791acec36000735ae0b3bb6856d6716f9f511"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94487b9516e57164cde23bec81c7aef250fd2a8f",
+      "size": 7,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/94487b9516e57164cde23bec81c7aef250fd2a8f"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5e3f649d835892b2549a6901b01f6c8cdcb03c1",
+      "size": 184,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/a5e3f649d835892b2549a6901b01f6c8cdcb03c1"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/cmake/catkin_simple-extras.cmake.em",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70b28398e0a99972c5ea4a960b4aa5a23b9dd447",
+      "size": 9224,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/70b28398e0a99972c5ea4a960b4aa5a23b9dd447"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88f5c88e415709332d061c5ec56f020af01fa67e",
+      "size": 552,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/88f5c88e415709332d061c5ec56f020af01fa67e"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65bae6255080ded936f3d242b65a93051c00590b",
+      "size": 16,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/65bae6255080ded936f3d242b65a93051c00590b"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/bar/include/bar/hello.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59898417038181205b62968b49da5a5252e7548d",
+      "size": 15,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/59898417038181205b62968b49da5a5252e7548d"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/bar/msg/HeaderString.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d8876532f9b33b0b19e14640f2e61796772c6f0",
+      "size": 28,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8d8876532f9b33b0b19e14640f2e61796772c6f0"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/bar/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba04f44dd91391bbda1c8265003093db7f0f78c5",
+      "size": 596,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ba04f44dd91391bbda1c8265003093db7f0f78c5"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/bar/src/hello.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c98a2a689840d01ae1581a927575d90d9bd6327",
+      "size": 244,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1c98a2a689840d01ae1581a927575d90d9bd6327"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/baz/include/baz/world.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "004b348b87c4d0f449eb05405d06ca79ba330cdf",
+      "size": 191,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/004b348b87c4d0f449eb05405d06ca79ba330cdf"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/baz/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac95aa66a35b2927ec501a212dadf16c8579ee5",
+      "size": 369,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/bac95aa66a35b2927ec501a212dadf16c8579ee5"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/catkin_simple",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8a4f8c2127bf74725cf14800dde7ea8aeec5c5c",
+      "size": 8,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/a8a4f8c2127bf74725cf14800dde7ea8aeec5c5c"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/foo/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9d374d84f4bcc5c7a71be41a81e02383e327067",
+      "size": 559,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c9d374d84f4bcc5c7a71be41a81e02383e327067"
+    },
+    {
+      "path": "lab4/code/dependencies/catkin_simple/test/scenarios/hello_world/foo/src/main.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2776f025dd978999f028be94cf00fb5281c521de",
+      "size": 114,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2776f025dd978999f028be94cf00fb5281c521de"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5545fc00ee01e3a6e4f927a492fd9694c05a8d6e",
+      "size": 228,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/5545fc00ee01e3a6e4f927a492fd9694c05a8d6e"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "527f9b3485e77dadc162bfa0b7ab5af12995a3f7",
+      "size": 4678,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/527f9b3485e77dadc162bfa0b7ab5af12995a3f7"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/DisableTests.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "523960f6457670aed56d201753ce89a29a462e55",
+      "size": 2376,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/523960f6457670aed56d201753ce89a29a462e55"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/FixWarning.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b05858cfb8722d8250a5ac1a256b575228752051",
+      "size": 2564,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b05858cfb8722d8250a5ac1a256b575228752051"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d82b8ad856e34548ca6a42bf468cefd80e849a25",
+      "size": 1555,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d82b8ad856e34548ca6a42bf468cefd80e849a25"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/StdVector.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7eb275cf119a1e333492c2c66267a66f32373ddb",
+      "size": 402,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7eb275cf119a1e333492c2c66267a66f32373ddb"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/cmake/eigen-extras.cmake.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8d4fa871e446161710220f9842b6df4c6a11ed2",
+      "size": 709,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c8d4fa871e446161710220f9842b6df4c6a11ed2"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5dd7bfbfdcb5e90bf19835898f15083a53b0985",
+      "size": 422,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c5dd7bfbfdcb5e90bf19835898f15083a53b0985"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_catkin/use-system-installation-of-eigen.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9795a0246490b1f0d94dacea3d56d7907bf29c3",
+      "size": 30,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c9795a0246490b1f0d94dacea3d56d7907bf29c3"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f95e5a4ff8a09daa49d6add16134f315aa943d4",
+      "size": 198,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2f95e5a4ff8a09daa49d6add16134f315aa943d4"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8da87e6a02e56606a85019f1a48be6e1ba67e078",
+      "size": 3514,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8da87e6a02e56606a85019f1a48be6e1ba67e078"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/cmake/eigen_checks-extras.cmake.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f43354475b1e1cd0a7ba4f06f8a6cad6d5f92f77",
+      "size": 155,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f43354475b1e1cd0a7ba4f06f8a6cad6d5f92f77"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/include/eigen-checks/entrypoint.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8c90c7b1d2cdd0ca47871d473075e32c943ae41",
+      "size": 2526,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c8c90c7b1d2cdd0ca47871d473075e32c943ae41"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/include/eigen-checks/glog.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47f1c61d61df3d4053bc83526e9fd0ccfc4c3e04",
+      "size": 4244,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/47f1c61d61df3d4053bc83526e9fd0ccfc4c3e04"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/include/eigen-checks/gtest.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e7e66f9ac07e74572f63442c1893c19e1d804f0",
+      "size": 2892,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4e7e66f9ac07e74572f63442c1893c19e1d804f0"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/include/eigen-checks/internal/gtest-equal.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "161dcc749b60ce6dd57333468db793f44ec4384d",
+      "size": 7095,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/161dcc749b60ce6dd57333468db793f44ec4384d"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e47b789be542c53cd1f4033354c250d255c04a",
+      "size": 701,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d4e47b789be542c53cd1f4033354c250d255c04a"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/src/eigen-checks.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bc0ea8de1c873e10a35ce7263770328d07ab86d",
+      "size": 1615,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6bc0ea8de1c873e10a35ce7263770328d07ab86d"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_glog-equal-double.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "448065ef50544d8910f9405fc18fe91e8c002e39",
+      "size": 3762,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/448065ef50544d8910f9405fc18fe91e8c002e39"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_glog-equal.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fda25dcac8ebf843aff50afcd66bba4cbce05b7",
+      "size": 3602,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9fda25dcac8ebf843aff50afcd66bba4cbce05b7"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_glog-near.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10cdaadcd1d09a5c8780ee801c3bd469c023f48e",
+      "size": 4023,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/10cdaadcd1d09a5c8780ee801c3bd469c023f48e"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_glog-zero-sized-types.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99bc0ce69f49a95b4dee30bef24a0d3c90f97576",
+      "size": 2303,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/99bc0ce69f49a95b4dee30bef24a0d3c90f97576"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_glog-zero.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cb916ca68f21618733a729e98ad9bc49504c946",
+      "size": 3158,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4cb916ca68f21618733a729e98ad9bc49504c946"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_gtest-equal-double.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca3605d846fe3102ac3c5054b59a20adc46f48f1",
+      "size": 3923,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ca3605d846fe3102ac3c5054b59a20adc46f48f1"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_gtest-equal.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7196cdbb5051fbdcb5ce09bf82ed0fc9dd9a83d0",
+      "size": 3343,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7196cdbb5051fbdcb5ce09bf82ed0fc9dd9a83d0"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_gtest-near.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb61a2d43f39b6ce7e2526ad4dd84b5fe623e89",
+      "size": 4047,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/efb61a2d43f39b6ce7e2526ad4dd84b5fe623e89"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_gtest-zero-sized-types.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eede49cac4528d3ec9b96cd6c9b4421a41b13a5",
+      "size": 2176,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1eede49cac4528d3ec9b96cd6c9b4421a41b13a5"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_gtest-zero.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3113af25ba368f2243f1731d049f992f2bc40c6",
+      "size": 2875,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e3113af25ba368f2243f1731d049f992f2bc40c6"
+    },
+    {
+      "path": "lab4/code/dependencies/eigen_checks/test/test_helper.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "251645c241291a3f235e4690535a8721701ba3e4",
+      "size": 5858,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/251645c241291a3f235e4690535a8721701ba3e4"
+    },
+    {
+      "path": "lab4/code/dependencies/glog_catkin/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "755d576f2c1b5d42c74d4c4994a5e26febaea0aa",
+      "size": 224,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/755d576f2c1b5d42c74d4c4994a5e26febaea0aa"
+    },
+    {
+      "path": "lab4/code/dependencies/glog_catkin/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76458e7e26ff0c31ba9800389e2df5295fdba79e",
+      "size": 1074,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/76458e7e26ff0c31ba9800389e2df5295fdba79e"
+    },
+    {
+      "path": "lab4/code/dependencies/glog_catkin/fix-unused-typedef-warning.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7be7ceb0e500e2c6dd08eb16d732b7727f7dc8c1",
+      "size": 4044,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7be7ceb0e500e2c6dd08eb16d732b7727f7dc8c1"
+    },
+    {
+      "path": "lab4/code/dependencies/glog_catkin/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6b958ee7bf6626c231d241f2a8c67327ce1dccd",
+      "size": 370,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e6b958ee7bf6626c231d241f2a8c67327ce1dccd"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/.clang-format",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0d63c7f81cb408d26039bd7fc8606941a34adb3",
+      "size": 50,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d0d63c7f81cb408d26039bd7fc8606941a34adb3"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_comm/CHANGELOG.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "853c3fc2d189dcee6e7c9bf7693bfcb89eeab38c",
+      "size": 891,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/853c3fc2d189dcee6e7c9bf7693bfcb89eeab38c"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_comm/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f30e042fec594c14a70e724a0099896f14ce633",
+      "size": 111,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9f30e042fec594c14a70e724a0099896f14ce633"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_comm/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fff4c362e67675fe95d3afa183fe482ce6fa13e",
+      "size": 1144,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3fff4c362e67675fe95d3afa183fe482ce6fa13e"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/CHANGELOG.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae800ee10bacefff69395b512c58e5325adf7cbf",
+      "size": 2418,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ae800ee10bacefff69395b512c58e5325adf7cbf"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df9371319e319d7de55920a2e65594f14d610353",
+      "size": 1084,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/df9371319e319d7de55920a2e65594f14d610353"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/cmake/export_flags.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52ba5e96f4b7b4af38d183fb6f124305b9301417",
+      "size": 56,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/52ba5e96f4b7b4af38d183fb6f124305b9301417"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/include/mav_msgs/common.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b52477ed569da57a41807221d463f5119a535b3e",
+      "size": 12695,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b52477ed569da57a41807221d463f5119a535b3e"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/include/mav_msgs/conversions.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9dcbc0860f7ef3d307226072157d1c58a0aa9b",
+      "size": 22735,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7b9dcbc0860f7ef3d307226072157d1c58a0aa9b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/include/mav_msgs/default_topics.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb25310a9a12293b278be9ce1541b030a576ed6",
+      "size": 3131,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/edb25310a9a12293b278be9ce1541b030a576ed6"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/include/mav_msgs/default_values.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24b637578f9de15dcffeecec3e3b8700c6a0c6bc",
+      "size": 1226,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/24b637578f9de15dcffeecec3e3b8700c6a0c6bc"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/include/mav_msgs/eigen_mav_msgs.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "100ac2109b261e8b08b559ace54298d3b0bf9491",
+      "size": 13868,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/100ac2109b261e8b08b559ace54298d3b0bf9491"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/Actuators.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3c7840ad237fd84641ef5fc997dd4fc7373b45f",
+      "size": 556,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c3c7840ad237fd84641ef5fc997dd4fc7373b45f"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/AttitudeThrust.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "822c85bb8a20ec2608afea61afc18d756f0de48a",
+      "size": 442,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/822c85bb8a20ec2608afea61afc18d756f0de48a"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/FilteredSensorData.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "615873b96e90e9045d3cc291546d6767bc8d2db1",
+      "size": 357,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/615873b96e90e9045d3cc291546d6767bc8d2db1"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/GpsWaypoint.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "395020c170af0f1c6fd90506789e7c927e081acb",
+      "size": 287,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/395020c170af0f1c6fd90506789e7c927e081acb"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/RateThrust.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "173582f51c961eb89fd1a7f29de0d907438aad70",
+      "size": 547,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/173582f51c961eb89fd1a7f29de0d907438aad70"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/RollPitchYawrateThrust.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c7a3471e73b144eaea0638df52b44f17190e99d",
+      "size": 989,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9c7a3471e73b144eaea0638df52b44f17190e99d"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/Status.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e815afd02e955371d65186a17c80bcb1cdb47126",
+      "size": 1359,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e815afd02e955371d65186a17c80bcb1cdb47126"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/msg/TorqueThrust.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "331c4d60a8c75132590f086a7d8378b2f619ac3e",
+      "size": 508,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/331c4d60a8c75132590f086a7d8378b2f619ac3e"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_msgs/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00bada9480680ad33628f59697753e54d899901b",
+      "size": 1278,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/00bada9480680ad33628f59697753e54d899901b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/CHANGELOG.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd6e1a60dca9b9be2a042146234af61e3a588adf",
+      "size": 808,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/cd6e1a60dca9b9be2a042146234af61e3a588adf"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf904e4c834fff015873d048a71dea144de25d07",
+      "size": 1147,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/cf904e4c834fff015873d048a71dea144de25d07"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/include/mav_planning_msgs/conversions.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a27c1811c948d6ef8eb7bc72cd6b16bb12eecc40",
+      "size": 4516,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/a27c1811c948d6ef8eb7bc72cd6b16bb12eecc40"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/include/mav_planning_msgs/conversions_deprecated.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "499d82c8fc16abee14d67111e9cbd4217262de31",
+      "size": 3997,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/499d82c8fc16abee14d67111e9cbd4217262de31"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/include/mav_planning_msgs/eigen_planning_msgs.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "062e45672bb4ac9f32392ba3c013ff99e1c9fea9",
+      "size": 1378,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/062e45672bb4ac9f32392ba3c013ff99e1c9fea9"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/mainpage.dox",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89eb47952e06b39fb986c1a1319369e353d4f373",
+      "size": 136,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/89eb47952e06b39fb986c1a1319369e353d4f373"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/Point2D.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f68f6b8123ec32714d48084523ee1e6ff1843ab",
+      "size": 67,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9f68f6b8123ec32714d48084523ee1e6ff1843ab"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/PointCloudWithPose.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f5f3c0b142af2b3263536fe1e8e19257df88efa",
+      "size": 104,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9f5f3c0b142af2b3263536fe1e8e19257df88efa"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/Polygon2D.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3902f315b0ef4b7fa2669098101772d4e9aa92a9",
+      "size": 132,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3902f315b0ef4b7fa2669098101772d4e9aa92a9"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/PolygonWithHoles.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b16315d7c5e18a7a03ceac1eede5074c5982e8d",
+      "size": 119,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1b16315d7c5e18a7a03ceac1eede5074c5982e8d"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/PolygonWithHolesStamped.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e52501e794f2712575969ad6d1f7181938be62b",
+      "size": 159,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1e52501e794f2712575969ad6d1f7181938be62b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/PolynomialSegment.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "250211f1b2ddb1c862cf48ebe775e3495a4f9d38",
+      "size": 784,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/250211f1b2ddb1c862cf48ebe775e3495a4f9d38"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/PolynomialSegment4D.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c166c4c05f44657b9d0d1e48042a89bc271978b",
+      "size": 436,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8c166c4c05f44657b9d0d1e48042a89bc271978b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/PolynomialTrajectory.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "295e1499a47f6bec4e069085920992b9fb37ac62",
+      "size": 45,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/295e1499a47f6bec4e069085920992b9fb37ac62"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/msg/PolynomialTrajectory4D.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "494d15800e31e55b1343c592f83ba348df325255",
+      "size": 47,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/494d15800e31e55b1343c592f83ba348df325255"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b1ac722a8c14a8ecfb4395ef03a52d1a18cc5c1",
+      "size": 1138,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3b1ac722a8c14a8ecfb4395ef03a52d1a18cc5c1"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/srv/ChangeNameService.srv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69a1798a2f649364369cadc190b8c4459eac7b2e",
+      "size": 102,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/69a1798a2f649364369cadc190b8c4459eac7b2e"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/srv/PlannerService.srv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "674cc98ad00fe9d552414b38b4b8151cefd950c7",
+      "size": 698,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/674cc98ad00fe9d552414b38b4b8151cefd950c7"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_planning_msgs/srv/PolygonService.srv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7548bd04ae136dc9ca18cb21232383e974008150",
+      "size": 217,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7548bd04ae136dc9ca18cb21232383e974008150"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_state_machine_msgs/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b31f13454bacdc3ff1523cf2f24adcf70958eff4",
+      "size": 335,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b31f13454bacdc3ff1523cf2f24adcf70958eff4"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_state_machine_msgs/msg/StartStopTask.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d40b802cfcc86191cfb12e2ef0809946f6ae85b6",
+      "size": 45,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d40b802cfcc86191cfb12e2ef0809946f6ae85b6"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_state_machine_msgs/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aceb937f8a14af382a1e12247407bc47e9154060",
+      "size": 510,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/aceb937f8a14af382a1e12247407bc47e9154060"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_state_machine_msgs/srv/RunTaskService.srv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49bc6220a4be18e541ff629a3f9fab4236fb4b58",
+      "size": 177,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/49bc6220a4be18e541ff629a3f9fab4236fb4b58"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_system_msgs/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66fefe427b4ad7177a9dd86372b845a9d8db8d52",
+      "size": 340,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/66fefe427b4ad7177a9dd86372b845a9d8db8d52"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_system_msgs/msg/CpuInfo.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2ea01b453c9497838ea8e7b44fa50cdde1b10ad",
+      "size": 369,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f2ea01b453c9497838ea8e7b44fa50cdde1b10ad"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_system_msgs/msg/ProcessInfo.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee91ca9cfd0dba519660991538686ee524449d6f",
+      "size": 395,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ee91ca9cfd0dba519660991538686ee524449d6f"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_comm/mav_system_msgs/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2a1372fd5797837b3176466e0f3317cd0ac877d",
+      "size": 495,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d2a1372fd5797837b3176466e0f3317cd0ac877d"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6e3ecbdf4dc57a8b36aa25d21f37206ca188aa8",
+      "size": 350,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e6e3ecbdf4dc57a8b36aa25d21f37206ca188aa8"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d7e47957b0112456ab5e50217d80dea2c4866c3",
+      "size": 573,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7d7e47957b0112456ab5e50217d80dea2c4866c3"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0ee81299bd368b4c38a7947d1651a1e32348313",
+      "size": 11558,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c0ee81299bd368b4c38a7947d1651a1e32348313"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/install/mav_trajectory_generation_https.rosinstall",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2ab5333bcb2ece61f1e7bf5a558daccf1fd84a4",
+      "size": 510,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e2ab5333bcb2ece61f1e7bf5a558daccf1fd84a4"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/install/mav_trajectory_generation_ssh.rosinstall",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af251a757da3e6ac89e17f30752ac978c5051d05",
+      "size": 486,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/af251a757da3e6ac89e17f30752ac978c5051d05"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/matlab/functions/feasibilityResultToString.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b1a9d364848d28d6e568b496373d230e2e514c1",
+      "size": 542,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9b1a9d364848d28d6e568b496373d230e2e514c1"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/matlab/test_feasibility_evaluation.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c708b6f7c42407986aa7e6dfb22c3f4164194562",
+      "size": 5203,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c708b6f7c42407986aa7e6dfb22c3f4164194562"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0351f01f067bbac6afe8a3b0315162064c36efb4",
+      "size": 1700,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/0351f01f067bbac6afe8a3b0315162064c36efb4"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/convolution.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d208a6f9825446e40b51b9594b822c3fd49387c7",
+      "size": 2405,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d208a6f9825446e40b51b9594b822c3fd49387c7"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/extremum.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "577333a3332a89dddbc97bb47148881fdb770ed4",
+      "size": 2086,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/577333a3332a89dddbc97bb47148881fdb770ed4"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/impl/polynomial_optimization_linear_impl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88f8dac494a7ae16c58fbec465d78167fb3a699a",
+      "size": 21059,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/88f8dac494a7ae16c58fbec465d78167fb3a699a"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64d284423922261359874aa501a2001e71d53bf1",
+      "size": 33556,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/64d284423922261359874aa501a2001e71d53bf1"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/io.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10cdb96dd70ae7899db8f39ef8eb3c71daf5b5b2",
+      "size": 2827,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/10cdb96dd70ae7899db8f39ef8eb3c71daf5b5b2"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/motion_defines.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31a467c9a7ec9299d6657b7eeb6aae4766e6cd11",
+      "size": 1744,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/31a467c9a7ec9299d6657b7eeb6aae4766e6cd11"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/polynomial.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f34d4be41db17d234c6819e6b2a28f80e09a955a",
+      "size": 10372,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f34d4be41db17d234c6819e6b2a28f80e09a955a"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/polynomial_optimization_linear.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ec8d44ce2acb2ceaa56f9d0a29542141fb7428f",
+      "size": 13312,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6ec8d44ce2acb2ceaa56f9d0a29542141fb7428f"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/polynomial_optimization_nonlinear.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1cbe5bf9c82fa4cfc515092707469ebdc0ddaaf",
+      "size": 13255,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/a1cbe5bf9c82fa4cfc515092707469ebdc0ddaaf"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/rpoly/rpoly_ak1.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8801e88bfa68d3ae7b1f2f3f8621ad76da39e8be",
+      "size": 1125,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8801e88bfa68d3ae7b1f2f3f8621ad76da39e8be"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/segment.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ee730e2003f95e4dc3e883946e91fdc8c542a32",
+      "size": 5840,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8ee730e2003f95e4dc3e883946e91fdc8c542a32"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/test_utils.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceab85db2e667a8051dba8dfde928dd664bd3c51",
+      "size": 2363,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ceab85db2e667a8051dba8dfde928dd664bd3c51"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/timing.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc8e1780a4cedc8508306222f3d7fc48b627f298",
+      "size": 6061,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/bc8e1780a4cedc8508306222f3d7fc48b627f298"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/trajectory.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24765e3a3be61b5e9ee96aec51132432b91fe578",
+      "size": 6051,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/24765e3a3be61b5e9ee96aec51132432b91fe578"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/trajectory_sampling.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04336aaaad8c77c17a3c788e73f7653410b7dd86",
+      "size": 2650,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/04336aaaad8c77c17a3c788e73f7653410b7dd86"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/include/mav_trajectory_generation/vertex.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f92791d1abb551e129558fb7aaa31c61a29a6f4",
+      "size": 7841,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4f92791d1abb551e129558fb7aaa31c61a29a6f4"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bf04384788ccc0382204f651902a7aa31d2d75f",
+      "size": 967,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6bf04384788ccc0382204f651902a7aa31d2d75f"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/io.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "401b33040e73a6a873e5e96af5128881f2ce59f0",
+      "size": 9403,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/401b33040e73a6a873e5e96af5128881f2ce59f0"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/motion_defines.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab0ea53e5d4cb1869a8e776d597ff471d58707d9",
+      "size": 2676,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ab0ea53e5d4cb1869a8e776d597ff471d58707d9"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/polynomial.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd2171823269d71e6a1a005dfd59c3ff613ded78",
+      "size": 7382,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/dd2171823269d71e6a1a005dfd59c3ff613ded78"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/polynomial_timing_evaluation.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68d4e58062c0f6060fedb641c5bb954cf7189d98",
+      "size": 4546,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/68d4e58062c0f6060fedb641c5bb954cf7189d98"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/rpoly/rpoly_ak1.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b29c1c773b5ccfcb7378b168069b0810f4df988b",
+      "size": 29869,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b29c1c773b5ccfcb7378b168069b0810f4df988b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/segment.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc8c0133d78208e2b5c8754ba108f4bf3d33ee9e",
+      "size": 9332,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/dc8c0133d78208e2b5c8754ba108f4bf3d33ee9e"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/timing.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b8d69a74d54f67c9a04c7425fc16a93df0a4acb",
+      "size": 6077,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7b8d69a74d54f67c9a04c7425fc16a93df0a4acb"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/trajectory.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83cd6d5dfffd8ca5b11b5392beb19a5fe6afebce",
+      "size": 14914,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/83cd6d5dfffd8ca5b11b5392beb19a5fe6afebce"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/trajectory_sampling.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e4d70798418930406a03f457726acfef822b77b",
+      "size": 7898,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/0e4d70798418930406a03f457726acfef822b77b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/src/vertex.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29abec7309e43396bfe385dd304e9fce1092ebc8",
+      "size": 10713,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/29abec7309e43396bfe385dd304e9fce1092ebc8"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/test/test_polynomial.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "143a8381311be391fd62cb7dcc5722758c263a81",
+      "size": 5699,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/143a8381311be391fd62cb7dcc5722758c263a81"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation/test/test_polynomial_optimization.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7b11d14ae841146443ce9bad44b6ff9cdae193c",
+      "size": 35509,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f7b11d14ae841146443ce9bad44b6ff9cdae193c"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23e92d1c8859673ff3a8a83442a49ffea130a904",
+      "size": 583,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/23e92d1c8859673ff3a8a83442a49ffea130a904"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/cfg/firefly_params.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12eac78f9a4f8fb1765c9ce412f2a656f3ee190",
+      "size": 22,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b12eac78f9a4f8fb1765c9ce412f2a656f3ee190"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/cfg/rviz_view_firefly.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5db4667aea30e73c79b8cfc3fab479b44e75ea0",
+      "size": 9275,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f5db4667aea30e73c79b8cfc3fab479b44e75ea0"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/cfg/rviz_view_voliro.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "138c4857f8d1f8aeafe094d48e047a333240b74c",
+      "size": 12517,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/138c4857f8d1f8aeafe094d48e047a333240b74c"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/cfg/voliro_params.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab0b26006d345a1c270d1658660b6f1bdadf0761",
+      "size": 54,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ab0b26006d345a1c270d1658660b6f1bdadf0761"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/include/mav_trajectory_generation_example/example_planner.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af5d8363ee748e91faade32330368eb05582c13e",
+      "size": 1847,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/af5d8363ee748e91faade32330368eb05582c13e"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/launch/example.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8946fcc16fa28574a64003fd3fb61a6b69a8071",
+      "size": 3079,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d8946fcc16fa28574a64003fd3fb61a6b69a8071"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/launch/example_6dof.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97970a45c1a94dd298f833006eded6543bb7ef3b",
+      "size": 3501,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/97970a45c1a94dd298f833006eded6543bb7ef3b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a781f715c5862ff497482acf4d2a2bd90762d0f",
+      "size": 797,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3a781f715c5862ff497482acf4d2a2bd90762d0f"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/src/example_planner.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d238665dcb877c154de40f10263b699819b95e",
+      "size": 5106,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/92d238665dcb877c154de40f10263b699819b95e"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/src/example_planner_6dof.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ecf41529aa7594b4fe3b8972c371fe97bdc64b3",
+      "size": 7771,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4ecf41529aa7594b4fe3b8972c371fe97bdc64b3"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/src/example_planner_6dof_node.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb9f7f4f01fbe4511d35f551d59b671aafe72e98",
+      "size": 2008,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/eb9f7f4f01fbe4511d35f551d59b671aafe72e98"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_example/src/example_planner_node.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "894810b518cf7e0dc6de3ba62b7881613be65562",
+      "size": 1576,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/894810b518cf7e0dc6de3ba62b7881613be65562"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52849729280c2c7a9afac37e34da4e898a62bf9c",
+      "size": 1574,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/52849729280c2c7a9afac37e34da4e898a62bf9c"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/feasibility_analytic.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e8cb4379480d8531127f78f50e0e86ac7c2aecd",
+      "size": 3434,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/0e8cb4379480d8531127f78f50e0e86ac7c2aecd"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/feasibility_base.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec1bbbfa85aaf4433f2d3c9b60eb5aaa397d9510",
+      "size": 4933,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ec1bbbfa85aaf4433f2d3c9b60eb5aaa397d9510"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/feasibility_recursive.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b96fc74f5148b0a081ecf08cd645d4baaec025eb",
+      "size": 3827,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b96fc74f5148b0a081ecf08cd645d4baaec025eb"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/feasibility_sampling.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b2588cc48ac3287eb5c3a230ed4675cc979fee",
+      "size": 2227,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/19b2588cc48ac3287eb5c3a230ed4675cc979fee"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/input_constraints.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b24d13cf96b1bb8004fd8b966056cf9f08fd91a2",
+      "size": 2589,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b24d13cf96b1bb8004fd8b966056cf9f08fd91a2"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/ros_conversions.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "747cde2fc9d0cac077e20fc090600a2746f7cfe3",
+      "size": 2064,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/747cde2fc9d0cac077e20fc090600a2746f7cfe3"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/ros_visualization.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61985a7da674f834f47ae21bbc800f57f5e3dfb3",
+      "size": 3450,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/61985a7da674f834f47ae21bbc800f57f5e3dfb3"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/include/mav_trajectory_generation_ros/trajectory_sampler_node.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b17681d69883db1e71668bf2460e9db36617cd4",
+      "size": 2998,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8b17681d69883db1e71668bf2460e9db36617cd4"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d31eeb20c224c30daf254dbd683da7dc3759265",
+      "size": 1047,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2d31eeb20c224c30daf254dbd683da7dc3759265"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/feasibility_analytic.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84f2102263217a1e52f7c4eb01f1d28db2c84243",
+      "size": 9336,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/84f2102263217a1e52f7c4eb01f1d28db2c84243"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/feasibility_base.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b84544c59210290f50081825b723f4737d5c407",
+      "size": 5770,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2b84544c59210290f50081825b723f4737d5c407"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/feasibility_recursive.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6601065e17b8730b782bfccf396194befdca699",
+      "size": 12646,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b6601065e17b8730b782bfccf396194befdca699"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/feasibility_sampling.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2842c74d8a7dc4aa34a7f3b0ecbee0c6beee7bfb",
+      "size": 5422,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2842c74d8a7dc4aa34a7f3b0ecbee0c6beee7bfb"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/input_constraints.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c383cf22eb3b6a1e9b153945131c531482a0127",
+      "size": 5306,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1c383cf22eb3b6a1e9b153945131c531482a0127"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/ros_conversions.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4dbc495027df4eaff913a87c0545f74e1e3d650",
+      "size": 6336,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d4dbc495027df4eaff913a87c0545f74e1e3d650"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/ros_visualization.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bfd589c3a94b5ef71aafcdacfec98eb0a7d9057",
+      "size": 10512,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6bfd589c3a94b5ef71aafcdacfec98eb0a7d9057"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/time_evaluation_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdabc60697d30fe55386b1c3eeb955db1a5f0d1d",
+      "size": 35370,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/cdabc60697d30fe55386b1c3eeb955db1a5f0d1d"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/src/trajectory_sampler_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2d3d3366a07dbd8095013c09baf9a9f8620c126",
+      "size": 5517,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c2d3d3366a07dbd8095013c09baf9a9f8620c126"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_trajectory_generation_ros/test/test_feasibility.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d840a8aad8e6e55177fc1b620839272e70b878c",
+      "size": 14279,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7d840a8aad8e6e55177fc1b620839272e70b878c"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a263be255091a52a8efa5a44176fe16e48ff1b7",
+      "size": 726,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7a263be255091a52a8efa5a44176fe16e48ff1b7"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/include/mav_visualization/helpers.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8419d91a5932bb29dea6d819a6150240e463383b",
+      "size": 6943,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8419d91a5932bb29dea6d819a6150240e463383b"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/include/mav_visualization/hexacopter_marker.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3da0f3767eff604d7f88ae3bd2983431601f2c51",
+      "size": 1078,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3da0f3767eff604d7f88ae3bd2983431601f2c51"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/include/mav_visualization/leica_marker.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e693244856d8514300c6f3d76aaf581e3ab986c7",
+      "size": 1010,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e693244856d8514300c6f3d76aaf581e3ab986c7"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/include/mav_visualization/marker_group.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8337f5bfff304ec79fdd7f13592a0fcfcd7defc0",
+      "size": 2125,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8337f5bfff304ec79fdd7f13592a0fcfcd7defc0"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/meshes/firefly_carbon.dae",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eca250e15189433988a6f1b5a67d6d9b0a875703",
+      "size": 2306561,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/eca250e15189433988a6f1b5a67d6d9b0a875703"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/meshes/firefly_cowl.dae",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1e11eb74b1cd7dd7fcb6d35592f2062eb821407",
+      "size": 10164,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b1e11eb74b1cd7dd7fcb6d35592f2062eb821407"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35c2b36c143ad6106b5c55080ef13ca26f36ae89",
+      "size": 910,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/35c2b36c143ad6106b5c55080ef13ca26f36ae89"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/src/hexacopter_marker.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "426c0d297973242eb10bbe3096f80103672e4cfa",
+      "size": 4220,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/426c0d297973242eb10bbe3096f80103672e4cfa"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/src/hexacopter_publisher.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb167a44ec71bc4e46e3006f9f8cb04d1e75c85c",
+      "size": 1723,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/fb167a44ec71bc4e46e3006f9f8cb04d1e75c85c"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/src/leica_marker.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b71a1ca4894dbb7705988b9e3b85ea81aa789eb6",
+      "size": 2925,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b71a1ca4894dbb7705988b9e3b85ea81aa789eb6"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/src/leica_publisher.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b38abcf900ca9f0eb284965ff745d5411e0f31a7",
+      "size": 1638,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b38abcf900ca9f0eb284965ff745d5411e0f31a7"
+    },
+    {
+      "path": "lab4/code/dependencies/mav_trajectory_generation/mav_visualization/src/marker_group.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71eebe17ffd87b878af7b8911f908f3a98062670",
+      "size": 4016,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/71eebe17ffd87b878af7b8911f908f3a98062670"
+    },
+    {
+      "path": "lab4/code/dependencies/nlopt/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b577031c4b1cd8b8527f401fedcabad53bcdc0c1",
+      "size": 225,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b577031c4b1cd8b8527f401fedcabad53bcdc0c1"
+    },
+    {
+      "path": "lab4/code/dependencies/nlopt/CATKIN_IGNORE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f34e88c5bed805dcbbc58cc61f9bbdb4e190f03",
+      "size": 92,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1f34e88c5bed805dcbbc58cc61f9bbdb4e190f03"
+    },
+    {
+      "path": "lab4/code/dependencies/nlopt/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cf1971165d71bc40798bb50225bab9cef574fd1",
+      "size": 1581,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6cf1971165d71bc40798bb50225bab9cef574fd1"
+    },
+    {
+      "path": "lab4/code/dependencies/nlopt/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68442548a9f27ca9e01cfcc42833ea29cbab227d",
+      "size": 7797,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/68442548a9f27ca9e01cfcc42833ea29cbab227d"
+    },
+    {
+      "path": "lab4/code/dependencies/nlopt/make_install_nlopt.sh.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dd8ff96a93f22f15bfaa59e2e6ae7d6c6dee874",
+      "size": 112,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7dd8ff96a93f22f15bfaa59e2e6ae7d6c6dee874"
+    },
+    {
+      "path": "lab4/code/dependencies/nlopt/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7ac2d7415f91f54ae5c9cec27770126bba14d6d",
+      "size": 488,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e7ac2d7415f91f54ae5c9cec27770126bba14d6d"
+    },
+    {
+      "path": "lab4/code/dependencies/nlopt/src/wrap_lib.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "lab4/code/dependencies/yaml_cpp_catkin/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "755d576f2c1b5d42c74d4c4994a5e26febaea0aa",
+      "size": 224,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/755d576f2c1b5d42c74d4c4994a5e26febaea0aa"
+    },
+    {
+      "path": "lab4/code/dependencies/yaml_cpp_catkin/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcb3fc74ab608ef3b01e355ed78db766e6cca8ea",
+      "size": 317,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/dcb3fc74ab608ef3b01e355ed78db766e6cca8ea"
+    },
+    {
+      "path": "lab4/code/dependencies/yaml_cpp_catkin/extra_version.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42988dd1badaa510f27475bf2d1fbd145ac8c2d4",
+      "size": 5786,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/42988dd1badaa510f27475bf2d1fbd145ac8c2d4"
+    },
+    {
+      "path": "lab4/code/dependencies/yaml_cpp_catkin/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e77c1da4eafaf6e0568dd5ce194b0e158856b6",
+      "size": 332,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/93e77c1da4eafaf6e0568dd5ce194b0e158856b6"
+    },
+    {
+      "path": "lab4/code/planner_pkg/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97b3b2d3ac09b55a0888e2c397a81f4a92e08dff",
+      "size": 1433,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/97b3b2d3ac09b55a0888e2c397a81f4a92e08dff"
+    },
+    {
+      "path": "lab4/code/planner_pkg/include/csv.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "049b9e637ab0bdeef4d0d7c7b919c931dab62c73",
+      "size": 58698,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/049b9e637ab0bdeef4d0d7c7b919c931dab62c73"
+    },
+    {
+      "path": "lab4/code/planner_pkg/launch/lab4_fast.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ae8c3e2409a3a34bf327fd32c5512a7550e3174",
+      "size": 1187,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4ae8c3e2409a3a34bf327fd32c5512a7550e3174"
+    },
+    {
+      "path": "lab4/code/planner_pkg/launch/lab4_race.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0a2c0cf5e54715387ccd30c01f0376155486bac",
+      "size": 2728,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f0a2c0cf5e54715387ccd30c01f0376155486bac"
+    },
+    {
+      "path": "lab4/code/planner_pkg/launch/static_point_test.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5890cb468ecd9a66e6ae0aed0e9c8c5dd07f9f4",
+      "size": 1232,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d5890cb468ecd9a66e6ae0aed0e9c8c5dd07f9f4"
+    },
+    {
+      "path": "lab4/code/planner_pkg/launch/traj_gen.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0e4a7d4a9d358d06e3bf787376f2e9603076fd3",
+      "size": 557,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c0e4a7d4a9d358d06e3bf787376f2e9603076fd3"
+    },
+    {
+      "path": "lab4/code/planner_pkg/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e473f700ca7d4b4acd4a31668a8526dfc36f5f0b",
+      "size": 1043,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e473f700ca7d4b4acd4a31668a8526dfc36f5f0b"
+    },
+    {
+      "path": "lab4/code/planner_pkg/src/simple_traj_planner.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7f9ad648eee365495050e806b5f1d8310e9f592",
+      "size": 3331,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f7f9ad648eee365495050e806b5f1d8310e9f592"
+    },
+    {
+      "path": "lab4/code/planner_pkg/src/traj_planner.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f270f37301c0a0cec6e3f6cc881492bca6d8c0e1",
+      "size": 238,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f270f37301c0a0cec6e3f6cc881492bca6d8c0e1"
+    },
+    {
+      "path": "lab4/code/planner_pkg/src/traj_vertices_publisher.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65d0c7a83e395c13675f49251267f03552b5ccd8",
+      "size": 5886,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/65d0c7a83e395c13675f49251267f03552b5ccd8"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6c74aadb41c0c0753b72a33c2d53bcf270d496e",
+      "size": 615,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b6c74aadb41c0c0753b72a33c2d53bcf270d496e"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/install/tesse_ros_bridge.rosinstall",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b29865ff7f03686af429538c306ae53c26db27",
+      "size": 111,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e3b29865ff7f03686af429538c306ae53c26db27"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/launch/maps.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49552f71e4084271f803836f65799cdb3f3c796e",
+      "size": 437,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/49552f71e4084271f803836f65799cdb3f3c796e"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/launch/play_traj.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22ab5bc70c2703707a7f54a07257ca740c31b990",
+      "size": 1839,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/22ab5bc70c2703707a7f54a07257ca740c31b990"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/launch/record_traj.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93246eb5a5fcf824b72ca227c21e7abf6f03ce74",
+      "size": 2059,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/93246eb5a5fcf824b72ca227c21e7abf6f03ce74"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/launch/tesse_bridge.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b51ec0c71088a8be79f21491f2c240ac1b20d65e",
+      "size": 8091,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b51ec0c71088a8be79f21491f2c240ac1b20d65e"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/launch/tesse_quadrotor_bridge.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2085db4e2e53ef53d2468010c6f3c2afe053007",
+      "size": 7942,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/a2085db4e2e53ef53d2468010c6f3c2afe053007"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/maps/city.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c45e2278f9f83970f4a8bcf6f54869b2b4dfa638",
+      "size": 119,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c45e2278f9f83970f4a8bcf6f54869b2b4dfa638"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/maps/city_roads.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f60b157953ec081a8cc1fc67a2eb6ff1bb87356a",
+      "size": 125,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f60b157953ec081a8cc1fc67a2eb6ff1bb87356a"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/msg/CollisionStats.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1eac679a2f86f3f91adaa024d39435b9c94f056",
+      "size": 216,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e1eac679a2f86f3f91adaa024d39435b9c94f056"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7a06411f4766c93a35f8af263585bc5cdf57e54",
+      "size": 854,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c7a06411f4766c93a35f8af263585bc5cdf57e54"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/params/camera_params.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d84ae4d80effeb1c178173d53292ad16bb5b53c4",
+      "size": 2575,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d84ae4d80effeb1c178173d53292ad16bb5b53c4"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/params/lidar_params.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52537bac91f1f31af6419ae96df529335005ac3c",
+      "size": 861,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/52537bac91f1f31af6419ae96df529335005ac3c"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/params/map_tfs.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97b77842efb2a3855159d5961c35b1c2c45c59eb",
+      "size": 301,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/97b77842efb2a3855159d5961c35b1c2c45c59eb"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/params/noise_model.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "922fe1a62849216bd5753faf9219ea0bbe45c749",
+      "size": 901,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/922fe1a62849216bd5753faf9219ea0bbe45c749"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/params/object_spawn_params.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d28f673f69a7c75fbdddb1dcb94eac4c1bfa1484",
+      "size": 6544,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d28f673f69a7c75fbdddb1dcb94eac4c1bfa1484"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/params/tesse_agent_params.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6143390be2de41cc5452dca79d4c3996351cef0a",
+      "size": 750,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6143390be2de41cc5452dca79d4c3996351cef0a"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/rqt_multiplot/tesse.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec33460a5dd5bec9e294ff1c5f358046e51eead7",
+      "size": 63673,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ec33460a5dd5bec9e294ff1c5f358046e51eead7"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/rviz/tesse_rss.rviz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed2a2a718d4677f91a2eb32db13ca4bacaddd673",
+      "size": 7940,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ed2a2a718d4677f91a2eb32db13ca4bacaddd673"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/scripts/convert_static_tf_csv.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3c93b43bdaf5c94e99d65caf4ef4647cd5eb2a90",
+      "size": 1949,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3c93b43bdaf5c94e99d65caf4ef4647cd5eb2a90"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/scripts/restamp_rosbag.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f574724d83e1ad6c2df0651d277e869f02ee513c",
+      "size": 3508,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f574724d83e1ad6c2df0651d277e869f02ee513c"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/scripts/rosbag_record.bash",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ffaf18f8a45f1d38ae182258a7460067d805e798",
+      "size": 763,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ffaf18f8a45f1d38ae182258a7460067d805e798"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/scripts/traj_loader.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "86a897935d63bcec516791a42815311a74ff29ca",
+      "size": 1399,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/86a897935d63bcec516791a42815311a74ff29ca"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/scripts/traj_saver.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5afd83a787b2d8ec1f76f511e22f29fffff0c79b",
+      "size": 1230,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/5afd83a787b2d8ec1f76f511e22f29fffff0c79b"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/setup.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "66faa38de6dc0b602095b3eb4a1817aa3b5bf07b",
+      "size": 468,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/66faa38de6dc0b602095b3eb4a1817aa3b5bf07b"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/src/key_teleop/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f59db3d155be7f99fa1f26716fcaf42d51d5420",
+      "size": 1335,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6f59db3d155be7f99fa1f26716fcaf42d51d5420"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/src/key_teleop/key_teleop.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "565d2456922484f62bbabd2957cd6222463340ff",
+      "size": 10176,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/565d2456922484f62bbabd2957cd6222463340ff"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c421d7c98cba5a7a538f0c6dcb71954235f01bfd",
+      "size": 853,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c421d7c98cba5a7a538f0c6dcb71954235f01bfd"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/noise_simulator.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "87087fd8401a4fce03cf77e8383d7e2c6c29859f",
+      "size": 9454,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/87087fd8401a4fce03cf77e8383d7e2c6c29859f"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/quadrotor_control_interface.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1d070f681c420c04ac166b4a535b890b37bf17cb",
+      "size": 8100,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1d070f681c420c04ac166b4a535b890b37bf17cb"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/tesse_ros_node.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d21e46861615c8b33fd7f427aa56b42c3a740302",
+      "size": 47533,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d21e46861615c8b33fd7f427aa56b42c3a740302"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f3702d0c9ac133ecb4b47f71c1ce8f3bacf14166",
+      "size": 35934,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f3702d0c9ac133ecb4b47f71c1ce8f3bacf14166"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/srv/ObjectSpawnRequestService.srv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2fb96b6224d7cee029a92693050e55ac6602869",
+      "size": 229,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d2fb96b6224d7cee029a92693050e55ac6602869"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/srv/RepositionRequestService.srv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dd94381988022ca16b668b870360fde8d883a88",
+      "size": 177,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/5dd94381988022ca16b668b870360fde8d883a88"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/srv/SceneRequestService.srv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b2525f04c82670821c7a238a921de7fea177beb",
+      "size": 200,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6b2525f04c82670821c7a238a921de7fea177beb"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/cam_data_0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "277b92c4ac2ba4c69e91f78e004bcbbcc27fb2de",
+      "size": 319,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/277b92c4ac2ba4c69e91f78e004bcbbcc27fb2de"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/lidar_data_0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09a7bb12657a28e1c941f7b87a0222dd422fe1c8",
+      "size": 320,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/09a7bb12657a28e1c941f7b87a0222dd422fe1c8"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/metadata_0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efaa4199dfa9ded3a2d462e42b9a0bb6593d33f1",
+      "size": 488,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/efaa4199dfa9ded3a2d462e42b9a0bb6593d33f1"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/metadata_1.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c37b1e930f8abb3a9fe0d23e507567bf9fb6d01",
+      "size": 498,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/5c37b1e930f8abb3a9fe0d23e507567bf9fb6d01"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/metadata_2.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1503f824993a9969442287babd44910528ce87d3",
+      "size": 496,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1503f824993a9969442287babd44910528ce87d3"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/metadata_3.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "567ef134bff414360968353865793806b694a289",
+      "size": 528,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/567ef134bff414360968353865793806b694a289"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/metadata_4.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "154a840fb18e8fb9cf2a5dd6fb09aaec923ed5a9",
+      "size": 530,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/154a840fb18e8fb9cf2a5dd6fb09aaec923ed5a9"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/metadata_5.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "072a9c300a8f6265dcef1af759de74373343fb99",
+      "size": 520,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/072a9c300a8f6265dcef1af759de74373343fb99"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/metadata_6.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c962fedf36b596e2c07675a42113bebecb464c5f",
+      "size": 508,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c962fedf36b596e2c07675a42113bebecb464c5f"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/data/object_data_0.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "356529fc49a46b8c6de8b15aa20764d5a1927d25",
+      "size": 280,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/356529fc49a46b8c6de8b15aa20764d5a1927d25"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/test_metadata_ordering.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ca1da7ec823f6d48fb46006a90990a6ee7e81806",
+      "size": 1359,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ca1da7ec823f6d48fb46006a90990a6ee7e81806"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/test_quadrotor_watchdog.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "849459588c070dd7821c3d93984e51526da9a400",
+      "size": 2851,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/849459588c070dd7821c3d93984e51526da9a400"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/tests/test_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8df6afb499d92eb6fe3c71e8768e48240d39a7b5",
+      "size": 15502,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8df6afb499d92eb6fe3c71e8768e48240d39a7b5"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/trajectories/traj_apartment.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08c13d6127f25dcfc09a1a0e2269728018352426",
+      "size": 74020,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/08c13d6127f25dcfc09a1a0e2269728018352426"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/trajectories/traj_neighborhood.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1a80a5220d00e868db660d66935c8ad261d65eb",
+      "size": 121187,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/a1a80a5220d00e868db660d66935c8ad261d65eb"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/trajectories/traj_neighborhood_2.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2120bd0d62b1bfdc388cdcb0705ab1209db9414e",
+      "size": 257691,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2120bd0d62b1bfdc388cdcb0705ab1209db9414e"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/trajectories/traj_office_long.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92fbec1aeed89ac4a4763b34ee5fc3f711a8bcce",
+      "size": 274980,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/92fbec1aeed89ac4a4763b34ee5fc3f711a8bcce"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/ROS/trajectories/traj_subway_long.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7935d93d71aee7b9c8d6c0327fbfa71063aea12d",
+      "size": 395164,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7935d93d71aee7b9c8d6c0327fbfa71063aea12d"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89e08fb002e48e22363b7b3789a5470ffe71fea1",
+      "size": 18431,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/89e08fb002e48e22363b7b3789a5470ffe71fea1"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11ae514d0148ff32c9090135ba845ff834cba49d",
+      "size": 65,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/11ae514d0148ff32c9090135ba845ff834cba49d"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55043a46078c1ac9fb49b046d7c4a059816b3ecf",
+      "size": 2001,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/55043a46078c1ac9fb49b046d7c4a059816b3ecf"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/setup.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c41ed1c9e026f603ae9a0405fea7f03d16b93c46",
+      "size": 1716,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c41ed1c9e026f603ae9a0405fea7f03d16b93c46"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/src/tesse/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/src/tesse/env.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8cd370c6078bc640ca63e6abd27e954be21d95f1",
+      "size": 5931,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8cd370c6078bc640ca63e6abd27e954be21d95f1"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/src/tesse/msgs.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "39a66d6d1e43d1d79ee6881803ef70fcbb7a07ed",
+      "size": 15848,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/39a66d6d1e43d1d79ee6881803ef70fcbb7a07ed"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/src/tesse/utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "646aee16393bc1b5bcdd9c29797468f10ac75092",
+      "size": 4836,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/646aee16393bc1b5bcdd9c29797468f10ac75092"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/tests/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "lab4/code/tesse-ros-bridge/tesse-interface/tests/test_import.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b5278b5c75178a3776c34ed8e640fd9dbb7a0ae7",
+      "size": 1337,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b5278b5c75178a3776c34ed8e640fd9dbb7a0ae7"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c987fefde63da462d89bec0514f75ca810e1a1ca",
+      "size": 8488,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c987fefde63da462d89bec0514f75ca810e1a1ca"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/launch/traj_following.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c19d5a9f6a02682331eb13ca7ad2d34362ddcab7",
+      "size": 1954,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/c19d5a9f6a02682331eb13ca7ad2d34362ddcab7"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/msg/FlatReference.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47140370b9c54be91ab79bcea0d906df2ef39f4e",
+      "size": 128,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/47140370b9c54be91ab79bcea0d906df2ef39f4e"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/msg/TrajectoryStatus.msg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d45a63647a73ba128fff2067bf94813d75670099",
+      "size": 304,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d45a63647a73ba128fff2067bf94813d75670099"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/package.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89d0088e047d05ca45848aa6659c25217a10120b",
+      "size": 5362,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/89d0088e047d05ca45848aa6659c25217a10120b"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/src/spiral_pose_publisher.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa34c5e5a230fc8b1611a6341a0f439a50d2e7a9",
+      "size": 1552,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/fa34c5e5a230fc8b1611a6341a0f439a50d2e7a9"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/src/trajectory_generation_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce414718a784c90d94deedc0a3812d0d9a9149f1",
+      "size": 24449,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ce414718a784c90d94deedc0a3812d0d9a9149f1"
+    },
+    {
+      "path": "lab4/code/trajectory_generation_pkg/src/trajectory_numerics_audit.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b1dfe335215f0acd8e456bf9067a5e69b62a196",
+      "size": 7282,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2b1dfe335215f0acd8e456bf9067a5e69b62a196"
+    },
+    {
+      "path": "lab4/config/vnav-2020-lab4_static_tfs.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f9cb0466397269dd59792b76e488af3762b739",
+      "size": 24980,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/56f9cb0466397269dd59792b76e488af3762b739"
+    },
+    {
+      "path": "lab4/optimization/official_gates.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc103f4bbc1c1c1efea8d5ca064a025faa9339d5",
+      "size": 2063,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/fc103f4bbc1c1c1efea8d5ca064a025faa9339d5"
+    },
+    {
+      "path": "lab4/optimization/profiles/balanced_baseline.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e4993b629db2b1dd9d7b00f51d98205a857eb4a",
+      "size": 647,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8e4993b629db2b1dd9d7b00f51d98205a857eb4a"
+    },
+    {
+      "path": "lab4/optimization/profiles/balanced_tau01.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daf8c71206409a0d455b9caf47617b74fbac9e38",
+      "size": 647,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/daf8c71206409a0d455b9caf47617b74fbac9e38"
+    },
+    {
+      "path": "lab4/optimization/profiles/balanced_tilt72.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "323aab58d7cb36a9a6ab52000f0a8cbf397894c0",
+      "size": 647,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/323aab58d7cb36a9a6ab52000f0a8cbf397894c0"
+    },
+    {
+      "path": "lab4/optimization/profiles/balanced_tilt78.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d322e0e56b937d1d83dc219302df7ee00006bb90",
+      "size": 647,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d322e0e56b937d1d83dc219302df7ee00006bb90"
+    },
+    {
+      "path": "lab4/optimization/profiles/fast_attitude.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ecb1fbdf4bf484052454a83a9f484c288ee4974",
+      "size": 620,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/9ecb1fbdf4bf484052454a83a9f484c288ee4974"
+    },
+    {
+      "path": "lab4/optimization/progress.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9c116782dc6fdbe029ca88f526b3d06ce58440e",
+      "size": 2609,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b9c116782dc6fdbe029ca88f526b3d06ce58440e"
+    },
+    {
+      "path": "lab4/optimization/qualify_profile.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ffdfd1799c620648e5a196dc77a98e8ea0723915",
+      "size": 2511,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ffdfd1799c620648e5a196dc77a98e8ea0723915"
+    },
+    {
+      "path": "lab4/optimization/race_acceptance.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "619ea9a14e46a94e143d6dc410a35916446c8a78",
+      "size": 3695,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/619ea9a14e46a94e143d6dc410a35916446c8a78"
+    },
+    {
+      "path": "lab4/optimization/run_batch.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "02681f558cee9e1d740db340d19e571ed178b530",
+      "size": 546,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/02681f558cee9e1d740db340d19e571ed178b530"
+    },
+    {
+      "path": "lab4/optimization/run_best.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d0a196f28f8c1aa3ce9b50c53a244d58e7647586",
+      "size": 352,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d0a196f28f8c1aa3ce9b50c53a244d58e7647586"
+    },
+    {
+      "path": "lab4/optimization/run_trial.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "406cfd6bde72211f1dbce34d37b2d024acaefb0a",
+      "size": 1583,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/406cfd6bde72211f1dbce34d37b2d024acaefb0a"
+    },
+    {
+      "path": "lab4/optimization/speed_trials.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6b7f780a7a8eeae65f467e81a01533ad2ae5f25c",
+      "size": 18485,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6b7f780a7a8eeae65f467e81a01533ad2ae5f25c"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v1_9732ms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d2a1ff95c6a2da5e64738fd4c77cb74afc32b24",
+      "size": 1278,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/6d2a1ff95c6a2da5e64738fd4c77cb74afc32b24"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v1_repeat_failed.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5cd8964a1a720dd6ddae93bb7d2732c010a1b1e",
+      "size": 1373,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/d5cd8964a1a720dd6ddae93bb7d2732c010a1b1e"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v2_9256ms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ee5e31effb9aea94ffd42f721eadaf2c04e4938",
+      "size": 1271,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7ee5e31effb9aea94ffd42f721eadaf2c04e4938"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v3_9000ms_airborne.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9eab0f8a3fedf3f03ed13e73743508bb876ae0",
+      "size": 1282,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/cf9eab0f8a3fedf3f03ed13e73743508bb876ae0"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v3_other_9000ms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "578599030505ca317c16e71744da644de0b4e9ed",
+      "size": 1481,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/578599030505ca317c16e71744da644de0b4e9ed"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v3_other_9043ms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e56a9943e061bbce8d3d412b391ab286ba01356",
+      "size": 1435,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8e56a9943e061bbce8d3d412b391ab286ba01356"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v3_other_collision.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e3e5c9c3ad1784e65d874ca8fabb2a25cf6b2a9",
+      "size": 1751,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1e3e5c9c3ad1784e65d874ca8fabb2a25cf6b2a9"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v3_repeat_9047ms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7522a239749d2c8b726730cc0f6bb64c8d0e4eb1",
+      "size": 1287,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/7522a239749d2c8b726730cc0f6bb64c8d0e4eb1"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v4_8505ms_third.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a6acbe7b045dd8c717aa7b017a8f16fda5044b2",
+      "size": 1483,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/2a6acbe7b045dd8c717aa7b017a8f16fda5044b2"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v4_8523ms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e1df134050e3ba3c6a1337f029477b9211e7bb2",
+      "size": 1479,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3e1df134050e3ba3c6a1337f029477b9211e7bb2"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v4_repeat_failed.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb4044ce403a3d777b18afff6f8fd44fb88565e",
+      "size": 1546,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ceb4044ce403a3d777b18afff6f8fd44fb88565e"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v4_repeat_failure.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb4044ce403a3d777b18afff6f8fd44fb88565e",
+      "size": 1546,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/ceb4044ce403a3d777b18afff6f8fd44fb88565e"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v5_7679ms_repeat.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f667c3e507629120e7a499569f0580fba6e367a7",
+      "size": 1440,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/f667c3e507629120e7a499569f0580fba6e367a7"
+    },
+    {
+      "path": "lab4/optimization/verified_milestones/v5_7697ms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "277a07e1681a9bd0195b898d596eb76c57e11a09",
+      "size": 1433,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/277a07e1681a9bd0195b898d596eb76c57e11a09"
+    },
+    {
+      "path": "lab4/scripts/analyze_balanced13.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1becc727737012a39d0912eed429fbeba931c6cf",
+      "size": 612,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1becc727737012a39d0912eed429fbeba931c6cf"
+    },
+    {
+      "path": "lab4/scripts/analyze_lab4_bag.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5c3702fe58c7d350b657b8d81612032c1e9e3d72",
+      "size": 24000,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/5c3702fe58c7d350b657b8d81612032c1e9e3d72"
+    },
+    {
+      "path": "lab4/scripts/audit_recorded_numerics.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8168777c118b7fbd611b0ad510352aec333429b2",
+      "size": 2321,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/8168777c118b7fbd611b0ad510352aec333429b2"
+    },
+    {
+      "path": "lab4/scripts/build_workspace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e83ab4a72acb81c4c144d754d6d6fd93bdc98ba1",
+      "size": 1474,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e83ab4a72acb81c4c144d754d6d6fd93bdc98ba1"
+    },
+    {
+      "path": "lab4/scripts/check_fast_result.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "296da6fc71b19dcec86cc8884cd6bd935fa36c03",
+      "size": 2075,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/296da6fc71b19dcec86cc8884cd6bd935fa36c03"
+    },
+    {
+      "path": "lab4/scripts/lab4_gate_timer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "644c1f70b97028f5b83fdf86fb7826860002b8f3",
+      "size": 8242,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/644c1f70b97028f5b83fdf86fb7826860002b8f3"
+    },
+    {
+      "path": "lab4/scripts/lab4_metrics.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e591dfc1db4c0651842806af8d34b7d4df9d40ee",
+      "size": 9885,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/e591dfc1db4c0651842806af8d34b7d4df9d40ee"
+    },
+    {
+      "path": "lab4/scripts/offline_bag_audit.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "23c81f613e5240384f852051caac6e4e1d04252d",
+      "size": 3374,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/23c81f613e5240384f852051caac6e4e1d04252d"
+    },
+    {
+      "path": "lab4/scripts/replay_balanced13.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1e85a84a077acf32fa75267fff8169bc0da78675",
+      "size": 662,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1e85a84a077acf32fa75267fff8169bc0da78675"
+    },
+    {
+      "path": "lab4/scripts/run_balanced13.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "828bdd5a18f6c34e5631056d31519c348363f5e2",
+      "size": 2383,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/828bdd5a18f6c34e5631056d31519c348363f5e2"
+    },
+    {
+      "path": "lab4/scripts/run_repeated_trials.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5a4bc23cfa4aa615386a4d920c2368be4e388508",
+      "size": 16816,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/5a4bc23cfa4aa615386a4d920c2368be4e388508"
+    },
+    {
+      "path": "lab4/scripts/verify_d1.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3329516c67e37e4a883390fc76216870317c20d0",
+      "size": 3277,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/3329516c67e37e4a883390fc76216870317c20d0"
+    },
+    {
+      "path": "lab4/scripts/verify_d2_counts.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b12c20cab3ab5a206d86450b38110bcf52dd8ed9",
+      "size": 928,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/b12c20cab3ab5a206d86450b38110bcf52dd8ed9"
+    },
+    {
+      "path": "lab4/tests/test_completion_logic.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "616db387b8c860d111f5c617bf229c216e337906",
+      "size": 3054,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/616db387b8c860d111f5c617bf229c216e337906"
+    },
+    {
+      "path": "lab4/tests/test_gate_crossing.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fa18712459442580198425b1d06e607dbf8f0926",
+      "size": 1419,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/fa18712459442580198425b1d06e607dbf8f0926"
+    },
+    {
+      "path": "lab4/tests/test_gate_timer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1d7419481744c7b2f94257db749fecfe3206b832",
+      "size": 1812,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/1d7419481744c7b2f94257db749fecfe3206b832"
+    },
+    {
+      "path": "lab4/tests/test_speed_acceptance.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4723223ad5c2e0763244b6987eb3a6c8a7fe8337",
+      "size": 1708,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/4723223ad5c2e0763244b6987eb3a6c8a7fe8337"
+    },
+    {
+      "path": "lab4/tests/test_yaw_unwrap.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "919b8183762ef0457452082c778fe373678914cd",
+      "size": 1096,
+      "url": "https://api.github.com/repos/Peichen-Shi/Robot-2026-8/git/blobs/919b8183762ef0457452082c778fe373678914cd"
+    }
+  ]
+}

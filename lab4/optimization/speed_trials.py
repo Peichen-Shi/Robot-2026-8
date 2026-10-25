@@ -11,6 +11,7 @@ import os
 import signal
 import subprocess
 import time
+import threading
 import csv
 import sys
 ANALYSIS_SCRIPTS=os.environ.get('LAB4_ANALYSIS_SCRIPTS',os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'scripts'))
@@ -25,11 +26,30 @@ from tesse_ros_bridge.srv import RepositionRequestService
 from tesse_ros_bridge.msg import CollisionStats
 
 
+class WallReferenceTimer:
+    """Publish a stationary hold independently of ROS clock delivery jitter.
+
+    This never advances mission time or moves a trajectory. The normal state,
+    reference and motor watchdogs remain enabled with their original limits.
+    """
+    def __init__(self, callback):
+        self.stop_event = threading.Event()
+        def run():
+            while not self.stop_event.wait(0.02) and not rospy.is_shutdown():
+                callback(None)
+        self.thread = threading.Thread(target=run, daemon=True)
+        self.thread.start()
+
+    def shutdown(self):
+        self.stop_event.set()
+
+
 class Trials:
     def __init__(self, root, subset_csv=None, subset_first=9, options=None):
         self.options = options
         self.root, self.state, self.status = root, None, None
         self.pref_enabled = True
+        self.hold_time_from_start = rospy.Duration(0)
         self.target = [.4,8.,2.,-math.pi/2]
         if options:
             self.target[2] = options.start_height
@@ -58,7 +78,7 @@ class Trials:
         rospy.Subscriber('/current_state', Odometry, self.on_state, queue_size=1)
         rospy.Subscriber('/trajectory_status', TrajectoryStatus, self.on_status, queue_size=1)
         rospy.Subscriber('/tesse/collision', CollisionStats, self.on_collision,queue_size=10)
-        self.timer = rospy.Timer(rospy.Duration(.02), self.publish_pref)
+        self.timer = WallReferenceTimer(self.publish_pref)
         rospy.on_shutdown(self.timer.shutdown)
 
     def on_state(self, m):
@@ -91,6 +111,9 @@ class Trials:
         tr.translation.x, tr.translation.y, tr.translation.z = self.target[:3]
         tr.rotation.z, tr.rotation.w = math.sin(self.target[3]/2), math.cos(self.target[3]/2)
         m.transforms, m.velocities, m.accelerations = [tr], [Twist()], [Twist()]
+        # Keep the completed flight's time during final hover. Publishing zero
+        # here would tell RViz that a new flight has begun and erase its path.
+        m.time_from_start = self.hold_time_from_start
         self.pref.publish(m)
         stamped=MultiDOFJointTrajectory()
         stamped.header.stamp=rospy.Time.now()
@@ -114,6 +137,7 @@ class Trials:
 
     def prepare(self):
         self.target=list(self.start_target)
+        self.hold_time_from_start = rospy.Duration(0)
         self.pref_enabled = True
         rospy.wait_for_service('/tesse/reposition_request', timeout=10)
         pose = Pose()
@@ -154,6 +178,8 @@ class Trials:
                     time_scale=self.options.time_scale if self.options else 3., exit_distance_m=1.,
                     post_hold_s=self.options.post_hold, preflight='separate from mission; never reposition during bag')
         meta['collision_telemetry_enabled']=rospy.get_param('/tesse/tesse_ros_bridge/publish_collisions',False)
+        meta['simulator_headless']=os.environ.get('LAB4_SIM_HEADLESS','0')=='1'
+        meta['clock_rate_modified']=False
         meta['race_exit_observation_s']=self.options.exit_observation
         meta['long_hold_completed']=self.options.exit_observation<=0
         initial = self.state.pose.pose.position
@@ -254,6 +280,7 @@ class Trials:
             # Continue the exact final reference AFTER the recorder has stopped;
             # do not drop a successfully parked drone while offline analysis runs.
             if self.last_mission_reference:
+                self.hold_time_from_start = self.last_mission_reference.time_from_start
                 tr=self.last_mission_reference.transforms[0]
                 q=tr.rotation
                 yaw=math.atan2(2*(q.w*q.z+q.x*q.y),1-2*(q.y*q.y+q.z*q.z))
@@ -261,9 +288,11 @@ class Trials:
                 self.pref_enabled=True
             with open(directory+'/run_metadata.json','w') as f:
                 json.dump(meta,f,indent=2)
-        subprocess.check_call(['python3', os.path.join(ANALYSIS_SCRIPTS,'analyze_lab4_bag.py'),
-                               directory+'/'+run_id+'.bag','--output-dir',directory+'/analysis',
-                               '--gate-index-offset',str(self.subset_first if self.subset_csv else 0)])
+        with open(directory+'/analysis_console.log', 'w') as analysis_log:
+            subprocess.check_call(['python3', os.path.join(ANALYSIS_SCRIPTS,'analyze_lab4_bag.py'),
+                                   directory+'/'+run_id+'.bag','--output-dir',directory+'/analysis',
+                                   '--gate-index-offset',str(self.subset_first if self.subset_csv else 0)],
+                                  stdout=analysis_log, stderr=subprocess.STDOUT)
         with open(directory+'/analysis/metrics.json') as f:
             metrics = json.load(f)
         accepted = metrics['actual_stable_full_route']
@@ -290,7 +319,12 @@ class Trials:
             accepted=assessment['passed']
         if not accepted:
             raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
-        print(run_id+' ACCEPTED', flush=True)
+        if self.options.race_scoring:
+            print('%s ACCEPTED | 12/12 gates | %.3f s | minimum clearance %.3f m' %
+                  (run_id, assessment['first_gate_to_last_gate_ms']/1000.0,
+                   assessment['minimum_clearance_m']), flush=True)
+        else:
+            print(run_id+' ACCEPTED', flush=True)
 
 
 if __name__ == '__main__':

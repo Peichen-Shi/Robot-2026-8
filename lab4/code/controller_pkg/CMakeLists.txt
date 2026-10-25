@@ -65,6 +65,8 @@ include_directories(
 )
 add_executable(controller_node src/controller_node.cpp)
 add_executable(feedforward_test src/feedforward_test.cpp)
+add_executable(reference_prediction_test src/reference_prediction_test.cpp)
+target_link_libraries(reference_prediction_test ${catkin_LIBRARIES})
 target_link_libraries(feedforward_test ${catkin_LIBRARIES})
 add_dependencies(controller_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(controller_node ${catkin_LIBRARIES})
@@ -91,6 +93,7 @@ target_link_libraries(deliverable_1_api_test ${catkin_LIBRARIES})
 
 install(TARGETS controller_node traj_publisher lab3_visualization_node
   lab4_visualization_node controller_math_test deliverable_1_api_test feedforward_test
+  reference_prediction_test
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -106,4 +109,5 @@ if(CATKIN_ENABLE_TESTING)
   add_test(NAME allocation_math COMMAND controller_math_test)
   add_test(NAME quaternion_conversions COMMAND deliverable_1_api_test)
   add_test(NAME so3_feedforward COMMAND feedforward_test)
+  add_test(NAME reference_prediction COMMAND reference_prediction_test)
 endif()

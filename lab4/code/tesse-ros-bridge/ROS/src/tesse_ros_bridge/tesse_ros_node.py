@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import time
 import numpy as np
 import copy
 
@@ -19,6 +20,7 @@ from rosgraph_msgs.msg import Clock
 from cv_bridge import CvBridge, CvBridgeError
 
 import tesse_ros_bridge.utils
+from tesse_ros_bridge.persistent_metadata import PersistentMetadataClient
 from tesse_ros_bridge.noise_simulator import NoiseParams, NoiseSimulator
 
 from tesse_ros_bridge.srv import SceneRequestService, \
@@ -52,6 +54,9 @@ class TesseROSWrapper:
         self.publish_clock             = rospy.get_param("~publish_clock", False)
         self.publish_metadata          = rospy.get_param("~publish_metadata", False)
         self.publish_collisions        = rospy.get_param("~publish_collisions", False)
+        # Use authentic UDP metadata timestamps when TCP requests temporarily stall.
+        self.clock_from_metadata_udp = rospy.get_param("~clock_from_metadata_udp", False)
+        self.persistent_metadata_listener = rospy.get_param("~persistent_metadata_listener", False)
         self.publish_imu               = rospy.get_param("~publish_imu", False)
         self.publish_odom              = rospy.get_param("~publish_odom", False)
         self.publish_noisy_imu         = rospy.get_param("~publish_noisy_imu", False)
@@ -208,6 +213,12 @@ class TesseROSWrapper:
         # Simulated time requires that we constantly publish to '/clock'.
         if self.publish_clock:
             self.clock_pub = rospy.Publisher("/clock", Clock, queue_size=10)
+        self.metadata_client = None
+        if self.persistent_metadata_listener:
+            self.metadata_client = PersistentMetadataClient(
+                self.env, self.self_ip, self.metadata_port)
+            rospy.on_shutdown(self.metadata_client.close)
+
 
         # Setup initial-pose subscriber
         rospy.Subscriber("/initialpose", PoseWithCovarianceStamped, self.reposition_cb)
@@ -257,8 +268,20 @@ class TesseROSWrapper:
 
         # self.scan_listener.start()
 
+        # Metadata replies use Unity's main-thread queue. An unbounded request
+        # loop competes with rotor commands and can stall entire physics frames.
+        # Poll once per 20 ms wall interval (the 50 Hz physics rate), without
+        # catch-up bursts. Clock stamps still come directly from the simulator.
+        request_period = 1.0 / max(1.0, float(rospy.get_param("~metadata_request_rate", 50.0)))
+        next_request = time.monotonic()
         while not rospy.is_shutdown():
             self.clock_cb(None)
+            next_request += request_period
+            remaining = next_request - time.monotonic()
+            if remaining > 0.0:
+                time.sleep(remaining)
+            else:
+                next_request = time.monotonic()
         else:
             rospy.spin()
 
@@ -284,12 +307,14 @@ class TesseROSWrapper:
 
         if self.publish_clock or self.publish_collisions:
             try:
-                sim_data = self.env.request(MetadataRequest()).metadata
+                sim_data = (self.metadata_client.request() if self.metadata_client
+                            else self.env.request(MetadataRequest()).metadata)
                 metadata = tesse_ros_bridge.utils.parse_metadata(sim_data)
 
-                if self.publish_clock:
-                    curr_ros_time = rospy.Time.from_sec(metadata['time'])
+                curr_ros_time = rospy.Time.from_sec(metadata['time'])
+                if self.publish_clock and not self.clock_from_metadata_udp:
                     self.clock_pub.publish(curr_ros_time)
+
 
                 # Publish collision statistics if necessary
                 if self.publish_collisions and metadata['collision_status']:
@@ -422,6 +447,11 @@ class TesseROSWrapper:
         # assertion here killed the receiving thread permanently. Ignore stale
         # packets without advancing derivatives; a true simulator reset still
         # appears on /clock and must fail the active mission, not be stitched.
+        if (self.publish_clock and self.clock_from_metadata_udp and
+                metadata['time'] < self.prev_time - 0.5):
+            # Detect a real epoch reset from the same ordered UDP stream.
+            # TCP replies may be delayed and must not overwrite the UDP clock.
+            self.clock_pub.publish(rospy.Time.from_sec(metadata['time']))
         if metadata['time'] <= self.prev_time:
             rospy.logwarn_throttle(5.0, 'Ignoring duplicate/out-of-order TESSE metadata')
             return
@@ -430,6 +460,11 @@ class TesseROSWrapper:
                 self.prev_time, self.prev_vel_brh, self.prev_enu_R_brh)
 
         timestamp = rospy.Time.from_sec(metadata_processed['time'])
+        if self.publish_clock and self.clock_from_metadata_udp:
+            # Identical simulator source time to this odometry sample: no wall
+            # timer, interpolation, rate multiplier or rescaling of /clock.
+            self.clock_pub.publish(timestamp)
+
 
         # Publish agent ground truth transform.
         self.publish_tf(metadata_processed['transform'], timestamp)
