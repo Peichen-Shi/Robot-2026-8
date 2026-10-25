@@ -5,7 +5,7 @@
   "required_observed_successes": 2,
   "qualification_attempts": 3,
   "early_acceptance": "Accept immediately when the first two independent attempts both pass.",
-  "default": "balanced_tilt72.yaml, target 11.5 s, start height 2.67 m",
+  "default": "fast_attitude.yaml, target 10.5 s, start height 2.67 m",
   "baseline_recheck_ms": 10219.952565474956,
   "candidates": [
     {
@@ -46,6 +46,16 @@
       "successes": 2,
       "attempts": 3,
       "repeat_failure": "Second attempt crossed only the first 3 gates in the unchanged sequence.",
+      "promoted_to_default": false
+    },
+    {
+      "profile": "fast_attitude.yaml",
+      "target_duration_s": 10.5,
+      "start_height_m": 2.67,
+      "successful_times_ms": [7697.146373802752, 7679.551836695282],
+      "qualification_state": "qualified with two consecutive independent successes; no third attempt needed",
+      "successes": 2,
+      "attempts": 2,
       "promoted_to_default": true
     }
   ],
