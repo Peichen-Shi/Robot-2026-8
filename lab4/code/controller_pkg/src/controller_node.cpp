@@ -73,8 +73,13 @@ class ControllerNode {
         task_phase_name_("WAITING") {
     private_nh_.param("kx", kx_, 4.0);
     private_nh_.param("kv", kv_, 5.0);
+    private_nh_.param("kx_z", kx_z_, kx_);
+    private_nh_.param("kv_z", kv_z_, kv_);
+    private_nh_.param("yaw_weight", yaw_weight_, 1.0);
     private_nh_.param("kr", kr_, 4.0);
     private_nh_.param("komega", komega_, 1.5);
+    private_nh_.param("hold_kr", hold_kr_, kr_);
+    private_nh_.param("hold_komega", hold_komega_, komega_);
     private_nh_.param("state_timeout", state_timeout_, 0.5);
     private_nh_.param("reference_timeout", reference_timeout_, 0.5);
     private_nh_.param("zero_command_period", zero_command_period_, 0.05);
@@ -95,21 +100,51 @@ class ControllerNode {
     private_nh_.param("maximum_moment_x", maximum_moment_x_, 1.0);
     private_nh_.param("maximum_moment_y", maximum_moment_y_, 1.0);
     private_nh_.param("maximum_moment_z", maximum_moment_z_, 0.5);
+    private_nh_.param("hold_maximum_moment_x", hold_maximum_moment_x_, maximum_moment_x_);
+    private_nh_.param("hold_maximum_moment_y", hold_maximum_moment_y_, maximum_moment_y_);
+    private_nh_.param("hold_maximum_moment_z", hold_maximum_moment_z_, maximum_moment_z_);
     private_nh_.param("attitude_feedforward", attitude_feedforward_, false);
     // During stationary holds, avoid differentiating feedback corrections.
     private_nh_.param("feedforward_tracking_only", feedforward_tracking_only_, false);
     private_nh_.param("feedforward_clip_rate", feedforward_clip_rate_, false);
     private_nh_.param("reference_prediction", reference_prediction_, false);
     private_nh_.param("maximum_reference_prediction", maximum_reference_prediction_, 0.04);
+    private_nh_.param("actuation_prediction", actuation_prediction_, 0.0);
+    private_nh_.param("acceleration_lead", acceleration_lead_, 0.0);
+    private_nh_.param("braking_lead_after", braking_lead_after_, -1.0);
+    private_nh_.param("braking_acceleration_lead", braking_acceleration_lead_, 0.0);
+    private_nh_.param("preserve_horizontal_force", preserve_horizontal_force_, false);
+    private_nh_.param("bound_vertical_thrust", bound_vertical_thrust_, false);
+    private_nh_.param("corner_force_bias_after", corner_force_bias_after_, -1.0);
+    private_nh_.param("corner_force_bias_x", corner_force_bias_x_, 0.0);
+    private_nh_.param("corner_force_bias_y", corner_force_bias_y_, 0.0);
     private_nh_.param("feedforward_filter_tau", feedforward_filter_tau_, 0.03);
     private_nh_.param("use_stamped_reference", use_stamped_reference_, false);
 
-    if (state_timeout_ <= 0.0 || reference_timeout_ <= 0.0 ||
+    if (!std::isfinite(corner_force_bias_after_) || corner_force_bias_after_ < -1. ||
+        !std::isfinite(corner_force_bias_x_) || std::abs(corner_force_bias_x_) > 10. ||
+        !std::isfinite(corner_force_bias_y_) || std::abs(corner_force_bias_y_) > 10. ||
+        !std::isfinite(braking_lead_after_) || braking_lead_after_ < -1. ||
+        !std::isfinite(braking_acceleration_lead_) || braking_acceleration_lead_ < 0. ||
+        braking_acceleration_lead_ > .20 ||
+        !std::isfinite(acceleration_lead_) || acceleration_lead_ < 0. ||
+        acceleration_lead_ > .12 ||
+        !std::isfinite(actuation_prediction_) || actuation_prediction_ < 0. ||
+        actuation_prediction_ > .04 ||
+        !std::isfinite(hold_kr_) || hold_kr_ <= 0. ||
+        !std::isfinite(hold_komega_) || hold_komega_ <= 0. ||
+        !std::isfinite(hold_maximum_moment_x_) || hold_maximum_moment_x_ <= 0. ||
+        !std::isfinite(hold_maximum_moment_y_) || hold_maximum_moment_y_ <= 0. ||
+        !std::isfinite(hold_maximum_moment_z_) || hold_maximum_moment_z_ <= 0. ||
+        !std::isfinite(kx_z_) || !std::isfinite(kv_z_) ||
+        kx_z_ <= 0. || kv_z_ <= 0. || !std::isfinite(yaw_weight_) ||
+        yaw_weight_ < 0. || yaw_weight_ > 1. ||
+        state_timeout_ <= 0.0 || reference_timeout_ <= 0.0 ||
         zero_command_period_ <= 0.0 || mass_ <= 0.0 || gravity_ <= 0.0 ||
         arm_length_ <= 0.0 || lift_coefficient_ <= 0.0 ||
         drag_coefficient_ <= 0.0 || inertia_x_ <= 0.0 || inertia_y_ <= 0.0 ||
         inertia_z_ <= 0.0 || maximum_tilt_deg_ <= 0.0 ||
-        maximum_tilt_deg_ >= 80.0 || minimum_vertical_force_ <= 0.0 ||
+        maximum_tilt_deg_ >= 89.0 || minimum_vertical_force_ <= 0.0 ||
         maximum_thrust_ <= minimum_thrust_ || maximum_moment_x_ <= 0.0 ||
         maximum_moment_y_ <= 0.0 || maximum_moment_z_ <= 0.0 ||
         !std::isfinite(maximum_reference_prediction_) ||
@@ -290,17 +325,27 @@ class ControllerNode {
     const double maximum_horizontal =
         limited.z() * std::tan(maximum_tilt_deg_ * M_PI / 180.0);
     if (horizontal_norm > maximum_horizontal) {
-      limited.head<2>() *= maximum_horizontal / horizontal_norm;
+      if (preserve_horizontal_force_ && task_phase_name_=="TRACKING") {
+        // Keep braking authority in a fast corner. Raise only the minimum
+        // vertical component required by the upright cone; never tilt past it.
+        limited.z()=horizontal_norm/std::tan(maximum_tilt_deg_*M_PI/180.0);
+      } else {
+        limited.head<2>() *= maximum_horizontal / horizontal_norm;
+      }
     }
     force_limited_ = (limited - unconstrained).norm() > 1e-9;
     return limited;
   }
 
   Eigen::Vector3d limitMoment(const Eigen::Vector3d& unconstrained) {
+    const bool tracking=task_phase_name_=="TRACKING";
+    const double mx=tracking?maximum_moment_x_:hold_maximum_moment_x_;
+    const double my=tracking?maximum_moment_y_:hold_maximum_moment_y_;
+    const double mz=tracking?maximum_moment_z_:hold_maximum_moment_z_;
     const Eigen::Vector3d limited(
-        clampScalar(unconstrained.x(), -maximum_moment_x_, maximum_moment_x_),
-        clampScalar(unconstrained.y(), -maximum_moment_y_, maximum_moment_y_),
-        clampScalar(unconstrained.z(), -maximum_moment_z_, maximum_moment_z_));
+        clampScalar(unconstrained.x(), -mx, mx),
+        clampScalar(unconstrained.y(), -my, my),
+        clampScalar(unconstrained.z(), -mz, mz));
     moment_limited_ = (limited - unconstrained).norm() > 1e-9;
     return limited;
   }
@@ -325,18 +370,34 @@ class ControllerNode {
       const auto reference=controller_pkg::predictReference(
           desired_position_,desired_velocity_,desired_acceleration_,reference_jerk_.jerk(),
           desired_yaw_,desired_yaw_rate_,desired_yaw_acceleration_,
-          source_lag,maximum_reference_prediction_);
+          source_lag+(task_phase_name_=="TRACKING"?actuation_prediction_:0.),
+          maximum_reference_prediction_);
       const Eigen::Vector3d position_error =
           current_position_ - reference.position;
       const Eigen::Vector3d velocity_error =
           current_velocity_world_ - reference.velocity;
-      const Eigen::Vector3d desired_force_unconstrained =
-          -kx_ * position_error - kv_ * velocity_error +
-          mass_ * gravity_ * e3_ + mass_ * reference.acceleration;
+      const double force_lead=task_phase_name_=="TRACKING" ?
+          ((braking_lead_after_>=0. && desired_time_from_start_>=braking_lead_after_)
+              ?braking_acceleration_lead_:acceleration_lead_) : 0.;
+      Eigen::Vector3d desired_force_unconstrained =
+          -Eigen::Vector3d(kx_,kx_,kx_z_).cwiseProduct(position_error) -
+          Eigen::Vector3d(kv_,kv_,kv_z_).cwiseProduct(velocity_error) +
+          mass_ * gravity_ * e3_ + mass_ * (reference.acceleration +
+              force_lead*reference_jerk_.jerk());
+      if (task_phase_name_=="TRACKING" && corner_force_bias_after_>=0. &&
+          desired_time_from_start_>=corner_force_bias_after_ &&
+          (braking_lead_after_<0. || desired_time_from_start_<braking_lead_after_)) {
+        // Small learned feedforward compensates repeatable final-turn drift.
+        // Actual state and logged tracking errors remain unmodified.
+        const double blend=std::min(1.,(desired_time_from_start_-corner_force_bias_after_)/.2);
+        desired_force_unconstrained += blend*Eigen::Vector3d(corner_force_bias_x_,corner_force_bias_y_,0.);
+      }
       const Eigen::Vector3d desired_force =
           limitDesiredForce(desired_force_unconstrained);
       const Eigen::Matrix3d desired_rotation =
-          controller_pkg::desiredRotation(desired_force, reference.yaw);
+          controller_pkg::prioritizeThrustDirection(current_rotation_,
+              controller_pkg::desiredRotation(desired_force, reference.yaw),
+              task_phase_name_ == "TRACKING" ? yaw_weight_ : 1.0);
       const Eigen::Vector3d rotation_error = 0.5 * controller_pkg::vee(
           desired_rotation.transpose() * current_rotation_ -
           current_rotation_.transpose() * desired_rotation);
@@ -358,12 +419,19 @@ class ControllerNode {
         attitude_derivatives_.reset();
       }
 
-      const double thrust_unconstrained =
+      double thrust_unconstrained =
           desired_force.dot(current_rotation_ * e3_);
+      if (bound_vertical_thrust_ && task_phase_name_=="TRACKING" && current_rotation_(2,2)>.05) {
+        // During a bank reversal, force projection alone can inject excess
+        // lift. Bound that vertical acceleration while attitude catches up.
+        thrust_unconstrained=std::min(thrust_unconstrained,
+            desired_force.z()/current_rotation_(2,2));
+      }
       const double thrust = clampScalar(thrust_unconstrained,
                                         minimum_thrust_, maximum_thrust_);
       const Eigen::Vector3d moment_unconstrained =
-          -kr_ * rotation_error - komega_ * angular_rate_error +
+          -(task_phase_name_=="TRACKING"?kr_:hold_kr_) * rotation_error -
+          (task_phase_name_=="TRACKING"?komega_:hold_komega_) * angular_rate_error +
           current_omega_body_.cross(inertia_ * current_omega_body_) + angular_feedforward;
       const Eigen::Vector3d moment = limitMoment(moment_unconstrained);
 
@@ -498,6 +566,9 @@ class ControllerNode {
   ros::Publisher rotor_speed_publisher_;
   ros::Publisher diagnostic_publisher_;
   double kx_, kv_, kr_, komega_;
+  double hold_kr_, hold_komega_;
+  double hold_maximum_moment_x_,hold_maximum_moment_y_,hold_maximum_moment_z_;
+  double kx_z_, kv_z_, yaw_weight_;
   double state_timeout_, reference_timeout_, zero_command_period_;
   bool twist_linear_in_body_, twist_angular_in_body_;
   double mass_, gravity_, arm_length_, lift_coefficient_, drag_coefficient_;
@@ -510,6 +581,11 @@ class ControllerNode {
   bool feedforward_clip_rate_;
   bool reference_prediction_;
   double maximum_reference_prediction_;
+  double actuation_prediction_;
+  double acceleration_lead_;
+  double braking_lead_after_,braking_acceleration_lead_;
+  bool preserve_horizontal_force_,bound_vertical_thrust_;
+  double corner_force_bias_after_,corner_force_bias_x_,corner_force_bias_y_;
   uint64_t reference_sequence_=0;
   double feedforward_filter_tau_;
   controller_pkg::AttitudeFeedforward attitude_derivatives_;

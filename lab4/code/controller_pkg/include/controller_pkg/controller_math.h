@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Eigen/Dense>
+#include <Eigen/Geometry>
 
 #include <cmath>
 #include <stdexcept>
@@ -73,6 +74,23 @@ inline Eigen::Matrix3d desiredRotation(const Eigen::Vector3d& desired_force,
   rotation.col(1) = b2_desired;
   rotation.col(2) = b3_desired;
   return rotation;
+}
+
+// Preserve the commanded thrust direction while giving heading a configurable
+// share of the available attitude response. Weight one is exactly the baseline.
+inline Eigen::Matrix3d prioritizeThrustDirection(
+    const Eigen::Matrix3d& current, const Eigen::Matrix3d& desired,
+    double yaw_weight) {
+  if (!std::isfinite(yaw_weight) || yaw_weight < 0. || yaw_weight > 1.)
+    throw std::invalid_argument("yaw weight must lie in [0,1]");
+  if (yaw_weight == 1.) return desired;
+  const Eigen::Quaterniond alignment = Eigen::Quaterniond::FromTwoVectors(
+      current.col(2), desired.col(2));
+  const Eigen::Matrix3d reduced = alignment.toRotationMatrix() * current;
+  const Eigen::Matrix3d remaining = reduced.transpose() * desired;
+  const double yaw = std::atan2(remaining(1,0), remaining(0,0));
+  return reduced * Eigen::AngleAxisd(yaw_weight*yaw,
+                                    Eigen::Vector3d::UnitZ()).toRotationMatrix();
 }
 
 inline Eigen::Vector4d solveRotorInputs(const Eigen::Matrix4d& allocation,

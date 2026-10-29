@@ -1,0 +1,22 @@
+{
+  "attempt": 1,
+  "simulator_pid": 137112,
+  "bridge_pid": 137154,
+  "headless": false,
+  "simulator_command": [
+    "/home/by/vnav-builds/lab4/lab4.x86_64",
+    "-screen-fullscreen",
+    "0",
+    "-screen-width",
+    "640",
+    "-screen-height",
+    "448",
+    "-screen-quality",
+    "Fastest",
+    "-job-worker-count",
+    "1",
+    "-logFile",
+    "/home/by/lab4_sub4_20261029/results/qualify_sub4_20261029_031725_015205632_3_startup/unity.log"
+  ],
+  "live_state_and_clock": true
+}

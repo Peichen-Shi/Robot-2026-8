@@ -1,0 +1,157 @@
+{
+  "video": "/home/by/Desktop/Lab4_Sub4_20261029_232155_872702434.mp4",
+  "run_directory": "/home/by/lab4_sub4_20261029/results/sub4_20261029_082156_245617044_01",
+  "race_acceptance": {
+    "passed": true,
+    "checks": {
+      "original_twelve_gates_unchanged": true,
+      "all_ordered_forward_gates": true,
+      "positive_finite_actual_time": true,
+      "complete_published_reference": true,
+      "single_trial": true,
+      "stable_exit_last_second": true,
+      "no_fault_clock_reset_or_long_gap": true,
+      "collision_telemetry_enabled": true,
+      "no_reported_mission_collision": true
+    },
+    "run_id": "sub4_20261029_082156_245617044_01",
+    "first_gate_to_last_gate_ms": 3895.74706944542,
+    "passed_gates": 12,
+    "gate_width_m": 2.4,
+    "gate_height_m": 2.4,
+    "body_margin_m": 0.18,
+    "ignored_legacy_criteria": [
+      "whole-record position aggregate",
+      "60-second terminal observation"
+    ],
+    "legacy_stability_result": {
+      "actual_stable_full_route": false,
+      "failure_reasons": [
+        "less than 60 seconds continuous terminal hold after settling",
+        "no independently verified reference completion",
+        "whole-run position limits exceeded"
+      ],
+      "reference_full_route": false,
+      "terminal_hold_duration_s": 0.0
+    },
+    "failure_reasons": [],
+    "minimum_clearance_m": 0.29344692951739904,
+    "racing_metrics": {
+      "angular_speed_max_rad_s": 7.000000834507868,
+      "duration_s": 5.279999999999999,
+      "position_max_m": 2.7583286300953826,
+      "position_p95_m": 2.5546905005753273,
+      "position_rmse_m": 1.1570704613437106,
+      "speed_max_mps": 36.306937548093025,
+      "yaw_error_max_deg": 137.44411341340512
+    },
+    "actual_speed_peak_mps": 36.306937548093025
+  },
+  "actual_run_under_4s": true,
+  "recording": "Unity window; real elapsed odometry timestamps; 25fps, no time scaling",
+  "gate_timing": {
+    "phase": "ACCEPTED",
+    "elapsed_ms": 3895.74706944542,
+    "crossing_elapsed_ms": 3895.74706944542,
+    "passed_gates": 12,
+    "total_gates": 12,
+    "first_gate_ros_s": 15.12058246894151,
+    "last_gate_ros_s": 19.01632953838693,
+    "crossing_ros_s": [
+      15.12058246894151,
+      15.52091394356137,
+      15.964055137411679,
+      16.361684927906584,
+      16.67428217282451,
+      17.10740392632457,
+      17.466993300932614,
+      17.73486246865371,
+      18.063126805025615,
+      18.48718196876347,
+      18.743491884432036,
+      19.01632953838693
+    ],
+    "run_id": "sub4_20261029_082156_245617044_01",
+    "reason": "",
+    "clock": "odometry header / ROS simulation time",
+    "rule": "Sequential forward local +x crossings inside 2.4 m aperture with 0.18 m body margin; first gate to last gate only."
+  },
+  "capture": {
+    "window_id": "0x2000014",
+    "x": 88,
+    "y": 101,
+    "width": 640,
+    "height": 448
+  },
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "Constrained Baseline",
+        "codec_type": "video",
+        "codec_time_base": "1/50",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 640,
+        "height": 448,
+        "coded_width": 640,
+        "coded_height": 448,
+        "has_b_frames": 0,
+        "pix_fmt": "yuv420p",
+        "level": 30,
+        "chroma_location": "left",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/12800",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 408576,
+        "duration": "31.920000",
+        "bit_rate": "3440568",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "798",
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/home/by/Desktop/Lab4_Sub4_20261029_232155_872702434.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "31.920000",
+      "size": "13732085",
+      "bit_rate": "3441625",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf58.29.100"
+      }
+    }
+  }
+}

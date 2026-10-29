@@ -1,0 +1,58 @@
+{
+  "source": "actual diagnostic messages; approximate model fit",
+  "input_runs": [
+    "/home/by/lab4_sub4_20261029/results/baseline_01",
+    "/home/by/lab4_sub4_20261029/results/search_5p5_upright85_01",
+    "/home/by/lab4_sub4_20261029/results/flat_4p9_thrust_priority_01"
+  ],
+  "fits": [
+    {
+      "lag_samples": 0,
+      "nominal_lag_seconds": 0.0,
+      "observed_intervals": 2060,
+      "inertia_kg_m2": [
+        0.04993552154411869,
+        0.17502451665944707,
+        0.06821236926482865
+      ],
+      "damping": [
+        -2.6251439463533353,
+        -0.101672065530017,
+        -0.7721013887353612
+      ],
+      "moment_rmse_Nm": 1.7157488631105549
+    },
+    {
+      "lag_samples": 1,
+      "nominal_lag_seconds": 0.02,
+      "observed_intervals": 2060,
+      "inertia_kg_m2": [
+        0.10114578928409838,
+        0.19596118850888347,
+        0.10178070134841143
+      ],
+      "damping": [
+        -0.009655104794948244,
+        -0.0024661218159441394,
+        0.054966672457675926
+      ],
+      "moment_rmse_Nm": 0.18572197782784858
+    },
+    {
+      "lag_samples": 2,
+      "nominal_lag_seconds": 0.04,
+      "observed_intervals": 2060,
+      "inertia_kg_m2": [
+        0.08309145505697191,
+        0.15222400389447,
+        0.07562476450980715
+      ],
+      "damping": [
+        2.428136029326997,
+        0.07606353862746967,
+        0.9379735875358262
+      ],
+      "moment_rmse_Nm": 1.640788935615618
+    }
+  ]
+}

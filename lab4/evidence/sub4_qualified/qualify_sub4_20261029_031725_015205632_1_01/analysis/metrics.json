@@ -1,0 +1,121 @@
+{
+  "actual_interval_max_s": 0.020009999999999195,
+  "actual_interval_p95_s": 0.020000001000001433,
+  "actual_record_frequency_hz": 49.99999999999999,
+  "actual_samples": 3748,
+  "actual_speed_peak_mps": 36.26623469639859,
+  "actual_stable_full_route": false,
+  "bag": "/home/by/lab4_sub4_20261029/results/qualify_sub4_20261029_031725_015205632_1_01/qualify_sub4_20261029_031725_015205632_1_01.bag",
+  "collision_events_during_mission": [],
+  "completion_verification": {
+    "actual_stable_full_route": false,
+    "failure_reasons": [
+      "less than 60 seconds continuous terminal hold after settling",
+      "no independently verified reference completion"
+    ],
+    "reference_full_route": false,
+    "terminal_hold_duration_s": 55.02000000000001
+  },
+  "desired_acceleration_peak_mps2": 119.39117527600506,
+  "desired_interval_max_s": 0.040000001000001006,
+  "desired_interval_p95_s": 0.020000001000001433,
+  "desired_record_frequency_hz": 49.959967974379495,
+  "desired_samples": 3745,
+  "desired_speed_peak_mps": 32.265387216938656,
+  "execution_start_to_last_gate_s": 8.07534023768543,
+  "first_gate_to_last_gate_s": 3.8956867242639444,
+  "gate_count": 12,
+  "legacy_reference_receipt_to_last_gate_s": 8.07534023768543,
+  "mission_start_source_s": 13.5,
+  "mission_start_to_last_gate_s": 5.3153402376854295,
+  "mission_start_to_settled_finish_s": 9.059999998999999,
+  "mission_to_last_gate_wall_s_estimate": 5.315423293539906,
+  "mission_to_settled_wall_s_estimate": 9.060405007999995,
+  "passed_gates": 12,
+  "path_length_m": 115.83388841514876,
+  "planned_trajectory_duration_s": 6.65,
+  "position_axis_rmse_m": {
+    "x": 0.2572227574718279,
+    "y": 0.2290101074103612,
+    "z": 0.037777712944973715
+  },
+  "position_max_m": 2.8312609185844995,
+  "position_p95_m": 0.6060281891420959,
+  "position_rmse_m": 0.3464625980576674,
+  "pre_last_gate": {
+    "position_max_m": 2.8312609185844995,
+    "position_p95_m": 2.4463778901462874,
+    "position_rmse_m": 0.9593858940704821
+  },
+  "recorded_preplan_duration_s": 2.76,
+  "recorded_tau_max_s": 6.65,
+  "reference_full_route": false,
+  "segments": {
+    "course_through_last_crossed_gate": {
+      "angular_speed_max_rad_s": 7.000000944703266,
+      "duration_s": 5.300000000000001,
+      "position_max_m": 2.8312609185844995,
+      "position_p95_m": 2.618120950168878,
+      "position_rmse_m": 1.182887021583258,
+      "speed_max_mps": 36.26623469639859,
+      "yaw_error_max_deg": 140.81437828843445
+    },
+    "exit_deceleration": {
+      "angular_speed_max_rad_s": 7.0000007590244335,
+      "duration_s": 1.8399999999999999,
+      "position_max_m": 1.5132929707549414,
+      "position_p95_m": 1.4865229424265014,
+      "position_rmse_m": 0.8661604868471073,
+      "speed_max_mps": 30.91740524122041,
+      "yaw_error_max_deg": 73.64345251022755
+    },
+    "terminal_after_10s_settling": {
+      "angular_speed_max_rad_s": 0.004820065293270502,
+      "duration_s": 55.02000000000001,
+      "position_max_m": 0.032299616245649636,
+      "position_p95_m": 0.03195163582834496,
+      "position_rmse_m": 0.031202530126131178,
+      "speed_max_mps": 0.006305423469142205,
+      "yaw_error_max_deg": 0.0004059082834665317
+    },
+    "terminal_hold": {
+      "angular_speed_max_rad_s": 4.2613748494115375,
+      "duration_s": 65.02000000000001,
+      "position_max_m": 0.6930614353252273,
+      "position_p95_m": 0.032079929756630064,
+      "position_rmse_m": 0.050477601610528326,
+      "speed_max_mps": 1.8501349202300492,
+      "yaw_error_max_deg": 6.66536647836951
+    },
+    "whole_record": {
+      "angular_speed_max_rad_s": 7.000000944703266,
+      "duration_s": 74.94000000000001,
+      "position_max_m": 2.8312609185844995,
+      "position_p95_m": 0.6060281891420959,
+      "position_rmse_m": 0.3464625980576674,
+      "speed_max_mps": 36.26623469639859,
+      "yaw_error_max_deg": 140.81437828843445
+    }
+  },
+  "stable_rule": {
+    "gate_margin_m": 0.18,
+    "gate_plane": "local y-z; forward normal local +x",
+    "p95_limit_m": 1.25,
+    "rmse_limit_m": 0.75,
+    "sequential_forward_gate_crossings": 12,
+    "terminal_angular_speed_limit_rad_s": 0.5,
+    "terminal_continuous_required_s": 60.0,
+    "terminal_position_limit_m": 0.3,
+    "terminal_settling_allowance_s": 10.0,
+    "terminal_speed_limit_mps": 0.2,
+    "terminal_yaw_limit_deg": 10.0
+  },
+  "terminal_stable_since_source_s": 22.559999999,
+  "time_alignment": "current_state header stamp when valid, otherwise bag stamp; explicit stamped reference header; no fitted time shift; independent trajectory_status T and FINISHED required; clock rollbacks invalidate the complete recording before suffix diagnostics; duplicate stamps replaced; desired state linearly interpolated at actual-state stamps without phase shift; RMSE is trapezoidally time weighted",
+  "tracking_start_to_settled_finish_s": 8.559999998999999,
+  "trajectory_start_source_s": 14.0,
+  "trajectory_start_to_last_gate_s": 4.8153402376854295,
+  "wall_time_method": "integrated recorded controller state-arrival wall intervals, interpolated at source-time boundaries; approximate, not a fitted phase shift",
+  "yaw_rmse_deg": 12.979073687820405,
+  "yaw_rmse_rad": 0.2265275697114287
+}

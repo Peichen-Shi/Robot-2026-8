@@ -20,7 +20,7 @@ if ! flock -n 9; then
   echo 'Another optimized run is active. Stop that terminal with Ctrl+C first.' >&2
   exit 2
 fi
-prefix="sub7_$(date +%Y%m%d_%H%M%S_%N)"
+prefix="${LAB4_RUN_PREFIX:-sub4}_$(date +%Y%m%d_%H%M%S_%N)"
 viewer_pid=''
 flight_pid=''
 prepare_pid=''
@@ -51,8 +51,8 @@ if [[ "$view" == 1 ]]; then
   roslaunch controller_pkg lab4_visualization.launch     rviz_config:="$PWD/code/controller_pkg/rviz/lab4_topdown.rviz"     > "results/${prefix}_view.log" 2>&1 9>&- &
   viewer_pid=$!
 fi
-export LAB4_PLANNER_PROFILE="${LAB4_PLANNER_PROFILE:-$PWD/optimization/planner_profiles/sub7.yaml}"
-controller_profile="${LAB4_CONTROLLER_PROFILE:-$PWD/optimization/profiles/sub7.yaml}"
+export LAB4_PLANNER_PROFILE="${LAB4_PLANNER_PROFILE:-$PWD/optimization/planner_profiles/sub4.yaml}"
+controller_profile="${LAB4_CONTROLLER_PROFILE:-$PWD/optimization/profiles/sub4.yaml}"
 export LAB4_EXIT_OBSERVATION="${LAB4_EXIT_OBSERVATION:-8}"
 export LAB4_KEEP_FINAL_HOLD=1
 export LAB4_SHOW_TIMER=1

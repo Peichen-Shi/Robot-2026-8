@@ -1,0 +1,14 @@
+{
+  "run_id": "qualify_sub4_20261029_031725_015205632_1_01",
+  "race_passed": true,
+  "actual_race_ms": 3895.686724263944,
+  "passed_gates": 12,
+  "minimum_clearance_m": 0.313024221903773,
+  "stable_terminal_60s": true,
+  "fresh_visible_simulator": true,
+  "numeric_reference_audit": true,
+  "terminal_tail_position_error_peak_m": 0.032299616245649636,
+  "terminal_tail_speed_peak_mps": 0.006305423469142205,
+  "terminal_tail_body_rate_peak_rad_s": 0.012425191102535583,
+  "qualified": true
+}

@@ -127,7 +127,7 @@ def save_result(path, result):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',help='Save result JSON on finish, invalidation or shutdown')
+    parser.add_argument('--output',help='Save live timing JSON, freezing elapsed time at the final gate')
     parser.add_argument('--bag',help='Offline validation only: read existing bag, no live control')
     args,_=parser.parse_known_args()
     timer=GateTimer()
@@ -171,6 +171,7 @@ def main():
                     result['phase'],result['elapsed_ms'],result['passed_gates'],result['total_gates'],
                     ' | waiting for fresh state' if stale else '',
                     ' | '+result['reason'] if result['reason'] else ''),flush=True)
+                save_result(args.output,result)
             time.sleep(.2)  # Wall-paced output continues while simulator time is paused.
     finally:
         with lock:

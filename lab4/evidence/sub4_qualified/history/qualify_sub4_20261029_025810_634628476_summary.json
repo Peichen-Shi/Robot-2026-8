@@ -1,0 +1,40 @@
+{
+  "batch": "qualify_sub4_20261029_025810_634628476",
+  "rule": "3/3 fresh visible simulations: actual 12-gate race <4s, no collisions/faults, independent reference audit, continuous stable terminal hold >=60s",
+  "attempts": [
+    {
+      "run_id": "qualify_sub4_20261029_025810_634628476_1_01",
+      "race_passed": true,
+      "actual_race_ms": 3888.231333705974,
+      "passed_gates": 12,
+      "minimum_clearance_m": 0.022031409130976565,
+      "stable_terminal_60s": true,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.032471821587166355,
+      "terminal_tail_speed_peak_mps": 0.004953192121332738,
+      "terminal_tail_body_rate_peak_rad_s": 0.013389092704322023,
+      "qualified": true
+    },
+    {
+      "run_id": "qualify_sub4_20261029_025810_634628476_2_01",
+      "race_passed": true,
+      "actual_race_ms": 3891.3004594338663,
+      "passed_gates": 12,
+      "minimum_clearance_m": 0.27037077578866675,
+      "stable_terminal_60s": true,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.032423889580111394,
+      "terminal_tail_speed_peak_mps": 0.00433205808164548,
+      "terminal_tail_body_rate_peak_rad_s": 0.011902880595507564,
+      "qualified": true
+    },
+    {
+      "run_id": "qualify_sub4_20261029_025810_634628476_3_01",
+      "qualified": false,
+      "reason": "missing complete evidence"
+    }
+  ],
+  "qualified": false
+}

@@ -1,0 +1,47 @@
+test_changed_id_or_clock (test_completion_logic.CompletionTests.test_changed_id_or_clock) ... ok
+test_complete (test_completion_logic.CompletionTests.test_complete) ... ok
+test_delayed_divergence (test_completion_logic.CompletionTests.test_delayed_divergence) ... ok
+test_fault_nan_and_gap (test_completion_logic.CompletionTests.test_fault_nan_and_gap) ... ok
+test_half_reference (test_completion_logic.CompletionTests.test_half_reference) ... ok
+test_missing_gate (test_completion_logic.CompletionTests.test_missing_gate) ... ok
+test_short_hold (test_completion_logic.CompletionTests.test_short_hold) ... ok
+test_forward_crossing_inside_local_yz_aperture (test_gate_crossing.GateGeometryTest.test_forward_crossing_inside_local_yz_aperture) ... ok
+test_reverse_crossing_is_rejected (test_gate_crossing.GateGeometryTest.test_reverse_crossing_is_rejected) ... ok
+test_timestamp_rollback_keeps_last_epoch (test_gate_crossing.GateGeometryTest.test_timestamp_rollback_keeps_last_epoch) ... ok
+test_duplicate_no_extra_crossing (test_gate_timer.GateTimerTests.test_duplicate_no_extra_crossing) ... ok
+test_first_to_last_only_and_freeze (test_gate_timer.GateTimerTests.test_first_to_last_only_and_freeze) ... ok
+test_gap_invalid (test_gate_timer.GateTimerTests.test_gap_invalid) ... ok
+test_new_trial_resets (test_gate_timer.GateTimerTests.test_new_trial_resets) ... ok
+test_outside_aperture_invalid (test_gate_timer.GateTimerTests.test_outside_aperture_invalid) ... ok
+test_reverse_not_a_start (test_gate_timer.GateTimerTests.test_reverse_not_a_start) ... ok
+test_rollback_invalid (test_gate_timer.GateTimerTests.test_rollback_invalid) ... ok
+test_expired_deadline_does_not_read (test_persistent_metadata.MetadataTest.test_expired_deadline_does_not_read) ... ok
+test_fragmented_replies_and_reconnect (test_persistent_metadata.MetadataTest.test_fragmented_replies_and_reconnect) ... ok
+test_fragments_share_one_deadline (test_persistent_metadata.MetadataTest.test_fragments_share_one_deadline) ... ok
+test_invalid_timeout (test_persistent_metadata.MetadataTest.test_invalid_timeout) ... ok
+test_clock_rollback (test_race_acceptance.TerminalWindowTests.test_clock_rollback) ... ok
+test_continuous_second (test_race_acceptance.TerminalWindowTests.test_continuous_second) ... ok
+test_dense_short_burst_is_not_a_second (test_race_acceptance.TerminalWindowTests.test_dense_short_burst_is_not_a_second) ... ok
+test_duplicate_with_unstable_sample_is_rejected (test_race_acceptance.TerminalWindowTests.test_duplicate_with_unstable_sample_is_rejected) ... ok
+test_empty (test_race_acceptance.TerminalWindowTests.test_empty) ... ok
+test_many_duplicates_do_not_make_a_second (test_race_acceptance.TerminalWindowTests.test_many_duplicates_do_not_make_a_second) ... ok
+test_missing_telemetry_inside_tail (test_race_acceptance.TerminalWindowTests.test_missing_telemetry_inside_tail) ... ok
+test_nonfinite_telemetry (test_race_acceptance.TerminalWindowTests.test_nonfinite_telemetry) ... ok
+test_recovered_old_excursion (test_race_acceptance.TerminalWindowTests.test_recovered_old_excursion) ... ok
+test_unstable_at_start_of_window (test_race_acceptance.TerminalWindowTests.test_unstable_at_start_of_window) ... ok
+test_unstable_duplicate_at_window_boundary (test_race_acceptance.TerminalWindowTests.test_unstable_duplicate_at_window_boundary) ... ok
+test_collision_cannot_be_averaged_away (test_speed_acceptance.SpeedAcceptanceTests.test_collision_cannot_be_averaged_away) ... ok
+test_complete_valid_fast_record (test_speed_acceptance.SpeedAcceptanceTests.test_complete_valid_fast_record) ... ok
+test_fast_gates_but_late_settling (test_speed_acceptance.SpeedAcceptanceTests.test_fast_gates_but_late_settling) ... ok
+test_fast_reference_but_failed_physics (test_speed_acceptance.SpeedAcceptanceTests.test_fast_reference_but_failed_physics) ... ok
+test_missing_gate (test_speed_acceptance.SpeedAcceptanceTests.test_missing_gate) ... ok
+test_no_settling_timestamp (test_speed_acceptance.SpeedAcceptanceTests.test_no_settling_timestamp) ... ok
+test_terminal_hold_cannot_dilute_racing_error (test_speed_acceptance.SpeedAcceptanceTests.test_terminal_hold_cannot_dilute_racing_error) ... ok
+test_negative_boundary (test_yaw_unwrap.YawUnwrapTest.test_negative_boundary) ... ok
+test_positive_boundary (test_yaw_unwrap.YawUnwrapTest.test_positive_boundary) ... ok
+test_sequence_is_locally_continuous (test_yaw_unwrap.YawUnwrapTest.test_sequence_is_locally_continuous) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.073s
+
+OK

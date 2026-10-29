@@ -1,0 +1,110 @@
+Initializing catkin workspace in `/home/by/lab4_sub4_20261029/ros_ws`.
+-----------------------------------------------------------------------
+Profile:                     default
+Extending:             [env] /opt/ros/noetic
+Workspace:                   /home/by/lab4_sub4_20261029/ros_ws
+-----------------------------------------------------------------------
+Build Space:       [missing] /home/by/lab4_sub4_20261029/ros_ws/build
+Devel Space:       [missing] /home/by/lab4_sub4_20261029/ros_ws/devel
+Install Space:      [unused] /home/by/lab4_sub4_20261029/ros_ws/install
+Log Space:         [missing] /home/by/lab4_sub4_20261029/ros_ws/logs
+Source Space:       [exists] /home/by/lab4_sub4_20261029/ros_ws/src
+DESTDIR:            [unused] None
+-----------------------------------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+-----------------------------------------------------------------------
+Additional CMake Args:       None
+Additional Make Args:        None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+-----------------------------------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+-----------------------------------------------------------------------
+Workspace configuration appears valid.
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+Profile:                     default
+Extending:        [explicit] /home/by/vnav_ws/devel
+Workspace:                   /home/by/lab4_sub4_20261029/ros_ws
+-----------------------------------------------------------------------
+Build Space:       [missing] /home/by/lab4_sub4_20261029/ros_ws/build
+Devel Space:       [missing] /home/by/lab4_sub4_20261029/ros_ws/devel
+Install Space:      [unused] /home/by/lab4_sub4_20261029/ros_ws/install
+Log Space:         [missing] /home/by/lab4_sub4_20261029/ros_ws/logs
+Source Space:       [exists] /home/by/lab4_sub4_20261029/ros_ws/src
+DESTDIR:            [unused] None
+-----------------------------------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+-----------------------------------------------------------------------
+Additional CMake Args:       -DCMAKE_BUILD_TYPE=Release
+Additional Make Args:        None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+-----------------------------------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+-----------------------------------------------------------------------
+Workspace configuration appears valid.
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+Profile:                     default
+Extending:        [explicit] /home/by/vnav_ws/devel
+Workspace:                   /home/by/lab4_sub4_20261029/ros_ws
+-----------------------------------------------------------------------
+Build Space:        [exists] /home/by/lab4_sub4_20261029/ros_ws/build
+Devel Space:        [exists] /home/by/lab4_sub4_20261029/ros_ws/devel
+Install Space:      [unused] /home/by/lab4_sub4_20261029/ros_ws/install
+Log Space:         [missing] /home/by/lab4_sub4_20261029/ros_ws/logs
+Source Space:       [exists] /home/by/lab4_sub4_20261029/ros_ws/src
+DESTDIR:            [unused] None
+-----------------------------------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+-----------------------------------------------------------------------
+Additional CMake Args:       -DCMAKE_BUILD_TYPE=Release
+Additional Make Args:        -j2
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+-----------------------------------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+-----------------------------------------------------------------------
+Workspace configuration appears valid.
+
+NOTE: Forcing CMake to run for each package.
+-----------------------------------------------------------------------
+[build] Found 18 packages in 0.0 seconds.                                      
+[build] Updating package table.                                                
+Starting >>> catkin_tools_prebuild               
+Finished <<< catkin_tools_prebuild                [ 1.2 seconds ]
+Starting >>> mav_planning_msgs                   
+Finished <<< mav_planning_msgs                    [ 4.3 seconds ]
+Starting >>> mav_visualization                   
+Finished <<< mav_visualization                    [ 8.1 seconds ]
+Starting >>> planner_pkg                         
+Finished <<< planner_pkg                          [ 5.8 seconds ]
+Starting >>> tesse_ros_bridge                    
+Finished <<< tesse_ros_bridge                     [ 3.0 seconds ]
+Starting >>> trajectory_generation               
+Finished <<< trajectory_generation                [ 13.3 seconds ]
+Starting >>> controller_pkg                      
+Finished <<< controller_pkg                       [ 13.7 seconds ]
+[build] Summary: All 7 packages succeeded!
+[build] Ignored: 12 packages were skipped or are skiplisted.
+[build] Warnings: None.
+[build] Abandoned: No packages were abandoned.
+[build] Failed: No packages failed.
+[build] Runtime: 49.4 seconds total.
+[build] Note: Workspace packages have changed, please re-source setup files to use them.
+
+Built workspace: /home/by/lab4_sub4_20261029/ros_ws
+Source /home/by/lab4_sub4_20261029/ros_ws/devel/setup.bash before launch.
+TESSE Python module path: /home/by/lab4_sub4_20261029/code/tesse-ros-bridge/tesse-interface/src
+
+Start: bash "/home/by/lab4_sub4_20261029/run_optimized.sh"

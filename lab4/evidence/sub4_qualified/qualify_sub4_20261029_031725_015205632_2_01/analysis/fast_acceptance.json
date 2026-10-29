@@ -1,0 +1,38 @@
+{
+  "passed": false,
+  "checks": {
+    "original_physical_acceptance": false,
+    "all_twelve_gates": true,
+    "actual_mission_to_last_gate_under_limit": true,
+    "actual_settled_finish_under_limit": true,
+    "complete_reference_under_limit": true,
+    "racing_rmse_unchanged_limit": false,
+    "racing_p95_unchanged_limit": false,
+    "no_reported_collisions": true
+  },
+  "limit_s": 15.0,
+  "actual_mission_to_last_gate_s": 5.3141881620874365,
+  "actual_tracking_to_last_gate_s": 4.8141881620874365,
+  "actual_mission_to_settled_finish_s": 9.040000001,
+  "measured_wall_to_settled_s_estimate": 9.040352494000011,
+  "planned_reference_duration_s": 6.65,
+  "racing_metrics": {
+    "angular_speed_max_rad_s": 7.0000007081503925,
+    "duration_s": 5.2799999989999975,
+    "position_max_m": 2.9898236871114965,
+    "position_p95_m": 2.6790493018792687,
+    "position_rmse_m": 1.2309631164724804,
+    "speed_max_mps": 36.36442988799348,
+    "yaw_error_max_deg": 142.26510714704563
+  },
+  "terminal_observation_separate": true,
+  "terminal_check": {
+    "actual_stable_full_route": false,
+    "failure_reasons": [
+      "less than 60 seconds continuous terminal hold after settling",
+      "no independently verified reference completion"
+    ],
+    "reference_full_route": false,
+    "terminal_hold_duration_s": 54.999999999
+  }
+}

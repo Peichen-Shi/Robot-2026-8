@@ -1,0 +1,39 @@
+run_id,valid,under_7s,race_time_ms,passed_gates,planned_duration_s,minimum_clearance_m,collision,stable_exit,failure_reasons
+balanced_3p9_balanced_01,False,False,,5,6.65,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+balanced_3p9_balanced_bias_01,False,False,,5,6.65,,False,True,incomplete sequential gate crossings
+balanced_4p4_balanced_01,False,False,,5,7.15,,False,True,incomplete sequential gate crossings
+baseline_01,True,True,6099.034709302045,12,8.85,0.33796273983868386,False,True,
+braking_3p9_brake12_01,False,False,,12,6.65,0.1624082556922618,True,False,missing independent terminal phase start; simulator reported collision during mission
+braking_3p9_brake18_01,False,False,,12,6.65,0.1402131072166004,True,False,missing independent terminal phase start; simulator reported collision during mission
+braking_3p9_brake_early_01,True,True,3891.5295164750105,12,6.65,0.16520665324932304,False,True,
+corner_3p9_lead120_01,False,False,,5,6.65,,False,True,incomplete sequential gate crossings
+corner_3p9_lead40_01,False,False,,8,6.65,,False,True,incomplete sequential gate crossings
+corner_3p9_lead80_01,False,False,,7,6.65,,False,True,incomplete sequential gate crossings
+corner_4p4_lead80_01,False,False,,5,7.1499999999999995,,False,True,incomplete sequential gate crossings
+feedforward_3p9_bias3_01,True,True,3896.7372452938653,12,6.65,0.2695608679775031,False,True,
+flat_3p9_thrust_priority_01,False,False,,5,6.6499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+flat_3p9_upright85_01,False,False,,3,6.6499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+flat_4p4_thrust_priority_01,False,False,,3,7.1499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+flat_4p9_thrust_priority_01,False,False,,12,7.65,0.29430291821276333,False,False,
+force_3p9_force_keep_01,False,False,,5,6.65,,False,True,incomplete sequential gate crossings
+force_3p9_force_lead20_01,False,False,,10,6.65,,False,True,incomplete sequential gate crossings
+force_3p9_force_vertical_01,False,False,,10,6.65,,False,True,incomplete sequential gate crossings
+model_3p9_direction_01,False,False,,2,6.6499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+model_3p9_identified_01,False,False,,5,6.6499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+model_4p4_identified_01,False,False,,5,7.1499999999999995,,False,False,incomplete sequential gate crossings
+model_4p9_identified_01,False,False,,12,7.65,0.236922613121062,False,False,
+qualify_sub4_20261029_025810_634628476_1_01,True,True,3888.231333705974,12,6.65,0.022031409130976565,False,True,
+qualify_sub4_20261029_025810_634628476_2_01,True,True,3891.3004594338663,12,6.65,0.27037077578866675,False,True,
+qualify_sub4_20261029_025810_634628476_3_01,False,False,,10,6.65,,False,True,incomplete sequential gate crossings
+qualify_sub4_20261029_031725_015205632_1_01,True,True,3895.686724263944,12,6.65,0.313024221903773,False,True,
+qualify_sub4_20261029_031725_015205632_2_01,True,True,3894.9729782258623,12,6.65,0.20593992768582692,False,True,
+qualify_sub4_20261029_031725_015205632_3_01,True,True,3896.349878366129,12,6.65,0.31157557118369483,False,True,
+robust_3p96_robust_01,False,False,,10,6.710000000000001,,False,True,incomplete sequential gate crossings
+search_3p9_aggressive85_01,False,False,,3,6.6499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+search_3p9_response85_01,False,False,,5,6.6499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+search_4p4_response85_01,False,False,,5,7.1499999999999995,,True,False,incomplete sequential gate crossings; missing independent terminal phase start; simulator reported collision during mission
+search_4p9_response85_01,False,False,,6,7.65,,False,False,incomplete sequential gate crossings
+search_5p5_upright85_01,True,True,5496.036493863672,12,8.25,0.24950850833642924,False,True,
+tail_3p95_force_quiet_yaw_01,False,False,,2,6.7,,False,True,incomplete sequential gate crossings
+tail_3p95_force_vertical_01,False,False,,5,6.7,,False,True,incomplete sequential gate crossings
+tail_3p9_force_vertical_01,False,False,,12,6.65,0.04144302658666199,True,False,missing independent terminal phase start; simulator reported collision during mission

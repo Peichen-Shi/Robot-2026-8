@@ -1,0 +1,189 @@
+{
+  "audit_type": "existing recorded evidence, not new flights",
+  "results": [
+    {
+      "passed": true,
+      "checks": {
+        "original_twelve_gates_unchanged": true,
+        "all_ordered_forward_gates": true,
+        "positive_finite_actual_time": true,
+        "complete_published_reference": true,
+        "single_trial": true,
+        "stable_exit_last_second": true,
+        "no_fault_clock_reset_or_long_gap": true,
+        "collision_telemetry_enabled": true,
+        "no_reported_mission_collision": true
+      },
+      "run_id": "qualify61_1_01",
+      "first_gate_to_last_gate_ms": 6098.144394025507,
+      "passed_gates": 12,
+      "gate_width_m": 2.4,
+      "gate_height_m": 2.4,
+      "body_margin_m": 0.18,
+      "ignored_legacy_criteria": [
+        "whole-record position aggregate",
+        "60-second terminal observation"
+      ],
+      "legacy_stability_result": {
+        "actual_stable_full_route": false,
+        "failure_reasons": [
+          "less than 60 seconds continuous terminal hold after settling",
+          "no independently verified reference completion"
+        ],
+        "reference_full_route": false,
+        "terminal_hold_duration_s": 0.0
+      },
+      "failure_reasons": [],
+      "minimum_clearance_m": 0.3365246525836778,
+      "racing_metrics": {
+        "angular_speed_max_rad_s": 7.0000006306208284,
+        "duration_s": 7.539999999999999,
+        "position_max_m": 0.3303386301151162,
+        "position_p95_m": 0.2608536351504356,
+        "position_rmse_m": 0.12967364242928292,
+        "speed_max_mps": 18.717834320093363,
+        "yaw_error_max_deg": 65.56679201388015
+      },
+      "actual_speed_peak_mps": 18.717834320093363,
+      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_1_01"
+    },
+    {
+      "passed": true,
+      "checks": {
+        "original_twelve_gates_unchanged": true,
+        "all_ordered_forward_gates": true,
+        "positive_finite_actual_time": true,
+        "complete_published_reference": true,
+        "single_trial": true,
+        "stable_exit_last_second": true,
+        "no_fault_clock_reset_or_long_gap": true,
+        "collision_telemetry_enabled": true,
+        "no_reported_mission_collision": true
+      },
+      "run_id": "qualify61_2_01",
+      "first_gate_to_last_gate_ms": 6098.465338597922,
+      "passed_gates": 12,
+      "gate_width_m": 2.4,
+      "gate_height_m": 2.4,
+      "body_margin_m": 0.18,
+      "ignored_legacy_criteria": [
+        "whole-record position aggregate",
+        "60-second terminal observation"
+      ],
+      "legacy_stability_result": {
+        "actual_stable_full_route": false,
+        "failure_reasons": [
+          "less than 60 seconds continuous terminal hold after settling",
+          "no independently verified reference completion"
+        ],
+        "reference_full_route": false,
+        "terminal_hold_duration_s": 0.0
+      },
+      "failure_reasons": [],
+      "minimum_clearance_m": 0.35873803481509703,
+      "racing_metrics": {
+        "angular_speed_max_rad_s": 7.000000950292079,
+        "duration_s": 7.539999999999999,
+        "position_max_m": 0.23831379850606488,
+        "position_p95_m": 0.19040645842069986,
+        "position_rmse_m": 0.1065402040194783,
+        "speed_max_mps": 18.677242870776254,
+        "yaw_error_max_deg": 65.73280207723384
+      },
+      "actual_speed_peak_mps": 18.677242870776254,
+      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_2_01"
+    },
+    {
+      "passed": true,
+      "checks": {
+        "original_twelve_gates_unchanged": true,
+        "all_ordered_forward_gates": true,
+        "positive_finite_actual_time": true,
+        "complete_published_reference": true,
+        "single_trial": true,
+        "stable_exit_last_second": true,
+        "no_fault_clock_reset_or_long_gap": true,
+        "collision_telemetry_enabled": true,
+        "no_reported_mission_collision": true
+      },
+      "run_id": "qualify61_3_01",
+      "first_gate_to_last_gate_ms": 6098.037419699172,
+      "passed_gates": 12,
+      "gate_width_m": 2.4,
+      "gate_height_m": 2.4,
+      "body_margin_m": 0.18,
+      "ignored_legacy_criteria": [
+        "whole-record position aggregate",
+        "60-second terminal observation"
+      ],
+      "legacy_stability_result": {
+        "actual_stable_full_route": false,
+        "failure_reasons": [
+          "less than 60 seconds continuous terminal hold after settling",
+          "no independently verified reference completion"
+        ],
+        "reference_full_route": false,
+        "terminal_hold_duration_s": 0.0
+      },
+      "failure_reasons": [],
+      "minimum_clearance_m": 0.39105480138867554,
+      "racing_metrics": {
+        "angular_speed_max_rad_s": 7.000000884176872,
+        "duration_s": 7.539999998999999,
+        "position_max_m": 0.2380562138565035,
+        "position_p95_m": 0.20240134235109658,
+        "position_rmse_m": 0.10510819391244165,
+        "speed_max_mps": 18.707213623288343,
+        "yaw_error_max_deg": 66.50737198369357
+      },
+      "actual_speed_peak_mps": 18.707213623288343,
+      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_3_01"
+    },
+    {
+      "passed": true,
+      "checks": {
+        "original_twelve_gates_unchanged": true,
+        "all_ordered_forward_gates": true,
+        "positive_finite_actual_time": true,
+        "complete_published_reference": true,
+        "single_trial": true,
+        "stable_exit_last_second": true,
+        "no_fault_clock_reset_or_long_gap": true,
+        "collision_telemetry_enabled": true,
+        "no_reported_mission_collision": true
+      },
+      "run_id": "sub7_20261025_062950_612446933_01",
+      "first_gate_to_last_gate_ms": 6097.876444283422,
+      "passed_gates": 12,
+      "gate_width_m": 2.4,
+      "gate_height_m": 2.4,
+      "body_margin_m": 0.18,
+      "ignored_legacy_criteria": [
+        "whole-record position aggregate",
+        "60-second terminal observation"
+      ],
+      "legacy_stability_result": {
+        "actual_stable_full_route": false,
+        "failure_reasons": [
+          "less than 60 seconds continuous terminal hold after settling",
+          "no independently verified reference completion"
+        ],
+        "reference_full_route": false,
+        "terminal_hold_duration_s": 0.0
+      },
+      "failure_reasons": [],
+      "minimum_clearance_m": 0.33903716236085124,
+      "racing_metrics": {
+        "angular_speed_max_rad_s": 7.00000068556914,
+        "duration_s": 7.539999999999999,
+        "position_max_m": 0.3262830437788201,
+        "position_p95_m": 0.2431321002166425,
+        "position_rmse_m": 0.12600381558326895,
+        "speed_max_mps": 18.707652183446207,
+        "yaw_error_max_deg": 65.74856755415117
+      },
+      "actual_speed_peak_mps": 18.707652183446207,
+      "source_directory": "tmp\\fast61-improved\\evidence\\sub7_20261025_062950_612446933_01"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "ready": true,
+  "topics": {
+    "state": {
+      "advancing_samples": 12,
+      "first_stamp": 1.06,
+      "last_stamp": 1.28
+    },
+    "clock": {
+      "advancing_samples": 12,
+      "first_stamp": 1.06,
+      "last_stamp": 1.28
+    }
+  }
+}

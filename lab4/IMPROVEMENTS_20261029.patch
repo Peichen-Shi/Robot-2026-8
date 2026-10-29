@@ -1,0 +1,797 @@
+--- a/code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/persistent_metadata.py
++++ b/code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/persistent_metadata.py
+@@ -5,11 +5,15 @@
+ """
+ import socket
+ import struct
++import math
++import time
+ from tesse.msgs import MetadataRequest
+ 
+ 
+ class PersistentMetadataClient:
+     def __init__(self, env, host, port, timeout=0.2):
++        if not math.isfinite(timeout) or timeout <= 0:
++            raise ValueError('Metadata timeout must be finite and positive')
+         self.env = env
+         self.timeout = timeout
+         self.listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+@@ -19,9 +23,14 @@
+         self.listener.settimeout(timeout)
+ 
+     @staticmethod
+-    def receive_exact(connection, length):
++    def receive_exact(connection, length, deadline=None):
+         parts = []
+         while length:
++            if deadline is not None:
++                remaining = deadline - time.monotonic()
++                if remaining <= 0:
++                    raise socket.timeout('TESSE metadata request deadline exceeded')
++                connection.settimeout(remaining)
+             part = connection.recv(length)
+             if not part:
+                 raise ConnectionError('TESSE closed an incomplete metadata reply')
+@@ -30,16 +39,22 @@
+         return b''.join(parts)
+ 
+     def request(self):
++        # One wall-clock budget covers accept, header and body. A peer sending
++        # tiny fragments must not postpone the controller's watchdog forever.
++        deadline = time.monotonic() + self.timeout
+         self.env.send(MetadataRequest())
++        remaining = deadline - time.monotonic()
++        if remaining <= 0:
++            raise socket.timeout('TESSE metadata request deadline exceeded')
++        self.listener.settimeout(remaining)
+         connection, _ = self.listener.accept()
+         with connection:
+-            connection.settimeout(self.timeout)
+-            if self.receive_exact(connection, 4) != b'meta':
++            if self.receive_exact(connection, 4, deadline) != b'meta':
+                 raise ValueError('Unexpected metadata reply tag')
+-            length = struct.unpack('I', self.receive_exact(connection, 4))[0]
++            length = struct.unpack('I', self.receive_exact(connection, 4, deadline))[0]
+             if not 0 < length <= 1024 * 1024:
+                 raise ValueError('Invalid metadata reply length')
+-            return self.receive_exact(connection, length)
++            return self.receive_exact(connection, length, deadline)
+ 
+     def close(self):
+         self.listener.close()
+--- /dev/null
++++ b/evidence/recheck_20261029.json
+@@ -0,0 +1,189 @@
++{
++  "audit_type": "existing recorded evidence, not new flights",
++  "results": [
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "qualify61_1_01",
++      "first_gate_to_last_gate_ms": 6098.144394025507,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.3365246525836778,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.0000006306208284,
++        "duration_s": 7.539999999999999,
++        "position_max_m": 0.3303386301151162,
++        "position_p95_m": 0.2608536351504356,
++        "position_rmse_m": 0.12967364242928292,
++        "speed_max_mps": 18.717834320093363,
++        "yaw_error_max_deg": 65.56679201388015
++      },
++      "actual_speed_peak_mps": 18.717834320093363,
++      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_1_01"
++    },
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "qualify61_2_01",
++      "first_gate_to_last_gate_ms": 6098.465338597922,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.35873803481509703,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.000000950292079,
++        "duration_s": 7.539999999999999,
++        "position_max_m": 0.23831379850606488,
++        "position_p95_m": 0.19040645842069986,
++        "position_rmse_m": 0.1065402040194783,
++        "speed_max_mps": 18.677242870776254,
++        "yaw_error_max_deg": 65.73280207723384
++      },
++      "actual_speed_peak_mps": 18.677242870776254,
++      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_2_01"
++    },
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "qualify61_3_01",
++      "first_gate_to_last_gate_ms": 6098.037419699172,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.39105480138867554,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.000000884176872,
++        "duration_s": 7.539999998999999,
++        "position_max_m": 0.2380562138565035,
++        "position_p95_m": 0.20240134235109658,
++        "position_rmse_m": 0.10510819391244165,
++        "speed_max_mps": 18.707213623288343,
++        "yaw_error_max_deg": 66.50737198369357
++      },
++      "actual_speed_peak_mps": 18.707213623288343,
++      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_3_01"
++    },
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "sub7_20261025_062950_612446933_01",
++      "first_gate_to_last_gate_ms": 6097.876444283422,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.33903716236085124,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.00000068556914,
++        "duration_s": 7.539999999999999,
++        "position_max_m": 0.3262830437788201,
++        "position_p95_m": 0.2431321002166425,
++        "position_rmse_m": 0.12600381558326895,
++        "speed_max_mps": 18.707652183446207,
++        "yaw_error_max_deg": 65.74856755415117
++      },
++      "actual_speed_peak_mps": 18.707652183446207,
++      "source_directory": "tmp\\fast61-improved\\evidence\\sub7_20261025_062950_612446933_01"
++    }
++  ]
++}
+--- /dev/null
++++ b/evidence/recheck_20261029_final.json
+@@ -0,0 +1,189 @@
++{
++  "audit_type": "existing recorded evidence, not new flights",
++  "results": [
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "qualify61_1_01",
++      "first_gate_to_last_gate_ms": 6098.144394025507,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.3365246525836778,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.0000006306208284,
++        "duration_s": 7.539999999999999,
++        "position_max_m": 0.3303386301151162,
++        "position_p95_m": 0.2608536351504356,
++        "position_rmse_m": 0.12967364242928292,
++        "speed_max_mps": 18.717834320093363,
++        "yaw_error_max_deg": 65.56679201388015
++      },
++      "actual_speed_peak_mps": 18.717834320093363,
++      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_1_01"
++    },
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "qualify61_2_01",
++      "first_gate_to_last_gate_ms": 6098.465338597922,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.35873803481509703,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.000000950292079,
++        "duration_s": 7.539999999999999,
++        "position_max_m": 0.23831379850606488,
++        "position_p95_m": 0.19040645842069986,
++        "position_rmse_m": 0.1065402040194783,
++        "speed_max_mps": 18.677242870776254,
++        "yaw_error_max_deg": 65.73280207723384
++      },
++      "actual_speed_peak_mps": 18.677242870776254,
++      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_2_01"
++    },
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "qualify61_3_01",
++      "first_gate_to_last_gate_ms": 6098.037419699172,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.39105480138867554,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.000000884176872,
++        "duration_s": 7.539999998999999,
++        "position_max_m": 0.2380562138565035,
++        "position_p95_m": 0.20240134235109658,
++        "position_rmse_m": 0.10510819391244165,
++        "speed_max_mps": 18.707213623288343,
++        "yaw_error_max_deg": 66.50737198369357
++      },
++      "actual_speed_peak_mps": 18.707213623288343,
++      "source_directory": "tmp\\fast61-improved\\evidence\\qualify61_3_01"
++    },
++    {
++      "passed": true,
++      "checks": {
++        "original_twelve_gates_unchanged": true,
++        "all_ordered_forward_gates": true,
++        "positive_finite_actual_time": true,
++        "complete_published_reference": true,
++        "single_trial": true,
++        "stable_exit_last_second": true,
++        "no_fault_clock_reset_or_long_gap": true,
++        "collision_telemetry_enabled": true,
++        "no_reported_mission_collision": true
++      },
++      "run_id": "sub7_20261025_062950_612446933_01",
++      "first_gate_to_last_gate_ms": 6097.876444283422,
++      "passed_gates": 12,
++      "gate_width_m": 2.4,
++      "gate_height_m": 2.4,
++      "body_margin_m": 0.18,
++      "ignored_legacy_criteria": [
++        "whole-record position aggregate",
++        "60-second terminal observation"
++      ],
++      "legacy_stability_result": {
++        "actual_stable_full_route": false,
++        "failure_reasons": [
++          "less than 60 seconds continuous terminal hold after settling",
++          "no independently verified reference completion"
++        ],
++        "reference_full_route": false,
++        "terminal_hold_duration_s": 0.0
++      },
++      "failure_reasons": [],
++      "minimum_clearance_m": 0.33903716236085124,
++      "racing_metrics": {
++        "angular_speed_max_rad_s": 7.00000068556914,
++        "duration_s": 7.539999999999999,
++        "position_max_m": 0.3262830437788201,
++        "position_p95_m": 0.2431321002166425,
++        "position_rmse_m": 0.12600381558326895,
++        "speed_max_mps": 18.707652183446207,
++        "yaw_error_max_deg": 65.74856755415117
++      },
++      "actual_speed_peak_mps": 18.707652183446207,
++      "source_directory": "tmp\\fast61-improved\\evidence\\sub7_20261025_062950_612446933_01"
++    }
++  ]
++}
+--- /dev/null
++++ b/evidence/validation/improvements_20261029_tests.log
+@@ -0,0 +1,47 @@
++test_changed_id_or_clock (test_completion_logic.CompletionTests.test_changed_id_or_clock) ... ok
++test_complete (test_completion_logic.CompletionTests.test_complete) ... ok
++test_delayed_divergence (test_completion_logic.CompletionTests.test_delayed_divergence) ... ok
++test_fault_nan_and_gap (test_completion_logic.CompletionTests.test_fault_nan_and_gap) ... ok
++test_half_reference (test_completion_logic.CompletionTests.test_half_reference) ... ok
++test_missing_gate (test_completion_logic.CompletionTests.test_missing_gate) ... ok
++test_short_hold (test_completion_logic.CompletionTests.test_short_hold) ... ok
++test_forward_crossing_inside_local_yz_aperture (test_gate_crossing.GateGeometryTest.test_forward_crossing_inside_local_yz_aperture) ... ok
++test_reverse_crossing_is_rejected (test_gate_crossing.GateGeometryTest.test_reverse_crossing_is_rejected) ... ok
++test_timestamp_rollback_keeps_last_epoch (test_gate_crossing.GateGeometryTest.test_timestamp_rollback_keeps_last_epoch) ... ok
++test_duplicate_no_extra_crossing (test_gate_timer.GateTimerTests.test_duplicate_no_extra_crossing) ... ok
++test_first_to_last_only_and_freeze (test_gate_timer.GateTimerTests.test_first_to_last_only_and_freeze) ... ok
++test_gap_invalid (test_gate_timer.GateTimerTests.test_gap_invalid) ... ok
++test_new_trial_resets (test_gate_timer.GateTimerTests.test_new_trial_resets) ... ok
++test_outside_aperture_invalid (test_gate_timer.GateTimerTests.test_outside_aperture_invalid) ... ok
++test_reverse_not_a_start (test_gate_timer.GateTimerTests.test_reverse_not_a_start) ... ok
++test_rollback_invalid (test_gate_timer.GateTimerTests.test_rollback_invalid) ... ok
++test_expired_deadline_does_not_read (test_persistent_metadata.MetadataTest.test_expired_deadline_does_not_read) ... ok
++test_fragmented_replies_and_reconnect (test_persistent_metadata.MetadataTest.test_fragmented_replies_and_reconnect) ... ok
++test_fragments_share_one_deadline (test_persistent_metadata.MetadataTest.test_fragments_share_one_deadline) ... ok
++test_invalid_timeout (test_persistent_metadata.MetadataTest.test_invalid_timeout) ... ok
++test_clock_rollback (test_race_acceptance.TerminalWindowTests.test_clock_rollback) ... ok
++test_continuous_second (test_race_acceptance.TerminalWindowTests.test_continuous_second) ... ok
++test_dense_short_burst_is_not_a_second (test_race_acceptance.TerminalWindowTests.test_dense_short_burst_is_not_a_second) ... ok
++test_duplicate_with_unstable_sample_is_rejected (test_race_acceptance.TerminalWindowTests.test_duplicate_with_unstable_sample_is_rejected) ... ok
++test_empty (test_race_acceptance.TerminalWindowTests.test_empty) ... ok
++test_many_duplicates_do_not_make_a_second (test_race_acceptance.TerminalWindowTests.test_many_duplicates_do_not_make_a_second) ... ok
++test_missing_telemetry_inside_tail (test_race_acceptance.TerminalWindowTests.test_missing_telemetry_inside_tail) ... ok
++test_nonfinite_telemetry (test_race_acceptance.TerminalWindowTests.test_nonfinite_telemetry) ... ok
++test_recovered_old_excursion (test_race_acceptance.TerminalWindowTests.test_recovered_old_excursion) ... ok
++test_unstable_at_start_of_window (test_race_acceptance.TerminalWindowTests.test_unstable_at_start_of_window) ... ok
++test_unstable_duplicate_at_window_boundary (test_race_acceptance.TerminalWindowTests.test_unstable_duplicate_at_window_boundary) ... ok
++test_collision_cannot_be_averaged_away (test_speed_acceptance.SpeedAcceptanceTests.test_collision_cannot_be_averaged_away) ... ok
++test_complete_valid_fast_record (test_speed_acceptance.SpeedAcceptanceTests.test_complete_valid_fast_record) ... ok
++test_fast_gates_but_late_settling (test_speed_acceptance.SpeedAcceptanceTests.test_fast_gates_but_late_settling) ... ok
++test_fast_reference_but_failed_physics (test_speed_acceptance.SpeedAcceptanceTests.test_fast_reference_but_failed_physics) ... ok
++test_missing_gate (test_speed_acceptance.SpeedAcceptanceTests.test_missing_gate) ... ok
++test_no_settling_timestamp (test_speed_acceptance.SpeedAcceptanceTests.test_no_settling_timestamp) ... ok
++test_terminal_hold_cannot_dilute_racing_error (test_speed_acceptance.SpeedAcceptanceTests.test_terminal_hold_cannot_dilute_racing_error) ... ok
++test_negative_boundary (test_yaw_unwrap.YawUnwrapTest.test_negative_boundary) ... ok
++test_positive_boundary (test_yaw_unwrap.YawUnwrapTest.test_positive_boundary) ... ok
++test_sequence_is_locally_continuous (test_yaw_unwrap.YawUnwrapTest.test_sequence_is_locally_continuous) ... ok
++
++----------------------------------------------------------------------
++Ran 42 tests in 0.073s
++
++OK
+--- /dev/null
++++ b/IMPROVEMENTS_20261029.md
+@@ -0,0 +1,45 @@
++# Fast61 稳定性改进（2026-10-29）
++
++此版本以用户提供的 VNAV_Lab4_3D_Fast61.zip 为基线。
++
++## 修改结果
++
++1. 元数据请求使用一个基于单调时钟的整体超时预算，覆盖连接等待、帧头和正文接收。过去只限制每次 recv 的等待，持续碎片回复可拖长整次请求；现在碎片不会刷新预算。拒绝非正、无穷和 NaN 超时配置。
++2. 竞速验收要求末尾至少连续一秒稳定遥测，相邻样本间隔不超过 100 ms；重复时间戳不能累积时长，窗口边界的重复异常样本也会被检查。拒绝时钟回退、非有限值和错误的运行标识。
++3. 增加 scripts/recheck_race_evidence.py，可在没有 ROS 的 Windows/Linux 上复核原始录包。仅读取已有证据，输出使用独占创建方式，避免覆盖旧结果。
++
++赛道、飞行控制增益、6.1 秒分段时间和推力上限保持基线值。本次改进针对通信等待和验收可靠性，没有未经测量地提速。
++
++## 已完成验证
++
++- 原有 28 项测试通过；改进后的完整测试集 42 项通过。
++- 四份原始 bag 均通过新的竞速验收规则。
++- 详细自动测试日志：evidence/validation/improvements_20261029_tests.log。
++- 最终历史录包复核：evidence/recheck_20261029_final.json。
++- 与用户 ZIP 的文本差异：IMPROVEMENTS_20261029.patch。
++- PACKAGE_SHA256SUMS.txt 已为改进版重新生成。
++
++**验证边界：没有进行本次修改后的新飞行、ROS 编译或速度对比。** 电脑运行着 VMware Ubuntu，但本次未能建立其命令连接；WSL Ubuntu 没有 ROS 环境。原来的运行目录未被替换，GitHub 本次没有新提交。
++
++## 在已有 ROS Noetic 仿真环境中使用
++
++建议解压至新的 ~/lab4_fast61_improved_20261029 目录，保留原版供对照：
++
++```bash
++cd ~/lab4_fast61_improved_20261029
++bash install.sh
++python3 -m unittest discover -s tests -v
++bash verify_sub7.sh
++```
++
++构建默认读取 ~/vnav_ws4/devel；若位置不同，先设置 LAB4_UNDERLAY。三次独立重启都通过后，再使用 bash run_3d_race.sh 日常启动。
++
++## 不启动仿真的离线复核
++
++需 Python 和 rosbags：
++
++```bash
++python scripts/recheck_race_evidence.py evidence/qualify61_1_01 evidence/qualify61_2_01 evidence/qualify61_3_01 evidence/sub7_20261025_062950_612446933_01 --output audit_new.json
++```
++
++这项命令只重新检查历史录包，不能证明新版本的闭环飞行性能。
+--- a/optimization/race_acceptance.py
++++ b/optimization/race_acceptance.py
+@@ -4,10 +4,33 @@
+ import json
+ import math
+ from pathlib import Path
+-import numpy as np
+-import rosbag
+ 
+-def evaluate_run(directory):
++def stable_terminal_window(samples, duration=1.0, maximum_gap=0.10):
++    """Require a full, ordered second of finite, continuously stable telemetry."""
++    if len(samples) < 2 or not all(math.isfinite(v) for row in samples for v in row):
++        return False
++    # Reject rollback anywhere in the terminal stream; duplicate epochs do not
++    # add observation time and are checked for stability like every other row.
++    if any(b[0] < a[0] for a, b in zip(samples, samples[1:])):
++        return False
++    cutoff = samples[-1][0] - duration
++    starts = [i for i, row in enumerate(samples) if row[0] <= cutoff + 1e-9]
++    if not starts:
++        return False
++    start = starts[-1]
++    while start > 0 and samples[start - 1][0] == samples[start][0]:
++        start -= 1
++    tail = samples[start:]
++    return (tail[-1][0] - tail[0][0] >= duration - 1e-9
++            and all(b[0] - a[0] <= maximum_gap + 1e-9
++                    for a, b in zip(tail, tail[1:]))
++            and all(0 <= r[1] <= .3 and 0 <= r[2] <= .2
++                    and 0 <= r[3] <= .5 for r in tail))
++
++def evaluate_run(directory, bag_factory=None):
++    if bag_factory is None:
++        import rosbag
++        bag_factory = rosbag.Bag
+     directory=Path(directory)
+     m=json.loads((directory/'analysis/metrics.json').read_text())
+     meta=json.loads((directory/'run_metadata.json').read_text())
+@@ -20,22 +43,22 @@
+         'less than 60 seconds continuous terminal hold after settling',
+         'whole-run position limits exceeded')]
+     statuses=[];terminal=[]
+-    with rosbag.Bag(str(directory/(meta['run_id']+'.bag'))) as bag:
++    with bag_factory(str(directory/(meta['run_id']+'.bag'))) as bag:
+         for topic,s,t in bag.read_messages(topics=['/trajectory_status','/controller_diagnostics']):
+             if topic=='/trajectory_status' and s.trajectory_id>0:statuses.append(s)
+             elif topic=='/controller_diagnostics' and s.task_phase_name in ('POST_RACE_HOLD','FINISHED'):
+                 norm=lambda v:math.sqrt(v.x*v.x+v.y*v.y+v.z*v.z)
+                 terminal.append((s.header.stamp.to_sec(),norm(s.position_error),norm(s.velocity),norm(s.body_angular_velocity)))
+     finished=any(s.phase in ('POST_RACE_HOLD','FINISHED') and s.reference_complete and s.sample_tau_s>=s.planned_duration_s-1e-6 for s in statuses)
+-    tail=[r for r in terminal if r[0]>=terminal[-1][0]-1] if terminal else []
+-    terminal_ok=len(tail)>=20 and all(r[1]<=.3 and r[2]<=.2 and r[3]<=.5 for r in tail)
++    terminal_ok=stable_terminal_window(terminal)
+     ids={(s.run_id,s.trajectory_id) for s in statuses}
+     crossings=list(csv.DictReader((directory/'analysis/gate_crossings.csv').open()))
+     all_crossed=len(crossings)==12 and all(r['passed']=='True' for r in crossings)
+     finite=[m.get('first_gate_to_last_gate_s'),m.get('actual_speed_peak_mps')]
+     checks=dict(original_twelve_gates_unchanged=same_gates,all_ordered_forward_gates=all_crossed,
+         positive_finite_actual_time=all(v is not None and math.isfinite(v) and v>0 for v in finite),
+-        complete_published_reference=finished,single_trial=len(ids)==1,
++        complete_published_reference=finished,
++        single_trial=len(ids)==1 and all(run_id == meta['run_id'] for run_id, _ in ids),
+         stable_exit_last_second=terminal_ok,
+         no_fault_clock_reset_or_long_gap=not forbidden,
+         collision_telemetry_enabled=meta.get('collision_telemetry_enabled') is True,
+--- a/README_zh.md
++++ b/README_zh.md
+@@ -1,4 +1,6 @@
+ # VNAV Lab4 三维竞速优化版：约 6.1 秒
++
++> **2026-10-29 稳定性改进版**：增加元数据请求的整体超时、连续终点悬停验收和无需 ROS 的录包复核工具。42 项自动测试通过；四份历史录包通过新规则复核。本次尚未在虚拟机重新飞行，以下约 6.1 秒成绩均为原始版本历史记录。改进详情和安装步骤见 [IMPROVEMENTS_20261029.md](IMPROVEMENTS_20261029.md)。
+ 
+ 在 Unity 三维窗口中竞速，基于原来约 6.95 秒的版本继续优化。上游为 <https://github.com/Peichen-Shi/Robot-2026-8/tree/main/lab4>，固定提交 `8f8f7af6668fbb2b51136e9c6570a54eb09300c7`。
+ 
+--- /dev/null
++++ b/scripts/recheck_race_evidence.py
+@@ -0,0 +1,64 @@
++#!/usr/bin/env python3
++"""Read-only ROS-free audit of existing bags; never starts a simulator.
++
++Requires rosbags (pip install rosbags). Output is separate from original evidence.
++"""
++import argparse
++import json
++import sys
++from pathlib import Path
++from types import SimpleNamespace
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'optimization'))
++from race_acceptance import evaluate_run
++
++
++class PortableBag:
++    def __init__(self, path):
++        from rosbags.highlevel import AnyReader
++        self.reader = AnyReader([Path(path)])
++
++    def __enter__(self):
++        self.reader.open()
++        return self
++
++    def __exit__(self, *args):
++        self.reader.close()
++
++    def read_messages(self, topics):
++        connections = [c for c in self.reader.connections if c.topic in topics]
++        for connection, timestamp, raw in self.reader.messages(connections=connections):
++            message = self.reader.deserialize(raw, connection.msgtype)
++            # rosbags represents ROS time using sec/nanosec fields.
++            stamp = message.header.stamp
++            seconds = stamp.sec + stamp.nanosec * 1e-9
++            message.header.stamp = SimpleNamespace(to_sec=lambda t=seconds: t)
++            yield connection.topic, message, timestamp
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('directories', type=Path, nargs='+')
++    parser.add_argument('--output', type=Path)
++    args = parser.parse_args()
++    results = []
++    for directory in args.directories:
++        try:
++            result = evaluate_run(directory, bag_factory=PortableBag)
++            result['source_directory'] = str(directory)
++        except Exception as error:
++            result = dict(passed=False, source_directory=str(directory),
++                          error=str(error))
++        results.append(result)
++        print('{}: {}'.format(directory.name, 'PASS' if result['passed'] else 'FAIL'))
++    if args.output:
++        # Exclusive creation prevents accidental replacement of original evidence.
++        with args.output.open('x', encoding='utf-8') as output:
++            json.dump(dict(audit_type='existing recorded evidence, not new flights',
++                           results=results), output, indent=2, allow_nan=False)
++            output.write('\n')
++    return 0 if all(row['passed'] for row in results) else 1
++
++
++if __name__ == '__main__':
++    raise SystemExit(main())
+--- a/tests/test_persistent_metadata.py
++++ b/tests/test_persistent_metadata.py
+@@ -1,5 +1,6 @@
+ """Exercise actual callback sockets, fragmented replies and reconnects."""
+ import importlib.util,socket,struct,sys,threading,unittest
++from unittest.mock import patch
+ from pathlib import Path
+ ROOT=Path(__file__).resolve().parents[1]
+ sys.path.insert(0,str(ROOT/'code/tesse-ros-bridge/tesse-interface/src'))
+@@ -16,6 +17,34 @@
+     for byte in frame:s.sendall(bytes([byte]))
+   threading.Thread(target=reply,daemon=True).start()
+ class MetadataTest(unittest.TestCase):
++ def test_invalid_timeout(self):
++  for timeout in (0, -1, float('nan'), float('inf')):
++   with self.assertRaises(ValueError):
++    module.PersistentMetadataClient(None,'127.0.0.1',0,timeout=timeout)
++
++ def test_fragments_share_one_deadline(self):
++  # A deterministic slow peer: each byte needs 30 ms, below the old
++  # per-recv 100 ms timeout, but the complete response exceeds its budget.
++  class SlowPeer:
++   now=0.
++   def settimeout(self,value): self.timeout=value
++   def recv(self,length):
++    if self.timeout < .03: raise socket.timeout('fragment exceeded remaining budget')
++    self.now+=.03
++    return b'x'
++  peer=SlowPeer()
++  with patch.object(module.time,'monotonic',side_effect=lambda:peer.now):
++   with self.assertRaises(socket.timeout):
++    module.PersistentMetadataClient.receive_exact(peer,10,deadline=.1)
++  self.assertLessEqual(peer.now,.1)
++
++ def test_expired_deadline_does_not_read(self):
++  class UnreadablePeer:
++   def recv(self,length): raise AssertionError('must not receive after deadline')
++  with patch.object(module.time,'monotonic',return_value=1.):
++   with self.assertRaises(socket.timeout):
++    module.PersistentMetadataClient.receive_exact(UnreadablePeer(),4,deadline=1.)
++
+  def test_fragmented_replies_and_reconnect(self):
+   env=Server();client=module.PersistentMetadataClient(env,'127.0.0.1',0,timeout=2)
+   env.port=client.listener.getsockname()[1]
+--- /dev/null
++++ b/tests/test_race_acceptance.py
+@@ -0,0 +1,65 @@
++"""Synthetic timing fixtures; these are not new flight evidence."""
++import math
++import sys
++import unittest
++from pathlib import Path
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'optimization'))
++from race_acceptance import stable_terminal_window
++
++
++class TerminalWindowTests(unittest.TestCase):
++    def samples(self):
++        return [(10 + i * .02, .1, .1, .1) for i in range(101)]
++
++    def test_continuous_second(self):
++        self.assertTrue(stable_terminal_window(self.samples()))
++
++    def test_many_duplicates_do_not_make_a_second(self):
++        self.assertFalse(stable_terminal_window([(10., .1, .1, .1)] * 100))
++
++    def test_dense_short_burst_is_not_a_second(self):
++        self.assertFalse(stable_terminal_window(self.samples()[-30:]))
++
++    def test_missing_telemetry_inside_tail(self):
++        rows = self.samples()
++        self.assertFalse(stable_terminal_window(rows[:65] + rows[80:]))
++
++    def test_clock_rollback(self):
++        rows = self.samples()
++        rows[60] = (10., .1, .1, .1)
++        self.assertFalse(stable_terminal_window(rows))
++
++    def test_nonfinite_telemetry(self):
++        for field in range(4):
++            for value in (math.nan, math.inf, -math.inf):
++                rows = self.samples()
++                bad = list(rows[-1]); bad[field] = value; rows[-1] = tuple(bad)
++                self.assertFalse(stable_terminal_window(rows))
++
++    def test_unstable_at_start_of_window(self):
++        rows = self.samples()
++        rows[50] = (11., .31, .1, .1)
++        self.assertFalse(stable_terminal_window(rows))
++
++    def test_recovered_old_excursion(self):
++        rows = self.samples()
++        rows[10] = (10.2, 5., .1, .1)
++        self.assertTrue(stable_terminal_window(rows))
++
++    def test_duplicate_with_unstable_sample_is_rejected(self):
++        rows = self.samples()
++        rows.insert(80, (rows[80][0], .1, 2., .1))
++        self.assertFalse(stable_terminal_window(rows))
++
++    def test_unstable_duplicate_at_window_boundary(self):
++        rows = self.samples()
++        rows.insert(50, (11., 1., .1, .1))
++        self.assertFalse(stable_terminal_window(rows))
++
++    def test_empty(self):
++        self.assertFalse(stable_terminal_window([]))
++
++
++if __name__ == '__main__':
++    unittest.main()

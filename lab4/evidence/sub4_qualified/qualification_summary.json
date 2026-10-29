@@ -1,0 +1,49 @@
+{
+  "batch": "qualify_sub4_20261029_031725_015205632",
+  "rule": "3/3 fresh visible simulations: actual 12-gate race <4s, no collisions/faults, independent reference audit, continuous stable terminal hold >=60s",
+  "attempts": [
+    {
+      "run_id": "qualify_sub4_20261029_031725_015205632_1_01",
+      "race_passed": true,
+      "actual_race_ms": 3895.686724263944,
+      "passed_gates": 12,
+      "minimum_clearance_m": 0.313024221903773,
+      "stable_terminal_60s": true,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.032299616245649636,
+      "terminal_tail_speed_peak_mps": 0.006305423469142205,
+      "terminal_tail_body_rate_peak_rad_s": 0.012425191102535583,
+      "qualified": true
+    },
+    {
+      "run_id": "qualify_sub4_20261029_031725_015205632_2_01",
+      "race_passed": true,
+      "actual_race_ms": 3894.9729782258623,
+      "passed_gates": 12,
+      "minimum_clearance_m": 0.20593992768582692,
+      "stable_terminal_60s": true,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.03236853635400723,
+      "terminal_tail_speed_peak_mps": 0.006889428755013033,
+      "terminal_tail_body_rate_peak_rad_s": 0.013022653858124804,
+      "qualified": true
+    },
+    {
+      "run_id": "qualify_sub4_20261029_031725_015205632_3_01",
+      "race_passed": true,
+      "actual_race_ms": 3896.349878366129,
+      "passed_gates": 12,
+      "minimum_clearance_m": 0.31157557118369483,
+      "stable_terminal_60s": true,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.032898688417356714,
+      "terminal_tail_speed_peak_mps": 0.003946344061231902,
+      "terminal_tail_body_rate_peak_rad_s": 0.010731690217976268,
+      "qualified": true
+    }
+  ],
+  "qualified": true
+}

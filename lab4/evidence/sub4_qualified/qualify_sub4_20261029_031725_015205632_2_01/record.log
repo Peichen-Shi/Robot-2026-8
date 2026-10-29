@@ -1,0 +1,13 @@
+[0m[INFO] [1793269183.858288509]: Subscribing to /active_race_gates[0m
+[0m[INFO] [1793269183.861031292]: Subscribing to /clock[0m
+[0m[INFO] [1793269183.862314680]: Subscribing to /controller_diagnostics[0m
+[0m[INFO] [1793269183.862971454]: Subscribing to /current_state[0m
+[0m[INFO] [1793269183.864811432]: Subscribing to /desired_state[0m
+[0m[INFO] [1793269183.865651471]: Subscribing to /desired_state_stamped[0m
+[0m[INFO] [1793269183.866327032]: Subscribing to /desired_traj_vertices[0m
+[0m[INFO] [1793269183.866950429]: Subscribing to /rotor_speed_cmds[0m
+[0m[INFO] [1793269183.867827615]: Subscribing to /tesse/applied_rotor_speed_cmds[0m
+[0m[INFO] [1793269183.868855535]: Subscribing to /tesse/collision[0m
+[0m[INFO] [1793269183.869740699]: Subscribing to /tesse/rotor_watchdog_event[0m
+[0m[INFO] [1793269183.870906091]: Subscribing to /trajectory_status[0m
+[0m[INFO] [1793269184.073580894, 10.699999999]: Recording to '/home/by/lab4_sub4_20261029/results/qualify_sub4_20261029_031725_015205632_2_01/qualify_sub4_20261029_031725_015205632_2_01.bag'.[0m

@@ -1,0 +1,9 @@
+[0m[INFO] [1793269184.716318469]: Trajectory follower waiting for valid current state and gates[0m
+[0m[INFO] [1793269186.812664941, 13.439999999]: Segment durations [s]: 0.95 0.408344 0.405244 0.385455 0.328055 0.351063 0.336704 0.350025 0.342123 0.337181 0.326497 0.329307 1.8 [0m
+[0m[INFO] [1793269186.815696575, 13.439999999]: Generated trajectory id=1, 13 segments, T=6.650 s; peaks v/a/j/s/yaw_rate=32.253/119.391/537.862/3704.455/5.527; residuals 8.882e-15 m / 2.220e-15 rad[0m
+[0m[INFO] [1793269187.304342516, 13.939999999]: Trajectory id=1 entered TRACKING[0m
+[0m[INFO] [1793269187.304430626, 13.939999999]: Trajectory id=1 progress 0.0%[0m
+[0m[INFO] [1793269189.304692824, 15.939999999]: Trajectory id=1 progress 30.1%[0m
+[0m[INFO] [1793269191.304129202, 17.940000000]: Trajectory id=1 progress 60.2%[0m
+[0m[INFO] [1793269193.304959245, 19.940000000]: Trajectory id=1 progress 90.2%[0m
+[0m[INFO] [1793269193.964693122, 20.600000000]: Trajectory id=1 entered POST_RACE_HOLD for 75.0 s[0m

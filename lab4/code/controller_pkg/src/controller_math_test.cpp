@@ -54,6 +54,22 @@ int main() {
           "desired rotation determinant is not one");
 
   std::mt19937 generator(314159);
+  for (double weight : {0., .2, .5, 1.}) {
+    const Eigen::Matrix3d current=Eigen::Matrix3d::Identity();
+    const Eigen::Matrix3d result=controller_pkg::prioritizeThrustDirection(
+        current, desired_rotation, weight);
+    require((result.col(2)-desired_rotation.col(2)).norm()<1e-9,
+            "yaw weighting changed the thrust direction");
+    require((result.transpose()*result-current).norm()<1e-9 &&
+            std::abs(result.determinant()-1.)<1e-9,
+            "weighted attitude is not a rotation");
+    if (weight==1.) require((result-desired_rotation).norm()<1e-12,
+                            "full yaw weight changed baseline behavior");
+    const Eigen::Matrix3d yaw_only=Eigen::AngleAxisd(1.,Eigen::Vector3d::UnitZ()).toRotationMatrix();
+    const Eigen::Matrix3d weighted=controller_pkg::prioritizeThrustDirection(current,yaw_only,weight);
+    require(std::abs(std::atan2(weighted(1,0),weighted(0,0))-weight)<1e-9,
+            "heading blend has the wrong weight");
+  }
   std::uniform_real_distribution<double> distribution(-4000.0, 4000.0);
   double maximum_residual = 0.0;
   for (int sample = 0; sample < 1000; ++sample) {

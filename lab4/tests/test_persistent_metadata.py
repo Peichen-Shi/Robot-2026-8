@@ -1,5 +1,6 @@
 """Exercise actual callback sockets, fragmented replies and reconnects."""
 import importlib.util,socket,struct,sys,threading,unittest
+from unittest.mock import patch
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'code/tesse-ros-bridge/tesse-interface/src'))
@@ -16,6 +17,34 @@ class Server:
     for byte in frame:s.sendall(bytes([byte]))
   threading.Thread(target=reply,daemon=True).start()
 class MetadataTest(unittest.TestCase):
+ def test_invalid_timeout(self):
+  for timeout in (0, -1, float('nan'), float('inf')):
+   with self.assertRaises(ValueError):
+    module.PersistentMetadataClient(None,'127.0.0.1',0,timeout=timeout)
+
+ def test_fragments_share_one_deadline(self):
+  # A deterministic slow peer: each byte needs 30 ms, below the old
+  # per-recv 100 ms timeout, but the complete response exceeds its budget.
+  class SlowPeer:
+   now=0.
+   def settimeout(self,value): self.timeout=value
+   def recv(self,length):
+    if self.timeout < .03: raise socket.timeout('fragment exceeded remaining budget')
+    self.now+=.03
+    return b'x'
+  peer=SlowPeer()
+  with patch.object(module.time,'monotonic',side_effect=lambda:peer.now):
+   with self.assertRaises(socket.timeout):
+    module.PersistentMetadataClient.receive_exact(peer,10,deadline=.1)
+  self.assertLessEqual(peer.now,.1)
+
+ def test_expired_deadline_does_not_read(self):
+  class UnreadablePeer:
+   def recv(self,length): raise AssertionError('must not receive after deadline')
+  with patch.object(module.time,'monotonic',return_value=1.):
+   with self.assertRaises(socket.timeout):
+    module.PersistentMetadataClient.receive_exact(UnreadablePeer(),4,deadline=1.)
+
  def test_fragmented_replies_and_reconnect(self):
   env=Server();client=module.PersistentMetadataClient(env,'127.0.0.1',0,timeout=2)
   env.port=client.listener.getsockname()[1]
