@@ -1,0 +1,7 @@
+qualify_speed_20261031_220005_624445676_1_01 recorder ready; preflight remains sole reference
+Traceback (most recent call last):
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: qualify_speed_20261031_220005_624445676_1_01 failed acceptance; stop repeated trials for diagnosis

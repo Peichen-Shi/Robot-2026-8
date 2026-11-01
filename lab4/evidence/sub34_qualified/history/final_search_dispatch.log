@@ -1,0 +1,30 @@
+START search_20261031_214817_921511665_lean_baseline
+ERROR: connection refused to [http://127.0.0.1:35069/]
+Unregistering /controller_node
+search_20261031_214817_921511665_lean_baseline_01 recorder ready; preflight remains sole reference
+search_20261031_214817_921511665_lean_baseline_01 ACCEPTED | 12/12 gates | 3.896 s | minimum clearance 0.248 m
+{"run": "search_20261031_214817_921511665_lean_baseline_01", "passed": true, "gates": 12, "actual_ms": 3895.702337286366, "checks": {"original_twelve_gates_unchanged": true, "all_ordered_forward_gates": true, "positive_finite_actual_time": true, "complete_published_reference": true, "single_trial": true, "stable_exit_last_second": true, "no_fault_clock_reset_or_long_gap": true, "collision_telemetry_enabled": true, "no_reported_mission_collision": true}}
+DIAGNOSTIC YZ [(1, 0.05, 0.04), (2, 0.23, 0.57), (3, 0.64, -0.15), (4, -0.01, -0.1), (5, -0.05, 0.09), (6, 0.15, 0.1), (7, 0.26, 0.15), (8, -0.2, -0.71), (9, -0.11, 0.44), (10, 0.64, 0.16), (11, -0.77, 0.2), (12, -0.49, 0.24)]
+START search_20261031_214817_921511665_late030
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: search_20261031_214817_921511665_late030_01 failed acceptance; stop repeated trials for diagnosis
+{"run": "search_20261031_214817_921511665_late030_01", "passed": false, "gates": 9, "actual_ms": 2306.8702419784195, "checks": {"original_twelve_gates_unchanged": true, "all_ordered_forward_gates": false, "positive_finite_actual_time": true, "complete_published_reference": true, "single_trial": true, "stable_exit_last_second": true, "no_fault_clock_reset_or_long_gap": false, "collision_telemetry_enabled": true, "no_reported_mission_collision": true}}
+DIAGNOSTIC YZ [(1, -0.69, 0.02), (2, -0.67, 0.41), (3, 0.74, -0.53), (4, 0.05, 0.22), (5, 0.43, 0.32), (6, -0.42, 0.08), (7, 0.54, 0.2), (8, 0.8, -0.48), (9, -0.7, 0.75), (10, 1.07, 0.42), (11, -0.48, 0.22), (12, 0.48, 0.31)]
+START search_20261031_214817_921511665_late045
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: search_20261031_214817_921511665_late045_01 failed acceptance; stop repeated trials for diagnosis
+{"run": "search_20261031_214817_921511665_late045_01", "passed": false, "gates": 9, "actual_ms": 2307.2927803975176, "checks": {"original_twelve_gates_unchanged": true, "all_ordered_forward_gates": false, "positive_finite_actual_time": true, "complete_published_reference": true, "single_trial": true, "stable_exit_last_second": true, "no_fault_clock_reset_or_long_gap": false, "collision_telemetry_enabled": true, "no_reported_mission_collision": true}}
+DIAGNOSTIC YZ [(1, -0.74, 0.02), (2, -0.67, 0.39), (3, 0.72, -0.63), (4, 0.07, 0.12), (5, 0.5, 0.25), (6, -0.63, 0.07), (7, 0.46, 0.2), (8, 0.74, -0.49), (9, -0.8, 0.75), (10, 1.11, 0.46), (11, -0.41, 0.27), (12, 0.5, 0.33)]
+START search_20261031_214817_921511665_late030original
+ERROR: connection refused to [http://127.0.0.1:33671/]
+Unregistering /controller_node
+search_20261031_214817_921511665_late030original_01 recorder ready; preflight remains sole reference
+search_20261031_214817_921511665_late030original_01 ACCEPTED | 12/12 gates | 3.350 s | minimum clearance 0.030 m
+{"run": "search_20261031_214817_921511665_late030original_01", "passed": true, "gates": 12, "actual_ms": 3349.7251793781543, "checks": {"original_twelve_gates_unchanged": true, "all_ordered_forward_gates": true, "positive_finite_actual_time": true, "complete_published_reference": true, "single_trial": true, "stable_exit_last_second": true, "no_fault_clock_reset_or_long_gap": true, "collision_telemetry_enabled": true, "no_reported_mission_collision": true}}
+DIAGNOSTIC YZ [(1, -0.8, 0.01), (2, -0.87, 0.4), (3, 0.63, -0.58), (4, 0.09, 0.16), (5, 0.48, 0.26), (6, -0.54, 0.09), (7, 0.6, 0.22), (8, 0.99, -0.47), (9, -0.78, 0.79), (10, 0.97, 0.49), (11, -0.4, 0.26), (12, 0.48, 0.33)]

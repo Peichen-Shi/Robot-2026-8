@@ -107,6 +107,7 @@ class ControllerNode {
     // During stationary holds, avoid differentiating feedback corrections.
     private_nh_.param("feedforward_tracking_only", feedforward_tracking_only_, false);
     private_nh_.param("feedforward_clip_rate", feedforward_clip_rate_, false);
+    private_nh_.param("transported_attitude_target", transported_attitude_target_, false);
     private_nh_.param("reference_prediction", reference_prediction_, false);
     private_nh_.param("maximum_reference_prediction", maximum_reference_prediction_, 0.04);
     private_nh_.param("actuation_prediction", actuation_prediction_, 0.0);
@@ -394,10 +395,16 @@ class ControllerNode {
       }
       const Eigen::Vector3d desired_force =
           limitDesiredForce(desired_force_unconstrained);
-      const Eigen::Matrix3d desired_rotation =
-          controller_pkg::prioritizeThrustDirection(current_rotation_,
-              controller_pkg::desiredRotation(desired_force, reference.yaw),
-              task_phase_name_ == "TRACKING" ? yaw_weight_ : 1.0);
+      const Eigen::Matrix3d full_rotation =
+          controller_pkg::desiredRotation(desired_force, reference.yaw);
+      Eigen::Matrix3d desired_rotation;
+      if (transported_attitude_target_ && task_phase_name_ == "TRACKING") {
+        desired_rotation=thrust_frame_.update(current_rotation_,full_rotation,yaw_weight_);
+      } else {
+        thrust_frame_.reset();
+        desired_rotation=controller_pkg::prioritizeThrustDirection(current_rotation_,
+            full_rotation,task_phase_name_ == "TRACKING" ? yaw_weight_ : 1.0);
+      }
       const Eigen::Vector3d rotation_error = 0.5 * controller_pkg::vee(
           desired_rotation.transpose() * current_rotation_ -
           current_rotation_.transpose() * desired_rotation);
@@ -579,6 +586,8 @@ class ControllerNode {
   bool attitude_feedforward_, use_stamped_reference_;
   bool feedforward_tracking_only_;
   bool feedforward_clip_rate_;
+  bool transported_attitude_target_;
+  controller_pkg::ThrustFrameReference thrust_frame_;
   bool reference_prediction_;
   double maximum_reference_prediction_;
   double actuation_prediction_;

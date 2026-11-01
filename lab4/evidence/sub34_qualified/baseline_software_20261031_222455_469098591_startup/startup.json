@@ -1,0 +1,23 @@
+{
+  "attempt": 1,
+  "simulator_pid": 116147,
+  "bridge_pid": 116203,
+  "headless": false,
+  "software_render": true,
+  "simulator_command": [
+    "/home/wanghanzhi/vnav-builds/lab4/lab4.x86_64",
+    "-screen-fullscreen",
+    "0",
+    "-screen-width",
+    "320",
+    "-screen-height",
+    "224",
+    "-screen-quality",
+    "Fastest",
+    "-job-worker-count",
+    "1",
+    "-logFile",
+    "/home/wanghanzhi/lab4_speed_20261031/results/baseline_software_20261031_222455_469098591_startup/unity.log"
+  ],
+  "live_state_and_clock": true
+}

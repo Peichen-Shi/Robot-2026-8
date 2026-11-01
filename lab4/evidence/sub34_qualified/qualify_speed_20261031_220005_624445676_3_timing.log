@@ -1,0 +1,106 @@
+[GATE TIMER] READY | WAIT_FIRST_GATE | 0 ms | ROS simulation time; crossing times interpolated from measured odometry.
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0 | waiting for fresh state
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] START at gate 1/12 | 0 ms
+[GATE TIMER] RUNNING | 188 ms | gates 1/12
+[GATE TIMER] GATE 2/12 | 206 ms
+[GATE TIMER] RUNNING | 388 ms | gates 2/12
+[GATE TIMER] GATE 3/12 | 442 ms
+[GATE TIMER] RUNNING | 588 ms | gates 3/12
+[GATE TIMER] RUNNING | 788 ms | gates 3/12
+[GATE TIMER] GATE 4/12 | 842 ms
+[GATE TIMER] RUNNING | 1008 ms | gates 4/12
+[GATE TIMER] GATE 5/12 | 1135 ms
+[GATE TIMER] RUNNING | 1188 ms | gates 5/12
+[GATE TIMER] RUNNING | 1408 ms | gates 5/12
+[GATE TIMER] GATE 6/12 | 1415 ms
+[GATE TIMER] RUNNING | 1608 ms | gates 6/12
+[GATE TIMER] RUNNING | 1808 ms | gates 6/12
+[GATE TIMER] GATE 7/12 | 1878 ms
+[GATE TIMER] RUNNING | 2008 ms | gates 7/12
+[GATE TIMER] GATE 8/12 | 2063 ms
+[GATE TIMER] RUNNING | 2108 ms | gates 8/12
+[GATE TIMER] RUNNING | 2108 ms | gates 8/12
+[GATE TIMER] RUNNING | 2208 ms | gates 8/12
+[GATE TIMER] GATE 9/12 | 2307 ms
+[GATE TIMER] RUNNING | 2488 ms | gates 9/12
+[GATE TIMER] RUNNING | 2488 ms | gates 9/12
+[GATE TIMER] INVALID | 2788 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 3088 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 3288 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 3488 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 3688 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 3888 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 4088 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 4308 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 4508 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 4708 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 4908 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 5108 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 5308 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 5508 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 5708 ms | gates 9/12 | gate 10 plane crossed outside aperture
+[GATE TIMER] INVALID | 5908 ms | gates 9/12 | gate 10 plane crossed outside aperture

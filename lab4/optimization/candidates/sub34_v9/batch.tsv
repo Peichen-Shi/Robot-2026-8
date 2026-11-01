@@ -1,0 +1,6 @@
+approach115	optimization/candidates/sub34_v9/approach115_planner.yaml	optimization/candidates/sub34_v9/approach115_controller.yaml
+approach135	optimization/candidates/sub34_v9/approach135_planner.yaml	optimization/candidates/sub34_v9/approach135_controller.yaml
+approach160	optimization/candidates/sub34_v9/approach160_planner.yaml	optimization/candidates/sub34_v9/approach160_controller.yaml
+safepoints	optimization/candidates/sub34_v9/safepoints_planner.yaml	optimization/candidates/sub34_v9/safepoints_controller.yaml
+approach115safe	optimization/candidates/sub34_v9/approach115safe_planner.yaml	optimization/candidates/sub34_v9/approach115safe_controller.yaml
+damped	optimization/candidates/sub34_v9/damped_planner.yaml	optimization/candidates/sub34_v9/damped_controller.yaml

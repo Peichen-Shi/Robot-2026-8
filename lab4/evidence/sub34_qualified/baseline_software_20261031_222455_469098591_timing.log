@@ -1,0 +1,442 @@
+[GATE TIMER] READY | WAIT_FIRST_GATE | 0 ms | ROS simulation time; crossing times interpolated from measured odometry.
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0 | waiting for fresh state
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/0
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] WAIT_FIRST_GATE | 0 ms | gates 0/12
+[GATE TIMER] START at gate 1/12 | 0 ms
+[GATE TIMER] RUNNING | 79 ms | gates 1/12
+[GATE TIMER] RUNNING | 279 ms | gates 1/12
+[GATE TIMER] GATE 2/12 | 401 ms
+[GATE TIMER] RUNNING | 479 ms | gates 2/12
+[GATE TIMER] RUNNING | 679 ms | gates 2/12
+[GATE TIMER] GATE 3/12 | 835 ms
+[GATE TIMER] RUNNING | 899 ms | gates 3/12
+[GATE TIMER] RUNNING | 1099 ms | gates 3/12
+[GATE TIMER] GATE 4/12 | 1235 ms
+[GATE TIMER] RUNNING | 1279 ms | gates 4/12
+[GATE TIMER] RUNNING | 1479 ms | gates 4/12
+[GATE TIMER] GATE 5/12 | 1551 ms
+[GATE TIMER] RUNNING | 1679 ms | gates 5/12
+[GATE TIMER] RUNNING | 1899 ms | gates 5/12
+[GATE TIMER] INVALID | 2079 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 2299 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 2479 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 2699 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 2899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 3079 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 3279 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 3499 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 3719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 3899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 4099 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 4299 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 4519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 4679 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 4919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 5119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 5319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 5519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 5699 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 5919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 6059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 6299 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 6519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 6719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 6919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 7119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 7339 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 7519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 7739 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 7959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 8139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 8339 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 8539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 8719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 8939 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 9139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 9339 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 9539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 9759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 9959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 10159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 10359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 10559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 10739 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 10979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 11159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 11359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 11559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 11779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 11959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 12159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 12379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 12559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 12759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 12999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 13179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 13379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 13559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 13779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 13979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 14179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 14379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 14579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 14779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 14959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 15179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 15379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 15579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 15779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 15999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 16199 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 16379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 16579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 16779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 16979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 17219 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 17419 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 17619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 17799 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 17999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 18199 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 18399 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 18599 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 18819 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 19019 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 19219 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 19399 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 19599 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 19819 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 20019 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 20219 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 20419 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 20619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 20839 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 21039 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 21239 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 21439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 21619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 21819 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 22019 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 22239 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 22439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 22619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 22839 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 23039 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 23239 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 23439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 23659 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 23839 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 24039 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 24239 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 24439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 24659 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 24859 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 25059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 25259 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 25459 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 25639 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 25879 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 26079 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 26259 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 26459 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 26659 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 26859 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 27059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 27279 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 27479 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 27679 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 27899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 28099 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 28299 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 28479 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 28699 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 28879 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 29079 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 29279 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 29499 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 29699 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 29879 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 30099 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 30279 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 30479 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 30699 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 30899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 31119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 31299 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 31519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 31719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 31899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 32119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 32319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 32519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 32719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 32899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 33119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 33319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 33519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 33719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 33919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 34119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 34339 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 34539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 34719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 34939 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 35139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 35319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 35539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 35739 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 35939 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 36139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 36359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 36539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 36759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 36959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 37159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 37359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 37559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 37739 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 37959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 38159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 38359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 38559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 38759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 38959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 39159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 39359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 39559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 39759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 39939 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 40159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 40379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 40559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 40759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 40979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 41179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 41379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 41579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 41779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 41979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 42179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 42399 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 42579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 42779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 42999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 43179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 43399 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 43599 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 43799 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 44019 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 44219 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 44399 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 44599 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 44799 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 44999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 45199 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 45419 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 45619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 45839 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 46039 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 46219 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 46419 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 46619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 46819 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 47019 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 47199 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 47439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 47619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 47819 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 47999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 48219 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 48419 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 48639 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 48819 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 49039 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 49239 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 49419 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 49659 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 49859 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 50019 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 50259 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 50459 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 50639 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 50859 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 51059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 51259 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 51439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 51659 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 51879 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 52059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 52259 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 52439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 52639 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 52839 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 53059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 53239 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 53479 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 53679 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 53859 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 54059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 54279 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 54459 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 54659 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 54879 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 55059 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 55199 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 55479 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 55639 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 55899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 56079 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 56279 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 56479 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 56679 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 56899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 57099 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 57279 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 57499 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 57679 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 57879 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 58099 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 58299 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 58499 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 58699 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 58899 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 59079 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 59319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 59519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 59699 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 59919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 60119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 60319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 60519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 60719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 60919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 61119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 61319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 61519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 61719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 61919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 62119 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 62339 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 62519 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 62739 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 62939 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 63139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 63339 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 63539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 63719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 63939 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 64139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 64339 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 64539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 64719 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 64919 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 65139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 65319 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 65539 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 65739 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 65939 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 66159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 66359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 66559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 66759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 66959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 67159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 67379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 67579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 67779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 67959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 68179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 68379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 68559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 68779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 68979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 69159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 69359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 69579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 69779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 69999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 70179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 70379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 70579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 70779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 70979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 71179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 71399 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 71599 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 71779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 71959 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 72139 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 72379 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 72559 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 72759 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 72999 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 73179 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 73359 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 73619 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 73779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 73979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 74159 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 74399 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 74599 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 74779 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 74979 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 75239 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 75439 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 75579 ms | gates 5/12 | gate 6 plane crossed outside aperture
+[GATE TIMER] INVALID | 75779 ms | gates 5/12 | gate 6 plane crossed outside aperture

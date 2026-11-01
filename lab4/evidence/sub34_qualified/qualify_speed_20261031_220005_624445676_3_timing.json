@@ -1,0 +1,24 @@
+{
+  "phase": "INVALID",
+  "elapsed_ms": 5987.75692323892,
+  "crossing_elapsed_ms": 2306.6073186189265,
+  "passed_gates": 9,
+  "total_gates": 12,
+  "first_gate_ros_s": 18.39224307576108,
+  "last_gate_ros_s": null,
+  "crossing_ros_s": [
+    18.39224307576108,
+    18.597781796388958,
+    18.833867826556222,
+    19.234138211094827,
+    19.527075896865465,
+    19.807160278053626,
+    20.269771329350483,
+    20.455666483651836,
+    20.698850394380006
+  ],
+  "run_id": "qualify_speed_20261031_220005_624445676_3_01",
+  "reason": "gate 10 plane crossed outside aperture",
+  "clock": "odometry header / ROS simulation time",
+  "rule": "Sequential forward local +x crossings inside 2.4 m aperture with 0.18 m body margin; first gate to last gate only."
+}

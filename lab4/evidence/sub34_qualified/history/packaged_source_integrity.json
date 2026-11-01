@@ -1,0 +1,25 @@
+{
+  "all_recorded_source_and_profile_hashes_match": true,
+  "checked": [
+    "optimization/planner_profiles/sub34.yaml",
+    "optimization/profiles/sub34.yaml",
+    "env.sh",
+    "code/controller_pkg/src/controller_node.cpp",
+    "code/trajectory_generation_pkg/src/trajectory_generation_node.cpp",
+    "code/trajectory_generation_pkg/CMakeLists.txt",
+    "optimization/official_gates.csv",
+    "optimization/race_acceptance.py",
+    "scripts/check_sub4_qualification.py",
+    "scripts/check_speed_improvement.py",
+    "optimization/trajectory_screen.py",
+    "code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/quadrotor_control_interface.py",
+    "code/tesse-ros-bridge/ROS/src/tesse_ros_bridge/persistent_metadata.py",
+    "scripts/prepare_simulator.py",
+    "optimization/run_trial.sh",
+    "optimization/speed_trials.py",
+    "code/controller_pkg/include/controller_pkg/attitude_feedforward.h",
+    "code/controller_pkg/include/controller_pkg/controller_math.h",
+    "code/controller_pkg/include/controller_pkg/flatness_feedforward.h",
+    "code/controller_pkg/include/controller_pkg/reference_prediction.h"
+  ]
+}

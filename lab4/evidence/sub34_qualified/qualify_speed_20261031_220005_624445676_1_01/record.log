@@ -1,0 +1,17 @@
+[33m[WARN] [1793509244.848860491, 17.940000000]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/qualify_speed_20261031_220005_624445676_1_01/qualify_speed_20261031_220005_624445676_1_01.bag.active'.[0m
+[33m[WARN] [1793509264.864016079, 37.659999999]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/qualify_speed_20261031_220005_624445676_1_01/qualify_speed_20261031_220005_624445676_1_01.bag.active'.[0m
+[33m[WARN] [1793509284.865266279, 57.340000000]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/qualify_speed_20261031_220005_624445676_1_01/qualify_speed_20261031_220005_624445676_1_01.bag.active'.[0m
+[33m[WARN] [1793509304.856999239, 76.719999999]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/qualify_speed_20261031_220005_624445676_1_01/qualify_speed_20261031_220005_624445676_1_01.bag.active'.[0m
+[0m[INFO] [1793509244.550691464]: Subscribing to /active_race_gates[0m
+[0m[INFO] [1793509244.555035425]: Subscribing to /clock[0m
+[0m[INFO] [1793509244.556720412]: Subscribing to /controller_diagnostics[0m
+[0m[INFO] [1793509244.558954247]: Subscribing to /current_state[0m
+[0m[INFO] [1793509244.560880420]: Subscribing to /desired_state[0m
+[0m[INFO] [1793509244.562433116]: Subscribing to /desired_state_stamped[0m
+[0m[INFO] [1793509244.564545059]: Subscribing to /desired_traj_vertices[0m
+[0m[INFO] [1793509244.566025598]: Subscribing to /rotor_speed_cmds[0m
+[0m[INFO] [1793509244.567438904]: Subscribing to /tesse/applied_rotor_speed_cmds[0m
+[0m[INFO] [1793509244.569031745]: Subscribing to /tesse/collision[0m
+[0m[INFO] [1793509244.570465655]: Subscribing to /tesse/rotor_watchdog_event[0m
+[0m[INFO] [1793509244.572289362]: Subscribing to /trajectory_status[0m
+[0m[INFO] [1793509244.848616581, 17.940000000]: Recording to '/home/wanghanzhi/lab4_speed_20261031/results/qualify_speed_20261031_220005_624445676_1_01/qualify_speed_20261031_220005_624445676_1_01.bag'.[0m

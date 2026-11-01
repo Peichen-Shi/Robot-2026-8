@@ -1,0 +1,36 @@
+{
+  "vertical": {
+    "screen": {
+      "kind": "offline_reference_only_not_flown",
+      "planned_gate_interval_s": 3.4299999999999997,
+      "speed_peak_mps": 31.96978939021178,
+      "acceleration_peak_mps2": 135.94869649309402,
+      "race_thrust_direction_rate_peak_rad_s": 7.026304743251786,
+      "race_thrust_direction_rate_p95_rad_s": 6.98414909567899,
+      "all_reference_gate_crossings_forward": true,
+      "minimum_forward_gate_speed_mps": 10.818305192121578,
+      "nominal_minimum_gate_clearance_m": 0.32000000000000006
+    },
+    "cost": 1.948015193804077,
+    "iterations": 24,
+    "optimizer_success": true,
+    "status": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+  },
+  "spatial": {
+    "screen": {
+      "kind": "offline_reference_only_not_flown",
+      "planned_gate_interval_s": 3.43,
+      "speed_peak_mps": 31.969789396127812,
+      "acceleration_peak_mps2": 135.94869655887152,
+      "race_thrust_direction_rate_peak_rad_s": 7.026304735750093,
+      "race_thrust_direction_rate_p95_rad_s": 6.984149098208487,
+      "all_reference_gate_crossings_forward": true,
+      "minimum_forward_gate_speed_mps": 10.818305196646008,
+      "nominal_minimum_gate_clearance_m": 0.32000000000000006
+    },
+    "cost": 1.9480151907672099,
+    "iterations": 1,
+    "optimizer_success": true,
+    "status": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+  }
+}

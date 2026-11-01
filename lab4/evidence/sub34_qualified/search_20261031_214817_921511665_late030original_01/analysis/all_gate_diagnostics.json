@@ -1,0 +1,138 @@
+{
+  "run_id": "search_20261031_214817_921511665_late030original_01",
+  "kind": "diagnostic_not_ordered_race_validation",
+  "crossings": [
+    {
+      "gate": 1,
+      "found": true,
+      "relative_time_s": 1.0100908631207908,
+      "nominal_time_s": 0.9499999999999993,
+      "local_y_m": -0.7996721024278169,
+      "local_z_m": 0.014611399423622645,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.22032789757218307,
+      "planned_lateral_m": 0.49855433598350646
+    },
+    {
+      "gate": 2,
+      "found": true,
+      "relative_time_s": 1.2165268281485169,
+      "nominal_time_s": 1.2262745245327729,
+      "local_y_m": -0.8677630182789537,
+      "local_z_m": 0.3964280012282843,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.15223698172104627,
+      "planned_lateral_m": 0.25
+    },
+    {
+      "gate": 3,
+      "found": true,
+      "relative_time_s": 1.4529620143357924,
+      "nominal_time_s": 1.495341323087434,
+      "local_y_m": 0.6334069131836102,
+      "local_z_m": -0.5796551788866728,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.3865930868163898,
+      "planned_lateral_m": 0.1
+    },
+    {
+      "gate": 4,
+      "found": true,
+      "relative_time_s": 1.852830915446468,
+      "nominal_time_s": 1.849886362451116,
+      "local_y_m": 0.09322552654013604,
+      "local_z_m": 0.15579150113603735,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.8642084988639627,
+      "planned_lateral_m": -0.3
+    },
+    {
+      "gate": 5,
+      "found": true,
+      "relative_time_s": 2.14819011058076,
+      "nominal_time_s": 2.1588781103018313,
+      "local_y_m": 0.47729639567868615,
+      "local_z_m": 0.2588853613493911,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.5427036043213138,
+      "planned_lateral_m": 0.5943912278989723
+    },
+    {
+      "gate": 6,
+      "found": true,
+      "relative_time_s": 2.4267612065857485,
+      "nominal_time_s": 2.3645210002443804,
+      "local_y_m": -0.536947501742578,
+      "local_z_m": 0.09099394604013954,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.483052498257422,
+      "planned_lateral_m": 0.6466791207061486
+    },
+    {
+      "gate": 7,
+      "found": true,
+      "relative_time_s": 2.8942031862509943,
+      "nominal_time_s": 2.863972873185606,
+      "local_y_m": 0.6039127739043847,
+      "local_z_m": 0.21596909661354585,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.4160872260956153,
+      "planned_lateral_m": 0.06124223246650619
+    },
+    {
+      "gate": 8,
+      "found": true,
+      "relative_time_s": 3.0772670164809703,
+      "nominal_time_s": 3.089449830014047,
+      "local_y_m": 0.989885369750475,
+      "local_z_m": -0.47322794007950725,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.030114630249524987,
+      "planned_lateral_m": 0.7
+    },
+    {
+      "gate": 9,
+      "found": true,
+      "relative_time_s": 3.3135836870346616,
+      "nominal_time_s": 3.3318478741625093,
+      "local_y_m": -0.7793386239416497,
+      "local_z_m": 0.7949981678284083,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.22500183217159175,
+      "planned_lateral_m": -0.7
+    },
+    {
+      "gate": 10,
+      "found": true,
+      "relative_time_s": 3.60964583526604,
+      "nominal_time_s": 3.6484666016675327,
+      "local_y_m": 0.9690435390094819,
+      "local_z_m": 0.49113966217778254,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.05095646099051809,
+      "planned_lateral_m": 0.7
+    },
+    {
+      "gate": 11,
+      "found": true,
+      "relative_time_s": 4.002320674131621,
+      "nominal_time_s": 4.01064281231265,
+      "local_y_m": -0.40341218512312843,
+      "local_z_m": 0.26178394371519015,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.6165878148768715,
+      "planned_lateral_m": -0.7
+    },
+    {
+      "gate": 12,
+      "found": true,
+      "relative_time_s": 4.359816042498945,
+      "nominal_time_s": 4.359999999999999,
+      "local_y_m": 0.4798747997580336,
+      "local_z_m": 0.3301509825873692,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.5401252002419664,
+      "planned_lateral_m": 0.6605894822330297
+    }
+  ]
+}

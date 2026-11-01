@@ -106,4 +106,24 @@ inline Eigen::Vector4d solveRotorInputs(const Eigen::Matrix4d& allocation,
   return inputs;
 }
 
+// Parallel-transport a desired frame along the commanded thrust direction.
+// Referencing measured heading on every update lets a free-yaw feedforward
+// target inherit the aircraft's own spin and cancel its rate damping. Here
+// measured attitude is used only for initialisation. Desired R, omega and alpha
+// remain a coherent reference; yaw weighting does not invent self-motion.
+class ThrustFrameReference {
+ public:
+  void reset() { ready_ = false; }
+  Eigen::Matrix3d update(const Eigen::Matrix3d& current,
+                         const Eigen::Matrix3d& desired, double yaw_weight) {
+    if (!ready_) previous_ = current;
+    previous_ = prioritizeThrustDirection(previous_, desired, yaw_weight);
+    ready_ = true;
+    return previous_;
+  }
+ private:
+  bool ready_ = false;
+  Eigen::Matrix3d previous_ = Eigen::Matrix3d::Identity();
+};
+
 }  // namespace controller_pkg

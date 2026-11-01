@@ -1,0 +1,6 @@
+uniform02	optimization/candidates/sub34_v4/uniform02_planner.yaml	optimization/candidates/sub34_v4/uniform02_controller.yaml
+uniform00	optimization/candidates/sub34_v4/uniform00_planner.yaml	optimization/candidates/sub34_v4/uniform00_controller.yaml
+gain36	optimization/candidates/sub34_v4/gain36_planner.yaml	optimization/candidates/sub34_v4/gain36_controller.yaml
+lead80	optimization/candidates/sub34_v4/lead80_planner.yaml	optimization/candidates/sub34_v4/lead80_controller.yaml
+gain36yaw01	optimization/candidates/sub34_v4/gain36yaw01_planner.yaml	optimization/candidates/sub34_v4/gain36yaw01_controller.yaml
+gain40	optimization/candidates/sub34_v4/gain40_planner.yaml	optimization/candidates/sub34_v4/gain40_controller.yaml

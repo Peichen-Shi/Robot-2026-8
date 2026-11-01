@@ -15,6 +15,17 @@ class TerminalWindowTests(unittest.TestCase):
     def test_continuous_second(self):
         self.assertTrue(stable_terminal_window(self.samples()))
 
+    def test_nanosecond_rounded_cutoff_uses_full_window(self):
+        rows = [(10 + i * .02, .1, .1, .1) for i in range(101)]
+        rows[50] = (11.000000001, .1, .1, .1)
+        self.assertTrue(stable_terminal_window(rows))
+
+    def test_unstable_sample_just_before_rounded_cutoff_is_checked(self):
+        rows = [(10 + i * .02, .1, .1, .1) for i in range(101)]
+        rows[49] = (10.98, .31, .1, .1)
+        rows[50] = (11.000000001, .1, .1, .1)
+        self.assertFalse(stable_terminal_window(rows))
+
     def test_many_duplicates_do_not_make_a_second(self):
         self.assertFalse(stable_terminal_window([(10., .1, .1, .1)] * 100))
 

@@ -1,0 +1,4 @@
+ERROR: connection refused to [http://127.0.0.1:33671/]
+Unregistering /controller_node
+search_20261031_214817_921511665_late030original_01 recorder ready; preflight remains sole reference
+search_20261031_214817_921511665_late030original_01 ACCEPTED | 12/12 gates | 3.350 s | minimum clearance 0.030 m

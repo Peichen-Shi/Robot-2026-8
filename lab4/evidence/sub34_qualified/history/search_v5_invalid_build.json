@@ -1,0 +1,5 @@
+{
+  "batch": "search_20261031_073552_668397141",
+  "control_change_test_valid": false,
+  "reason": "Source archive preserved old mtime, so make reused the previous controller object. Do not attribute these outcomes to the experimental yaw-derivative option."
+}

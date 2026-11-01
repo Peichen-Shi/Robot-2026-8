@@ -1,0 +1,17 @@
+[33m[WARN] [1793510727.898781653, 12.859999999]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/baseline_software_20261031_222455_469098591_01/baseline_software_20261031_222455_469098591_01.bag.active'.[0m
+[33m[WARN] [1793510747.916598408, 32.880000000]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/baseline_software_20261031_222455_469098591_01/baseline_software_20261031_222455_469098591_01.bag.active'.[0m
+[33m[WARN] [1793510767.909051873, 52.880000000]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/baseline_software_20261031_222455_469098591_01/baseline_software_20261031_222455_469098591_01.bag.active'.[0m
+[33m[WARN] [1793510787.933071156, 72.799999999]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/baseline_software_20261031_222455_469098591_01/baseline_software_20261031_222455_469098591_01.bag.active'.[0m
+[0m[INFO] [1793510727.598002176]: Subscribing to /active_race_gates[0m
+[0m[INFO] [1793510727.599798027]: Subscribing to /clock[0m
+[0m[INFO] [1793510727.600910371]: Subscribing to /controller_diagnostics[0m
+[0m[INFO] [1793510727.602175521]: Subscribing to /current_state[0m
+[0m[INFO] [1793510727.604437958]: Subscribing to /desired_state[0m
+[0m[INFO] [1793510727.605846274]: Subscribing to /desired_state_stamped[0m
+[0m[INFO] [1793510727.607183359]: Subscribing to /desired_traj_vertices[0m
+[0m[INFO] [1793510727.608492522]: Subscribing to /rotor_speed_cmds[0m
+[0m[INFO] [1793510727.609703559]: Subscribing to /tesse/applied_rotor_speed_cmds[0m
+[0m[INFO] [1793510727.611340723]: Subscribing to /tesse/collision[0m
+[0m[INFO] [1793510727.612617955]: Subscribing to /tesse/rotor_watchdog_event[0m
+[0m[INFO] [1793510727.614230392]: Subscribing to /trajectory_status[0m
+[0m[INFO] [1793510727.898678162, 12.859999999]: Recording to '/home/wanghanzhi/lab4_speed_20261031/results/baseline_software_20261031_222455_469098591_01/baseline_software_20261031_222455_469098591_01.bag'.[0m

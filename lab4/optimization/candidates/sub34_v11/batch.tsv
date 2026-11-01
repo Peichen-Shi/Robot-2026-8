@@ -1,0 +1,4 @@
+strict_early	optimization/candidates/sub34_v11/strict_early_planner.yaml	optimization/candidates/sub34_v11/strict_early_controller.yaml
+strict_safe	optimization/candidates/sub34_v11/strict_safe_planner.yaml	optimization/candidates/sub34_v11/strict_safe_controller.yaml
+strict_safe343	optimization/candidates/sub34_v11/strict_safe343_planner.yaml	optimization/candidates/sub34_v11/strict_safe343_controller.yaml
+strict_flat	optimization/candidates/sub34_v11/strict_flat_planner.yaml	optimization/candidates/sub34_v11/strict_flat_controller.yaml

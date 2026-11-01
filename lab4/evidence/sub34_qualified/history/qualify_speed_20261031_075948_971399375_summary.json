@@ -1,0 +1,63 @@
+{
+  "batch": "qualify_speed_20261031_075948_971399375",
+  "baseline_ms": 3894.973,
+  "requested_improvement_ms": 500.0,
+  "rule": "3/3 fresh visible Unity flights, original gates/physics/time, actual race <= baseline minus 500 ms, no mission/exit faults or collisions, independent numeric audit, continuous stable hold >=60s",
+  "attempts": [
+    {
+      "run_id": "qualify_speed_20261031_075948_971399375_1_01",
+      "race_passed": false,
+      "actual_race_ms": 470.16456769490844,
+      "passed_gates": 3,
+      "minimum_clearance_m": null,
+      "stable_terminal_60s": true,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.03340102474282506,
+      "terminal_tail_speed_peak_mps": 0.030756827682044508,
+      "terminal_tail_body_rate_peak_rad_s": 0.033102865862886,
+      "qualified": false,
+      "baseline_ms": 3894.973,
+      "requested_improvement_ms": 500.0,
+      "maximum_race_time_ms": 3394.973,
+      "actual_improvement_ms": 3424.8084323050916
+    },
+    {
+      "run_id": "qualify_speed_20261031_075948_971399375_2_01",
+      "race_passed": false,
+      "actual_race_ms": null,
+      "passed_gates": 1,
+      "minimum_clearance_m": null,
+      "stable_terminal_60s": true,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.034495051758423316,
+      "terminal_tail_speed_peak_mps": 0.04572898602965997,
+      "terminal_tail_body_rate_peak_rad_s": 0.0031744256982942937,
+      "qualified": false,
+      "baseline_ms": 3894.973,
+      "requested_improvement_ms": 500.0,
+      "maximum_race_time_ms": 3394.973,
+      "actual_improvement_ms": null
+    },
+    {
+      "run_id": "qualify_speed_20261031_075948_971399375_3_01",
+      "race_passed": false,
+      "actual_race_ms": null,
+      "passed_gates": 1,
+      "minimum_clearance_m": null,
+      "stable_terminal_60s": false,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.930745003577567,
+      "terminal_tail_speed_peak_mps": 3.334674000122877,
+      "terminal_tail_body_rate_peak_rad_s": 0.7087337013162929,
+      "qualified": false,
+      "baseline_ms": 3894.973,
+      "requested_improvement_ms": 500.0,
+      "maximum_race_time_ms": 3394.973,
+      "actual_improvement_ms": null
+    }
+  ],
+  "qualified": false
+}

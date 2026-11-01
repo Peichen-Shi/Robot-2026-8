@@ -1,0 +1,39 @@
+{
+  "status": "NOT_FLIGHT_QUALIFIED",
+  "baseline": {
+    "kind": "offline_reference_only_not_flown",
+    "planned_gate_interval_s": 3.9,
+    "speed_peak_mps": 32.2711877977567,
+    "acceleration_peak_mps2": 119.43894480288375,
+    "race_thrust_direction_rate_peak_rad_s": 23.47618765773598,
+    "race_thrust_direction_rate_p95_rad_s": 12.46168751451742,
+    "nominal_minimum_gate_clearance_m": 0.32000000000000006
+  },
+  "optimizer": {
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 64,
+    "initial_cost": 79.7824960121273,
+    "final_cost": 5.472587654896468
+  },
+  "candidates": {
+    "scaled": {
+      "kind": "offline_reference_only_not_flown",
+      "planned_gate_interval_s": 3.3800000000000003,
+      "speed_peak_mps": 40.28956749060464,
+      "acceleration_peak_mps2": 160.9320098145724,
+      "race_thrust_direction_rate_peak_rad_s": 28.683423667744137,
+      "race_thrust_direction_rate_p95_rad_s": 14.830180232259163,
+      "nominal_minimum_gate_clearance_m": 0.32000000000000006
+    },
+    "screened": {
+      "kind": "offline_reference_only_not_flown",
+      "planned_gate_interval_s": 3.3800000000000003,
+      "speed_peak_mps": 31.510702317156923,
+      "acceleration_peak_mps2": 115.80463577556894,
+      "race_thrust_direction_rate_peak_rad_s": 7.430801872722263,
+      "race_thrust_direction_rate_p95_rad_s": 7.379698127690559,
+      "nominal_minimum_gate_clearance_m": 0.32000000000000006
+    }
+  }
+}

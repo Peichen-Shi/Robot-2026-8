@@ -1,0 +1,138 @@
+{
+  "run_id": "search_20261031_214817_921511665_lean_baseline_01",
+  "kind": "diagnostic_not_ordered_race_validation",
+  "crossings": [
+    {
+      "gate": 1,
+      "found": true,
+      "relative_time_s": 0.919175557973066,
+      "nominal_time_s": 0.9499999999999993,
+      "local_y_m": 0.04672232943603365,
+      "local_z_m": 0.03796471282018294,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.9732776705639664,
+      "planned_lateral_m": 0.0
+    },
+    {
+      "gate": 2,
+      "found": true,
+      "relative_time_s": 1.3202181934471824,
+      "nominal_time_s": 1.3583438992806407,
+      "local_y_m": 0.22697218024083,
+      "local_z_m": 0.5720035714725159,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.4479964285274841,
+      "planned_lateral_m": 0.0
+    },
+    {
+      "gate": 3,
+      "found": true,
+      "relative_time_s": 1.7609652995107332,
+      "nominal_time_s": 1.763587959820292,
+      "local_y_m": 0.6358981851844486,
+      "local_z_m": -0.1525161867342422,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.3841018148155514,
+      "planned_lateral_m": -0.2
+    },
+    {
+      "gate": 4,
+      "found": true,
+      "relative_time_s": 2.159454280761203,
+      "nominal_time_s": 2.149043458088048,
+      "local_y_m": -0.005959433473566797,
+      "local_z_m": -0.10030957009357366,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.9196904299064264,
+      "planned_lateral_m": 0.0
+    },
+    {
+      "gate": 5,
+      "found": true,
+      "relative_time_s": 2.4732289307433426,
+      "nominal_time_s": 2.477098657887538,
+      "local_y_m": -0.051311767491293,
+      "local_z_m": 0.09112678427112246,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.9288732157288776,
+      "planned_lateral_m": 0.4
+    },
+    {
+      "gate": 6,
+      "found": true,
+      "relative_time_s": 2.9029011523727917,
+      "nominal_time_s": 2.8281619016674924,
+      "local_y_m": 0.1514346041048953,
+      "local_z_m": 0.09734060371981995,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.8685653958951047,
+      "planned_lateral_m": 0.6
+    },
+    {
+      "gate": 7,
+      "found": true,
+      "relative_time_s": 3.2703392847586272,
+      "nominal_time_s": 3.1648661213714178,
+      "local_y_m": 0.2587229407074807,
+      "local_z_m": 0.15439978617895095,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.7612770592925193,
+      "planned_lateral_m": 0.4
+    },
+    {
+      "gate": 8,
+      "found": true,
+      "relative_time_s": 3.534572500626652,
+      "nominal_time_s": 3.514891191471122,
+      "local_y_m": -0.2006405562380985,
+      "local_z_m": -0.7122198159794418,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.3077801840205582,
+      "planned_lateral_m": -0.3
+    },
+    {
+      "gate": 9,
+      "found": true,
+      "relative_time_s": 3.861436072521645,
+      "nominal_time_s": 3.857014624132354,
+      "local_y_m": -0.11368416787087518,
+      "local_z_m": 0.437222889344172,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.5827771106558279,
+      "planned_lateral_m": -0.7
+    },
+    {
+      "gate": 10,
+      "found": true,
+      "relative_time_s": 4.293213568928618,
+      "nominal_time_s": 4.194195935858787,
+      "local_y_m": 0.6405644763694963,
+      "local_z_m": 0.15605996110108358,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.3794355236305037,
+      "planned_lateral_m": 0.2
+    },
+    {
+      "gate": 11,
+      "found": true,
+      "relative_time_s": 4.550443383035006,
+      "nominal_time_s": 4.520692817946401,
+      "local_y_m": -0.7716325133941901,
+      "local_z_m": 0.19849736341833377,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.24836748660580987,
+      "planned_lateral_m": 0.7
+    },
+    {
+      "gate": 12,
+      "found": true,
+      "relative_time_s": 4.814877895259432,
+      "nominal_time_s": 4.850000000000001,
+      "local_y_m": -0.4890862871084594,
+      "local_z_m": 0.24259061285084535,
+      "inside_aperture": true,
+      "remaining_clearance_m": 0.5309137128915407,
+      "planned_lateral_m": 0.7
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "qualify_speed_20261031_220005_624445676_2_01",
+  "race_passed": false,
+  "actual_race_ms": 3347.0910936244422,
+  "passed_gates": 12,
+  "minimum_clearance_m": 0.03459073993583517,
+  "stable_terminal_60s": false,
+  "fresh_visible_simulator": true,
+  "numeric_reference_audit": true,
+  "terminal_tail_position_error_peak_m": 0.26172633155437663,
+  "terminal_tail_speed_peak_mps": 1.1756540296545268,
+  "terminal_tail_body_rate_peak_rad_s": 0.17723575590781315,
+  "qualified": false,
+  "baseline_ms": 3894.973,
+  "requested_improvement_ms": 500.0,
+  "maximum_race_time_ms": 3394.973,
+  "actual_improvement_ms": 547.8819063755577
+}

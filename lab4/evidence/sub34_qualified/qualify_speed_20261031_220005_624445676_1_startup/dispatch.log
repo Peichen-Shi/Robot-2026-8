@@ -1,0 +1,6 @@
+Preparing simulator and bridge, attempt 1/2.
+Stopping old simulator bridge: 52238, 52260, 52261
+Stopping old Lab4 simulator: 52201
+Simulator metadata interface ready.
+{"ready": true, "topics": {"state": {"advancing_samples": 12, "first_stamp": 2.7199999999999998, "last_stamp": 2.94}, "clock": {"advancing_samples": 12, "first_stamp": 2.7199999999999998, "last_stamp": 2.94}}}
+State feedback and /clock ready. Fresh simulator/bridge connected.

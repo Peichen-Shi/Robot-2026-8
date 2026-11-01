@@ -14,7 +14,10 @@ def stable_terminal_window(samples, duration=1.0, maximum_gap=0.10):
     if any(b[0] < a[0] for a, b in zip(samples, samples[1:])):
         return False
     cutoff = samples[-1][0] - duration
-    starts = [i for i, row in enumerate(samples) if row[0] <= cutoff + 1e-9]
+    # Select a sample at or before the cutoff. A +1 ns tolerance here can
+    # select a sample *after* it, making a stable window spuriously too short
+    # after ROS nanoseconds have been converted to floating-point seconds.
+    starts = [i for i, row in enumerate(samples) if row[0] <= cutoff]
     if not starts:
         return False
     start = starts[-1]

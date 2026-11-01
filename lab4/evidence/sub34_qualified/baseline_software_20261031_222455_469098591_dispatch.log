@@ -1,0 +1,9 @@
+ERROR: connection refused to [http://127.0.0.1:33713/]
+Unregistering /controller_node
+baseline_software_20261031_222455_469098591_01 recorder ready; preflight remains sole reference
+Traceback (most recent call last):
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: baseline_software_20261031_222455_469098591_01 failed acceptance; stop repeated trials for diagnosis

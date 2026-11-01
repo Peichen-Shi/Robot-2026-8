@@ -1,0 +1,56 @@
+_______________________________________________________________________________
+Warnings << controller_pkg:check /home/wanghanzhi/lab4_speed_20261031/ros_ws/logs/controller_pkg/build.check.005.log
+CMake Warning (dev) at CMakeLists.txt:2 (project):
+  Policy CMP0048 is not set: project() command manages VERSION variables.
+  Run "cmake --help-policy CMP0048" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  The following variable(s) would be set to empty:
+
+    CMAKE_PROJECT_VERSION
+    CMAKE_PROJECT_VERSION_MAJOR
+    CMAKE_PROJECT_VERSION_MINOR
+    CMAKE_PROJECT_VERSION_PATCH
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+cd /home/wanghanzhi/lab4_speed_20261031/ros_ws/build/controller_pkg; catkin build --get-env controller_pkg | catkin env -si  /usr/bin/make cmake_check_build_system; cd -
+
+...............................................................................
+--------------------------------------------------------------------------------
+Profile:                     default
+Extending:        [explicit] /home/wanghanzhi/vnav_ws4/devel
+Workspace:                   /home/wanghanzhi/lab4_speed_20261031/ros_ws
+--------------------------------------------------------------------------------
+Build Space:        [exists] /home/wanghanzhi/lab4_speed_20261031/ros_ws/build
+Devel Space:        [exists] /home/wanghanzhi/lab4_speed_20261031/ros_ws/devel
+Install Space:      [unused] /home/wanghanzhi/lab4_speed_20261031/ros_ws/install
+Log Space:          [exists] /home/wanghanzhi/lab4_speed_20261031/ros_ws/logs
+Source Space:       [exists] /home/wanghanzhi/lab4_speed_20261031/ros_ws/src
+DESTDIR:            [unused] None
+--------------------------------------------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+--------------------------------------------------------------------------------
+Additional CMake Args:       -DCMAKE_BUILD_TYPE=Release
+Additional Make Args:        -j2
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+--------------------------------------------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+--------------------------------------------------------------------------------
+Workspace configuration appears valid.
+--------------------------------------------------------------------------------
+[build] Found 18 packages in 0.0 seconds.                                      
+[build] Package table is up to date.                                           
+Starting >>> trajectory_generation               
+Finished <<< trajectory_generation                [ 35.4 seconds ]
+Starting >>> controller_pkg                      
+Finished <<< controller_pkg                       [ 1 minute and 25.2 seconds ]
+[build] Summary: All 2 packages succeeded!
+[build] Ignored: 16 packages were skipped or are skiplisted.
+[build] Warnings: 1 packages succeeded with warnings.
+[build] Abandoned: No packages were abandoned.
+[build] Failed: No packages failed.
+[build] Runtime: 2 minutes and 0.6 seconds total.

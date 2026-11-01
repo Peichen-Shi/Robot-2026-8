@@ -1,0 +1,27 @@
+{
+  "phase": "FINISHED",
+  "elapsed_ms": 3349.8415073601145,
+  "crossing_elapsed_ms": 3349.8415073601145,
+  "passed_gates": 12,
+  "total_gates": 12,
+  "first_gate_ros_s": 22.689854653960566,
+  "last_gate_ros_s": 26.03969616132068,
+  "crossing_ros_s": [
+    22.689854653960566,
+    22.897697234520976,
+    23.1353478993773,
+    23.535210860291986,
+    23.82851136714383,
+    24.111128946398594,
+    24.57658960280164,
+    24.759258317639645,
+    24.99396856896057,
+    25.288729081214797,
+    25.682889804983276,
+    26.03969616132068
+  ],
+  "run_id": "qualify_speed_20261031_220005_624445676_1_01",
+  "reason": "",
+  "clock": "odometry header / ROS simulation time",
+  "rule": "Sequential forward local +x crossings inside 2.4 m aperture with 0.18 m body margin; first gate to last gate only."
+}

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "planned_duration_s": 6.159999999999999,
+  "reconstructed_duration_error_s": 0,
+  "maximum_physical_time_boundary_map_condition": 8979983401.680641,
+  "maximum_normalized_time_boundary_map_condition": 2183924521.930572,
+  "maximum_gate_position_residual_m": 2.4165146080457573e-14,
+  "maximum_gate_yaw_residual_rad": 3.552713678800501e-15,
+  "recorded_position_match_max_m": 1.722710862850363e-11,
+  "recorded_velocity_match_max_mps": 1.4656986735417377e-10,
+  "recorded_acceleration_match_max_mps2": 2.0913759613387195e-09,
+  "recorded_yaw_match_max_rad": 4.707345624410664e-14,
+  "position_continuity_residual_by_derivative_0_to_4": [
+    7.259734894074137e-12,
+    1.2517272363879736e-10,
+    1.957650173586282e-09,
+    4.1174300246158566e-08,
+    9.089238217317739e-07
+  ],
+  "yaw_continuity_residual_by_derivative_0_to_4": [
+    5.253575352526241e-12,
+    4.2309267200835166e-11,
+    2.309967772617938e-10,
+    5.495991217685514e-09,
+    1.1772772268159315e-07
+  ],
+  "gate_constraint_targets": "selected points within original apertures",
+  "maximum_selected_lateral_offset_m": 0.7,
+  "maximum_selected_vertical_offset_m": 0.7,
+  "minimum_nominal_gate_clearance_m": 0.32000000000000006
+}

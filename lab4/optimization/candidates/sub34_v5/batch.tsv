@@ -1,0 +1,4 @@
+damp_corrected	optimization/candidates/sub34_v5/damp_corrected_planner.yaml	optimization/candidates/sub34_v5/damp_corrected_controller.yaml
+damp_optimized	optimization/candidates/sub34_v5/damp_optimized_planner.yaml	optimization/candidates/sub34_v5/damp_optimized_controller.yaml
+damp_uniform	optimization/candidates/sub34_v5/damp_uniform_planner.yaml	optimization/candidates/sub34_v5/damp_uniform_controller.yaml
+damp_yaw05	optimization/candidates/sub34_v5/damp_yaw05_planner.yaml	optimization/candidates/sub34_v5/damp_yaw05_controller.yaml

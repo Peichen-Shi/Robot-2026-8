@@ -1,0 +1,20 @@
+{
+  "phase": "INVALID",
+  "elapsed_ms": 75858.83490326675,
+  "crossing_elapsed_ms": 1550.6106937756813,
+  "passed_gates": 5,
+  "total_gates": 12,
+  "first_gate_ros_s": 17.32116509673326,
+  "last_gate_ros_s": null,
+  "crossing_ros_s": [
+    17.32116509673326,
+    17.722544233518406,
+    18.156442584659946,
+    18.555752977600655,
+    18.87177579050894
+  ],
+  "run_id": "baseline_software_20261031_222455_469098591_01",
+  "reason": "gate 6 plane crossed outside aperture",
+  "clock": "odometry header / ROS simulation time",
+  "rule": "Sequential forward local +x crossings inside 2.4 m aperture with 0.18 m body margin; first gate to last gate only."
+}

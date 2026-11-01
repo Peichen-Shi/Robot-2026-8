@@ -1,0 +1,68 @@
+{
+  "approach115": {
+    "kind": "offline_reference_only_not_flown",
+    "planned_gate_interval_s": 3.3800000000000003,
+    "speed_peak_mps": 31.476629013697202,
+    "acceleration_peak_mps2": 115.71120670781598,
+    "race_thrust_direction_rate_peak_rad_s": 10.526464861071574,
+    "race_thrust_direction_rate_p95_rad_s": 7.672016515326779,
+    "all_reference_gate_crossings_forward": true,
+    "minimum_forward_gate_speed_mps": 10.800931302314867,
+    "nominal_minimum_gate_clearance_m": 0.32000000000000006
+  },
+  "approach135": {
+    "kind": "offline_reference_only_not_flown",
+    "planned_gate_interval_s": 3.3800000000000003,
+    "speed_peak_mps": 31.47527211410606,
+    "acceleration_peak_mps2": 115.70981955930819,
+    "race_thrust_direction_rate_peak_rad_s": 10.429429355877902,
+    "race_thrust_direction_rate_p95_rad_s": 7.542332379824207,
+    "all_reference_gate_crossings_forward": true,
+    "minimum_forward_gate_speed_mps": 10.824949529863206,
+    "nominal_minimum_gate_clearance_m": 0.32000000000000006
+  },
+  "approach160": {
+    "kind": "offline_reference_only_not_flown",
+    "planned_gate_interval_s": 3.3800000000000003,
+    "speed_peak_mps": 31.473907291105196,
+    "acceleration_peak_mps2": 115.70826847265474,
+    "race_thrust_direction_rate_peak_rad_s": 10.350265584048023,
+    "race_thrust_direction_rate_p95_rad_s": 7.54279361329121,
+    "all_reference_gate_crossings_forward": true,
+    "minimum_forward_gate_speed_mps": 10.848142558676201,
+    "nominal_minimum_gate_clearance_m": 0.32000000000000006
+  },
+  "safepoints": {
+    "kind": "offline_reference_only_not_flown",
+    "planned_gate_interval_s": 3.3800000000000003,
+    "speed_peak_mps": 31.58609407176513,
+    "acceleration_peak_mps2": 115.70224140591348,
+    "race_thrust_direction_rate_peak_rad_s": 12.059561793733545,
+    "race_thrust_direction_rate_p95_rad_s": 9.348278613488693,
+    "all_reference_gate_crossings_forward": true,
+    "minimum_forward_gate_speed_mps": 10.693447431459118,
+    "nominal_minimum_gate_clearance_m": 0.32000000000000006
+  },
+  "approach115safe": {
+    "kind": "offline_reference_only_not_flown",
+    "planned_gate_interval_s": 3.3800000000000003,
+    "speed_peak_mps": 31.52570482786438,
+    "acceleration_peak_mps2": 115.70070222290057,
+    "race_thrust_direction_rate_peak_rad_s": 11.812663680881691,
+    "race_thrust_direction_rate_p95_rad_s": 8.33568858060117,
+    "all_reference_gate_crossings_forward": true,
+    "minimum_forward_gate_speed_mps": 10.729719406466367,
+    "nominal_minimum_gate_clearance_m": 0.32000000000000006
+  },
+  "damped": {
+    "kind": "offline_reference_only_not_flown",
+    "planned_gate_interval_s": 3.3800000000000003,
+    "speed_peak_mps": 31.58609407176513,
+    "acceleration_peak_mps2": 115.70224140591348,
+    "race_thrust_direction_rate_peak_rad_s": 12.059561793733545,
+    "race_thrust_direction_rate_p95_rad_s": 9.348278613488693,
+    "all_reference_gate_crossings_forward": true,
+    "minimum_forward_gate_speed_mps": 10.693447431459118,
+    "nominal_minimum_gate_clearance_m": 0.32000000000000006
+  }
+}

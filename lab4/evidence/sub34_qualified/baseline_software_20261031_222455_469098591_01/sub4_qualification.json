@@ -1,0 +1,14 @@
+{
+  "run_id": "baseline_software_20261031_222455_469098591_01",
+  "race_passed": false,
+  "actual_race_ms": 1550.6106937756813,
+  "passed_gates": 5,
+  "minimum_clearance_m": null,
+  "stable_terminal_60s": true,
+  "fresh_visible_simulator": true,
+  "numeric_reference_audit": true,
+  "terminal_tail_position_error_peak_m": 0.027275902385710833,
+  "terminal_tail_speed_peak_mps": 0.05090299637948131,
+  "terminal_tail_body_rate_peak_rad_s": 0.022693888559486383,
+  "qualified": false
+}

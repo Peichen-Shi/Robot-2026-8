@@ -110,6 +110,7 @@ class TesseQuadrotorControlInterface:
             Actuators,
             self.props_control_cb,
             queue_size=1,
+            tcp_nodelay=True,
         )
         rospy.loginfo(
             "TESSE rotor watchdog enabled: timeout=%.3f s, rate=%.1f Hz",

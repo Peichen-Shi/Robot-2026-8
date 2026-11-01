@@ -1,0 +1,20 @@
+{
+  "/home/wanghanzhi/lab4_speed_20261031/optimization/candidates/sub34_v8/early00_planner.yaml": "79258c4d1bda6cb9fa16a5a53ee77c3cfb43a6f2bebc55ab43c28b2e99a39271",
+  "/home/wanghanzhi/lab4_speed_20261031/optimization/candidates/sub34_v8/early00_controller.yaml": "73723664bdc4cdc7eb4ff322f4f4b9a40dcfe9a3f9e8a3ed262d0bd94bef5e0c",
+  "/home/wanghanzhi/vnav-builds/lab4/lab4.x86_64": "fc275e71f90659bbc2b9e066696ebb842d69579238b8969178ac3396007e51e4",
+  "/home/wanghanzhi/lab4_speed_20261031/code/controller_pkg/src/controller_node.cpp": "12083f3d1d69f1f2dc8ba61ddf0be43e9c9d8d992c5c8727d4eae33928956463",
+  "/home/wanghanzhi/lab4_speed_20261031/code/trajectory_generation_pkg/src/trajectory_generation_node.cpp": "fda860d3306d82129b1c2a576f7e66f5f71a2612ac56d63998b4f014c2e20fa1",
+  "/home/wanghanzhi/lab4_speed_20261031/optimization/official_gates.csv": "2c988d7000dbd7a34cfe801a5f02a6a86cd18a4d6de31337debf5af38302dce1",
+  "/home/wanghanzhi/lab4_speed_20261031/optimization/race_acceptance.py": "1b33cc5d939f90036627b214f3a7e090d71171bdfd30b2400cf36ef82a101c9f",
+  "/home/wanghanzhi/lab4_speed_20261031/scripts/check_sub4_qualification.py": "9f049c69ae8c0013074932b23ebc75fa87ce14b88bca51341eeb146033e22bbd",
+  "/home/wanghanzhi/lab4_speed_20261031/scripts/check_speed_improvement.py": "1d552236f0286af59eb4a11a34c8c1908265ac352617f1b827161eaf0327adad",
+  "/home/wanghanzhi/lab4_speed_20261031/scripts/prepare_simulator.py": "1a559e8dc2310bd679dc766a14dad7c7130a3e47031e340533bf1f1855e723d4",
+  "/home/wanghanzhi/lab4_speed_20261031/optimization/run_trial.sh": "98c3eefe52eece47c5fdc799f3036fc4ea38a7b40881d408919621e3207e62f6",
+  "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py": "f0b02112f7c07aed9dbf157cb9e0f020661aa14cb18e0e2f9024797d812fb635",
+  "/home/wanghanzhi/lab4_speed_20261031/code/controller_pkg/include/controller_pkg/attitude_feedforward.h": "4d8b8e23760bcc70fe08fc8edbf008bab4e7d0604f8ed8e152c34fff26e72ebb",
+  "/home/wanghanzhi/lab4_speed_20261031/code/controller_pkg/include/controller_pkg/controller_math.h": "5a28862233627c0a87b66c5b98da949aea8b5ef3758e7f754fb73fbbf0a9bf5a",
+  "/home/wanghanzhi/lab4_speed_20261031/code/controller_pkg/include/controller_pkg/flatness_feedforward.h": "b96b4d66e08cd33e01d17b9ef0df7cc2b4ee0f953121eab0a64d12d4fdbdc366",
+  "/home/wanghanzhi/lab4_speed_20261031/code/controller_pkg/include/controller_pkg/reference_prediction.h": "2f5f5132801483c390fc681b3b10a632d678b81e37fdad61608ee601d6660b87",
+  "/home/wanghanzhi/lab4_speed_20261031/ros_ws/devel/.private/controller_pkg/lib/controller_pkg/controller_node": "c896314ba3ef112e14eba227ff1bf0ff14f297bdddb9c8ca95201beb581ce915",
+  "/home/wanghanzhi/lab4_speed_20261031/ros_ws/devel/.private/trajectory_generation/lib/trajectory_generation/trajectory_generation_node": "3732e2c1da08f40793a4dc8d41e4d2167d9280c3a397e2adbf7e434fcddce877"
+}

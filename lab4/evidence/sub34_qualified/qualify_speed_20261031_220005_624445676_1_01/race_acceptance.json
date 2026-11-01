@@ -1,0 +1,68 @@
+{
+  "passed": false,
+  "checks": {
+    "original_twelve_gates_unchanged": true,
+    "all_ordered_forward_gates": true,
+    "positive_finite_actual_time": true,
+    "complete_published_reference": true,
+    "single_trial": true,
+    "stable_exit_last_second": true,
+    "no_fault_clock_reset_or_long_gap": false,
+    "collision_telemetry_enabled": true,
+    "no_reported_mission_collision": true
+  },
+  "run_id": "qualify_speed_20261031_220005_624445676_1_01",
+  "first_gate_to_last_gate_ms": 3349.8415073601145,
+  "passed_gates": 12,
+  "gate_width_m": 2.4,
+  "gate_height_m": 2.4,
+  "body_margin_m": 0.18,
+  "ignored_legacy_criteria": [
+    "whole-record position aggregate",
+    "60-second terminal observation"
+  ],
+  "legacy_stability_result": {
+    "actual_stable_full_route": false,
+    "failure_reasons": [
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.351 s exceeded 0.350 s\", \"ros_time_s\": 42.74, \"wall_monotonic_s\": 1719.716541005}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.359 s exceeded 0.350 s\", \"ros_time_s\": 27.019999999, \"wall_monotonic_s\": 1703.698037972}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.362 s exceeded 0.350 s\", \"ros_time_s\": 58.039999999, \"wall_monotonic_s\": 1735.158016244}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.366 s exceeded 0.350 s\", \"ros_time_s\": 74.18, \"wall_monotonic_s\": 1751.753809525}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.369 s exceeded 0.350 s\", \"ros_time_s\": 89.92, \"wall_monotonic_s\": 1767.801792461}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.374 s exceeded 0.350 s\", \"ros_time_s\": 73.78, \"wall_monotonic_s\": 1751.196309094}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.377 s exceeded 0.350 s\", \"ros_time_s\": 26.64, \"wall_monotonic_s\": 1703.142763674}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.388 s exceeded 0.350 s\", \"ros_time_s\": 42.34, \"wall_monotonic_s\": 1719.159916022}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.388 s exceeded 0.350 s\", \"ros_time_s\": 58.46, \"wall_monotonic_s\": 1735.763194759}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.393 s exceeded 0.350 s\", \"ros_time_s\": 89.5, \"wall_monotonic_s\": 1767.240008966}",
+      "less than 60 seconds continuous terminal hold after settling",
+      "no independently verified reference completion",
+      "terminal stability or continuity limits exceeded"
+    ],
+    "reference_full_route": false,
+    "terminal_hold_duration_s": 55.01999999899999
+  },
+  "failure_reasons": [
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.351 s exceeded 0.350 s\", \"ros_time_s\": 42.74, \"wall_monotonic_s\": 1719.716541005}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.359 s exceeded 0.350 s\", \"ros_time_s\": 27.019999999, \"wall_monotonic_s\": 1703.698037972}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.362 s exceeded 0.350 s\", \"ros_time_s\": 58.039999999, \"wall_monotonic_s\": 1735.158016244}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.366 s exceeded 0.350 s\", \"ros_time_s\": 74.18, \"wall_monotonic_s\": 1751.753809525}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.369 s exceeded 0.350 s\", \"ros_time_s\": 89.92, \"wall_monotonic_s\": 1767.801792461}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.374 s exceeded 0.350 s\", \"ros_time_s\": 73.78, \"wall_monotonic_s\": 1751.196309094}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.377 s exceeded 0.350 s\", \"ros_time_s\": 26.64, \"wall_monotonic_s\": 1703.142763674}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.388 s exceeded 0.350 s\", \"ros_time_s\": 42.34, \"wall_monotonic_s\": 1719.159916022}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.388 s exceeded 0.350 s\", \"ros_time_s\": 58.46, \"wall_monotonic_s\": 1735.763194759}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.393 s exceeded 0.350 s\", \"ros_time_s\": 89.5, \"wall_monotonic_s\": 1767.240008966}",
+    "terminal stability or continuity limits exceeded"
+  ],
+  "minimum_clearance_m": 0.012530704454578823,
+  "racing_metrics": {
+    "angular_speed_max_rad_s": 7.000000799731486,
+    "duration_s": 4.82,
+    "position_max_m": 2.398158625417031,
+    "position_p95_m": 2.0160635256728843,
+    "position_rmse_m": 0.9019893438133813,
+    "speed_max_mps": 37.66074397253152,
+    "yaw_error_max_deg": 178.29738831513984
+  },
+  "actual_speed_peak_mps": 37.66074397253152
+}

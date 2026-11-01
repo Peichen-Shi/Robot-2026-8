@@ -1,0 +1,151 @@
+START search_20261031_215707_232716984_negative8
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: search_20261031_215707_232716984_negative8_01 failed acceptance; stop repeated trials for diagnosis
+{"run": "search_20261031_215707_232716984_negative8_01", "passed": false, "gates": 9, "actual_ms": 2299.1123140371064, "checks": {"original_twelve_gates_unchanged": true, "all_ordered_forward_gates": false, "positive_finite_actual_time": true, "complete_published_reference": true, "single_trial": true, "stable_exit_last_second": true, "no_fault_clock_reset_or_long_gap": false, "collision_telemetry_enabled": true, "no_reported_mission_collision": true}}
+DIAGNOSTIC YZ [(1, -0.73, 0.01), (2, -0.72, 0.39), (3, 0.71, -0.58), (4, 0.14, 0.16), (5, 0.55, 0.26), (6, -0.5, 0.09), (7, 0.44, 0.22), (8, 0.81, -0.45), (9, -0.46, 0.8), (10, 1.45, 0.5), (11, -0.46, 0.31), (12, 0.61, 0.39)]
+START search_20261031_215707_232716984_negative12
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 171, in run
+    self.prepare()
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 163, in prepare
+    raise RuntimeError('initial conditions did not settle; no race started')
+RuntimeError: initial conditions did not settle; no race started
+Incomplete evidence; dispatch exit code 1
+Selected: late030original actual ms 3349.7251793781543 clearance 0.030114630249524765
+START independent qualification 1/3: qualify_speed_20261031_220005_624445676_1
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: qualify_speed_20261031_220005_624445676_1_01 failed acceptance; stop repeated trials for diagnosis
+{
+  "run_id": "qualify_speed_20261031_220005_624445676_1_01",
+  "race_passed": false,
+  "actual_race_ms": 3349.8415073601145,
+  "passed_gates": 12,
+  "minimum_clearance_m": 0.012530704454578823,
+  "stable_terminal_60s": false,
+  "fresh_visible_simulator": true,
+  "numeric_reference_audit": true,
+  "terminal_tail_position_error_peak_m": 0.12176398749514829,
+  "terminal_tail_speed_peak_mps": 0.5438115601958619,
+  "terminal_tail_body_rate_peak_rad_s": 0.17833881734652612,
+  "qualified": false,
+  "baseline_ms": 3894.973,
+  "requested_improvement_ms": 500.0,
+  "maximum_race_time_ms": 3394.973,
+  "actual_improvement_ms": 545.1314926398854
+}
+START independent qualification 2/3: qualify_speed_20261031_220005_624445676_2
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: qualify_speed_20261031_220005_624445676_2_01 failed acceptance; stop repeated trials for diagnosis
+{
+  "run_id": "qualify_speed_20261031_220005_624445676_2_01",
+  "race_passed": false,
+  "actual_race_ms": 3347.0910936244422,
+  "passed_gates": 12,
+  "minimum_clearance_m": 0.03459073993583517,
+  "stable_terminal_60s": false,
+  "fresh_visible_simulator": true,
+  "numeric_reference_audit": true,
+  "terminal_tail_position_error_peak_m": 0.26172633155437663,
+  "terminal_tail_speed_peak_mps": 1.1756540296545268,
+  "terminal_tail_body_rate_peak_rad_s": 0.17723575590781315,
+  "qualified": false,
+  "baseline_ms": 3894.973,
+  "requested_improvement_ms": 500.0,
+  "maximum_race_time_ms": 3394.973,
+  "actual_improvement_ms": 547.8819063755577
+}
+START independent qualification 3/3: qualify_speed_20261031_220005_624445676_3
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 355, in <module>
+    trial.run(index)
+  File "/home/wanghanzhi/lab4_speed_20261031/optimization/speed_trials.py", line 321, in run
+    raise RuntimeError(run_id+' failed acceptance; stop repeated trials for diagnosis')
+RuntimeError: qualify_speed_20261031_220005_624445676_3_01 failed acceptance; stop repeated trials for diagnosis
+{
+  "run_id": "qualify_speed_20261031_220005_624445676_3_01",
+  "race_passed": false,
+  "actual_race_ms": 2306.6073186189265,
+  "passed_gates": 9,
+  "minimum_clearance_m": null,
+  "stable_terminal_60s": false,
+  "fresh_visible_simulator": true,
+  "numeric_reference_audit": true,
+  "terminal_tail_position_error_peak_m": null,
+  "terminal_tail_speed_peak_mps": null,
+  "terminal_tail_body_rate_peak_rad_s": null,
+  "qualified": false,
+  "baseline_ms": 3894.973,
+  "requested_improvement_ms": 500.0,
+  "maximum_race_time_ms": 3394.973,
+  "actual_improvement_ms": null
+}
+{
+  "batch": "qualify_speed_20261031_220005_624445676",
+  "baseline_ms": 3894.973,
+  "requested_improvement_ms": 500.0,
+  "rule": "3/3 fresh visible Unity flights, original gates/physics/time, actual race <= baseline minus 500 ms, no mission/exit faults or collisions, independent numeric audit, continuous stable hold >=60s",
+  "attempts": [
+    {
+      "run_id": "qualify_speed_20261031_220005_624445676_1_01",
+      "race_passed": false,
+      "actual_race_ms": 3349.8415073601145,
+      "passed_gates": 12,
+      "minimum_clearance_m": 0.012530704454578823,
+      "stable_terminal_60s": false,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.12176398749514829,
+      "terminal_tail_speed_peak_mps": 0.5438115601958619,
+      "terminal_tail_body_rate_peak_rad_s": 0.17833881734652612,
+      "qualified": false,
+      "baseline_ms": 3894.973,
+      "requested_improvement_ms": 500.0,
+      "maximum_race_time_ms": 3394.973,
+      "actual_improvement_ms": 545.1314926398854
+    },
+    {
+      "run_id": "qualify_speed_20261031_220005_624445676_2_01",
+      "race_passed": false,
+      "actual_race_ms": 3347.0910936244422,
+      "passed_gates": 12,
+      "minimum_clearance_m": 0.03459073993583517,
+      "stable_terminal_60s": false,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": 0.26172633155437663,
+      "terminal_tail_speed_peak_mps": 1.1756540296545268,
+      "terminal_tail_body_rate_peak_rad_s": 0.17723575590781315,
+      "qualified": false,
+      "baseline_ms": 3894.973,
+      "requested_improvement_ms": 500.0,
+      "maximum_race_time_ms": 3394.973,
+      "actual_improvement_ms": 547.8819063755577
+    },
+    {
+      "run_id": "qualify_speed_20261031_220005_624445676_3_01",
+      "race_passed": false,
+      "actual_race_ms": 2306.6073186189265,
+      "passed_gates": 9,
+      "minimum_clearance_m": null,
+      "stable_terminal_60s": false,
+      "fresh_visible_simulator": true,
+      "numeric_reference_audit": true,
+      "terminal_tail_position_error_peak_m": null,
+      "terminal_tail_speed_peak_mps": null,
+      "terminal_tail_body_rate_peak_rad_s": null,
+      "qualified": false,
+      "baseline_ms": 3894.973,
+      "requested_improvement_ms": 500.0,
+      "maximum_race_time_ms": 3394.973,
+      "actual_improvement_ms": null
+    }
+  ],
+  "qualified": false
+}

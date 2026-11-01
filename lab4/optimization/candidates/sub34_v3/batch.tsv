@@ -1,0 +1,4 @@
+g4half	optimization/candidates/sub34_v3/g4half_planner.yaml	optimization/candidates/sub34_v3/g4half_controller.yaml
+robust	optimization/candidates/sub34_v3/robust_planner.yaml	optimization/candidates/sub34_v3/robust_controller.yaml
+g4zero	optimization/candidates/sub34_v3/g4zero_planner.yaml	optimization/candidates/sub34_v3/g4zero_controller.yaml
+lead60	optimization/candidates/sub34_v3/lead60_planner.yaml	optimization/candidates/sub34_v3/lead60_controller.yaml

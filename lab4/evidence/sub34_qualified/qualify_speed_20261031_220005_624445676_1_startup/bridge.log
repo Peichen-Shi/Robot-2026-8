@@ -1,0 +1,497 @@
+... logging to /home/wanghanzhi/.ros/log/1b163c7a-d5ae-11f1-b138-87ee05bd1935/roslaunch-ubuntu-57401.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wanghanzhi/lab4_speed_20261031/code/tesse-ros-bridge/ROS/launch/tesse_quadrotor_bridge.launch
+[1mstarted roslaunch server http://127.0.0.1:34247/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /tesse/quadrotor_control_interface/command_timeout: 0.35
+ * /tesse/quadrotor_control_interface/watchdog_rate: 20.0
+ * /tesse/tesse_ros_bridge/accelerometer_bias_correlation_time: 500
+ * /tesse/tesse_ros_bridge/accelerometer_bias_random_walk: 0.003
+ * /tesse/tesse_ros_bridge/accelerometer_bias_random_walk_mu: 0.0
+ * /tesse/tesse_ros_bridge/accelerometer_noise_density: 0.002
+ * /tesse/tesse_ros_bridge/accelerometer_noise_density_mu: 0.0
+ * /tesse/tesse_ros_bridge/body_frame_id: base_link
+ * /tesse/tesse_ros_bridge/body_frame_id_gt: base_link_gt
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/camera_id: depth_cam
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/compression: False
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/far_draw_dist: 200
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/frame_id: left_cam
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/height: 480
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/near_draw_dist: -0.05
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/num_channels: 1
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/pos_x: -0.05
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/pos_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/pos_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/quat_w: 1.0
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/quat_x: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/quat_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/quat_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/vertical_fov: 60
+ * /tesse/tesse_ros_bridge/camera_params/DEPTH/width: 720
+ * /tesse/tesse_ros_bridge/camera_params/GRY_LEFT/camera_id: left_cam
+ * /tesse/tesse_ros_bridge/camera_params/GRY_LEFT/compression: False
+ * /tesse/tesse_ros_bridge/camera_params/GRY_LEFT/frame_id: left_cam
+ * /tesse/tesse_ros_bridge/camera_params/GRY_LEFT/num_channels: 1
+ * /tesse/tesse_ros_bridge/camera_params/GRY_RIGHT/camera_id: right_cam
+ * /tesse/tesse_ros_bridge/camera_params/GRY_RIGHT/compression: False
+ * /tesse/tesse_ros_bridge/camera_params/GRY_RIGHT/frame_id: right_cam
+ * /tesse/tesse_ros_bridge/camera_params/GRY_RIGHT/num_channels: 1
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/camera_id: left_cam
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/compression: False
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/far_draw_dist: 50
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/frame_id: left_cam
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/height: 480
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/near_draw_dist: -0.05
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/num_channels: 3
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/pos_x: -0.05
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/pos_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/pos_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/quat_w: 1.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/quat_x: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/quat_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/quat_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/vertical_fov: 60
+ * /tesse/tesse_ros_bridge/camera_params/RGB_LEFT/width: 720
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/camera_id: right_cam
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/compression: False
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/far_draw_dist: 50
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/frame_id: right_cam
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/height: 480
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/near_draw_dist: -0.05
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/num_channels: 3
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/pos_x: 0.05
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/pos_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/pos_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/quat_w: 1.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/quat_x: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/quat_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/quat_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/vertical_fov: 60
+ * /tesse/tesse_ros_bridge/camera_params/RGB_RIGHT/width: 720
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/camera_id: seg_cam
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/compression: False
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/far_draw_dist: 50
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/frame_id: left_cam
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/height: 480
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/near_draw_dist: -0.05
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/num_channels: 3
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/pos_x: -0.05
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/pos_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/pos_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/quat_w: 1.0
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/quat_x: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/quat_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/quat_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/vertical_fov: 60
+ * /tesse/tesse_ros_bridge/camera_params/SEGMENTATION/width: 720
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/camera_id: third_person
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/compression: False
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/far_draw_dist: 159
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/frame_id: third_person
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/height: 768
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/near_draw_dist: 0.3
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/num_channels: 3
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/pos_x: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/pos_y: 0.7
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/pos_z: -1.2
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/quat_w: 0.9942158
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/quat_x: 0.1074007
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/quat_y: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/quat_z: 0.0
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/vertical_fov: 90
+ * /tesse/tesse_ros_bridge/camera_params/THIRD_PERSON/width: 1024
+ * /tesse/tesse_ros_bridge/clock_from_metadata_udp: True
+ * /tesse/tesse_ros_bridge/drive_with_ackermann: False
+ * /tesse/tesse_ros_bridge/enable_collision: True
+ * /tesse/tesse_ros_bridge/enable_step_mode: False
+ * /tesse/tesse_ros_bridge/frame_rate: 20.0
+ * /tesse/tesse_ros_bridge/gyroscope_bias_correlation_time: 500
+ * /tesse/tesse_ros_bridge/gyroscope_bias_random_walk: 1.9393e-05
+ * /tesse/tesse_ros_bridge/gyroscope_bias_random_walk_mu: 0.0
+ * /tesse/tesse_ros_bridge/gyroscope_noise_density: 0.00016968
+ * /tesse/tesse_ros_bridge/gyroscope_noise_density_mu: 0.0
+ * /tesse/tesse_ros_bridge/image_port: 9002
+ * /tesse/tesse_ros_bridge/imu_rate: 200
+ * /tesse/tesse_ros_bridge/initial_pose/enabled: False
+ * /tesse/tesse_ros_bridge/initial_scene: 1
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/frame_id: front_lidar
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/lidar_id: front_lidar
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/pos_x: default
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/pos_y: default
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/pos_z: default
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/quat_w: default
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/quat_x: default
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/quat_y: default
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/quat_z: default
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/scan_beams: 1080
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/scan_max_angle: 3.92699
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/scan_max_range: 200
+ * /tesse/tesse_ros_bridge/lidar_params/FRONT/scan_min_angle: -0.785398
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/frame_id: rear_lidar
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/lidar_id: rear_lidar
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/pos_x: default
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/pos_y: default
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/pos_z: default
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/quat_w: default
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/quat_x: default
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/quat_y: default
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/quat_z: default
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/scan_beams: 1080
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/scan_max_angle: 0.785398
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/scan_max_range: 200
+ * /tesse/tesse_ros_bridge/lidar_params/REAR/scan_min_angle: -3.92699
+ * /tesse/tesse_ros_bridge/lidar_port: 9006
+ * /tesse/tesse_ros_bridge/lidar_udp_port: 9007
+ * /tesse/tesse_ros_bridge/linear_velocity_noise_mu: 0.0
+ * /tesse/tesse_ros_bridge/linear_velocity_noise_sigma: 0.1
+ * /tesse/tesse_ros_bridge/map_frame_id: map
+ * /tesse/tesse_ros_bridge/metadata_port: 9001
+ * /tesse/tesse_ros_bridge/num_objects: 0
+ * /tesse/tesse_ros_bridge/object_0/id: 0
+ * /tesse/tesse_ros_bridge/object_0/send_params: True
+ * /tesse/tesse_ros_bridge/object_0/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_1/id: 1
+ * /tesse/tesse_ros_bridge/object_1/send_params: True
+ * /tesse/tesse_ros_bridge/object_1/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_10/id: 0
+ * /tesse/tesse_ros_bridge/object_10/send_params: True
+ * /tesse/tesse_ros_bridge/object_10/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_11/id: 1
+ * /tesse/tesse_ros_bridge/object_11/send_params: True
+ * /tesse/tesse_ros_bridge/object_11/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_12/id: 0
+ * /tesse/tesse_ros_bridge/object_12/send_params: True
+ * /tesse/tesse_ros_bridge/object_12/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_13/id: 1
+ * /tesse/tesse_ros_bridge/object_13/send_params: True
+ * /tesse/tesse_ros_bridge/object_13/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_14/id: 0
+ * /tesse/tesse_ros_bridge/object_14/send_params: True
+ * /tesse/tesse_ros_bridge/object_14/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_15/id: 1
+ * /tesse/tesse_ros_bridge/object_15/send_params: True
+ * /tesse/tesse_ros_bridge/object_15/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_16/id: 0
+ * /tesse/tesse_ros_bridge/object_16/send_params: True
+ * /tesse/tesse_ros_bridge/object_16/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_17/id: 1
+ * /tesse/tesse_ros_bridge/object_17/send_params: True
+ * /tesse/tesse_ros_bridge/object_17/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_18/id: 0
+ * /tesse/tesse_ros_bridge/object_18/send_params: True
+ * /tesse/tesse_ros_bridge/object_18/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_19/id: 1
+ * /tesse/tesse_ros_bridge/object_19/send_params: True
+ * /tesse/tesse_ros_bridge/object_19/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_2/id: 0
+ * /tesse/tesse_ros_bridge/object_2/send_params: True
+ * /tesse/tesse_ros_bridge/object_2/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_20/id: 0
+ * /tesse/tesse_ros_bridge/object_20/send_params: True
+ * /tesse/tesse_ros_bridge/object_20/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_21/id: 1
+ * /tesse/tesse_ros_bridge/object_21/send_params: True
+ * /tesse/tesse_ros_bridge/object_21/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_22/id: 0
+ * /tesse/tesse_ros_bridge/object_22/send_params: True
+ * /tesse/tesse_ros_bridge/object_22/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_23/id: 1
+ * /tesse/tesse_ros_bridge/object_23/send_params: True
+ * /tesse/tesse_ros_bridge/object_23/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_24/id: 0
+ * /tesse/tesse_ros_bridge/object_24/send_params: True
+ * /tesse/tesse_ros_bridge/object_24/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_25/id: 1
+ * /tesse/tesse_ros_bridge/object_25/send_params: True
+ * /tesse/tesse_ros_bridge/object_25/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_26/id: 0
+ * /tesse/tesse_ros_bridge/object_26/send_params: True
+ * /tesse/tesse_ros_bridge/object_26/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_27/id: 1
+ * /tesse/tesse_ros_bridge/object_27/send_params: True
+ * /tesse/tesse_ros_bridge/object_27/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_28/id: 0
+ * /tesse/tesse_ros_bridge/object_28/send_params: True
+ * /tesse/tesse_ros_bridge/object_28/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_29/id: 1
+ * /tesse/tesse_ros_bridge/object_29/send_params: True
+ * /tesse/tesse_ros_bridge/object_29/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_3/id: 1
+ * /tesse/tesse_ros_bridge/object_3/send_params: True
+ * /tesse/tesse_ros_bridge/object_3/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_30/id: 0
+ * /tesse/tesse_ros_bridge/object_30/send_params: True
+ * /tesse/tesse_ros_bridge/object_30/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_31/id: 1
+ * /tesse/tesse_ros_bridge/object_31/send_params: True
+ * /tesse/tesse_ros_bridge/object_31/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_32/id: 0
+ * /tesse/tesse_ros_bridge/object_32/send_params: True
+ * /tesse/tesse_ros_bridge/object_32/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_33/id: 1
+ * /tesse/tesse_ros_bridge/object_33/send_params: True
+ * /tesse/tesse_ros_bridge/object_33/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_34/id: 0
+ * /tesse/tesse_ros_bridge/object_34/send_params: True
+ * /tesse/tesse_ros_bridge/object_34/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_35/id: 1
+ * /tesse/tesse_ros_bridge/object_35/send_params: True
+ * /tesse/tesse_ros_bridge/object_35/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_36/id: 0
+ * /tesse/tesse_ros_bridge/object_36/send_params: True
+ * /tesse/tesse_ros_bridge/object_36/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_37/id: 1
+ * /tesse/tesse_ros_bridge/object_37/send_params: True
+ * /tesse/tesse_ros_bridge/object_37/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_38/id: 0
+ * /tesse/tesse_ros_bridge/object_38/send_params: True
+ * /tesse/tesse_ros_bridge/object_38/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_39/id: 1
+ * /tesse/tesse_ros_bridge/object_39/send_params: True
+ * /tesse/tesse_ros_bridge/object_39/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_4/id: 0
+ * /tesse/tesse_ros_bridge/object_4/send_params: True
+ * /tesse/tesse_ros_bridge/object_4/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_40/id: 0
+ * /tesse/tesse_ros_bridge/object_40/send_params: True
+ * /tesse/tesse_ros_bridge/object_40/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_41/id: 1
+ * /tesse/tesse_ros_bridge/object_41/send_params: True
+ * /tesse/tesse_ros_bridge/object_41/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_42/id: 0
+ * /tesse/tesse_ros_bridge/object_42/send_params: True
+ * /tesse/tesse_ros_bridge/object_42/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_43/id: 1
+ * /tesse/tesse_ros_bridge/object_43/send_params: True
+ * /tesse/tesse_ros_bridge/object_43/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_44/id: 0
+ * /tesse/tesse_ros_bridge/object_44/send_params: True
+ * /tesse/tesse_ros_bridge/object_44/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_45/id: 1
+ * /tesse/tesse_ros_bridge/object_45/send_params: True
+ * /tesse/tesse_ros_bridge/object_45/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_46/id: 0
+ * /tesse/tesse_ros_bridge/object_46/send_params: True
+ * /tesse/tesse_ros_bridge/object_46/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_47/id: 1
+ * /tesse/tesse_ros_bridge/object_47/send_params: True
+ * /tesse/tesse_ros_bridge/object_47/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_48/id: 0
+ * /tesse/tesse_ros_bridge/object_48/send_params: True
+ * /tesse/tesse_ros_bridge/object_48/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_49/id: 1
+ * /tesse/tesse_ros_bridge/object_49/send_params: True
+ * /tesse/tesse_ros_bridge/object_49/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_5/id: 1
+ * /tesse/tesse_ros_bridge/object_5/send_params: True
+ * /tesse/tesse_ros_bridge/object_5/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_50/id: 0
+ * /tesse/tesse_ros_bridge/object_50/send_params: True
+ * /tesse/tesse_ros_bridge/object_50/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_51/id: 1
+ * /tesse/tesse_ros_bridge/object_51/send_params: True
+ * /tesse/tesse_ros_bridge/object_51/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_52/id: 0
+ * /tesse/tesse_ros_bridge/object_52/send_params: True
+ * /tesse/tesse_ros_bridge/object_52/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_53/id: 1
+ * /tesse/tesse_ros_bridge/object_53/send_params: True
+ * /tesse/tesse_ros_bridge/object_53/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_54/id: 0
+ * /tesse/tesse_ros_bridge/object_54/send_params: True
+ * /tesse/tesse_ros_bridge/object_54/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_55/id: 1
+ * /tesse/tesse_ros_bridge/object_55/send_params: True
+ * /tesse/tesse_ros_bridge/object_55/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_56/id: 0
+ * /tesse/tesse_ros_bridge/object_56/send_params: True
+ * /tesse/tesse_ros_bridge/object_56/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_57/id: 1
+ * /tesse/tesse_ros_bridge/object_57/send_params: True
+ * /tesse/tesse_ros_bridge/object_57/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_58/id: 0
+ * /tesse/tesse_ros_bridge/object_58/send_params: True
+ * /tesse/tesse_ros_bridge/object_58/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_59/id: 1
+ * /tesse/tesse_ros_bridge/object_59/send_params: True
+ * /tesse/tesse_ros_bridge/object_59/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_6/id: 0
+ * /tesse/tesse_ros_bridge/object_6/send_params: True
+ * /tesse/tesse_ros_bridge/object_6/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_60/id: 0
+ * /tesse/tesse_ros_bridge/object_60/send_params: True
+ * /tesse/tesse_ros_bridge/object_60/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_61/id: 1
+ * /tesse/tesse_ros_bridge/object_61/send_params: True
+ * /tesse/tesse_ros_bridge/object_61/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_62/id: 0
+ * /tesse/tesse_ros_bridge/object_62/send_params: True
+ * /tesse/tesse_ros_bridge/object_62/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_63/id: 1
+ * /tesse/tesse_ros_bridge/object_63/send_params: True
+ * /tesse/tesse_ros_bridge/object_63/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_64/id: 0
+ * /tesse/tesse_ros_bridge/object_64/send_params: True
+ * /tesse/tesse_ros_bridge/object_64/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_65/id: 1
+ * /tesse/tesse_ros_bridge/object_65/send_params: True
+ * /tesse/tesse_ros_bridge/object_65/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_66/id: 0
+ * /tesse/tesse_ros_bridge/object_66/send_params: True
+ * /tesse/tesse_ros_bridge/object_66/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_67/id: 1
+ * /tesse/tesse_ros_bridge/object_67/send_params: True
+ * /tesse/tesse_ros_bridge/object_67/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_68/id: 0
+ * /tesse/tesse_ros_bridge/object_68/send_params: True
+ * /tesse/tesse_ros_bridge/object_68/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_69/id: 1
+ * /tesse/tesse_ros_bridge/object_69/send_params: True
+ * /tesse/tesse_ros_bridge/object_69/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_7/id: 1
+ * /tesse/tesse_ros_bridge/object_7/send_params: True
+ * /tesse/tesse_ros_bridge/object_7/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_70/id: 0
+ * /tesse/tesse_ros_bridge/object_70/send_params: True
+ * /tesse/tesse_ros_bridge/object_70/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_71/id: 1
+ * /tesse/tesse_ros_bridge/object_71/send_params: True
+ * /tesse/tesse_ros_bridge/object_71/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_72/id: 0
+ * /tesse/tesse_ros_bridge/object_72/send_params: True
+ * /tesse/tesse_ros_bridge/object_72/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_73/id: 1
+ * /tesse/tesse_ros_bridge/object_73/send_params: True
+ * /tesse/tesse_ros_bridge/object_73/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_74/id: 0
+ * /tesse/tesse_ros_bridge/object_74/send_params: True
+ * /tesse/tesse_ros_bridge/object_74/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_75/id: 1
+ * /tesse/tesse_ros_bridge/object_75/send_params: True
+ * /tesse/tesse_ros_bridge/object_75/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_76/id: 0
+ * /tesse/tesse_ros_bridge/object_76/send_params: True
+ * /tesse/tesse_ros_bridge/object_76/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_77/id: 1
+ * /tesse/tesse_ros_bridge/object_77/send_params: True
+ * /tesse/tesse_ros_bridge/object_77/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_78/id: 0
+ * /tesse/tesse_ros_bridge/object_78/send_params: True
+ * /tesse/tesse_ros_bridge/object_78/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_79/id: 1
+ * /tesse/tesse_ros_bridge/object_79/send_params: True
+ * /tesse/tesse_ros_bridge/object_79/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_8/id: 0
+ * /tesse/tesse_ros_bridge/object_8/send_params: True
+ * /tesse/tesse_ros_bridge/object_8/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/object_9/id: 1
+ * /tesse/tesse_ros_bridge/object_9/send_params: True
+ * /tesse/tesse_ros_bridge/object_9/use_custom_pose: False
+ * /tesse/tesse_ros_bridge/persistent_metadata_listener: True
+ * /tesse/tesse_ros_bridge/position_noise_mu: 0.0
+ * /tesse/tesse_ros_bridge/position_noise_sigma: 0.5
+ * /tesse/tesse_ros_bridge/position_port: 9000
+ * /tesse/tesse_ros_bridge/publish_clock: True
+ * /tesse/tesse_ros_bridge/publish_collisions: True
+ * /tesse/tesse_ros_bridge/publish_depth: False
+ * /tesse/tesse_ros_bridge/publish_front_lidar: False
+ * /tesse/tesse_ros_bridge/publish_imu: True
+ * /tesse/tesse_ros_bridge/publish_imu_noise_biases: False
+ * /tesse/tesse_ros_bridge/publish_metadata: True
+ * /tesse/tesse_ros_bridge/publish_noisy_imu: False
+ * /tesse/tesse_ros_bridge/publish_noisy_odom: False
+ * /tesse/tesse_ros_bridge/publish_odom: True
+ * /tesse/tesse_ros_bridge/publish_rear_lidar: False
+ * /tesse/tesse_ros_bridge/publish_segmentation: False
+ * /tesse/tesse_ros_bridge/publish_stereo_gry: False
+ * /tesse/tesse_ros_bridge/publish_stereo_rgb: False
+ * /tesse/tesse_ros_bridge/publish_third_pov: False
+ * /tesse/tesse_ros_bridge/rotation_noise_mu: 0.0
+ * /tesse/tesse_ros_bridge/rotation_noise_sigma: 0.05
+ * /tesse/tesse_ros_bridge/scan_rate: 40.0
+ * /tesse/tesse_ros_bridge/self_ip: 127.0.0.1
+ * /tesse/tesse_ros_bridge/sim_ip: 127.0.0.1
+ * /tesse/tesse_ros_bridge/step_port: 9005
+ * /tesse/tesse_ros_bridge/teleop: False
+ * /tesse/tesse_ros_bridge/udp_port: 9004
+ * /tesse/tesse_ros_bridge/use_broadcast: True
+ * /tesse/tesse_ros_bridge/use_gt_frames: True
+ * /tesse/tesse_ros_bridge/world_frame_id: world
+ * /use_sim_time: True
+
+NODES
+  /tesse/
+    quadrotor_control_interface (tesse_ros_bridge/quadrotor_control_interface.py)
+    tesse_ros_bridge (tesse_ros_bridge/tesse_ros_node.py)
+TESSE_ROS_NODE: Spawning initial objects
+TESSE_ROS_NODE: Initialization complete.
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+TESSE_ROS_NODE: clock_cb error:  timed out
+[ERROR] [1793509228.439962, 0.000000]: Rotor watchdog commanded zero speed: no actuator command received
+[ERROR] [1793509234.467427, 7.720000]: Rotor watchdog commanded zero speed: command age 0.974 s exceeded 0.350 s
+[ERROR] [1793509235.325289, 8.540000]: Rotor watchdog commanded zero speed: command age 0.375 s exceeded 0.350 s
+[ERROR] [1793509236.086966, 9.120000]: Rotor watchdog commanded zero speed: command age 0.399 s exceeded 0.350 s
+[ERROR] [1793509238.361257, 11.260000]: Rotor watchdog commanded zero speed: command age 0.374 s exceeded 0.350 s
+[ERROR] [1793509253.914258, 26.640000]: Rotor watchdog commanded zero speed: command age 0.377 s exceeded 0.350 s
+[ERROR] [1793509254.469475, 27.020000]: Rotor watchdog commanded zero speed: command age 0.359 s exceeded 0.350 s
+[ERROR] [1793509269.931505, 42.340000]: Rotor watchdog commanded zero speed: command age 0.388 s exceeded 0.350 s
+[ERROR] [1793509270.488054, 42.740000]: Rotor watchdog commanded zero speed: command age 0.351 s exceeded 0.350 s
+[ERROR] [1793509285.929463, 58.040000]: Rotor watchdog commanded zero speed: command age 0.362 s exceeded 0.350 s
+[ERROR] [1793509286.534656, 58.460000]: Rotor watchdog commanded zero speed: command age 0.388 s exceeded 0.350 s
+[ERROR] [1793509301.967765, 73.780000]: Rotor watchdog commanded zero speed: command age 0.374 s exceeded 0.350 s
+[ERROR] [1793509302.525249, 74.180000]: Rotor watchdog commanded zero speed: command age 0.366 s exceeded 0.350 s
+[ERROR] [1793509318.011491, 89.500000]: Rotor watchdog commanded zero speed: command age 0.393 s exceeded 0.350 s
+[ERROR] [1793509318.573250, 89.920000]: Rotor watchdog commanded zero speed: command age 0.369 s exceeded 0.350 s
+[ERROR] [1793509328.528816, 100.120000]: Rotor watchdog commanded zero speed: command age 0.378 s exceeded 0.350 s
+[ERROR] [1793509331.888860, 103.480000]: Rotor watchdog commanded zero speed: bridge shutdown
+[WARN] [1793509331.892807, 103.480000]: TESSE bridge shutdown: zero rotor speed sent
+[INFO] [1793509228.448472, 0.000000]: TESSE rotor watchdog enabled: timeout=0.350 s, rate=20.0 Hz
+[INFO] [1793509231.525033, 5.740000]: Rotor command stream restored; watchdog released
+[INFO] [1793509234.477525, 7.740000]: Rotor command stream restored; watchdog released
+[INFO] [1793509235.454962, 8.559999]: Rotor command stream restored; watchdog released
+[INFO] [1793509236.185281, 9.139999]: Rotor command stream restored; watchdog released
+[INFO] [1793509238.501355, 11.280000]: Rotor command stream restored; watchdog released
+[INFO] [1793509254.047884, 26.660000]: Rotor command stream restored; watchdog released
+[INFO] [1793509254.573419, 27.040000]: Rotor command stream restored; watchdog released
+[INFO] [1793509270.054732, 42.360000]: Rotor command stream restored; watchdog released
+[INFO] [1793509270.598620, 42.760000]: Rotor command stream restored; watchdog released
+[INFO] [1793509286.060110, 58.060000]: Rotor command stream restored; watchdog released
+[INFO] [1793509286.605984, 58.480000]: Rotor command stream restored; watchdog released
+[INFO] [1793509302.087940, 73.800000]: Rotor command stream restored; watchdog released
+[INFO] [1793509302.636574, 74.200000]: Rotor command stream restored; watchdog released
+[INFO] [1793509318.117557, 89.520000]: Rotor command stream restored; watchdog released
+[INFO] [1793509318.649024, 89.939990]: Rotor command stream restored; watchdog released

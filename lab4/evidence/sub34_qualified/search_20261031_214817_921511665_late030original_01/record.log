@@ -1,0 +1,14 @@
+[33m[WARN] [1793508714.298847583, 14.220000000]: Less than 5 x 1G of space free on disk with '/home/wanghanzhi/lab4_speed_20261031/results/search_20261031_214817_921511665_late030original_01/search_20261031_214817_921511665_late030original_01.bag.active'.[0m
+[0m[INFO] [1793508714.054392105]: Subscribing to /active_race_gates[0m
+[0m[INFO] [1793508714.060838389]: Subscribing to /clock[0m
+[0m[INFO] [1793508714.063005982]: Subscribing to /controller_diagnostics[0m
+[0m[INFO] [1793508714.065753901]: Subscribing to /current_state[0m
+[0m[INFO] [1793508714.067775096]: Subscribing to /desired_state[0m
+[0m[INFO] [1793508714.069978229]: Subscribing to /desired_state_stamped[0m
+[0m[INFO] [1793508714.071490229]: Subscribing to /desired_traj_vertices[0m
+[0m[INFO] [1793508714.075191350]: Subscribing to /rotor_speed_cmds[0m
+[0m[INFO] [1793508714.078474236]: Subscribing to /tesse/applied_rotor_speed_cmds[0m
+[0m[INFO] [1793508714.083549228]: Subscribing to /tesse/collision[0m
+[0m[INFO] [1793508714.086827939]: Subscribing to /tesse/rotor_watchdog_event[0m
+[0m[INFO] [1793508714.091209952]: Subscribing to /trajectory_status[0m
+[0m[INFO] [1793508714.298737783, 14.220000000]: Recording to '/home/wanghanzhi/lab4_speed_20261031/results/search_20261031_214817_921511665_late030original_01/search_20261031_214817_921511665_late030original_01.bag'.[0m

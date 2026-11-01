@@ -1,0 +1,64 @@
+{
+  "passed": false,
+  "checks": {
+    "original_twelve_gates_unchanged": true,
+    "all_ordered_forward_gates": true,
+    "positive_finite_actual_time": true,
+    "complete_published_reference": true,
+    "single_trial": true,
+    "stable_exit_last_second": true,
+    "no_fault_clock_reset_or_long_gap": false,
+    "collision_telemetry_enabled": true,
+    "no_reported_mission_collision": true
+  },
+  "run_id": "qualify_speed_20261031_220005_624445676_2_01",
+  "first_gate_to_last_gate_ms": 3347.0910936244422,
+  "passed_gates": 12,
+  "gate_width_m": 2.4,
+  "gate_height_m": 2.4,
+  "body_margin_m": 0.18,
+  "ignored_legacy_criteria": [
+    "whole-record position aggregate",
+    "60-second terminal observation"
+  ],
+  "legacy_stability_result": {
+    "actual_stable_full_route": false,
+    "failure_reasons": [
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.354 s exceeded 0.350 s\", \"ros_time_s\": 61.6, \"wall_monotonic_s\": 1863.889352527}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.360 s exceeded 0.350 s\", \"ros_time_s\": 61.2, \"wall_monotonic_s\": 1863.331634297}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.369 s exceeded 0.350 s\", \"ros_time_s\": 45.539999999, \"wall_monotonic_s\": 1847.344134437}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.370 s exceeded 0.350 s\", \"ros_time_s\": 30.199999999, \"wall_monotonic_s\": 1831.91099506}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.372 s exceeded 0.350 s\", \"ros_time_s\": 29.76, \"wall_monotonic_s\": 1831.302844869}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.375 s exceeded 0.350 s\", \"ros_time_s\": 76.92, \"wall_monotonic_s\": 1879.374161934}",
+      "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.393 s exceeded 0.350 s\", \"ros_time_s\": 45.92, \"wall_monotonic_s\": 1847.949919254}",
+      "controller fault: state or reference timeout",
+      "less than 60 seconds continuous terminal hold after settling",
+      "no independently verified reference completion",
+      "terminal stability or continuity limits exceeded"
+    ],
+    "reference_full_route": false,
+    "terminal_hold_duration_s": 54.999999999
+  },
+  "failure_reasons": [
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.354 s exceeded 0.350 s\", \"ros_time_s\": 61.6, \"wall_monotonic_s\": 1863.889352527}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.360 s exceeded 0.350 s\", \"ros_time_s\": 61.2, \"wall_monotonic_s\": 1863.331634297}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.369 s exceeded 0.350 s\", \"ros_time_s\": 45.539999999, \"wall_monotonic_s\": 1847.344134437}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.370 s exceeded 0.350 s\", \"ros_time_s\": 30.199999999, \"wall_monotonic_s\": 1831.91099506}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.372 s exceeded 0.350 s\", \"ros_time_s\": 29.76, \"wall_monotonic_s\": 1831.302844869}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.375 s exceeded 0.350 s\", \"ros_time_s\": 76.92, \"wall_monotonic_s\": 1879.374161934}",
+    "bridge watchdog event: {\"event\": \"WATCHDOG_ZERO\", \"reason\": \"command age 0.393 s exceeded 0.350 s\", \"ros_time_s\": 45.92, \"wall_monotonic_s\": 1847.949919254}",
+    "controller fault: state or reference timeout",
+    "terminal stability or continuity limits exceeded"
+  ],
+  "minimum_clearance_m": 0.03459073993583517,
+  "racing_metrics": {
+    "angular_speed_max_rad_s": 7.000000759886641,
+    "duration_s": 4.840000001,
+    "position_max_m": 2.5023904230213856,
+    "position_p95_m": 2.09639791360229,
+    "position_rmse_m": 0.9040770157474893,
+    "speed_max_mps": 37.742188644199686,
+    "yaw_error_max_deg": 179.19279540600957
+  },
+  "actual_speed_peak_mps": 37.742188644199686
+}

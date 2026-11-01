@@ -1,0 +1,5 @@
+turn60	optimization/candidates/sub34_v7/turn60_planner.yaml	optimization/candidates/sub34_v7/turn60_controller.yaml
+turn100	optimization/candidates/sub34_v7/turn100_planner.yaml	optimization/candidates/sub34_v7/turn100_controller.yaml
+turn140	optimization/candidates/sub34_v7/turn140_planner.yaml	optimization/candidates/sub34_v7/turn140_controller.yaml
+turn100safe	optimization/candidates/sub34_v7/turn100safe_planner.yaml	optimization/candidates/sub34_v7/turn100safe_controller.yaml
+turn100g4zero	optimization/candidates/sub34_v7/turn100g4zero_planner.yaml	optimization/candidates/sub34_v7/turn100g4zero_controller.yaml
