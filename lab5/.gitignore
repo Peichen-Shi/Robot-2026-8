@@ -1,0 +1,11 @@
+*.bag
+*.bag.active
+*.part
+*.segmented
+build/
+devel/
+install/
+opencv/
+.report_packages/
+__pycache__/
+*.pyc

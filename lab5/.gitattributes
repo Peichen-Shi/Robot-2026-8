@@ -1,0 +1,11 @@
+*.pdf binary
+*.png binary
+logs/** -text -diff
+*.cpp text eol=lf
+*.h text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.csv text eol=lf
+*.json text eol=lf

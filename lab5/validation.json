@@ -1,0 +1,86 @@
+[
+  {
+    "dataset": "pair",
+    "method": "SIFT",
+    "pairs": 1,
+    "valid": true
+  },
+  {
+    "dataset": "pair",
+    "method": "SURF",
+    "pairs": 1,
+    "valid": true
+  },
+  {
+    "dataset": "pair",
+    "method": "ORB",
+    "pairs": 1,
+    "valid": true
+  },
+  {
+    "dataset": "pair",
+    "method": "FAST_BRIEF",
+    "pairs": 1,
+    "valid": true
+  },
+  {
+    "dataset": "dataset1",
+    "method": "SIFT",
+    "pairs": 1583,
+    "valid": true
+  },
+  {
+    "dataset": "dataset1",
+    "method": "SURF",
+    "pairs": 1583,
+    "valid": true
+  },
+  {
+    "dataset": "dataset1",
+    "method": "ORB",
+    "pairs": 1583,
+    "valid": true
+  },
+  {
+    "dataset": "dataset1",
+    "method": "FAST_BRIEF",
+    "pairs": 1583,
+    "valid": true
+  },
+  {
+    "dataset": "dataset1",
+    "method": "LK",
+    "pairs": 1583,
+    "valid": true
+  },
+  {
+    "dataset": "dataset2",
+    "method": "SIFT",
+    "pairs": 1385,
+    "valid": true
+  },
+  {
+    "dataset": "dataset2",
+    "method": "SURF",
+    "pairs": 1385,
+    "valid": true
+  },
+  {
+    "dataset": "dataset2",
+    "method": "ORB",
+    "pairs": 1385,
+    "valid": true
+  },
+  {
+    "dataset": "dataset2",
+    "method": "FAST_BRIEF",
+    "pairs": 1385,
+    "valid": true
+  },
+  {
+    "dataset": "dataset2",
+    "method": "LK",
+    "pairs": 1385,
+    "valid": true
+  }
+]

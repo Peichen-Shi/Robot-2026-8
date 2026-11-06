@@ -1,0 +1,32 @@
+Scanning dependencies of target lab5_evaluate
+Scanning dependencies of target feature_trackers
+[  7%] Building CXX object feature_tracking/CMakeFiles/lab5_evaluate.dir/src/evaluate.cpp.o
+[ 15%] Building CXX object feature_tracking/CMakeFiles/feature_trackers.dir/src/feature_tracker.cpp.o
+[ 23%] Building CXX object feature_tracking/CMakeFiles/feature_trackers.dir/src/sift_feature_tracker.cpp.o
+[ 30%] Building CXX object feature_tracking/CMakeFiles/feature_trackers.dir/src/surf_feature_tracker.cpp.o
+[ 38%] Building CXX object feature_tracking/CMakeFiles/feature_trackers.dir/src/orb_feature_tracker.cpp.o
+[ 46%] Building CXX object feature_tracking/CMakeFiles/feature_trackers.dir/src/fast_feature_tracker.cpp.o
+[ 53%] Building CXX object feature_tracking/CMakeFiles/feature_trackers.dir/src/lk_feature_tracker.cpp.o
+[ 61%] Linking CXX shared library /home/by/lab5_complete/ws/devel/lib/libfeature_trackers.so
+[ 61%] Built target feature_trackers
+Scanning dependencies of target self_flow
+Scanning dependencies of target track_features
+[ 69%] Building CXX object feature_tracking/CMakeFiles/track_features.dir/src/track_features.cpp.o
+[ 76%] Building CXX object feature_tracking/CMakeFiles/self_flow.dir/src/self_flow.cpp.o
+[ 84%] Linking CXX executable /home/by/lab5_complete/ws/devel/lib/lab_5/self_flow
+[ 92%] Linking CXX executable /home/by/lab5_complete/ws/devel/lib/lab_5/track_features
+[ 92%] Built target self_flow
+[100%] Linking CXX executable /home/by/lab5_complete/ws/devel/lib/lab_5/lab5_evaluate
+[100%] Built target track_features
+[100%] Built target lab5_evaluate
+Base path: /home/by/lab5_complete/ws
+Source space: /home/by/lab5_complete/ws/src
+Build space: /home/by/lab5_complete/ws/build
+Devel space: /home/by/lab5_complete/ws/devel
+Install space: /home/by/lab5_complete/ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/by/lab5_complete/ws/build"
+####
+####
+#### Running command: "make -j4" in "/home/by/lab5_complete/ws/build"
+####

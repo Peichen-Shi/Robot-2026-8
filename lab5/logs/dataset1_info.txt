@@ -1,0 +1,11 @@
+path:        data/30fps_424x240_2018-10-01-18-35-06.bag
+version:     2.0
+duration:    59.7s
+start:       Oct 01 2018 18:35:06.57 (1538444106.57)
+end:         Oct 01 2018 18:36:06.28 (1538444166.28)
+size:        769.0 MB
+messages:    3167
+compression: none [792/792 chunks]
+types:       sensor_msgs/Image [060021388200f6f0f447d0fcd9c64743]
+topics:      /camera/aligned_depth_to_color/image_raw   1583 msgs    : sensor_msgs/Image
+             /camera/color/image_raw                    1584 msgs    : sensor_msgs/Image

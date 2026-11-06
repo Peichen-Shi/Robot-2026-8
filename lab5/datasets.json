@@ -1,0 +1,12 @@
+[
+  {
+    "filename": "30fps_424x240_2018-10-01-18-35-06.bag",
+    "bytes": 806370643,
+    "sha256": "35fe022bf2477304ac94dd518f92471689d6c563358fec3e58ef48e66620c4b8"
+  },
+  {
+    "filename": "vnav-lab5-smooth-trajectory.bag",
+    "bytes": 1445408085,
+    "sha256": "6895925a18b06ff9d73fa2cac4bd276f2ef17a09e48be9e79a599cad8fc81ab1"
+  }
+]

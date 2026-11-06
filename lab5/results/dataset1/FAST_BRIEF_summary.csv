@@ -1,0 +1,2 @@
+method,pairs,keypoints1,keypoints2,matches,good,inliers,inlier_ratio,ms
+FAST_BRIEF,1583,342.299,342.346,342.299,281.968,273.351,0.966244,1.92488

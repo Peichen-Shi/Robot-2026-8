@@ -1,0 +1,5 @@
+reportlab
+matplotlib
+numpy
+pillow
+pypdf

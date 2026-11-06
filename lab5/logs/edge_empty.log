@@ -1,0 +1,4 @@
+SIFT pairs=1 0 0 0 0 0 0 33.619
+SURF pairs=1 0 0 0 0 0 0 5.57925
+ORB pairs=1 0 0 0 0 0 0 0.545903
+FAST_BRIEF pairs=1 0 0 0 0 0 0 0.057848

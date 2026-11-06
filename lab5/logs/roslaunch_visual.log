@@ -1,0 +1,53 @@
+Gtk-Message: 08:35:59.513: Failed to load module "canberra-gtk-module"
+[0m[INFO] [1793374559.354604319]: Got param: /home/by/lab5_complete/ws/src/feature_tracking/images/box.png[0m
+[0m[INFO] [1793374559.355382318]: Got param: /home/by/lab5_complete/ws/src/feature_tracking/images/box_in_scene.png[0m
+Avg. Keypoints 1 Size: 604
+Avg. Keypoints 2 Size: 969
+Avg. Number of matches: 604
+Avg. Number of good matches: 100
+Avg. Number of Inliers: 81
+Avg. Inliers ratio: 0.81
+Num. of samples: 1
+Avg. Keypoints 1 Size: 604
+Avg. Keypoints 2 Size: 969
+Avg. Number of matches: 604
+Avg. Number of good matches: 100
+Avg. Number of Inliers: 81
+Avg. Inliers ratio: 0.81
+Num. of samples: 1
+... logging to /home/by/.ros/log/9adaefb0-d477-11f1-bd30-05625b905ced/roslaunch-ubuntu-14981.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/by/lab5_complete/lab5/feature_tracking/launch/two_frames_tracking.launch
+[1mstarted roslaunch server http://ubuntu:41861/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /lab_5/descriptor: SIFT
+ * /lab_5/img1_path: /home/by/lab5_com...
+ * /lab_5/img2_path: /home/by/lab5_com...
+ * /lab_5/mode: 0
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+
+NODES
+  /
+    lab_5 (lab_5/track_features)
+
+auto-starting new master
+[1mprocess[master]: started with pid [14992][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/by/lab5_complete/lab5/feature_tracking/launch/two_frames_tracking.launch http://localhost:11311
+[1msetting /run_id to 9adaefb0-d477-11f1-bd30-05625b905ced[0m
+[1mprocess[rosout-1]: started with pid [15005][0m
+started core service [/rosout]
+[1mprocess[lab_5-2]: started with pid [15009][0m
+[lab_5-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

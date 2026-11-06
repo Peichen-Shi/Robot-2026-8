@@ -1,0 +1,31 @@
+path:        data/vnav-lab5-smooth-trajectory.bag
+version:     2.0
+duration:    1:09s (69s)
+start:       Dec 31 1969 16:00:33.86 (33.86)
+end:         Dec 31 1969 16:01:43.48 (103.48)
+size:        1.3 GB
+messages:    24688
+compression: none [1387/1387 chunks]
+types:       geometry_msgs/PoseArray                      [916c28c5764443f268b296bb671b9d97]
+             mav_msgs/Actuators                           [25741daf38ed25442e3a66a855ee8d9c]
+             nav_msgs/Odometry                            [cd5e73d190d741a2f92e81eda573aca7]
+             rosgraph_msgs/Clock                          [a9c97c1d230cfc112e270351a944ee47]
+             rosgraph_msgs/Log                            [acffd30cd6b6de30f120938c17c593fb]
+             sensor_msgs/CameraInfo                       [c9a58c1b0b154e0e6da7578cb991d214]
+             sensor_msgs/Image                            [060021388200f6f0f447d0fcd9c64743]
+             sensor_msgs/Imu                              [6a62c6daae103f4ff57a132d6f95cec2]
+             tf2_msgs/TFMessage                           [94810edda583a504dfda3829e70d7eec]
+             trajectory_msgs/MultiDOFJointTrajectoryPoint [3ebe08d1abd5b65862d50e09430db776]
+topics:      /clock                          2458 msgs    : rosgraph_msgs/Clock                         
+             /current_state                  3473 msgs    : nav_msgs/Odometry                           
+             /desired_state                   336 msgs    : trajectory_msgs/MultiDOFJointTrajectoryPoint
+             /desired_traj_vertices           338 msgs    : geometry_msgs/PoseArray                     
+             /rosout                          348 msgs    : rosgraph_msgs/Log                            (2 connections)
+             /rosout_agg                      338 msgs    : rosgraph_msgs/Log                           
+             /rotor_speed_cmds               4905 msgs    : mav_msgs/Actuators                          
+             /tesse/imu/clean/imu            3473 msgs    : sensor_msgs/Imu                             
+             /tesse/left_cam/camera_info     1387 msgs    : sensor_msgs/CameraInfo                      
+             /tesse/left_cam/rgb/image_raw   1386 msgs    : sensor_msgs/Image                           
+             /tesse/right_cam/camera_info    1386 msgs    : sensor_msgs/CameraInfo                      
+             /tf                             4859 msgs    : tf2_msgs/TFMessage                          
+             /tf_static                         1 msg     : tf2_msgs/TFMessage

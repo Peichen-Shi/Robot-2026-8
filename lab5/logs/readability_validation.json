@@ -1,0 +1,39 @@
+{
+  "cpp_files_checked": 15,
+  "non_comment_tokens_unchanged": true,
+  "catkin_build_exit": 0,
+  "pair_counts_identical": {
+    "SIFT": {
+      "keypoints1": "604",
+      "keypoints2": "969",
+      "matches": "604",
+      "good": "97",
+      "inliers": "77",
+      "inlier_ratio": "0.793814"
+    },
+    "SURF": {
+      "keypoints1": "786",
+      "keypoints2": "1040",
+      "matches": "786",
+      "good": "120",
+      "inliers": "74",
+      "inlier_ratio": "0.616667"
+    },
+    "ORB": {
+      "keypoints1": "865",
+      "keypoints2": "1000",
+      "matches": "865",
+      "good": "51",
+      "inliers": "43",
+      "inlier_ratio": "0.843137"
+    },
+    "FAST_BRIEF": {
+      "keypoints1": "1596",
+      "keypoints2": "2489",
+      "matches": "1596",
+      "good": "21",
+      "inliers": "12",
+      "inlier_ratio": "0.571429"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "reports": [
+    {
+      "file": "LAB5_Visual_Tracking_Report_EN.pdf",
+      "pages": 19,
+      "figures": 24,
+      "tables": 11,
+      "references": 7,
+      "sha256": "340dceedf764988621b6ff1a346fb3b7077deb13db5564bdbe93ac9f139900fc"
+    },
+    {
+      "file": "LAB5_无人机视觉跟踪实验报告.pdf",
+      "pages": 19,
+      "figures": 24,
+      "tables": 11,
+      "references": 7,
+      "sha256": "11fb1d50f66f54a26e88bcb85d6ebb44dfdb971777382be128224805429dcabc"
+    }
+  ],
+  "relative_readme_links": "passed",
+  "screenshots": 17,
+  "new_charts": 7,
+  "large_bags_excluded": true
+}

@@ -1,0 +1,2 @@
+35fe022bf2477304ac94dd518f92471689d6c563358fec3e58ef48e66620c4b8  /home/by/lab5_complete/data/30fps_424x240_2018-10-01-18-35-06.bag
+6895925a18b06ff9d73fa2cac4bd276f2ef17a09e48be9e79a599cad8fc81ab1  /home/by/lab5_complete/data/vnav-lab5-smooth-trajectory.bag
