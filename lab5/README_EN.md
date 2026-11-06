@@ -1,6 +1,6 @@
 # Lab5 Visual Feature Tracking
 
-[中文说明](README.md) · [Chinese report](deliverables/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](deliverables/LAB5_Visual_Tracking_Report_EN.pdf) · [Screenshot index](screenshots/README.md) · [Charts](charts/README.md)
+[中文说明](README.md) · [Chinese report](reports/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](reports/LAB5_Visual_Tracking_Report_EN.pdf) · [Screenshot index](screenshots/README.md) · [Charts](charts/README.md)
 
 Both reports contain 19 pages, 17 actual Ubuntu screenshots, seven reproducible diagrams/charts and 11 tables. They follow the chapter, header, caption and blue-gray table style of the repository's Lab3/Lab4 reports. Their measurements are independent of those earlier labs.
 

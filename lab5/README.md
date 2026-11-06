@@ -1,6 +1,6 @@
 # Lab5 无人机视觉跟踪
 
-[返回课程首页](../README.md) · [中文报告](deliverables/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](deliverables/LAB5_Visual_Tracking_Report_EN.pdf) · [代码入口](feature_tracking/README.md) · [截图与数据](screenshots/README.md)
+[返回课程首页](../README.md) · [中文报告](reports/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](reports/LAB5_Visual_Tracking_Report_EN.pdf) · [代码入口](feature_tracking/README.md) · [截图与数据](screenshots/README.md)
 
 同一个盒子，换个角度还能认出来吗？Lab5 先用两张照片比较配对方法，再把同样的问题放进两段视频。
 
@@ -16,7 +16,7 @@
 
 | 目录 | 放了什么 |
 | --- | --- |
-| [deliverables/](deliverables/README.md) | [中文报告 PDF](deliverables/LAB5_无人机视觉跟踪实验报告.pdf) · [英文报告 PDF](deliverables/LAB5_Visual_Tracking_Report_EN.pdf) |
+| [reports/](reports/README.md) | [中文报告 PDF](reports/LAB5_无人机视觉跟踪实验报告.pdf) · [英文报告 PDF](reports/LAB5_Visual_Tracking_Report_EN.pdf) |
 | [feature_tracking/](feature_tracking/README.md) | [C++ 源码](feature_tracking/src/) · [ROS 启动配置](feature_tracking/launch/) · [原始盒子图片](feature_tracking/images/) |
 | [screenshots/](screenshots/README.md) | 17 张按实验步骤编号的运行截图 |
 | [charts/](charts/README.md) | 7 张流程图与统计图 |
@@ -151,7 +151,7 @@ python lab5/scripts/make_report_charts.py
 python lab5/scripts/build_bilingual_reports.py
 ```
 
-图表生成可跨平台运行。当前PDF排版脚本在Windows上使用宋体与黑体，输出到`lab5/deliverables`；这与Ubuntu上的实验运行环境不同。`report_content_cn.py`和`report_content_en.py`仅供新版排版器读取正文，不是推荐的生成入口。
+图表生成可跨平台运行。当前PDF排版脚本在Windows上使用宋体与黑体，输出到`lab5/reports`；这与Ubuntu上的实验运行环境不同。`report_content_cn.py`和`report_content_en.py`仅供新版排版器读取正文，不是推荐的生成入口。
 
 ## 截图、图表与引用
 

@@ -4,7 +4,7 @@
 
 | 实验 | 直接打开 |
 | --- | --- |
-| Lab5 无人机视觉跟踪 | [中文报告 PDF](lab5/deliverables/LAB5_无人机视觉跟踪实验报告.pdf) · [英文报告 PDF](lab5/deliverables/LAB5_Visual_Tracking_Report_EN.pdf) · [代码与复现说明](lab5/README.md) |
+| Lab5 无人机视觉跟踪 | [中文报告 PDF](lab5/reports/LAB5_无人机视觉跟踪实验报告.pdf) · [英文报告 PDF](lab5/reports/LAB5_Visual_Tracking_Report_EN.pdf) · [Lab5 完整 README](lab5/README.md) |
 | Lab4 | [实验目录](lab4/) |
 | Lab0 | [实验目录](lab0/) |
 | 实验三 · 桌面物体自动分类仿真 | [代码、场景、演示视频与数据](实验三仿真模拟部分/README.md) |

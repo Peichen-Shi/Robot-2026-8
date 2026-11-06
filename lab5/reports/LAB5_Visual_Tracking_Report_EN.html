@@ -6,16 +6,16 @@
 <p>The experiment implements visual feature matching and tracking in VMware Ubuntu 20.04 with ROS Noetic. SIFT, SURF, ORB, FAST+BRIEF and Harris+LK are evaluated on every neighboring frame pair in two official bags: 1,583 and 1,385 pairs. ORB yields 528.2 and 316.5 mean geometric inliers; FAST+BRIEF takes 1.92 and 1.65 ms on average. The report retains 17 actual screenshots and adds seven reproducible charts, alongside projection and vanishing-point derivations. Model-based geometric inliers are not human ground truth. [1-3,7]</p>
 <p>1 Introduction</p>
 <p>Lab3 follows a reference and Lab4 plans a route. Lab5 asks how to find repeatable image landmarks and associate them between frames. Detection selects landmarks, descriptors encode local appearance, and matching plus geometry checks their correspondence. The report follows the same settings, implementation, results, discussion and conclusions structure as the earlier Lab3/Lab4 reports.</p>
-<p>Table 1 Tasks and deliverables</p>
+<p>Table 1 Tasks and reports</p>
 <table><tr><td>Item</td><td>Task</td><td>Evidence</td></tr><tr><td>D1</td><td>Sphere projection</td><td>Section 4</td></tr><tr><td>D2</td><td>Vanishing points</td><td>Section 4</td></tr><tr><td>D3</td><td>SIFT detection</td><td>Figures 03-04</td></tr><tr><td>D4</td><td>Matching and ratio test</td><td>Figures 04-05</td></tr><tr><td>D5</td><td>Inliers and statistics</td><td>Figure 06, tables</td></tr><tr><td>D6</td><td>Method and sequence comparison</td><td>Figures 07-11,19-24</td></tr><tr><td>D7</td><td>Harris+LK</td><td>Figures 12-13,17</td></tr><tr><td>D8</td><td>Farneback extension</td><td>Figures 14-15</td></tr></table>
 <p>2 Experimental Settings</p>
 <p>Table 2 Environment and shared parameters</p>
 <table><tr><td>Item</td><td>Setting</td><td>Purpose</td></tr><tr><td>System</td><td>Ubuntu 20.04 / ROS Noetic</td><td>Run ROS nodes</td></tr><tr><td>OpenCV</td><td>4.2.0 contrib; NONFREE=ON</td><td>Enable SIFT and SURF</td></tr><tr><td>Workspace</td><td>~/lab5_complete/ws</td><td>Isolate previous labs</td></tr><tr><td>Ratio test</td><td>d1 &amp;lt; 0.8*d2</td><td>Reject ambiguous matches</td></tr><tr><td>RANSAC</td><td>3 px; confidence 0.99</td><td>Check epipolar consistency</td></tr><tr><td>Evaluation</td><td>1 OpenCV thread; seed 42</td><td>Full traversal and reproducible records</td></tr></table>
-<figure><img src="screenshots/01_Ubuntu_ROS_Environment.png"><figcaption>Figure 1 Environment and isolated OpenCV build</figcaption></figure>
-<figure><img src="screenshots/02_Catkin_Build_and_ROS_Test.png"><figcaption>Figure 2 catkin build and launch check</figcaption></figure>
+<figure><img src="../screenshots/01_Ubuntu_ROS_Environment.png"><figcaption>Figure 1 Environment and isolated OpenCV build</figcaption></figure>
+<figure><img src="../screenshots/02_Catkin_Build_and_ROS_Test.png"><figcaption>Figure 2 catkin build and launch check</figcaption></figure>
 <p>Figures 01 and 02 show the actual Ubuntu environment. OpenCV is built separately; build options and dynamic linking are retained in logs. Course code and API sources are [2,4].</p>
 <p>3 Implementation Pipeline and Parameters</p>
-<figure><img src="charts/18_Feature_Tracking_Pipeline.png"><figcaption>Figure 18 Feature matching and tracking pipeline</figcaption></figure>
+<figure><img src="../charts/18_Feature_Tracking_Pipeline.png"><figcaption>Figure 18 Feature matching and tracking pipeline</figcaption></figure>
 <p>Table 3 Method components</p>
 <table><tr><td>Method</td><td>Detection and description</td><td>Matching or tracking</td></tr><tr><td>SIFT</td><td>Scale space; 128 floats</td><td>FLANN, ratio 0.8</td></tr><tr><td>SURF</td><td>Hessian 400; float descriptor</td><td>FLANN, ratio 0.8</td></tr><tr><td>ORB</td><td>Up to 1000 points; 32 bytes</td><td>Hamming BF, ratio 0.8</td></tr><tr><td>FAST+BRIEF</td><td>FAST 20; BRIEF 32 bytes</td><td>Hamming BF, ratio 0.8</td></tr><tr><td>Harris+LK</td><td>500 corners; quality .01; spacing 8 px</td><td>21x21 window; max level 3</td></tr></table>
 <p>The SIFT, SURF, ORB and FAST tracker adapters implement detection, description and matching. FeatureTracker supplies geometric validation, drawing and average statistics. FAST is used only as a detector; a separate BRIEF extractor computes its descriptors.</p>
@@ -41,25 +41,25 @@
 <p>5 Image Pair Keypoints and Raw Matching</p>
 <p>SIFT locates features in scale space, assigns an orientation and describes a local gradient distribution. Its default descriptor contains 4 x 4 x 8 = 128 floating-point components. Descriptor computation may remove keypoints without a valid neighborhood, so statistics use the surviving keypoint counts.</p>
 <p>A nearest neighbor alone can yield many false matches. The distance ratio tests whether the best candidate is sufficiently distinct from the second best, rejecting some ambiguities from repeated texture. It does not prove geometric correctness. [4]</p>
-<figure><img src="screenshots/03_SIFT_Keypoints.png"><figcaption>Figure 3 SIFT keypoints in both images</figcaption></figure>
-<figure><img src="screenshots/04_SIFT_Raw_Matches.png"><figcaption>Figure 4 Unfiltered nearest-neighbor matches</figcaption></figure>
+<figure><img src="../screenshots/03_SIFT_Keypoints.png"><figcaption>Figure 3 SIFT keypoints in both images</figcaption></figure>
+<figure><img src="../screenshots/04_SIFT_Raw_Matches.png"><figcaption>Figure 4 Unfiltered nearest-neighbor matches</figcaption></figure>
 <p>5.1 Ratio Filtering and Geometric Inliers</p>
-<figure><img src="screenshots/05_SIFT_Ratio_Filter.png"><figcaption>Figure 5 Matches after the ratio test</figcaption></figure>
-<figure><img src="screenshots/06_SIFT_RANSAC.png"><figcaption>Figure 6 Green inliers and red outliers</figcaption></figure>
+<figure><img src="../screenshots/05_SIFT_Ratio_Filter.png"><figcaption>Figure 5 Matches after the ratio test</figcaption></figure>
+<figure><img src="../screenshots/06_SIFT_RANSAC.png"><figcaption>Figure 6 Green inliers and red outliers</figcaption></figure>
 <p>Table 4 Measured statistics pair</p>
 <table><tr><td>Method</td><td>Pairs</td><td>KP1</td><td>KP2</td><td>Raw</td><td>Good</td><td>Inliers</td><td>Ratio</td><td>ms</td></tr><tr><td>SIFT</td><td>1</td><td>604.0</td><td>969.0</td><td>604.0</td><td>97.0</td><td>77.0</td><td>79.4%</td><td>110.15</td></tr><tr><td>SURF</td><td>1</td><td>786.0</td><td>1040.0</td><td>786.0</td><td>120.0</td><td>74.0</td><td>61.7%</td><td>145.16</td></tr><tr><td>ORB</td><td>1</td><td>865.0</td><td>1000.0</td><td>865.0</td><td>51.0</td><td>43.0</td><td>84.3%</td><td>12.99</td></tr><tr><td>FAST_BRIEF</td><td>1</td><td>1596.0</td><td>2489.0</td><td>1596.0</td><td>21.0</td><td>12.0</td><td>57.1%</td><td>30.05</td></tr></table>
 <p>Green marks RANSAC inliers and red marks outliers. Ratio filtering reduces the candidate set; the fundamental matrix then rejects correspondences inconsistent with the estimated epipolar model. The box scene is strongly planar and may be degenerate for fundamental-matrix estimation. An inlier is therefore model-consistent, not necessarily correct according to human ground truth. [6,7]</p>
 <p>5.2 SURF ORB and FAST BRIEF</p>
-<figure><img src="screenshots/07_SURF_RANSAC.png"><figcaption>Figure 7 SURF geometric verification</figcaption></figure>
-<figure><img src="screenshots/08_ORB_RANSAC.png"><figcaption>Figure 8 ORB geometric verification</figcaption></figure>
-<figure><img src="screenshots/09_FAST_BRIEF_RANSAC.png"><figcaption>Figure 9 FAST and BRIEF geometric verification</figcaption></figure>
+<figure><img src="../screenshots/07_SURF_RANSAC.png"><figcaption>Figure 7 SURF geometric verification</figcaption></figure>
+<figure><img src="../screenshots/08_ORB_RANSAC.png"><figcaption>Figure 8 ORB geometric verification</figcaption></figure>
+<figure><img src="../screenshots/09_FAST_BRIEF_RANSAC.png"><figcaption>Figure 9 FAST and BRIEF geometric verification</figcaption></figure>
 <p>FAST detects corners but does not compute a descriptor. BRIEF compares intensity pairs to produce a 32-byte binary descriptor. Hamming distance measures differing bits; converting descriptor bytes to floating point and using Euclidean distance would change the meaning of the comparison.</p>
 <p>FAST threshold is 20 with nonmaximum suppression. BRIEF uses 32 bytes without additional orientation compensation. ORB uses at most 1000 keypoints and a multiscale pyramid. SURF uses Hessian threshold 400; SIFT uses defaults. The same settings are used on both real sequences. [4,7]</p>
 <p>6 Real Sequences and Evaluation Protocol</p>
 <p>Table 5 Datasets and actual sample counts</p>
 <table><tr><td>Dataset</td><td>Selected RGB topic</td><td>Images</td><td>Pairs</td></tr><tr><td>Dataset 1</td><td>/camera/color/image_raw</td><td>1584</td><td>1583</td></tr><tr><td>Dataset 2</td><td>/tesse/left_cam/rgb/image_raw</td><td>1386</td><td>1385</td></tr></table>
 <p>Every neighboring pair on one RGB topic is traversed, without subsampling or mixing depth images and cameras. SHA256 checks agree with the original desktop copies and are recorded in datasets.json. Dataset 2 uses relative simulation time; its displayed historical date is not the experiment date. [3,7]</p>
-<figure><img src="charts/19_Mean_Geometric_Inliers.png"><figcaption>Figure 19 Mean geometric inliers across both sequences</figcaption></figure>
+<figure><img src="../charts/19_Mean_Geometric_Inliers.png"><figcaption>Figure 19 Mean geometric inliers across both sequences</figcaption></figure>
 <p>Table 6 Definitions of reported statistics</p>
 <table><tr><td>Metric</td><td>Definition</td><td>Interpretation</td></tr><tr><td>Raw</td><td>Best candidate per query</td><td>Not total two-neighbor elements</td></tr><tr><td>Good</td><td>Ratio-passing matches; valid LK tracks</td><td>No ratio test for LK</td></tr><tr><td>Inlier ratio</td><td>Mean of per-pair inliers/good</td><td>Not ratio of accumulated counts</td></tr></table>
 <p>6.1 Results on Dataset 1</p>
@@ -68,7 +68,7 @@
 <p>Dataset: 30fps_424x240_2018-10-01-18-35-06.bag. Every neighboring RGB frame pair is evaluated, without subsampling or selecting a short segment. Statistics are arithmetic means over frame pairs. The reported ratio is the mean of individual ratios, not total inliers divided by total good matches.</p>
 <p>Among descriptor methods, ORB produced the most geometric inliers on average (528.2). FAST_BRIEF had the lowest mean computation time (1.92 ms). The highest mean inlier ratio was obtained by ORB (98.0%). These quantities measure different aspects of performance.</p>
 <p>Harris+LK tracked 89.8 valid points per pair, of which 89.7 passed the geometric check, at 2.07 ms per pair. Its local small-motion assumption suits neighboring frames, but does not guarantee successful tracking through occlusion or large motion. [3,7]</p>
-<figure><img src="screenshots/10_Dataset1_Statistics.png"><figcaption>Figure 10 Complete statistics for dataset 1</figcaption></figure>
+<figure><img src="../screenshots/10_Dataset1_Statistics.png"><figcaption>Figure 10 Complete statistics for dataset 1</figcaption></figure>
 <p>Source: results/dataset1/*_frames.csv and *_summary.csv. Figure 10 displays those records; the table is generated from the same files.</p>
 <p>6.2 Results on Dataset 2</p>
 <p>Table 8 Measured statistics dataset2</p>
@@ -76,36 +76,36 @@
 <p>Dataset: vnav-lab5-smooth-trajectory.bag. Topic selection and pairing follow the same rule. Its simulated timestamps run from approximately 33.86 s to 103.48 s. The historical dates displayed by rosbag info are a Unix-time interpretation, not the experiment dates. Full records are stored in results/dataset2.</p>
 <p>Among descriptor methods, ORB produced the most geometric inliers on average (316.5). FAST_BRIEF had the lowest mean computation time (1.65 ms). The highest mean inlier ratio was obtained by FAST_BRIEF (92.1%). These quantities measure different aspects of performance.</p>
 <p>Harris+LK tracked 63.8 valid points per pair, of which 59.5 passed the geometric check, at 5.21 ms per pair. Its local small-motion assumption suits neighboring frames, but does not guarantee successful tracking through occlusion or large motion. [3,7]</p>
-<figure><img src="screenshots/11_Dataset2_Statistics.png"><figcaption>Figure 11 Complete statistics for dataset 2</figcaption></figure>
+<figure><img src="../screenshots/11_Dataset2_Statistics.png"><figcaption>Figure 11 Complete statistics for dataset 2</figcaption></figure>
 <p>Source: results/dataset2. All methods evaluate 1,385 pairs using the same settings and definitions as dataset 1.</p>
 <p>6.3 Quality and Computation Cost</p>
-<figure><img src="charts/20_Mean_Inlier_Ratio.png"><figcaption>Figure 20 Mean per-pair inlier ratio</figcaption></figure>
-<figure><img src="charts/21_Computation_Time_Log.png"><figcaption>Figure 21 Computation time on a logarithmic axis</figcaption></figure>
+<figure><img src="../charts/20_Mean_Inlier_Ratio.png"><figcaption>Figure 20 Mean per-pair inlier ratio</figcaption></figure>
+<figure><img src="../charts/21_Computation_Time_Log.png"><figcaption>Figure 21 Computation time on a logarithmic axis</figcaption></figure>
 <p>Figure 20 measures proportion, while Figure 19 measures absolute count; neither substitutes for the other. Figure 21 includes detection, description, matching and geometry, excluding file loading, drawing and capture. Its logarithmic axis spans approximately 1-135 ms; linear height differences are not time differences. VM background work and scheduling affect timing, so these are not hard real-time guarantees. [7]</p>
 <p>6.4 Candidate Retention by Stage</p>
-<figure><img src="charts/22_Ratio_Test_Retention.png"><figcaption>Figure 22 Mean retention after the ratio test</figcaption></figure>
-<figure><img src="charts/23_Box_Pair_Matching_Stages.png"><figcaption>Figure 23 Raw, filtered and inlier counts on the box pair</figcaption></figure>
+<figure><img src="../charts/22_Ratio_Test_Retention.png"><figcaption>Figure 22 Mean retention after the ratio test</figcaption></figure>
+<figure><img src="../charts/23_Box_Pair_Matching_Stages.png"><figcaption>Figure 23 Raw, filtered and inlier counts on the box pair</figcaption></figure>
 <p>Figure 22 averages good/raw over pairs, assigning zero to an empty raw set. LK is excluded because it has no descriptor ratio test. Figure 23 uses the box-pair CSV and a logarithmic count axis. Removing more candidates is not automatically better; the remaining geometric inliers and scene changes must also be considered. [7]</p>
 <p>6.5 Temporal Stability and Timing Distribution</p>
-<figure><img src="charts/24_Temporal_Inlier_Ratio.png"><figcaption>Figure 24 Inlier-ratio traces with a 51-pair trailing mean</figcaption></figure>
+<figure><img src="../charts/24_Temporal_Inlier_Ratio.png"><figcaption>Figure 24 Inlier-ratio traces with a 51-pair trailing mean</figcaption></figure>
 <p>Figure 24 retains sequence order and uses a 51-pair trailing mean only for visualization. Tables still use every original pair. Drops may be associated with weak texture, occlusion or changing motion, but the plot alone does not establish their cause without ground truth. [7]</p>
 <p>Table 9 Per-pair median and 95th-percentile time in ms</p>
 <table><tr><td>Method</td><td>D1 median</td><td>D1 P95</td><td>D2 median</td><td>D2 P95</td></tr><tr><td>SIFT</td><td>49.16</td><td>63.93</td><td>103.59</td><td>124.44</td></tr><tr><td>SURF</td><td>48.82</td><td>63.92</td><td>121.42</td><td>259.97</td></tr><tr><td>ORB</td><td>8.75</td><td>10.91</td><td>11.74</td><td>17.18</td></tr><tr><td>FAST_BRIEF</td><td>1.67</td><td>4.02</td><td>1.29</td><td>3.86</td></tr><tr><td>LK</td><td>2.06</td><td>2.63</td><td>5.07</td><td>6.33</td></tr></table>
 <p>7 Harris and Lucas Kanade Tracking</p>
 <p>Brightness constancy assumes I(x,y,t)=I(x+u,y+v,t+1). First-order expansion gives I<sub>x</sub>u+I<sub>y</sub>v+I<sub>t</sub>=0. One pixel does not constrain both motion components. LK assumes similar motion within a local window and solves a least-squares problem. Harris corners provide intensity variation in both directions, improving conditioning.</p>
 <p>Parameters are a 21 x 21 window, maximum pyramid level 3, at most 500 Harris corners, quality 0.01 and minimum spacing 8 pixels. The ROS class keeps surviving corners and detects again below 150 points. The offline table detects Harris points anew in each first image, keeping a fixed pairwise evaluation protocol. [5]</p>
-<figure><img src="screenshots/12_Dataset1_LK.png"><figcaption>Figure 12 Harris+LK tracks in dataset 1</figcaption></figure>
-<figure><img src="screenshots/13_Dataset2_LK.png"><figcaption>Figure 13 Harris+LK tracks in dataset 2</figcaption></figure>
+<figure><img src="../screenshots/12_Dataset1_LK.png"><figcaption>Figure 12 Harris+LK tracks in dataset 1</figcaption></figure>
+<figure><img src="../screenshots/13_Dataset2_LK.png"><figcaption>Figure 13 Harris+LK tracks in dataset 2</figcaption></figure>
 <p>LK relies on approximate brightness constancy, locally coherent motion and sufficiently small displacement for linearization. Pyramids extend the displacement range but do not remove failures caused by occlusion, blur, weak texture or lighting changes. Descriptor methods can rematch over larger motion; LK often has a lower local tracking cost. [5]</p>
 <p>8 Farneback Dense Optical Flow Extension</p>
 <p>Dense flow is computed between neighboring real frames. Parameters are pyr_scale=0.5, levels=3, winsize=15, iterations=3, poly_n=5 and poly_sigma=1.2. Hue represents direction; value represents flow magnitude normalized within the frame. Saturation is fixed at 255. [5]</p>
-<figure><img src="screenshots/14_Dataset1_Farneback.png"><figcaption>Figure 14 Dense flow in dataset 1</figcaption></figure>
-<figure><img src="screenshots/15_Dataset2_Farneback.png"><figcaption>Figure 15 Dense flow in dataset 2</figcaption></figure>
+<figure><img src="../screenshots/14_Dataset1_Farneback.png"><figcaption>Figure 14 Dense flow in dataset 1</figcaption></figure>
+<figure><img src="../screenshots/15_Dataset2_Farneback.png"><figcaption>Figure 15 Dense flow in dataset 2</figcaption></figure>
 <p>Per-frame normalization means that brightness cannot be compared across these images as an absolute speed measure. Dense flow covers the full image, including poorly constrained textureless or occluded areas. This extension illustrates the difference between sparse feature trajectories and a dense motion field. [5]</p>
 <p>9 ROS Interactive Verification</p>
-<figure><img src="screenshots/16_ROS_Live_SIFT_Window.png"><figcaption>Figure 16 Live SIFT matching window</figcaption></figure>
+<figure><img src="../screenshots/16_ROS_Live_SIFT_Window.png"><figcaption>Figure 16 Live SIFT matching window</figcaption></figure>
 <p>The ROS node and offline evaluator are launched separately. FLANN approximation and the RANSAC random state can produce slightly different counts. All comparison tables consistently use the offline evaluator initialized with random seed 42. This screenshot verifies the ROS input and display path. [7]</p>
-<figure><img src="screenshots/17_ROS_Live_LK_Video.png"><figcaption>Figure 17 rosbag playback and LK tracking</figcaption></figure>
+<figure><img src="../screenshots/17_ROS_Live_LK_Video.png"><figcaption>Figure 17 rosbag playback and LK tracking</figcaption></figure>
 <p>The course video_tracking.launch starts bag playback and the Harris+LK node. The live window verifies image-topic reception, grayscale conversion, status checks and trajectory drawing. Complete tables come from offline traversal, so rendering speed and message queues do not determine which frame pairs are evaluated. [7]</p>
 <p>10 Discussion</p>
 <p>Table 10 Observed tradeoffs</p>
