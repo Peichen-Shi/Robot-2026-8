@@ -16,7 +16,7 @@
 
 | 目录 | 放了什么 |
 | --- | --- |
-| [reports/](reports/README.md) | 中英文 PDF 和可编辑 HTML |
+| [reports/](reports/README.md) | 中英文实验报告 PDF |
 | [feature_tracking/](feature_tracking/README.md) | C++ 源码、ROS 启动配置和原始盒子图片 |
 | [results/](results/README.md) | 两图与视频统计、编号截图、图表和运行日志 |
 | [scripts/](scripts/README.md) | 下载、编译、复现脚本和数据集校验值 |

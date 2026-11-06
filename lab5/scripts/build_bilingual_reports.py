@@ -155,4 +155,4 @@ for en in [False,True]:
  report_dir=sub/'reports';report_dir.mkdir(exist_ok=True)
  filename='LAB5_Visual_Tracking_Report_EN' if en else 'LAB5_无人机视觉跟踪实验报告'
  SimpleDocTemplate(str(report_dir/(filename+'.pdf')),pagesize=A4,leftMargin=48,rightMargin=48,topMargin=47,bottomMargin=42,title=T('VNAV Lab5 无人机视觉跟踪','VNAV Lab5 UAV Visual Tracking'),author='Boyu Huang').build(story,onFirstPage=footer,onLaterPages=footer)
- (report_dir/(filename+'.html')).write_text('\n'.join(htmlout),encoding='utf-8');print(filename)
+ print(filename)
