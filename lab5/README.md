@@ -12,16 +12,17 @@
 
 [English guide](README_EN.md)
 
-## 先看什么
+## 目录怎么找
 
-| 想了解的内容 | 入口 |
+| 目录 | 放了什么 |
 | --- | --- |
-| 理论、实验步骤、结果与讨论 | [中文 PDF](deliverables/LAB5_无人机视觉跟踪实验报告.pdf) / [English PDF](deliverables/LAB5_Visual_Tracking_Report_EN.pdf) |
-| 实验的真实运行画面 | [17 张编号截图](screenshots/README.md) |
-| 各算法表现差异 | [7 张统计与流程图](charts/README.md) |
-| 可重新计算的原始数据 | [CSV 与统计字段说明](results/README.md) |
-| ROS代码与离线评估 | [C++ 源码](feature_tracking/src) |
-| 编译和验证证据 | [日志与验证说明](logs/README.md) |
+| [deliverables/](deliverables/README.md) | [中文报告 PDF](deliverables/LAB5_无人机视觉跟踪实验报告.pdf) · [英文报告 PDF](deliverables/LAB5_Visual_Tracking_Report_EN.pdf) |
+| [feature_tracking/](feature_tracking/README.md) | [C++ 源码](feature_tracking/src/) · [ROS 启动配置](feature_tracking/launch/) · [原始盒子图片](feature_tracking/images/) |
+| [screenshots/](screenshots/README.md) | 17 张按实验步骤编号的运行截图 |
+| [charts/](charts/README.md) | 7 张流程图与统计图 |
+| [results/](results/README.md) | 两图测试、两组视频的逐帧 CSV 和汇总 |
+| [scripts/](scripts/README.md) | 下载数据、编译和复现实验的脚本 |
+| [logs/](logs/README.md) | 编译、运行与验证日志 |
 
 ## Lab5 有哪些任务
 
