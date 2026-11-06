@@ -11,11 +11,11 @@
 <p>2 实验设置</p>
 <p>表2 实验环境和统一参数</p>
 <table><tr><td>项目</td><td>配置</td><td>用途</td></tr><tr><td>系统</td><td>Ubuntu 20.04 / ROS Noetic</td><td>运行ROS程序</td></tr><tr><td>OpenCV</td><td>4.2.0 contrib; NONFREE=ON</td><td>支持SIFT和SURF</td></tr><tr><td>工作空间</td><td>~/lab5_complete/ws</td><td>隔离已有实验</td></tr><tr><td>比值筛选</td><td>d1 &amp;lt; 0.8*d2</td><td>删除模糊匹配</td></tr><tr><td>RANSAC</td><td>3 px; confidence 0.99</td><td>检查极线一致性</td></tr><tr><td>评估</td><td>1 OpenCV thread; seed 42</td><td>完整遍历与可复算统计</td></tr></table>
-<figure><img src="../screenshots/01_Ubuntu_ROS_Environment.png"><figcaption>图1 环境与独立OpenCV构建</figcaption></figure>
-<figure><img src="../screenshots/02_Catkin_Build_and_ROS_Test.png"><figcaption>图2 catkin编译与启动验证</figcaption></figure>
+<figure><img src="../results/screenshots/01_Ubuntu_ROS_Environment.png"><figcaption>图1 环境与独立OpenCV构建</figcaption></figure>
+<figure><img src="../results/screenshots/02_Catkin_Build_and_ROS_Test.png"><figcaption>图2 catkin编译与启动验证</figcaption></figure>
 <p>图01和图02对应实际 Ubuntu 环境。OpenCV 独立编译，避免直接替换系统依赖；编译参数和动态链接记录保存在 logs。课程代码来源与构建依据见[2,4]。</p>
 <p>3 实现流程与参数</p>
-<figure><img src="../charts/18_Feature_Tracking_Pipeline.png"><figcaption>图18 特征匹配与跟踪流程</figcaption></figure>
+<figure><img src="../results/charts/18_Feature_Tracking_Pipeline.png"><figcaption>图18 特征匹配与跟踪流程</figcaption></figure>
 <p>表3 各方法的组成</p>
 <table><tr><td>方法</td><td>检测和描述</td><td>匹配或跟踪</td></tr><tr><td>SIFT</td><td>尺度空间；128维浮点</td><td>FLANN, ratio 0.8</td></tr><tr><td>SURF</td><td>Hessian阈值400；浮点描述子</td><td>FLANN, ratio 0.8</td></tr><tr><td>ORB</td><td>最多1000点；32字节二值</td><td>Hamming BF, ratio 0.8</td></tr><tr><td>FAST+BRIEF</td><td>FAST阈值20；BRIEF 32字节</td><td>Hamming BF, ratio 0.8</td></tr><tr><td>Harris+LK</td><td>最多500角点；质量0.01；间隔8px</td><td>21x21窗口；最大层级3</td></tr></table>
 <p>补全了 SiftFeatureTracker、SurfFeatureTracker、OrbFeatureTracker、FastFeatureTracker 的检测、描述和匹配函数，以及通用 FeatureTracker 的几何验证、可视化和均值统计。为 FAST 单独使用 BRIEF 提取器，避免把 FAST 检测器误作描述子。</p>
@@ -41,25 +41,25 @@
 <p>5 双图实验 特征提取与原始匹配</p>
 <p>SIFT 先在尺度空间中定位特征并确定主方向，再以局部梯度直方图形成描述子。默认描述子维数为 4×4×8=128，使用浮点存储。描述计算可能删除无法获得有效邻域的关键点，因此统计以描述计算后的关键点数为准。</p>
 <p>直接选择每个描述子的最近邻会产生许多错误连接。距离比检查两个近邻是否足够可区分，能够去除重复纹理和描述不唯一造成的部分误匹配；它不是几何正确性的证明。 [4]</p>
-<figure><img src="../screenshots/03_SIFT_Keypoints.png"><figcaption>图3 两幅图像的SIFT关键点</figcaption></figure>
-<figure><img src="../screenshots/04_SIFT_Raw_Matches.png"><figcaption>图4 未经筛选的最近邻匹配</figcaption></figure>
+<figure><img src="../results/screenshots/03_SIFT_Keypoints.png"><figcaption>图3 两幅图像的SIFT关键点</figcaption></figure>
+<figure><img src="../results/screenshots/04_SIFT_Raw_Matches.png"><figcaption>图4 未经筛选的最近邻匹配</figcaption></figure>
 <p>5.1 距离比筛选与几何内点</p>
-<figure><img src="../screenshots/05_SIFT_Ratio_Filter.png"><figcaption>图5 距离比筛选后的匹配</figcaption></figure>
-<figure><img src="../screenshots/06_SIFT_RANSAC.png"><figcaption>图6 绿色内点与红色外点</figcaption></figure>
+<figure><img src="../results/screenshots/05_SIFT_Ratio_Filter.png"><figcaption>图5 距离比筛选后的匹配</figcaption></figure>
+<figure><img src="../results/screenshots/06_SIFT_RANSAC.png"><figcaption>图6 绿色内点与红色外点</figcaption></figure>
 <p>表4 实测统计 pair</p>
 <table><tr><td>方法</td><td>帧对</td><td>特征1</td><td>特征2</td><td>原始</td><td>筛后</td><td>内点</td><td>内点率</td><td>耗时ms</td></tr><tr><td>SIFT</td><td>1</td><td>604.0</td><td>969.0</td><td>604.0</td><td>97.0</td><td>77.0</td><td>79.4%</td><td>110.15</td></tr><tr><td>SURF</td><td>1</td><td>786.0</td><td>1040.0</td><td>786.0</td><td>120.0</td><td>74.0</td><td>61.7%</td><td>145.16</td></tr><tr><td>ORB</td><td>1</td><td>865.0</td><td>1000.0</td><td>865.0</td><td>51.0</td><td>43.0</td><td>84.3%</td><td>12.99</td></tr><tr><td>FAST_BRIEF</td><td>1</td><td>1596.0</td><td>2489.0</td><td>1596.0</td><td>21.0</td><td>12.0</td><td>57.1%</td><td>30.05</td></tr></table>
 <p>图中绿色为 RANSAC 内点，红色为外点。距离比筛选减少候选数量，基本矩阵再根据极线几何剔除部分不一致点。盒子图像具有较强平面结构，基本矩阵估计可能退化；本实验的“内点”仅表示符合所估计模型，不能作为人工标注意义上的真实准确率。 [6,7]</p>
 <p>5.2 SURF ORB 与 FAST BRIEF</p>
-<figure><img src="../screenshots/07_SURF_RANSAC.png"><figcaption>图7 SURF几何验证</figcaption></figure>
-<figure><img src="../screenshots/08_ORB_RANSAC.png"><figcaption>图8 ORB几何验证</figcaption></figure>
-<figure><img src="../screenshots/09_FAST_BRIEF_RANSAC.png"><figcaption>图9 FAST与BRIEF几何验证</figcaption></figure>
+<figure><img src="../results/screenshots/07_SURF_RANSAC.png"><figcaption>图7 SURF几何验证</figcaption></figure>
+<figure><img src="../results/screenshots/08_ORB_RANSAC.png"><figcaption>图8 ORB几何验证</figcaption></figure>
+<figure><img src="../results/screenshots/09_FAST_BRIEF_RANSAC.png"><figcaption>图9 FAST与BRIEF几何验证</figcaption></figure>
 <p>FAST 负责快速角点检测，本身不生成描述子；BRIEF 对邻域像素对进行二值比较，得到 32 字节描述子。二值描述子使用 Hamming 距离，比把二进制字节转换为浮点后使用欧氏距离更符合其定义。</p>
 <p>当前 FAST 阈值为 20，开启非极大值抑制；BRIEF 长度 32 字节，未启用额外旋转补偿。ORB 设置最多 1000 个关键点，使用多尺度金字塔。SURF Hessian 阈值为 400，SIFT 使用默认参数。参数在两段真实序列上保持一致，避免为每个数据集单独调整后混淆比较。 [4,7]</p>
 <p>6 真实序列与评估口径</p>
 <p>表5 数据集与实际样本数</p>
 <table><tr><td>序列</td><td>RGB话题</td><td>图像数</td><td>帧对数</td></tr><tr><td>Dataset 1</td><td>/camera/color/image_raw</td><td>1584</td><td>1583</td></tr><tr><td>Dataset 2</td><td>/tesse/left_cam/rgb/image_raw</td><td>1386</td><td>1385</td></tr></table>
 <p>完整遍历同一RGB话题的所有相邻图像，不跳帧、不混入深度图和其他相机。数据文件与桌面原始文件的SHA256一致，校验值记录在datasets.json。第二段使用仿真相对时间，不应把包内历史日期误认为实验日期。[3,7]</p>
-<figure><img src="../charts/19_Mean_Geometric_Inliers.png"><figcaption>图19 两段序列的平均几何内点数</figcaption></figure>
+<figure><img src="../results/charts/19_Mean_Geometric_Inliers.png"><figcaption>图19 两段序列的平均几何内点数</figcaption></figure>
 <p>表6 关键统计量的含义</p>
 <table><tr><td>指标</td><td>定义</td><td>比较时注意</td></tr><tr><td>原始匹配</td><td>每个查询点的最佳候选</td><td>不是两近邻元素总数</td></tr><tr><td>筛后匹配</td><td>距离比通过的候选；LK为有效跟踪</td><td>LK不使用距离比</td></tr><tr><td>内点率</td><td>先算每对内点/筛后，再平均</td><td>不等于累计数之比</td></tr></table>
 <p>6.1 第一段序列结果</p>
@@ -68,7 +68,7 @@
 <p>数据集 30fps_424x240_2018-10-01-18-35-06.bag。使用选定 RGB 图像话题的所有相邻帧对，不跳帧、不抽取局部片段。每项统计取逐帧对算术平均；内点率取各帧对内点率的均值，而非汇总内点数除以汇总候选数。</p>
 <p>本序列中，描述子方法里 ORB 的平均几何内点数最高，为 528.2；FAST_BRIEF 的平均计算耗时最低，为 1.92 ms。最高平均内点率来自 ORB，为 98.0%。这三个指标反映数量、代价和一致性，可能由不同方法占优。</p>
 <p>Harris+LK 每对帧平均成功跟踪 89.8 个点，其中 89.7 个通过几何验证，平均耗时 2.07 ms。其连续小位移假设适合相邻视频帧，但在遮挡或大运动下不能保证持续跟踪。 [3,7]</p>
-<figure><img src="../screenshots/10_Dataset1_Statistics.png"><figcaption>图10 第一段完整统计输出</figcaption></figure>
+<figure><img src="../results/screenshots/10_Dataset1_Statistics.png"><figcaption>图10 第一段完整统计输出</figcaption></figure>
 <p>数据来源：results/dataset1/*_frames.csv 与 *_summary.csv。图10为这些结果的终端展示，表格直接读取同一组文件。</p>
 <p>6.2 第二段序列结果</p>
 <p>表8 实测统计 dataset2</p>
@@ -76,36 +76,36 @@
 <p>数据集 vnav-lab5-smooth-trajectory.bag。话题选择与帧对构造方式和第一段一致。该包以仿真时间记录，时间戳约为 33.86 s 至 103.48 s；rosbag info 据此显示的历史日期不代表本次实验日期。完整逐帧表见 results/dataset2，各算法文件以方法名区分。</p>
 <p>本序列中，描述子方法里 ORB 的平均几何内点数最高，为 316.5；FAST_BRIEF 的平均计算耗时最低，为 1.65 ms。最高平均内点率来自 FAST_BRIEF，为 92.1%。这三个指标反映数量、代价和一致性，可能由不同方法占优。</p>
 <p>Harris+LK 每对帧平均成功跟踪 63.8 个点，其中 59.5 个通过几何验证，平均耗时 5.21 ms。其连续小位移假设适合相邻视频帧，但在遮挡或大运动下不能保证持续跟踪。 [3,7]</p>
-<figure><img src="../screenshots/11_Dataset2_Statistics.png"><figcaption>图11 第二段完整统计输出</figcaption></figure>
+<figure><img src="../results/screenshots/11_Dataset2_Statistics.png"><figcaption>图11 第二段完整统计输出</figcaption></figure>
 <p>数据来源：results/dataset2。所有方法均评估1,385个帧对，与第一段采用相同参数和统计公式。</p>
 <p>6.3 质量与计算代价</p>
-<figure><img src="../charts/20_Mean_Inlier_Ratio.png"><figcaption>图20 平均内点率比较</figcaption></figure>
-<figure><img src="../charts/21_Computation_Time_Log.png"><figcaption>图21 计算耗时比较 对数纵轴</figcaption></figure>
+<figure><img src="../results/charts/20_Mean_Inlier_Ratio.png"><figcaption>图20 平均内点率比较</figcaption></figure>
+<figure><img src="../results/charts/21_Computation_Time_Log.png"><figcaption>图21 计算耗时比较 对数纵轴</figcaption></figure>
 <p>图20显示内点比例，图19显示绝对内点数量，两者不能相互替代。图21仅统计检测、描述、匹配、几何验证，排除文件读取、绘图和截图。纵轴采用对数刻度以同时展示约1至135 ms的范围；不应按柱高的线性差值估计倍数。虚拟机后台任务与调度会影响时间，这些结果不是硬实时保证。[7]</p>
 <p>6.4 筛选阶段的数量变化</p>
-<figure><img src="../charts/22_Ratio_Test_Retention.png"><figcaption>图22 距离比筛选的平均保留率</figcaption></figure>
-<figure><img src="../charts/23_Box_Pair_Matching_Stages.png"><figcaption>图23 盒子图对的原始 筛后与内点数量</figcaption></figure>
+<figure><img src="../results/charts/22_Ratio_Test_Retention.png"><figcaption>图22 距离比筛选的平均保留率</figcaption></figure>
+<figure><img src="../results/charts/23_Box_Pair_Matching_Stages.png"><figcaption>图23 盒子图对的原始 筛后与内点数量</figcaption></figure>
 <p>图22直接计算每帧对good/raw后再取平均，空原始集合记为0。LK没有描述子距离比，因此不放入该图。图23使用双图原始CSV，纵轴为对数刻度；筛掉的点多不一定意味着更好，必须结合留下的内点数量和场景变化解释。[7]</p>
 <p>6.5 时序稳定性与耗时分布</p>
-<figure><img src="../charts/24_Temporal_Inlier_Ratio.png"><figcaption>图24 内点率随帧变化 51帧对后向均值</figcaption></figure>
+<figure><img src="../results/charts/24_Temporal_Inlier_Ratio.png"><figcaption>图24 内点率随帧变化 51帧对后向均值</figcaption></figure>
 <p>图24保留完整序列顺序，用51帧对的后向平均减少单帧抖动；这只用于可视化，前述表格仍由全部原始帧对直接计算。曲线下降可能来自弱纹理、遮挡或运动变化，不能在缺少真值时只凭曲线确定原因。[7]</p>
 <p>表9 逐帧耗时的中位数与95分位数 单位ms</p>
 <table><tr><td>Method</td><td>D1 median</td><td>D1 P95</td><td>D2 median</td><td>D2 P95</td></tr><tr><td>SIFT</td><td>49.16</td><td>63.93</td><td>103.59</td><td>124.44</td></tr><tr><td>SURF</td><td>48.82</td><td>63.92</td><td>121.42</td><td>259.97</td></tr><tr><td>ORB</td><td>8.75</td><td>10.91</td><td>11.74</td><td>17.18</td></tr><tr><td>FAST_BRIEF</td><td>1.67</td><td>4.02</td><td>1.29</td><td>3.86</td></tr><tr><td>LK</td><td>2.06</td><td>2.63</td><td>5.07</td><td>6.33</td></tr></table>
 <p>7 Harris 与 Lucas Kanade 跟踪</p>
 <p>由亮度恒定 I(x,y,t)=I(x+u,y+v,t+1)，一阶近似得到 I<sub>x</sub>u+I<sub>y</sub>v+I<sub>t</sub>=0。单个像素不足以求解两个运动分量，LK 假设局部窗口内运动近似一致，以最小二乘估计运动；Harris 角点在两个方向上具有足够梯度变化，有助于局部方程稳定求解。</p>
 <p>跟踪使用 21×21 窗口、3 层最大金字塔级别、最多 500 个 Harris 角点、质量阈值 0.01、最小间距 8 像素。ROS 跟踪类保存前帧与存活角点，数量低于 150 时重新检测；离线比较表每对帧从前帧检测 Harris 角点后跟踪到后帧，以保证帧对统计口径固定。 [5]</p>
-<figure><img src="../screenshots/12_Dataset1_LK.png"><figcaption>图12 第一段Harris与LK轨迹</figcaption></figure>
-<figure><img src="../screenshots/13_Dataset2_LK.png"><figcaption>图13 第二段Harris与LK轨迹</figcaption></figure>
+<figure><img src="../results/screenshots/12_Dataset1_LK.png"><figcaption>图12 第一段Harris与LK轨迹</figcaption></figure>
+<figure><img src="../results/screenshots/13_Dataset2_LK.png"><figcaption>图13 第二段Harris与LK轨迹</figcaption></figure>
 <p>LK 依赖亮度近似恒定、局部运动一致和线性化范围内的小位移。金字塔扩大可处理位移范围，但不能消除遮挡、运动模糊、弱纹理和剧烈光照变化造成的失败。描述子方法可以在更大位移下重新匹配，LK 则通常具有较低的局部跟踪代价。 [5]</p>
 <p>8 Farneback 稠密光流选做</p>
 <p>在两段真实视频中对相邻帧计算 Farneback 光流，参数为 pyr_scale=0.5、levels=3、winsize=15、iterations=3、poly_n=5、poly_sigma=1.2。色相表示方向，亮度表示该帧内归一化后的幅值，饱和度固定为 255。 [5]</p>
-<figure><img src="../screenshots/14_Dataset1_Farneback.png"><figcaption>图14 第一段稠密光流</figcaption></figure>
-<figure><img src="../screenshots/15_Dataset2_Farneback.png"><figcaption>图15 第二段稠密光流</figcaption></figure>
+<figure><img src="../results/screenshots/14_Dataset1_Farneback.png"><figcaption>图14 第一段稠密光流</figcaption></figure>
+<figure><img src="../results/screenshots/15_Dataset2_Farneback.png"><figcaption>图15 第二段稠密光流</figcaption></figure>
 <p>由于每帧单独归一化，不能仅根据两幅图的亮度大小比较绝对速度；稠密光流覆盖整幅图像，也会在低纹理或遮挡区域产生不可靠运动估计。该扩展实验展示了稀疏特征跟踪与稠密运动场的输出差异。 [5]</p>
 <p>9 ROS 交互运行证据</p>
-<figure><img src="../screenshots/16_ROS_Live_SIFT_Window.png"><figcaption>图16 SIFT实时匹配窗口</figcaption></figure>
+<figure><img src="../results/screenshots/16_ROS_Live_SIFT_Window.png"><figcaption>图16 SIFT实时匹配窗口</figcaption></figure>
 <p>ROS 节点和离线评估器分别启动。FLANN 近似搜索与 RANSAC 的随机状态可能导致少量计数差异；报告比较表统一采用固定随机种子 42 的离线完整评估结果。交互窗口证明 ROS 消息与显示链路可正常运行。 [7]</p>
-<figure><img src="../screenshots/17_ROS_Live_LK_Video.png"><figcaption>图17 rosbag播放与LK跟踪窗口</figcaption></figure>
+<figure><img src="../results/screenshots/17_ROS_Live_LK_Video.png"><figcaption>图17 rosbag播放与LK跟踪窗口</figcaption></figure>
 <p>使用课程 video_tracking.launch 启动 rosbag 播放与 Harris+LK 节点，验证真实图像话题的接收、灰度转换、状态检查和轨迹显示。交互启动用于验证运行链路，完整序列表由离线遍历生成，避免图形刷新或队列丢帧影响统计。 [7]</p>
 <p>10 讨论</p>
 <p>表10 各方法的实际取舍</p>

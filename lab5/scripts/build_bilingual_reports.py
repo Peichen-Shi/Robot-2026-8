@@ -39,8 +39,8 @@ for en in [False,True]:
   texts=core[idx][1] if limit is None else core[idx][1][:limit]
   for i,s in enumerate(texts):p(s+(f' [{cite}]' if cite and i==len(texts)-1 else ''))
  def fig(folder,name,num,cn,eng,maxh=200):
-  path=sub/folder/name;im=Image(str(path));factor=min(475/im.imageWidth,maxh/im.imageHeight);im.drawWidth=im.imageWidth*factor;im.drawHeight=im.imageHeight*factor
-  label=T(f'图{num} {cn}',f'Figure {num} {eng}');story.extend([im,Paragraph(label,cap)]);htmlout.append(f'<figure><img src="{folder}/{name}"><figcaption>{label}</figcaption></figure>')
+  path=sub/'results'/folder/name;im=Image(str(path));factor=min(475/im.imageWidth,maxh/im.imageHeight);im.drawWidth=im.imageWidth*factor;im.drawHeight=im.imageHeight*factor
+  label=T(f'图{num} {cn}',f'Figure {num} {eng}');story.extend([im,Paragraph(label,cap)]);htmlout.append(f'<figure><img src="../results/{folder}/{name}"><figcaption>{label}</figcaption></figure>')
  def screenshot(n,name,cn,eng,maxh=190):fig('screenshots',name,n,cn,eng,maxh)
  def chart(n,name,cn,eng,maxh=235):fig('charts',name,n,cn,eng,maxh)
  def tab(cn,eng,headers,rows,widths=None):
@@ -140,19 +140,19 @@ for en in [False,True]:
  tab('各方法的实际取舍','Observed tradeoffs',T(['方法','本实验观察','使用时注意'],['Method','Observed behavior','Caution']),[['SIFT',T('对盒子视角变化保留较稳定的内点','Stable box-pair geometric correspondences'),T('本次虚拟机计算代价较高','Higher measured computation cost')],['SURF',T('第二段特征数比SIFT多','More features than SIFT in dataset 2'),T('点多不保证内点率更高','More points need not improve ratio')],['ORB',T('两段平均内点数均最高','Highest mean inlier count in both sequences'),T('受尺度 纹理和检测预算影响','Depends on scale, texture and point budget')],['FAST+BRIEF',T('本次平均计算耗时最低','Lowest mean computation time'),T('盒子图对匹配较弱','Weaker matches on the box pair')],['Harris+LK',T('连续小位移下保持较高内点率','High model consistency for local motion'),T('特征2和筛后定义不同','KP2 and Good have different meanings')]], [75,205,195])
  p(T('本实验的内点依据估计的基本矩阵，而不是人工标注。盒子场景近似平面、相邻帧基线较小，可能使几何估计退化。不能把较高内点率直接写成“真实匹配准确率”。[6,7]','Inliers come from an estimated fundamental matrix, not manual labels. The box scene is approximately planar, and neighboring frames have a small baseline; both may affect geometric estimation. A high inlier ratio must not be presented as ground-truth matching accuracy. [6,7]'))
  p(T('在线ROS跟踪与离线统计承担不同任务：前者检查消息和显示链路，后者避免队列丢帧并形成完整表格。LK在线类持续保存角点，离线表每对重新检测，因此两者不能混成同一条实验记录。[7]','Live ROS tracking verifies the message and display path; offline traversal avoids queue-related omissions and supplies complete tables. Online LK retains points, whereas the offline comparison detects anew per pair. Their records must not be mixed. [7]'))
- p(T('图18至图24由保存的CSV通过make_report_charts.py生成，未手工填写结果。原始CSV、charts/chart_data.json、编号截图和数据集SHA256均保留，便于复算与检查。[7]','Figures 18-24 are generated from saved CSV files by make_report_charts.py, without manually entered measurements. Raw CSV, charts/chart_data.json, numbered captures and dataset hashes are retained for independent checks. [7]'))
+ p(T('图18至图24由保存的CSV通过make_report_charts.py生成，未手工填写结果。原始CSV、results/charts/chart_data.json、编号截图和数据集SHA256均保留，便于复算与检查。[7]','Figures 18-24 are generated from saved CSV files by make_report_charts.py, without manually entered measurements. Raw CSV, results/charts/chart_data.json, numbered captures and dataset hashes are retained for independent checks. [7]'))
  page('11 结论与复现','11 Conclusions and Reproduction')
  paras(14,'2,4,5,7')
- tab('复现材料索引','Reproduction file index',T(['材料','路径','用途'],['Material','Path','Purpose']),[[T('源码','Source'),'feature_tracking/',T('ROS节点与离线评估器','ROS nodes and evaluator')],[T('统计','Statistics'),'results/pair, dataset1, dataset2',T('原始逐帧表和均值','Per-pair and summary CSV')],[T('截图','Captures'),'screenshots/01...17',T('真实运行证据','Actual execution evidence')],[T('图表','Charts'),'charts/18...24',T('可复算PNG与矢量PDF','Reproducible PNG and vector PDF')],[T('脚本','Scripts'),'scripts/',T('依赖 运行 图表 报告','Build, run, plot and report')]], [65,230,180])
+ tab('复现材料索引','Reproduction file index',T(['材料','路径','用途'],['Material','Path','Purpose']),[[T('源码','Source'),'feature_tracking/',T('ROS节点与离线评估器','ROS nodes and evaluator')],[T('统计','Statistics'),'results/pair, dataset1, dataset2',T('原始逐帧表和均值','Per-pair and summary CSV')],[T('截图','Captures'),'results/screenshots/01...17',T('真实运行证据','Actual execution evidence')],[T('图表','Charts'),'results/charts/18...24',T('可复算PNG与矢量PDF','Reproducible PNG and vector PDF')],[T('脚本','Scripts'),'scripts/',T('依赖 运行 图表 报告','Build, run, plot and report')]], [65,230,180])
  page('参考文献与数据出处','References and Data Provenance')
  p(T('正文中的方括号编号对应下列来源。算法和API说明引用官方文档；具体性能数字引用本实验原始数据，不归因于文档中的演示结果。','Bracketed numbers in the text correspond to the sources below. Algorithm and API descriptions cite official documentation; measured performance values cite the experiment records, not illustrative documentation results.'))
  for i,(name,url) in enumerate(sources,1):p(f'[{i}] {name}.<br/><link href="{url}" color="#245b83">{url}</link>',small)
  p(T('数据记录：2026-10-30至31。上游代码版本：2443ec7e491001d09ab8dd66f6b953177043b784。图01至17为本次Ubuntu实际截图；图18至24为原始CSV生成的统计图与流程图。排版参考同仓库Lab3/Lab4报告的章节、页眉、蓝灰色表格和图注形式，未复用其测量数据。','Data recorded: 30-31 October 2026. Upstream code revision: 2443ec7e491001d09ab8dd66f6b953177043b784. Figures 01-17 are actual Ubuntu captures; Figures 18-24 are generated charts and the pipeline diagram. Layout follows the chapter structure, header, blue-gray tables and captions of the repository Lab3/Lab4 reports; their measurements are not reused.'),small)
- hashes=json.loads((sub/'datasets.json').read_text())
+ hashes=json.loads((sub/'scripts'/'datasets.json').read_text())
  for r in hashes:p(r['filename']+'<br/>SHA256: '+r['sha256'],small)
  def footer(canvas,doc):
   canvas.setStrokeColor(line);canvas.line(48,A4[1]-32,A4[0]-48,A4[1]-32);canvas.setFillColor(colors.HexColor('#718494'));canvas.setFont(bodyfont,7.5);canvas.drawString(48,A4[1]-24,T('VNAV LAB5 无人机视觉跟踪','VNAV LAB5 UAV Visual Tracking')+' | '+T('黄博宇','Boyu Huang')+' 24020036026');canvas.drawCentredString(A4[0]/2,24,str(doc.page))
  report_dir=sub/'reports';report_dir.mkdir(exist_ok=True)
  filename='LAB5_Visual_Tracking_Report_EN' if en else 'LAB5_无人机视觉跟踪实验报告'
  SimpleDocTemplate(str(report_dir/(filename+'.pdf')),pagesize=A4,leftMargin=48,rightMargin=48,topMargin=47,bottomMargin=42,title=T('VNAV Lab5 无人机视觉跟踪','VNAV Lab5 UAV Visual Tracking'),author='Boyu Huang').build(story,onFirstPage=footer,onLaterPages=footer)
- (sub/(filename+'.html')).write_text('\n'.join(htmlout),encoding='utf-8');print(filename)
+ (report_dir/(filename+'.html')).write_text('\n'.join(htmlout),encoding='utf-8');print(filename)

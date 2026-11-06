@@ -9,7 +9,7 @@
 
 每份报告包含24幅图、11张表：其中17张实际截图，7张流程或统计图。排版参考Lab3/Lab4，引用编号与文末来源对应。
 
-报告生成入口是[build_bilingual_reports.py](../scripts/build_bilingual_reports.py)。源码读取[screenshots](../screenshots/README.md)、[charts](../charts/README.md)和[results](../results/README.md)中的材料。
+报告生成入口是[build_bilingual_reports.py](../scripts/build_bilingual_reports.py)。源码读取[screenshots](../results/screenshots/README.md)、[charts](../results/charts/README.md)和[results](../results/README.md)中的材料。
 
 | 可编辑报告 | 文件 |
 | --- | --- |

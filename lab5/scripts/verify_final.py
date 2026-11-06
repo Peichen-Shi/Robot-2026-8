@@ -24,13 +24,13 @@ assert len({x['pairs'] for x in checks if x['dataset']=='dataset1'})==1
 assert len({x['pairs'] for x in checks if x['dataset']=='dataset2'})==1
 assert next(x['pairs'] for x in checks if x['dataset']=='dataset1')==1583
 assert next(x['pairs'] for x in checks if x['dataset']=='dataset2')==1385
-(root/'validation.json').write_text(json.dumps(checks,ensure_ascii=False,indent=2),encoding='utf-8')
+(root/'results'/'validation.json').write_text(json.dumps(checks,ensure_ascii=False,indent=2),encoding='utf-8')
 from PIL import Image,ImageStat
 files=[]
-for f in sorted((root/'screenshots').glob('*.png')):
+for f in sorted((root/'results'/'screenshots').glob('*.png')):
  stats=ImageStat.Stat(Image.open(f).convert('RGB'));assert max(stats.stddev)>10,('blank screenshot',f.name)
  files.append({'filename':f.name,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()})
-with (root/'screenshots'/'截图编号索引.csv').open('w',newline='',encoding='utf-8-sig') as f:
+with (root/'results'/'screenshots'/'截图编号索引.csv').open('w',newline='',encoding='utf-8-sig') as f:
  w=csv.DictWriter(f,fieldnames=['filename','sha256']);w.writeheader();w.writerows(files)
 assert {int(x['filename'].split('_')[0]) for x in files}==set(range(1,18))
 print(json.dumps(checks,indent=2));print('VERIFIED_SCREENSHOTS',len(files))

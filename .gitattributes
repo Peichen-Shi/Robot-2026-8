@@ -1,0 +1,12 @@
+# Lab5 file rules
+lab5/**/*.pdf binary
+lab5/**/*.png binary
+lab5/results/logs/** -text -diff
+lab5/**/*.cpp text eol=lf
+lab5/**/*.h text eol=lf
+lab5/**/*.py text eol=lf
+lab5/**/*.sh text eol=lf
+lab5/**/*.md text eol=lf
+lab5/**/*.html text eol=lf
+lab5/**/*.csv text eol=lf
+lab5/**/*.json text eol=lf

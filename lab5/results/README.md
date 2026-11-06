@@ -1,6 +1,13 @@
 # Lab5逐帧统计与结果图
 
-[返回Lab5](../README.md) · [统计图表](../charts/README.md)
+| 资料 | 入口 |
+| --- | --- |
+| 运行画面 | [编号截图](screenshots/README.md) |
+| 流程和统计图 | [图表](charts/README.md) |
+| 编译与运行记录 | [日志](logs/README.md) |
+| 文件校验 | [SHA256 清单](MANIFEST_SHA256.txt) |
+
+[返回Lab5](../README.md) · [统计图表](charts/README.md)
 
 | 目录 | 内容 |
 | --- | --- |

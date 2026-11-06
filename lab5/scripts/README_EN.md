@@ -1,6 +1,6 @@
 # Lab5 Visual Feature Tracking
 
-[中文说明](README.md) · [Chinese report](reports/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](reports/LAB5_Visual_Tracking_Report_EN.pdf) · [Screenshot index](screenshots/README.md) · [Charts](charts/README.md)
+[中文说明](../README.md) · [Chinese report](../reports/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](../reports/LAB5_Visual_Tracking_Report_EN.pdf) · [Screenshot index](../results/screenshots/README.md) · [Charts](../results/charts/README.md)
 
 Both reports contain 19 pages, 17 actual Ubuntu screenshots, seven reproducible diagrams/charts and 11 tables. They follow the chapter, header, caption and blue-gray table style of the repository's Lab3/Lab4 reports. Their measurements are independent of those earlier labs.
 
@@ -24,7 +24,7 @@ The reported inlier ratio is the average of each pair's inliers/good. LK has no 
 
 Use Ubuntu 20.04, ROS Noetic, GCC 9.4 and OpenCV 4.2.0 contrib with nonfree enabled. The Chinese guide contains complete shell commands; they are shared by both language versions. Build in `~/lab5_complete/ws`, download the two prescribed bags into `~/lab5_complete/data`, then run `scripts/run_all.sh`. Descriptor names are `FAST` in the ROS node and `FAST_BRIEF` in the offline evaluator.
 
-The repository keeps source, measurements, reports and evidence. The approximately 2.1 GiB raw bags and compiled dependency archives remain on the desktop and VM. `datasets.json` records hashes. Charts can be recreated with `scripts/make_report_charts.py`. The current bilingual PDF generator uses Windows SimSun/SimHei fonts; experiment execution is on Ubuntu.
+The repository keeps source, measurements, reports and evidence. The approximately 2.1 GiB raw bags and compiled dependency archives remain on the desktop and VM. `scripts/datasets.json` records hashes. Charts can be recreated with `scripts/make_report_charts.py`. The current bilingual PDF generator uses Windows SimSun/SimHei fonts; experiment execution is on Ubuntu.
 
 ## Provenance
 

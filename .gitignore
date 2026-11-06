@@ -1,0 +1,12 @@
+# Lab5 generated files and local datasets
+/lab5/**/*.bag
+/lab5/**/*.bag.active
+/lab5/**/*.part
+/lab5/**/*.segmented
+/lab5/**/build/
+/lab5/**/devel/
+/lab5/**/install/
+/lab5/**/opencv/
+/lab5/**/.report_packages/
+/lab5/**/__pycache__/
+/lab5/**/*.pyc

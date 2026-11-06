@@ -8,7 +8,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,Image,Table,TableStyle,KeepTogether
 from reportlab.lib.pagesizes import A4
-root=Path(__file__).parent; bundle=root.parent if root.name=='scripts' else root/'submission'; results=bundle/'results'; shots=bundle/'screenshots';bundle.mkdir(exist_ok=True)
+root=Path(__file__).parent; bundle=root.parent if root.name=='scripts' else root/'submission'; results=bundle/'results'; shots=results/'screenshots';bundle.mkdir(exist_ok=True)
 pdfmetrics.registerFont(TTFont('SimSun',r'C:\Windows\Fonts\simsun.ttc',subfontIndex=0))
 normal=ParagraphStyle('normal',fontName='SimSun',fontSize=10.5,leading=17,spaceAfter=8)
 heading=ParagraphStyle('heading',parent=normal,fontSize=16,leading=23,spaceAfter=14)

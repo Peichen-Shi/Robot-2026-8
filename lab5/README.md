@@ -1,6 +1,6 @@
 # Lab5 无人机视觉跟踪
 
-[返回课程首页](../README.md) · [中文报告](reports/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](reports/LAB5_Visual_Tracking_Report_EN.pdf) · [代码入口](feature_tracking/README.md) · [截图与数据](screenshots/README.md)
+[返回课程首页](../README.md) · [中文报告](reports/LAB5_无人机视觉跟踪实验报告.pdf) · [English report](reports/LAB5_Visual_Tracking_Report_EN.pdf) · [代码入口](feature_tracking/README.md) · [截图与数据](results/screenshots/README.md)
 
 同一个盒子，换个角度还能认出来吗？Lab5 先用两张照片比较配对方法，再把同样的问题放进两段视频。
 
@@ -10,19 +10,16 @@
 | Harris＋LK | 选出好认的角点，看看它在下一帧挪了多远 |
 | Farneback | 给整幅画面画一张运动地图 |
 
-[English guide](README_EN.md)
+[English guide](scripts/README_EN.md)
 
 ## 目录怎么找
 
 | 目录 | 放了什么 |
 | --- | --- |
-| [reports/](reports/README.md) | [中文报告 PDF](reports/LAB5_无人机视觉跟踪实验报告.pdf) · [英文报告 PDF](reports/LAB5_Visual_Tracking_Report_EN.pdf) |
-| [feature_tracking/](feature_tracking/README.md) | [C++ 源码](feature_tracking/src/) · [ROS 启动配置](feature_tracking/launch/) · [原始盒子图片](feature_tracking/images/) |
-| [screenshots/](screenshots/README.md) | 17 张按实验步骤编号的运行截图 |
-| [charts/](charts/README.md) | 7 张流程图与统计图 |
-| [results/](results/README.md) | 两图测试、两组视频的逐帧 CSV 和汇总 |
-| [scripts/](scripts/README.md) | 下载数据、编译和复现实验的脚本 |
-| [logs/](logs/README.md) | 编译、运行与验证日志 |
+| [reports/](reports/README.md) | 中英文 PDF 和可编辑 HTML |
+| [feature_tracking/](feature_tracking/README.md) | C++ 源码、ROS 启动配置和原始盒子图片 |
+| [results/](results/README.md) | 两图与视频统计、编号截图、图表和运行日志 |
+| [scripts/](scripts/README.md) | 下载、编译、复现脚本和数据集校验值 |
 
 ## Lab5 有哪些任务
 
@@ -66,7 +63,7 @@
 - 内点表示符合估计的基本矩阵，不等于人工标注的匹配准确率；平面场景可能退化。
 - 计时包含检测、描述、匹配和几何验证，不包含读取、绘图或截图；虚拟机调度会影响时间。
 
-![两段序列平均内点比较](charts/19_Mean_Geometric_Inliers.png)
+![两段序列平均内点比较](results/charts/19_Mean_Geometric_Inliers.png)
 
 ## 代码怎么读
 
@@ -155,7 +152,7 @@ python lab5/scripts/build_bilingual_reports.py
 
 ## 截图、图表与引用
 
-- 截图文件名按`01_环境`到`17_ROS视频`编号，具体中文和英文说明见[screenshots/README.md](screenshots/README.md)。文件名保留方法和用途，报告中图号与索引一致。
-- 图18至24位于`charts`，每张都有PNG和矢量PDF；时序图采用51帧对后向均值，但报告均值表仍读取全部原始数据。
+- 截图文件名按`01_环境`到`17_ROS视频`编号，具体中文和英文说明见[screenshots/README.md](results/screenshots/README.md)。文件名保留方法和用途，报告中图号与索引一致。
+- 图18至24位于`results/charts`，每张都有PNG和矢量PDF；时序图采用51帧对后向均值，但报告均值表仍读取全部原始数据。
 - 报告的[1]至[6]引用题面、代码和官方API，[7]引用本实验测量。截图和CSV各自保留SHA256或校验记录。
 - 排版参考个人实验归档中的Lab3/Lab4；代码模板来自MIT-SPARK VNAV2021（2443ec7e491001d09ab8dd66f6b953177043b784）。OpenCV与课程资料的权利归原作者，实验结果和实现修改见本目录。

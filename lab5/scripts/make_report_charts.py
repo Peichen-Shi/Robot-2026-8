@@ -7,7 +7,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
-sub=root;out=sub/'charts';out.mkdir(exist_ok=True)
+sub=root;out=sub/'results'/'charts';out.mkdir(exist_ok=True)
 methods=['SIFT','SURF','ORB','FAST_BRIEF','LK'];labels=['SIFT','SURF','ORB','FAST+BRIEF','Harris+LK'];datasets=['dataset1','dataset2']
 colors=['#245b83','#b56a37'];palette=['#245b83','#348d81','#b56a37','#8b6c9e','#687d36']
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False,'axes.titleweight':'bold','axes.labelcolor':'#263746','text.color':'#263746','grid.alpha':.2,'savefig.facecolor':'white'})
