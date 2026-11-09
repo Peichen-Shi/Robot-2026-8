@@ -175,6 +175,10 @@ def render(en):
            t(["D5 三维对应","30","Arun + RANSAC、米制误差"],["D5 3D–3D","30","Arun + RANSAC and metric error"])],[150,54,289])
     text(t("分值按本地课程说明。团队检查可用演示脚本播放真实 RGB、深度和估计位姿。","Points follow the local course rubric. For team inspection, the demo replays measured RGB, depth and estimated poses."))
 
+    figure(shots/"01_RViz_NISTER5.png",
+           t("实测预览（见图 01）。RViz 左侧是 Office 深度与 RGB，右侧是相机位姿。",
+             "Experiment preview (Fig. 01). RViz shows Office depth and RGB on the left and camera poses on the right."),215)
+
     page_start(t("实验目标与阅读路线","Experiment goals and reading guide"),
                t("从图像对应走到可检查的相机位姿","From image correspondences to verifiable camera poses"))
     text(t("核心问题是估计相邻两帧的相机运动。SIFT 回答两个像点是否可能来自同一处场景，位姿求解器再利用这些对应关系判断相机怎么动。","The goal is to recover camera motion between adjacent images. SIFT proposes which pixels represent the same scene point, then the pose solver uses those correspondences to estimate the motion."))
@@ -190,6 +194,10 @@ def render(en):
            t(["二维与三维结果、RViz 回放","11–14"],["2D and 3D results and RViz replay","11–14"]),
            t(["匹配证据、复现实验和引用","15–18"],["Match evidence, reproduction and references","15–18"])],[414,79])
 
+    figure(shots/"12_NISTER5_Inliers.png",
+           t("配对示例（见图 12）。绿色连线连接五点 RANSAC 保留的匹配。",
+             "Matching example (Fig. 12). Green lines connect matches retained by five-point RANSAC."),188)
+
     page_start(t("坐标、尺度与参考值","Coordinates, scale and reference"),
                t("先确定变换方向，再比较误差","Fix the transform direction before comparing errors"))
     text(t("用 T_ab 表示把坐标从 b 系变换到 a 系。里程计给出 T_world_body，乘固定外参 T_body_camera 得到相机在世界系的位姿。相邻帧参考变换为 inv(T_world_prev) · T_world_curr。","Let T_ab map coordinates in frame b into frame a. Odometry supplies T_world_body. Composing it with the fixed T_body_camera gives the camera pose in the world. The relative reference is inv(T_world_prev) · T_world_curr."))
@@ -200,6 +208,10 @@ def render(en):
            t(["二维平移方向","分别单位化后取欧氏距离","取值 0 到 2，方向相反时为 2"],["2D translation direction","Euclidean distance between unit directions","Ranges from 0 to 2, with 2 for opposite directions"]),
            t(["三维平移","直接比较两个平移向量","数值单位为米"],["3D translation","Compare the two translation vectors directly","Error is measured in meters"])],[103,195,195])
     text(t("报告中的定量误差先计算。RViz 再用上一帧真值锚定，并给二维平移方向补上真值长度，用于观察单步结果。","Errors are computed first. RViz then anchors each estimate to the previous reference pose and scales the 2D translation direction by the reference length for single-step visualization."))
+
+    figure(shots/"04_RViz_ARUN3.png",
+           t("米制位姿示例（见图 04）。Arun 利用深度估计平移，RViz 将单步结果锚定到上一帧真值。",
+             "Metric pose example (Fig. 04). Arun estimates translation from depth. RViz anchors the result to the preceding reference pose."),198)
 
     page_start(t("四种方法怎么比较","How the four solvers compare"),
                t("相同的 SIFT 输入，不同的运动约束","Shared SIFT matches, different motion constraints"))
@@ -212,6 +224,10 @@ def render(en):
     text(t("无 RANSAC 对照按描述子距离选一组点，只提出一次假设。它和五点 RANSAC 使用同一种几何模型，可用于观察重复采样和一致性评分的影响。","The baseline takes one group of points ranked by descriptor distance and proposes a single hypothesis. It shares the five-point geometry and illustrates the effect of repeated sampling and consensus scoring."))
 
 
+    figure(shots/"13_EIGHT8_Inliers.png",
+           t("八点法实测（见图 13）。从同一帧对的 SIFT 匹配中筛出符合模型的内点。",
+             "Eight-point output (Fig. 13). The model retains inliers from SIFT matches for this pair."),188)
+
     page_start(t("D1 · Nistér 五点法","D1 · Nistér's five-point solver"),t("五对像点约束一个相对姿态","Five correspondences constrain a relative pose"))
     text(t("约定 R 和 t 把第二相机坐标变到第一相机。对去畸变的单位射线 x1、x2，有 x1^T E x2 = 0，其中 E = [t]_cross R。旋转有 3 个自由度，平移方向有 2 个。","Use R and t to map camera 2 into camera 1. For calibrated unit bearings x1 and x2, x1^T E x2 = 0 with E = [t]_cross R. Rotation has three degrees of freedom and translation direction has two."))
     table([t(["步骤","计算"],["Stage","Computation"]),
@@ -220,6 +236,10 @@ def render(en):
            t(["3. 选物理解","保留实根并回代。分解 E 取得候选 R、±t；用三角化正深度筛选，再用额外匹配给候选打分。"],["3. Physical pose","Back-substitute real roots. Decompose E into candidate rotations and ±t, check positive triangulated depth, then score on further correspondences."])],[139,354])
     text(t("退化：纯旋转时射线经 R 对齐，平移方向没有可观测约束；点近乎共线或视差极小时也难以稳定估计。平面场景可以得到有限解，但可能存在多个相容候选，不能把共面一概判为无解。[2]","Degeneracy: pure rotation aligns rays after R and leaves translation direction unobservable. Nearly collinear points or very small parallax make estimates unstable. A plane can yield finite solutions, sometimes with multiple compatible candidates. [2]"))
     text(t("设内点率 w，每次独立抽取五点。成功概率约为 w^5，首次抽中无外点样本的期望次数为 1/w^5。要达到置信度 p，需 N = ceil(log(1-p) / log(1-w^5))。w=0.7、p=0.99 时，期望约 5.95 次，预算 26 次。OpenGV 的 NISTER 包装额外取 3 对用于候选分解和消歧，实际抽样量为 8。","For independent five-point draws at inlier fraction w, the success probability is about w^5 and the expected wait is 1/w^5. At confidence p, N = ceil(log(1-p) / log(1-w^5)). For w=0.7 and p=0.99, the mean is 5.95 and the budget is 26. The OpenGV NISTER wrapper adds three pairs for decomposition and disambiguation, so it draws eight."))
+
+    figure(shots/"16_NISTER5_RAW_Inliers.png",
+           t("五点法的单次假设对照（见图 16）。绿色连线是这次假设解释的匹配。",
+             "Single-hypothesis five-point baseline (Fig. 16). Green lines mark matches explained by that hypothesis."),188)
 
     page_start(t("D2 · 已知旋转的两点法","D2 · Two points with known rotation"),
                t("两条约束确定平移方向","Two constraints determine the direction of translation"))
@@ -231,6 +251,10 @@ def render(en):
            t(["保留","按内点数选最佳模型，同分时可比较残差。用 w^2 更新置信预算。"],["Keep","Keep the largest consensus set; use residuals to break ties if needed. Update the budget with w^2."]),
            t(["输出","返回最优方向和内点，必要时以全部内点精化。"],["Return","Return the best direction and inliers, optionally refit using all inliers."])],[120,373])
     text(t("代码里的两点法使用真值相对旋转模拟已知 IMU 旋转。旋转误差接近零来自这个输入条件，不能用来证明视觉算法估出了旋转。","The two-point experiment uses ground-truth relative rotation as the known IMU rotation. Its near-zero rotation error follows from this input."))
+
+    figure(shots/"14_KNOWN2_Inliers.png",
+           t("两点法实测（见图 14）。已知旋转后，用匹配点估计平移方向。",
+             "Two-point output (Fig. 14). With rotation supplied, the matches constrain the translation direction."),188)
 
     page_start(t("抽样预算与外点","Sampling budget and outliers"),
                t("匹配越干净，越容易抽到可用的一组点","Cleaner matches make an all-inlier draw more likely"))
