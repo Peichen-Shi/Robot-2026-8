@@ -1,0 +1,10 @@
+<launch>
+  <arg name="path_to_dataset"/>
+  <arg name="pose_bag"/>
+  <arg name="rate" default="0.5"/>
+  <param name="/use_sim_time" value="true"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="lab6_world" args="0 0 0 0 0 0 world lab6_view"/>
+  <node pkg="rviz" type="rviz" name="lab6_rviz" args="-d $(find lab_6)/rviz/office.rviz"/>
+  <node pkg="rosbag" type="play" name="lab6_play" output="screen"
+    args="--clock --delay=2 --loop -r $(arg rate) $(arg path_to_dataset) $(arg pose_bag) --topics /tesse/left_cam/rgb/image_raw /tesse/depth_cam/mono/image_raw /camera_pose /gt_camera_pose"/>
+</launch>

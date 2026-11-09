@@ -1,0 +1,15 @@
+Scanning dependencies of target pose_estimation
+[ 50%] Building CXX object lab6/CMakeFiles/pose_estimation.dir/src/pose_estimation.cpp.o
+[100%] Linking CXX executable /home/by/lab6_complete/ws/devel/lib/lab_6/pose_estimation
+[100%] Built target pose_estimation
+Base path: /home/by/lab6_complete/ws
+Source space: /home/by/lab6_complete/ws/src
+Build space: /home/by/lab6_complete/ws/build
+Devel space: /home/by/lab6_complete/ws/devel
+Install space: /home/by/lab6_complete/ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/by/lab6_complete/ws/build"
+####
+####
+#### Running command: "make -j2" in "/home/by/lab6_complete/ws/build"
+####

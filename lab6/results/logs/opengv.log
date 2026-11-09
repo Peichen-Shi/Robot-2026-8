@@ -1,0 +1,149 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning at CMakeLists.txt:12 (find_package):
+  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "catkin", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "catkin" with any
+  of the following names:
+
+    catkinConfig.cmake
+    catkin-config.cmake
+
+  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+  "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+No catkin found. Creating opengv package with rosbuild
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_PYTHON
+    BUILD_TESTS
+
+
+-- Build files have been written to: /home/by/lab6_complete/opengv-build
+Scanning dependencies of target opengv
+[  1%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gp3p/code.cpp.o
+[  0%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/main.cpp.o
+/home/by/lab6_complete/opengv/src/absolute_pose/modules/main.cpp:32:10: fatal error: Eigen/NonLinearOptimization: No such file or directory
+   32 | #include <Eigen/NonLinearOptimization>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/opengv.dir/build.make:63: CMakeFiles/opengv.dir/src/absolute_pose/modules/main.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /home/by/lab6_complete/opengv/src/absolute_pose/modules/gp3p/code.cpp:32:
+/home/by/lab6_complete/opengv/include/opengv/absolute_pose/modules/gp3p/modules.hpp:36:10: fatal error: Eigen/Eigen: No such file or directory
+   36 | #include <Eigen/Eigen>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/opengv.dir/build.make:76: CMakeFiles/opengv.dir/src/absolute_pose/modules/gp3p/code.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:529: CMakeFiles/opengv.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+CMake Warning at CMakeLists.txt:12 (find_package):
+  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "catkin", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "catkin" with any
+  of the following names:
+
+    catkinConfig.cmake
+    catkin-config.cmake
+
+  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+  "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+No catkin found. Creating opengv package with rosbuild
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/by/lab6_complete/opengv-build
+[  0%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/main.cpp.o
+[  1%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gp3p/code.cpp.o
+[  2%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gp3p/init.cpp.o
+[  4%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gp3p/reductors.cpp.o
+[  5%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gp3p/spolynomials.cpp.o
+[  7%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/Epnp.cpp.o
+[  8%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp1/code.cpp.o
+[ 10%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp1/init.cpp.o
+[ 11%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp1/reductors.cpp.o
+[ 13%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp1/spolynomials.cpp.o
+[ 14%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp2/code.cpp.o
+[ 14%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp2/init.cpp.o
+[ 16%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp2/reductors.cpp.o
+[ 17%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp2/spolynomials.cpp.o
+[ 19%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp3/code.cpp.o
+[ 20%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp3/init.cpp.o
+[ 22%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp3/reductors.cpp.o
+[ 23%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp3/spolynomials.cpp.o
+[ 25%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp4/code.cpp.o
+[ 26%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp4/init.cpp.o
+[ 28%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp4/reductors.cpp.o
+[ 29%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp4/spolynomials.cpp.o
+[ 29%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp5/code.cpp.o
+[ 31%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp5/init.cpp.o
+[ 32%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp5/reductors.cpp.o
+[ 34%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/gpnp5/spolynomials.cpp.o
+[ 35%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/upnp2.cpp.o
+[ 37%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/modules/upnp4.cpp.o
+[ 38%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/main.cpp.o
+[ 40%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/fivept_nister/modules.cpp.o
+[ 41%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/fivept_stewenius/modules.cpp.o
+[ 43%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/fivept_kneip/code.cpp.o
+[ 44%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/fivept_kneip/init.cpp.o
+[ 44%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/fivept_kneip/reductors.cpp.o
+[ 46%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/fivept_kneip/spolynomials.cpp.o
+[ 47%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/sixpt/modules2.cpp.o
+[ 49%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/eigensolver/modules.cpp.o
+[ 50%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/modules/ge/modules.cpp.o
+[ 52%] Building CXX object CMakeFiles/opengv.dir/src/math/cayley.cpp.o
+[ 53%] Building CXX object CMakeFiles/opengv.dir/src/math/quaternion.cpp.o
+[ 55%] Building CXX object CMakeFiles/opengv.dir/src/math/arun.cpp.o
+[ 56%] Building CXX object CMakeFiles/opengv.dir/src/math/Sturm.cpp.o
+[ 58%] Building CXX object CMakeFiles/opengv.dir/src/math/roots.cpp.o
+[ 59%] Building CXX object CMakeFiles/opengv.dir/src/math/gauss_jordan.cpp.o
+[ 59%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/methods.cpp.o
+[ 61%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/CentralAbsoluteAdapter.cpp.o
+[ 62%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/NoncentralAbsoluteAdapter.cpp.o
+[ 64%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/NoncentralAbsoluteMultiAdapter.cpp.o
+[ 65%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/methods.cpp.o
+[ 67%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/CentralRelativeAdapter.cpp.o
+[ 68%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/CentralRelativeWeightingAdapter.cpp.o
+[ 70%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/NoncentralRelativeAdapter.cpp.o
+[ 71%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/CentralRelativeMultiAdapter.cpp.o
+[ 73%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/NoncentralRelativeMultiAdapter.cpp.o
+[ 74%] Building CXX object CMakeFiles/opengv.dir/src/triangulation/methods.cpp.o
+[ 74%] Building CXX object CMakeFiles/opengv.dir/src/point_cloud/methods.cpp.o
+[ 76%] Building CXX object CMakeFiles/opengv.dir/src/point_cloud/PointCloudAdapter.cpp.o
+[ 77%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/absolute_pose/AbsolutePoseSacProblem.cpp.o
+[ 79%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/absolute_pose/MultiNoncentralAbsolutePoseSacProblem.cpp.o
+[ 80%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/relative_pose/CentralRelativePoseSacProblem.cpp.o
+[ 82%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/relative_pose/NoncentralRelativePoseSacProblem.cpp.o
+[ 83%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/relative_pose/RotationOnlySacProblem.cpp.o
+[ 85%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/relative_pose/TranslationOnlySacProblem.cpp.o
+[ 86%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/relative_pose/EigensolverSacProblem.cpp.o
+[ 88%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/relative_pose/MultiCentralRelativePoseSacProblem.cpp.o
+[ 89%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/relative_pose/MultiNoncentralRelativePoseSacProblem.cpp.o
+[ 89%] Building CXX object CMakeFiles/opengv.dir/src/sac_problems/point_cloud/PointCloudSacProblem.cpp.o
+[ 91%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/MACentralAbsolute.cpp.o
+[ 92%] Building CXX object CMakeFiles/opengv.dir/src/absolute_pose/MANoncentralAbsolute.cpp.o
+[ 94%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/MACentralRelative.cpp.o
+[ 95%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/MANoncentralRelative.cpp.o
+[ 97%] Building CXX object CMakeFiles/opengv.dir/src/relative_pose/MANoncentralRelativeMulti.cpp.o
+[ 98%] Building CXX object CMakeFiles/opengv.dir/src/point_cloud/MAPointCloud.cpp.o
+[100%] Linking CXX shared library libopengv.so
+[100%] Built target opengv
+-- Install configuration: "Release"

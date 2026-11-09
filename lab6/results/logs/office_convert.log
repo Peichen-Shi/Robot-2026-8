@@ -1,0 +1,2 @@
+Stopped at first missing SQLite page in the archive prefix
+{'/tesse/odom': 2281, '/tesse/left_cam/rgb/image_raw': 215, '/tesse/left_cam/camera_info': 215, '/tesse/depth_cam/camera_info': 214, '/tesse/depth_cam/mono/image_raw': 214}

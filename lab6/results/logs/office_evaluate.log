@@ -1,0 +1,9 @@
+Calibration CameraInfo K=[415.6921938165306, 0, 360;
+ 0, 415.6921938165306, 240;
+ 0, 0, 1] D=[0, 0, 0, 0]
+Odometry samples=2281; depth samples=214
+Processed 50 frame pairs
+Processed 100 frame pairs
+Processed 150 frame pairs
+Processed 200 frame pairs
+RGB used=214; no bracketing pose=1; no aligned depth=0

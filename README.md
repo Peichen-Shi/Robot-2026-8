@@ -4,6 +4,7 @@
 
 | 实验 | 直接打开 |
 | --- | --- |
+| Lab6 无人机视觉定位 | [实验首页](lab6/README.md) · [中文报告 PDF](lab6/reports/LAB6_无人机视觉定位实验报告.pdf) · [英文报告 PDF](lab6/reports/LAB6_Visual_Localization_Report_EN.pdf) · [演示操作](lab6/reports/演示操作文档.md) |
 | Lab5 无人机视觉跟踪 | [中文报告 PDF](lab5/reports/LAB5_无人机视觉跟踪实验报告.pdf) · [英文报告 PDF](lab5/reports/LAB5_Visual_Tracking_Report_EN.pdf) · [Lab5 完整 README](lab5/README.md) |
 | Lab4 | [2.677145 秒实测与快速演示](lab4/README.md) · [下载 2.67 秒竞速版 ZIP](lab4/packages/Lab4_2p67_20261105.zip) |
 | Lab0 | [实验目录](lab0/) |
