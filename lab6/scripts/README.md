@@ -7,6 +7,7 @@
 | [evaluate.sh](evaluate.sh) | 离线评估所有方法，生成逐帧误差和小型位姿包 |
 | [demo.sh](demo.sh) | 在 RViz 中显示某种方法的估计位姿 |
 | [full_office.sh](full_office.sh) | 继续下载完整归档、解压、转换并启动完整评估 |
+| [capture_evidence.py](capture_evidence.py) | 在已配置的 Ubuntu 桌面显示实验输出并补拍 09–16 号截图 |
 | [build_reports.py](build_reports.py) | 从 CSV 重新生成图表和双语 PDF |
 | [record_lab4.sh](record_lab4.sh) | 可选 Lab4 RGB-D 采集，现有仿真器的深度初始化失败 |
 

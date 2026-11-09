@@ -175,6 +175,43 @@ def render(en):
            t(["D5 三维对应","30","Arun + RANSAC、米制误差"],["D5 3D–3D","30","Arun + RANSAC and metric error"])],[150,54,289])
     text(t("分值按本地课程说明。团队检查可用演示脚本播放真实 RGB、深度和估计位姿。","Points follow the local course rubric. For team inspection, the demo replays measured RGB, depth and estimated poses."))
 
+    page_start(t("实验目标与阅读路线","Experiment goals and reading guide"),
+               t("从图像对应走到可检查的相机位姿","From image correspondences to verifiable camera poses"))
+    text(t("核心问题是估计相邻两帧的相机运动。SIFT 回答两个像点是否可能来自同一处场景，位姿求解器再利用这些对应关系判断相机怎么动。","The goal is to recover camera motion between adjacent images. SIFT proposes which pixels represent the same scene point, then the pose solver uses those correspondences to estimate the motion."))
+    table([t(["阶段","输入","输出"],["Stage","Input","Output"]),
+           t(["配对","前后两张 RGB 图","像素坐标对与描述子距离"],["Match","Two RGB frames","Pixel pairs and descriptor distances"]),
+           t(["标定","像素位置与内参 K、D","归一化的相机视线"],["Calibrate","Pixel locations and K, D","Normalized camera bearings"]),
+           t(["求解","视线，或有深度的三维对应","相对旋转、平移方向或米制平移"],["Solve","Bearings, or depth-backed 3D pairs","Relative rotation and translation direction or metric translation"]),
+           t(["评估","相对估计和里程计参考","逐帧 RPE、求解状态与时间"],["Evaluate","Estimate and odometry reference","Per-pair RPE, solver status and timing"])],[98,159,236])
+    table([t(["内容","页码"],["Content","Pages"]),
+           t(["任务、数据流程、坐标约定、算法比较","1–4"],["Tasks, data flow, coordinate convention and algorithm comparison","1–4"]),
+           t(["D1、D2 理论推导与采样分析","5–7"],["D1 and D2 derivations and sampling analysis","5–7"]),
+           t(["环境、数据校验、工程实现","8–10"],["Setup, input checks and implementation","8–10"]),
+           t(["二维与三维结果、RViz 回放","11–14"],["2D and 3D results and RViz replay","11–14"]),
+           t(["匹配证据、复现实验和引用","15–18"],["Match evidence, reproduction and references","15–18"])],[414,79])
+
+    page_start(t("坐标、尺度与参考值","Coordinates, scale and reference"),
+               t("先确定变换方向，再比较误差","Fix the transform direction before comparing errors"))
+    text(t("用 T_ab 表示把坐标从 b 系变换到 a 系。里程计给出 T_world_body，乘固定外参 T_body_camera 得到相机在世界系的位姿。相邻帧参考变换为 inv(T_world_prev) · T_world_curr。","Let T_ab map coordinates in frame b into frame a. Odometry supplies T_world_body. Composing it with the fixed T_body_camera gives the camera pose in the world. The relative reference is inv(T_world_prev) · T_world_curr."))
+    text(t("如果旧相机是原点，新相机沿旧相机的 x 轴移动 0.10 m，那么该相对变换的平移为 (+0.10, 0, 0) m。新帧坐标系中的点经过变换后应落在旧帧坐标系。","If the previous camera is at the origin and the current camera moves 0.10 m along its x-axis, the relative translation is (+0.10, 0, 0) m. Applying the transform maps a current-camera point into previous-camera coordinates."))
+    table([t(["量","计算","读数含义"],["Quantity","Computation","Interpretation"]),
+           t(["旋转 RPE","两旋转矩阵的 Frobenius 距离","零表示两种旋转一致"],["Rotation RPE","Frobenius distance of two rotation matrices","Zero means identical rotations"]),
+           t(["旋转角","从 R_ref^T R_est 提取角度","以度报告，可直接读作角度偏差"],["Rotation angle","Angle of R_ref^T R_est","Angular discrepancy in degrees"]),
+           t(["二维平移方向","分别单位化后取欧氏距离","取值 0 到 2，方向相反时为 2"],["2D translation direction","Euclidean distance between unit directions","Ranges from 0 to 2, with 2 for opposite directions"]),
+           t(["三维平移","直接比较两个平移向量","数值单位为米"],["3D translation","Compare the two translation vectors directly","Error is measured in meters"])],[103,195,195])
+    text(t("报告中的定量误差先计算。RViz 再用上一帧真值锚定，并给二维平移方向补上真值长度，用于观察单步结果。","Errors are computed first. RViz then anchors each estimate to the previous reference pose and scales the 2D translation direction by the reference length for single-step visualization."))
+
+    page_start(t("四种方法怎么比较","How the four solvers compare"),
+               t("相同的 SIFT 输入，不同的运动约束","Shared SIFT matches, different motion constraints"))
+    table([t(["方法","需要什么","求解结果","主要限制"],["Method","Inputs","Output","Main limitation"]),
+           t(["Nistér 五点","5 对标定视线","旋转、平移方向","多候选，需要用更多匹配消歧"],["Nistér 5pt","5 calibrated bearing pairs","Rotation and translation direction","Multiple candidates require disambiguation"]),
+           t(["八点","8 对标定视线","旋转、平移方向","线性方程对点分布和噪声敏感"],["8pt","8 calibrated bearing pairs","Rotation and translation direction","Linear system is sensitive to point layout and noise"]),
+           t(["已知旋转两点","2 对视线及已知旋转","平移方向","旋转输入误差会传到平移"],["Known-R 2pt","2 bearing pairs and known rotation","Translation direction","Rotation input error affects translation"]),
+           t(["Arun 三点","3 对非共线三维点","旋转、米制平移","依赖深度有效性和对齐"],["Arun 3pt","3 non-collinear 3D pairs","Rotation and metric translation","Requires valid, registered depth"])],[102,120,115,156])
+    text(t("公平比较时，三个二维方法使用同一批通过 SIFT 距离比筛选的匹配。Arun 还要求对应点两侧深度均有效。所有方法共享同一帧对和真值对齐过程。","The three 2D methods share the same matches surviving the SIFT ratio test. Arun also requires valid depth on both sides. All methods share the same frame pairs and reference alignment."))
+    text(t("无 RANSAC 对照按描述子距离选一组点，只提出一次假设。它和五点 RANSAC 使用同一种几何模型，可用于观察重复采样和一致性评分的影响。","The baseline takes one group of points ranked by descriptor distance and proposes a single hypothesis. It shares the five-point geometry and illustrates the effect of repeated sampling and consensus scoring."))
+
+
     page_start(t("D1 · Nistér 五点法","D1 · Nistér's five-point solver"),t("五对像点约束一个相对姿态","Five correspondences constrain a relative pose"))
     text(t("约定 R 和 t 把第二相机坐标变到第一相机。对去畸变的单位射线 x1、x2，有 x1^T E x2 = 0，其中 E = [t]_cross R。旋转有 3 个自由度，平移方向有 2 个。","Use R and t to map camera 2 into camera 1. For calibrated unit bearings x1 and x2, x1^T E x2 = 0 with E = [t]_cross R. Rotation has three degrees of freedom and translation direction has two."))
     table([t(["步骤","计算"],["Stage","Computation"]),
@@ -194,6 +231,34 @@ def render(en):
            t(["保留","按内点数选最佳模型，同分时可比较残差。用 w^2 更新置信预算。"],["Keep","Keep the largest consensus set; use residuals to break ties if needed. Update the budget with w^2."]),
            t(["输出","返回最优方向和内点，必要时以全部内点精化。"],["Return","Return the best direction and inliers, optionally refit using all inliers."])],[120,373])
     text(t("代码里的两点法使用真值相对旋转模拟已知 IMU 旋转。旋转误差接近零来自这个输入条件，不能用来证明视觉算法估出了旋转。","The two-point experiment uses ground-truth relative rotation as the known IMU rotation. Its near-zero rotation error follows from this input."))
+
+    page_start(t("抽样预算与外点","Sampling budget and outliers"),
+               t("匹配越干净，越容易抽到可用的一组点","Cleaner matches make an all-inlier draw more likely"))
+    text(t("如果内点率为 w，一次抽 m 对且近似独立，整组为内点的概率是 w^m。N 次都失败的概率是 (1−w^m)^N。令它不超过 0.01，便得到 99% 置信预算。","For inlier fraction w and sample size m, independent draws give an all-inlier probability of w^m. All N attempts fail with probability (1−w^m)^N. Requiring this to be at most 0.01 yields a 99% confidence budget."))
+    header=t(["假设内点率","两点 m=2","五点 m=5","八点 m=8"],
+             ["Inlier fraction","Two points m=2","Five points m=5","Eight points m=8"])
+    rows=[header]
+    for ratio in (.5,.7,.9):
+        rows.append([f"{ratio:.0%}"] + [math.ceil(math.log(.01)/math.log1p(-ratio**n)) for n in (2,5,8)])
+    table(rows,[121,124,124,124])
+    text(t("表中是理论预算。OpenGV 的中心相机五点和八点封装还取额外对应来分解或选择候选。实验代码设定最多 300 次，并根据内点共识估计终止条件。","These are theoretical budgets. OpenGV's central five-point and eight-point wrappers draw additional matches for decomposition or candidate selection. The experiment caps iterations at 300 and uses inlier consensus to estimate when to stop."))
+    text(t("同一个近似几何模型也可能解释一批错误匹配，因此应结合旋转和平移误差、内点数及场景视差一起判断。","Several mismatches can still fit an approximate geometric model. Assess inlier counts together with rotation and translation errors and scene parallax."))
+
+    page_start(t("D3 · 环境与相机标定","D3 · Build and camera calibration"),
+               t("构建产物与运行日志提供初始配置证据","Build outputs and run logs provide setup evidence"))
+    figure(shots/"09_Catkin_Build.png",
+           t("图 09  Ubuntu 桌面显示 Catkin 构建输出。","Fig. 09  Catkin build output displayed on the Ubuntu desktop."),217)
+    figure(shots/"10_Office_Calibration.png",
+           t("图 10  实际评估日志中的 CameraInfo、深度样本和帧数。","Fig. 10  Actual evaluation log showing CameraInfo, depth samples and frame counts."),217)
+
+    page_start(t("D3 · 数据通道与对齐","D3 · Data topics and alignment"),
+               t("检查位姿与深度能否对应到 RGB 帧","Check whether pose and depth can be aligned to RGB"))
+    figure(shots/"11_Office_ROS_Topics.png",
+           t("图 11  rosbag info 列出 Office 片段的输入话题与消息数。","Fig. 11  rosbag info shows input topics and counts for the Office segment."),225)
+    table([t(["对齐步骤","检查点"],["Alignment step","Check"]),
+           t(["相邻 RGB 帧","按时间遍历，跳过重复或倒退的时间戳"],["Adjacent RGB frames","Process in time order and skip duplicate or backwards timestamps"]),
+           t(["关联深度","选择 15 ms 内最近的深度帧，像素在两帧中均需有有效深度"],["Associate depth","Choose nearest depth within 15 ms and require valid depth at both pixels"]),
+           t(["关联真值","使用图像时间两侧的里程计，平移线性插值，旋转四元数插值"],["Associate reference","Use bracketing odometry and interpolate translation and quaternion rotation"])],[133,360])
 
     page_start(t("D3–D5 · 数据和实现","D3–D5 · Data and implementation"),
                t("从像素到相对变换","From pixels to relative transforms"))
@@ -231,6 +296,25 @@ def render(en):
             figure(shots/f"{i+1:02d}_RViz_{methods[i]}.png",
                    t(f"图 {i+1:02d}  {names[i]} 的 Office 片段回放。",
                      f"Fig. {i+1:02d}  {names[i]} replay of the Office prefix."),254)
+
+    image_pairs = (
+        ((12,"NISTER5"),(13,"EIGHT8")),
+        ((14,"KNOWN2"),(15,"ARUN3")),
+        ((16,"NISTER5_RAW"),),
+    )
+    for group in image_pairs:
+        page_start(t("实验匹配与内点证据","Match and inlier evidence"),
+                   t("Ubuntu 实际输出，绿色连线是相应模型保留的匹配。","Actual Ubuntu output. Green lines connect correspondences retained by each model."))
+        for index, method in group:
+            figure(shots/f"{index:02d}_{method}_Inliers.png",
+                   t(f"图 {index:02d}  {method} 的代表性画面对。",
+                     f"Fig. {index:02d}  Representative pair for {method}."),227)
+        if len(group)==1:
+            text(t("无 RANSAC 对照只从描述子排序较前的匹配提出一次假设。图中展示一个成功帧对。时序曲线和汇总表展示该方法在全部已评估帧对上的误差。","The baseline proposes one hypothesis from the highest-ranked matches. The screenshot shows one successful pair. The error curves and summary cover all evaluated frame pairs."))
+            table([t(["检查点","观察方法"],["Check","What to inspect"]),
+                   t(["匹配","观察绿色线是否连接两张图中同一处边缘或纹理"],["Matches","Check whether green lines connect corresponding edges or texture"]),
+                   t(["稳健性","结合五点 RANSAC 的方向误差与内点统计比较"],["Robustness","Compare with five-point RANSAC direction errors and inlier counts"])],[135,358])
+
 
     page_start(t("结果核对与引用","Verification and references"),
                t("复现脚本、测量口径与限制","Reproduction, metrics and limitations"))

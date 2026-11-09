@@ -6,11 +6,11 @@
 
 | 想找什么 | 入口 |
 | --- | --- |
-| 中文报告 | [直接打开 PDF](reports/LAB6_无人机视觉定位实验报告.pdf) |
-| 英文报告 | [Open English PDF](reports/LAB6_Visual_Localization_Report_EN.pdf) |
+| 中文报告 | [直接打开 PDF（18 页）](reports/LAB6_无人机视觉定位实验报告.pdf) |
+| 英文报告 | [Open English PDF (18 pages)](reports/LAB6_Visual_Localization_Report_EN.pdf) |
 | 现场演示 | [Ubuntu 命令与检查清单](reports/演示操作文档.md) |
 | 看代码 | [ROS 包与位姿求解入口](code/lab6/src/pose_estimation.cpp) |
-| 看结果 | [统计、图表、截图及日志](results/README.md) |
+| 看结果 | [统计、4 张误差图、12 张截图及日志](results/README.md) |
 | 重跑实验 | [构建、转换和运行脚本](scripts/README.md) |
 
 | 任务 | 做了什么 |

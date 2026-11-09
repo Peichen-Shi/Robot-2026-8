@@ -4,7 +4,7 @@
 | --- | --- |
 | 213 对的逐帧统计 | [RPE CSV](office_preview/rpe.csv) |
 | 有效对数与误差中位数 | [摘要 CSV](office_preview/summary.csv) |
-| 01–04 RViz 实际截图 | [编号索引](screenshots/README.md) |
+| 12 张实际截图（01–04、09–16） | [编号索引](screenshots/README.md) |
 | 05–08 旋转与平移图表 | [图表索引](charts/README.md) |
 | 编译与数据转换 | [运行日志](logs/) |
 | 片段数据校验 | [SHA256](dataset_sha256.txt) |
