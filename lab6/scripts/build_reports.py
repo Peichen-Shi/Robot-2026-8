@@ -21,7 +21,7 @@ from reportlab.platypus import Paragraph, Table, TableStyle
 
 root = Path(__file__).resolve().parent.parent
 ap = argparse.ArgumentParser()
-ap.add_argument("--results", default="office_preview")
+ap.add_argument("--results", default="office_extended")
 ap.add_argument("--full", action="store_true")
 args = ap.parse_args()
 results = root / "results" / args.results
@@ -124,7 +124,7 @@ def render(en):
         c.line(51,49,544,49)
         c.setFillColor(muted)
         c.setFont("Helvetica",9)
-        c.drawString(51,33,"Boyu Huang  /  2026-11-09")
+        c.drawString(51,33,"Boyu Huang  /  2026-11-10")
         c.drawRightString(544,33,f"{page:02d}")
         y=756
         text(title,23,30,True,navy)
@@ -346,7 +346,7 @@ def render(en):
            t(["rpe.csv","逐帧对误差、匹配数、内点数、真值基线、求解耗时。"],["rpe.csv","Per-pair errors, match counts, inliers, baseline and solver timing."]),
            t(["summary.csv","有效对数与中位数。耗时只计位姿求解，包含 RANSAC。"],["summary.csv","Valid counts and medians. Timing covers pose solving and RANSAC."]),
            t(["演示操作文档","Ubuntu 上运行 RViz、切换方法、重新计算及查看结果。"],["Demo guide","Run RViz, switch methods, recompute and inspect output."])],[140,353])
-    text(t("数据范围限制：2023 题面里的旧 Google Drive 文件返回 404。本次使用同课程新版提供的 ROS 2 Office 归档，先转换了可读取的连续前段。整段数据的性能与题面预期仍需用完整归档复核。Lab4 RGB-D 补充采集在旧仿真器的深度相机信息解析处失败，日志单独保存。","Scope: the original Google Drive file returned 404. The current course ROS 2 Office archive supplied the contiguous prefix used here. Full-sequence performance still needs validation. An optional Lab4 RGB-D recording failed during depth camera metadata parsing in the older simulator; its log is retained."))
+    text(t("数据范围限制：2023 题面里的旧 Google Drive 文件返回 404。课程公告改用 ROS 2 Office 归档。Google Drive 返回配额限制，当前评估覆盖已下载部分中可完整读取的连续前段。RViz 回放截图来自同一序列的短片段，图 09–16 展示扩展实测的日志和匹配。Lab4 RGB-D 补充采集在旧仿真器的深度相机信息解析处失败，日志单独保存。","Scope: the original Google Drive file returned 404. The course now provides a ROS 2 archive. The download quota limited evaluation to complete records in the downloaded prefix. The RViz replay screenshots show a short segment of the same sequence. Figures 09–16 show logs and matches from the extended run. An optional Lab4 RGB-D recording failed during depth camera metadata parsing in the older simulator; its log is retained."))
     text(t(f"本次二维方向误差中位数：五点 {summary[0][4]}，八点 {summary[1][4]}，已知旋转两点 {summary[2][4]}。无 RANSAC 对照为 {summary[4][4]}。Arun 米制平移误差中位数为 {summary[3][4]} m。不同尺度的平移误差不作直接排名。",f"Median 2D direction errors were {summary[0][4]} (5pt), {summary[1][4]} (8pt), {summary[2][4]} (known rotation) and {summary[4][4]} (no RANSAC). Arun's median metric error was {summary[3][4]} m. The translation metrics use different units."),10,14)
     refs=[
       ("[1] MIT VNAV, Lab 6 Exercises (ROS 1).","https://vnav.mit.edu/labs_2023/lab6/exercises.html"),

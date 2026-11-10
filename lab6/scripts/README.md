@@ -31,7 +31,7 @@ bash evaluate.sh "$HOME/lab6_complete/data/office_ros1.bag" "$HOME/lab6_complete
 | --- | --- |
 | 课程公告的 `rosbags-convert` | 将完整 ROS 2 录包转为 ROS 1 |
 | 本仓库的 `convert_office.py` | 兼容现有 Ubuntu 20.04 环境，仅转换实验使用的话题，也可处理已获取的连续片段 |
-| 当前报告与图表 | 基于已验证的 213 对画面，全量统计需在完整录包转换后生成 |
+| 当前报告与图表 | 基于扩展片段的 2214 对画面，全量统计需在完整录包转换后生成 |
 
 ## Ubuntu 20.04 上的兼容路线
 
@@ -45,4 +45,4 @@ bash scripts/full_office.sh
 
 若已有转换后的 ROS 1 输入包，可运行 `bash scripts/evaluate.sh /绝对路径/office.bag`。报告生成需要 Windows 宋体和黑体，以及 Python 的 matplotlib、Pillow 和 reportlab。
 
-完整归档下载失败时，可用已保存的片段输入包重跑本报告的范围。转换脚本支持用原始归档的前 490188800 字节复现该片段，须先核对下载响应和文件长度。全量转换请使用完整 ZIP 解出的 SQLite 文件。完整数据报告可传入 `--results office_full --full` 重新生成。
+完整归档下载失败时，可用已保存的片段输入包重跑本报告的范围。转换脚本支持用原始归档的前 490188800 字节复现最初 213 对画面的短片段，须先核对下载响应和文件长度。扩展片段来自同一归档的前 4,997,054,455 字节。全量转换请使用完整 ZIP 解出的 SQLite 文件。完整数据报告可传入 `--results office_full --full` 重新生成。

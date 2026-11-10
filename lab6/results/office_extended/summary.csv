@@ -1,0 +1,6 @@
+method,solved_over_pairs,translation_samples,median_rotation_deg,median_translation_rpe,median_inliers,median_solver_ms
+Nistér 5pt,2214/2214,2214,0.4978,0.7523,289,0.6869
+8pt,2214/2214,2214,0.2309,0.4252,276,0.7268
+Known-R 2pt,2214/2214,2214,0,0.08999,267,0.08376
+Arun 3pt,2214/2214,2214,0.02265,0.002914,246,0.03213
+5pt without RANSAC,2211/2214,2211,1.391,1.084,194.5,0.07563

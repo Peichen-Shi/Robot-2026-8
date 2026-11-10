@@ -1,0 +1,16 @@
+path:        data/office_extended.bag
+version:     2.0
+duration:    2:15s (135s)
+start:       Dec 31 1969 16:00:24.00 (24.00)
+end:         Dec 31 1969 16:02:39.45 (159.45)
+size:        5.0 GB
+messages:    35951
+compression: none [2665/2665 chunks]
+types:       nav_msgs/Odometry      [cd5e73d190d741a2f92e81eda573aca7]
+             sensor_msgs/CameraInfo [c9a58c1b0b154e0e6da7578cb991d214]
+             sensor_msgs/Image      [060021388200f6f0f447d0fcd9c64743]
+topics:      /tesse/depth_cam/camera_info       2215 msgs    : sensor_msgs/CameraInfo
+             /tesse/depth_cam/mono/image_raw    2215 msgs    : sensor_msgs/Image     
+             /tesse/left_cam/camera_info        2215 msgs    : sensor_msgs/CameraInfo
+             /tesse/left_cam/rgb/image_raw      2215 msgs    : sensor_msgs/Image     
+             /tesse/odom                       27091 msgs    : nav_msgs/Odometry

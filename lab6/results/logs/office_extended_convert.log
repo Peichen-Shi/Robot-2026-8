@@ -1,0 +1,4 @@
+Received ZIP prefix bytes: 4997054455
+Complete decompressed prefix bytes: 11601768755
+Stopped at first missing SQLite page in the archive prefix
+{'/tesse/odom': 27091, '/tesse/left_cam/rgb/image_raw': 2215, '/tesse/left_cam/camera_info': 2215, '/tesse/depth_cam/camera_info': 2215, '/tesse/depth_cam/mono/image_raw': 2215}
