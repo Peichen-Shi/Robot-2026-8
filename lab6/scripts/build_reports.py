@@ -191,8 +191,9 @@ def render(en):
            t(["任务、数据流程、坐标约定、算法比较","1–4"],["Tasks, data flow, coordinate convention and algorithm comparison","1–4"]),
            t(["D1、D2 理论推导与采样分析","5–7"],["D1 and D2 derivations and sampling analysis","5–7"]),
            t(["环境、数据校验、工程实现","8–10"],["Setup, input checks and implementation","8–10"]),
-           t(["二维与三维结果、RViz 回放","11–14"],["2D and 3D results and RViz replay","11–14"]),
-           t(["匹配证据、复现实验和引用","15–18"],["Match evidence, reproduction and references","15–18"])],[414,79])
+           t(["二维与三维结果、误差分布与对照","11–14"],["2D and 3D results, error distributions and comparison","11–14"]),
+           t(["复现流程、RViz 与匹配证据","15–20"],["Reproduction, RViz and match evidence","15–20"]),
+           t(["资料核对与引用","21"],["Verification and references","21"])],[414,79])
 
     figure(shots/"12_NISTER5_Inliers.png",
            t("配对示例（见图 12）。绿色连线连接五点 RANSAC 保留的匹配。",
@@ -312,6 +313,68 @@ def render(en):
              ["Solved","Median rot. °","Median trans. m","Median inliers","Median solve ms"]),
            [r[1],r[3],r[4],r[5],r[6]]],[84,102,104,97,106])
     text(t("深度让同一个像点变成有单位的空间点。可逐帧累乘米制变换，但局部误差会积累，本实验的 RViz 显示采用真值锚定的单步位姿。","Depth turns pixels into points with a metric scale. Metric transforms can be composed across frames, but drift accumulates. The RViz display shows ground-truth-anchored single-step poses."),10,15)
+
+    page_start(t("误差分布与达标比例","Error distribution and target rates"),
+               t("用中位数和第 90 百分位同时看典型误差与较差帧对",
+                 "Medians describe typical errors; the 90th percentile describes the upper tail"))
+    def distribution(rows,key,threshold):
+        data=sorted(vals(rows,key))
+        if not data:
+            return ["—","—","—"]
+        index=math.ceil(.9*len(data))-1
+        return [med(data),f"{data[index]:.4g}",f"{sum(v<threshold for v in data)}/{len(data)} ({sum(v<threshold for v in data)/len(data):.1%})"]
+    rotation_rows=[t(["方法","中位数 °","P90 °","低于 1°"],["Method","Median °","P90 °","Below 1°"])]
+    for m,name in zip(methods,names):
+        rotation_rows.append([name,*distribution(series[m],"rotation_deg",1)])
+    table(rotation_rows,[158,90,90,155])
+    direction_rows=[t(["二维方法","中位数","P90","低于 0.5"],["2D method","Median","P90","Below 0.5"])]
+    for i in (0,1,2,4):
+        m=methods[i]
+        direction_rows.append([names[i],*distribution(series[m],"translation_rpe",.5)])
+    table(direction_rows,[158,90,90,155])
+    arun=distribution(series["ARUN3"],"translation_rpe",.01)
+    text(t(f"Arun 米制误差中位数为 {arun[0]} m，P90 为 {arun[1]} m，低于 1 cm 的帧对为 {arun[2]}。",
+           f"Arun's median metric error is {arun[0]} m, with P90 of {arun[1]} m and {arun[2]} of pairs below 1 cm."))
+    text(t("达标比例按有有效误差的帧对计算，求解成功数另见前两页。已知旋转两点法的旋转误差来自给定的旋转条件。这里的阈值用于解释统计，课程的验收按题面执行。",
+           "Target rates use pairs with finite errors. Solve counts are shown on the preceding pages. The known-rotation solver receives rotation as input. The thresholds here describe the measurements; course acceptance follows the handout."))
+
+    page_start(t("RANSAC 对照与结论","RANSAC comparison and findings"),
+               t("同一种五点几何，比较单次假设与多次采样",
+                 "Compare one hypothesis against repeated sampling with the same five-point geometry"))
+    raw=summary[4]
+    robust=summary[0]
+    table([t(["五点方法","成功","旋转中位数 °","方向中位数","内点中位数"],
+             ["Five-point method","Solved","Median rot. °","Median direction","Median inliers"]),
+           [t("使用 RANSAC","With RANSAC"),robust[1],robust[3],robust[4],robust[5]],
+           [t("单次假设","Single hypothesis"),raw[1],raw[3],raw[4],raw[5]]],[112,70,99,104,108])
+    text(t("本片段中，多次抽样提高了内点数中位数，并降低了旋转和平移方向误差。八点法的两项中位误差均低于五点 RANSAC，这是这个片段上的观察，场景结构和帧间位移改变后还需要复测。",
+           "On this segment, repeated sampling increased median inlier count and reduced both rotation and direction error. The eight-point medians are below the five-point RANSAC medians here. Changes in scene structure or frame-to-frame motion warrant another comparison."))
+    text(t("两点法借助已知旋转，减少了要求解的未知量。Arun 在深度有效时能得到实际位移长度，可用厘米或毫米解释误差。二维的方向误差和三维的米制误差分开看。",
+           "Known rotation reduces the unknowns in the two-point solver. Valid depth gives Arun an actual displacement length, so its errors can be read in centimeters or millimeters. Interpret 2D direction and 3D metric errors separately."))
+    table([t(["异常现象","优先核对"],["Symptom","What to check first"]),
+           t(["方向误差高","先查真值帧间基线，再查匹配是否集中在同一面墙上。"],
+             ["Large direction error","Check the reference baseline, then whether matches cluster on a single wall."]),
+           t(["Arun 可用点少","核对深度是否有效、与 RGB 是否配准。"],
+             ["Few usable Arun points","Check depth validity and registration to RGB."]),
+           t(["位姿箭头与曲线差异大","RViz 显示采用上一帧真值锚定，误差图比较相对变换。"],
+             ["Pose arrows and curves look different","RViz uses the preceding reference pose as an anchor. The curves compare relative transforms."])],[158,335])
+
+    page_start(t("数据来源与现场复现","Data provenance and live reproduction"),
+               t("输入、操作、输出可以逐项核对","Trace inputs, commands and outputs"))
+    scope=t(f"本次实际评估 {pairs} 对相邻帧，覆盖约 {end:.2f} 秒。报告主表和图 05–08 使用这次运行。图 01–04 是同一数据序列的短片段 RViz 回放。",
+            f"The evaluation covers {pairs} adjacent pairs over about {end:.2f} s. The main tables and Figs. 05–08 use this run. Figs. 01–04 show RViz playback of a short segment from the same sequence.")
+    text(scope)
+    table([t(["步骤","操作","检查点"],["Step","Action","Verification"]),
+           t(["1. 准备","使用已编译的 Ubuntu ROS Noetic 环境","可找到 lab_6 包与 Office 输入包"],
+             ["1. Prepare","Use the built Ubuntu ROS Noetic environment","The lab_6 package and Office input bag are available"]),
+           t(["2. 演示","进入 ~/lab6_complete，运行 bash demo.sh ARUN3","RViz 显示 RGB、深度和估计位姿"],
+             ["2. Demo","In ~/lab6_complete, run bash demo.sh ARUN3","RViz displays RGB, depth and estimated poses"]),
+           t(["3. 复算","运行 bash evaluate.sh","新目录生成逐帧 CSV 和位姿包"],
+             ["3. Recompute","Run bash evaluate.sh","A new result directory contains per-pair CSV and pose bags"]),
+           t(["4. 核对","打开摘要 CSV 和数据 SHA256","确认方法、分母与输入文件一致"],
+             ["4. Verify","Open the summary CSV and input SHA256","Check method names, denominators and the input file"])],[103,182,208])
+    if not args.full:
+        text(t("完整归档约 8.57 GB。本次从已下载的约 5.00 GB 连续前段中提取完整消息。下载恢复后，应对完整录包重新转换和评估，再用全量结果重建图表。","The full archive is about 8.57 GB. This run extracts complete messages from about 5.00 GB of contiguous downloaded bytes. Once available, convert and evaluate the full recording, then regenerate the plots from that run."))
 
     for group in ((0,1),(2,3)):
         page_start(t("RViz 实际运行截图","RViz replay screenshots"),
