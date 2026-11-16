@@ -1,0 +1,85 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 38; 43; 50
+    Fixed Frame: world
+    Frame Rate: 20
+  Displays:
+    - Class: rviz/Path
+      Name: Ground truth path (white)
+      Enabled: true
+      Topic: /lab6/path_gt
+      Color: 240; 240; 240
+      Line Style: Lines
+      Line Width: 0.03
+    - Class: rviz/Path
+      Name: Arun path (magenta)
+      Enabled: true
+      Topic: /lab6/path_arun
+      Color: 240; 70; 220
+      Line Style: Lines
+      Line Width: 0.02
+    - Class: rviz/Grid
+      Name: Ground grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 40
+    - Class: rviz/Image
+      Name: RGB camera
+      Enabled: true
+      Image Topic: /tesse/left_cam/rgb/image_raw
+      Transport Hint: raw
+      Queue Size: 2
+    - Class: rviz/Image
+      Name: Depth camera
+      Enabled: true
+      Image Topic: /tesse/depth_cam/mono/image_raw
+      Transport Hint: raw
+      Queue Size: 2
+      Normalize Range: true
+    - Class: rviz/Pose
+      Name: Camera ground truth
+      Enabled: true
+      Topic: /gt_camera_pose
+      Color: 255; 255; 255
+      Shape: Arrow
+    - Class: rviz/Pose
+      Name: Nister 5pt
+      Enabled: true
+      Topic: /lab6/pose_5pt
+      Color: 40; 140; 255
+      Shape: Arrow
+    - Class: rviz/Pose
+      Name: Eight point
+      Enabled: true
+      Topic: /lab6/pose_8pt
+      Color: 255; 150; 25
+      Shape: Arrow
+    - Class: rviz/Pose
+      Name: Known rotation 2pt
+      Enabled: true
+      Topic: /lab6/pose_2pt
+      Color: 25; 220; 100
+      Shape: Arrow
+    - Class: rviz/Pose
+      Name: Arun RGB-D
+      Enabled: true
+      Topic: /lab6/pose_arun
+      Color: 220; 80; 220
+      Shape: Arrow
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 8
+      Pitch: 0.8
+      Yaw: 0.7
+      Focal Point:
+        X: -15
+        Y: 24
+        Z: 2.5
+Window Geometry:
+  Width: 1280
+  Height: 800

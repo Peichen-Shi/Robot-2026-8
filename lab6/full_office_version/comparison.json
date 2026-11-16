@@ -1,0 +1,85 @@
+{
+  "repository_base": "25b27fe1a3b9f3e4937f302902d911d4b2daa6cb",
+  "our_total_pairs": 3889,
+  "teammate_pairs": 2214,
+  "matched_prefix": {
+    "NISTER5": {
+      "ours": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.2352838240365,
+        "median_rotation_deg": 0.126959654856
+      },
+      "teammate": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.7523342606000001,
+        "median_rotation_deg": 0.49781416675
+      }
+    },
+    "EIGHT8": {
+      "ours": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.1903689382615,
+        "median_rotation_deg": 0.0866171609532
+      },
+      "teammate": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.42515564445,
+        "median_rotation_deg": 0.23088954825000002
+      }
+    },
+    "KNOWN2": {
+      "ours": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.05229551956075,
+        "median_rotation_deg": 0.0
+      },
+      "teammate": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.08998807655499999,
+        "median_rotation_deg": 0.0
+      }
+    },
+    "ARUN3": {
+      "ours": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.0030412224845249997,
+        "median_rotation_deg": 0.023338894463
+      },
+      "teammate": {
+        "pairs": 2214,
+        "success": 2214,
+        "median_translation_error": 0.0029137488334999998,
+        "median_rotation_deg": 0.022646628995
+      }
+    }
+  },
+  "alignment": {
+    "NISTER5": {
+      "count": 2214,
+      "max_time_difference_s": 1.000017846308765e-09,
+      "max_baseline_difference_m": 2.8900999995973287e-10
+    },
+    "EIGHT8": {
+      "count": 2214,
+      "max_time_difference_s": 1.000017846308765e-09,
+      "max_baseline_difference_m": 2.8900999995973287e-10
+    },
+    "KNOWN2": {
+      "count": 2214,
+      "max_time_difference_s": 1.000017846308765e-09,
+      "max_baseline_difference_m": 2.8900999995973287e-10
+    },
+    "ARUN3": {
+      "count": 2214,
+      "max_time_difference_s": 1.000017846308765e-09,
+      "max_baseline_difference_m": 2.8900999995973287e-10
+    }
+  }
+}

@@ -1,0 +1,7 @@
+PASS: 3890 synchronized frames, 3889 unique pairs per method, 15556 rows.
+PASS: all four methods returned finite rotation estimates for all pairs.
+PASS: monocular direction distances in [0,2].
+PASS: fixed input rotation preserved by the two-point method.
+PASS: catkin_make -j2.
+PASS: ROS1 CameraInfo MD5 and camera intrinsics checked.
+PASS: live ROS topics and RViz Global Status OK.

@@ -1,0 +1,15 @@
+path:        /home/joe/data/vnav/office.bag
+version:     2.0
+duration:    3:56s (236s)
+start:       Dec 31 1969 16:00:24.00 (24.00)
+end:         Dec 31 1969 16:04:20.00 (261.00)
+size:        8.8 GB
+messages:    59070
+compression: none [4653/4653 chunks]
+types:       nav_msgs/Odometry      [cd5e73d190d741a2f92e81eda573aca7]
+             sensor_msgs/CameraInfo [c9a58c1b0b154e0e6da7578cb991d214]
+             sensor_msgs/Image      [060021388200f6f0f447d0fcd9c64743]
+topics:      /tesse/depth_cam/mono/image_raw    3890 msgs    : sensor_msgs/Image     
+             /tesse/left_cam/camera_info        3890 msgs    : sensor_msgs/CameraInfo
+             /tesse/left_cam/rgb/image_raw      3890 msgs    : sensor_msgs/Image     
+             /tesse/odom                       47400 msgs    : nav_msgs/Odometry
