@@ -1,0 +1,16 @@
+<launch>
+  <arg name="path_to_dataset" default="$(env HOME)/data/vnav/office.bag"/>
+  <arg name="pose_estimator" default="-1"/>
+  <arg name="output" default="$(env HOME)/lab6_results/live"/>
+  <arg name="rate" default="0.15"/>
+  <arg name="rviz" default="true"/>
+  <param name="use_sim_time" value="true"/>
+  <node name="lab6" pkg="lab_6" type="pose_estimation" output="screen"
+    args="--pose_estimator $(arg pose_estimator) --output $(arg output)"/>
+  <node name="office_bag" pkg="rosbag" type="play" args="--clock --delay=3 -r $(arg rate) $(arg path_to_dataset)"/>
+  <node name="lab6_paths" pkg="lab_6" type="path_visualizer.py"/>
+  <node name="lab6_world_frame" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 world lab6_origin"/>
+  <node if="$(arg rviz)" name="lab6_rviz" pkg="rviz" type="rviz" args="-d $(find lab_6)/rviz/lab6.rviz">
+    <env name="DISABLE_ROS1_EOL_WARNINGS" value="1"/>
+  </node>
+</launch>

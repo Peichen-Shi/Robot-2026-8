@@ -1,0 +1,10 @@
+Name: rosbags
+Version: 0.9.23
+Summary: Pure Python library to read, modify, convert, and write rosbag files.
+Home-page: None
+Author: None
+Author-email: Ternaris <team@ternaris.com>
+License: Apache-2.0
+Location: /home/joe/.local/lib/python3.8/site-packages
+Requires: zstandard, lz4, numpy, ruamel.yaml
+Required-by: 

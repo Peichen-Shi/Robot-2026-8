@@ -1,0 +1,6 @@
+Camera K=[415.6921938165306, 0, 360;
+ 0, 415.6921938165306, 240;
+ 0, 0, 1]; odom=47400
+Processed 50 frames; matches=419 time=2.5
+Processed 100 frames; matches=372 time=5
+COMPLETE frames=100
